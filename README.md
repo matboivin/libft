@@ -1,6 +1,11 @@
-# libft - 42
+# libft at 42
 
+libft is a school project at [42 Paris](https://www.42.fr) campus.
+42 is a private, non-profit and tuition-free Computer Science school based on peer-to-peer learning and hands-on projects.
+
+> First C project
 > Many implementations of the Standard C Library functions, and additional functions.
+
 
 ## Description
 
