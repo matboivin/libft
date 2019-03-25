@@ -18,4 +18,4 @@ In order to have a deeper understanding of C programming and data structures, 42
 
 The 'ft' in front of function's names stands for 'fourty two".
 
-My functions currently lack documentation.
+My functions currently lack documentation. The libft project aims to be expanded and improved throughout the years.
