@@ -1,4 +1,4 @@
-# libft at 42
+# libft
 
 libft is a school project at [42 Paris](https://www.42.fr) campus.
 
