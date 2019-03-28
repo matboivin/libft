@@ -16,10 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-# include <sys/types.h>
-# include <sys/uio.h>
-
-# define BUF_SIZE 4096
 
 typedef struct		s_list
 {
