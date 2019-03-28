@@ -16,13 +16,15 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC_DIR = ./srcs
+SRCDIR = srcs
 
-INC_DIR = ./includes
+INCDIR = includes
 
-OBJ_DIR = ./objs
+OBJDIR = objs
 
-RM = /bin/rm -rf
+RM = rm -rf
+
+AR = ar -rc
 
 
 # C files
@@ -91,49 +93,50 @@ SRC_FILES = ft_memset.c \
 	ft_strrev.c \
 	ft_nbrlen.c \
 
-SRCS = $(patsubst %.c, $(SRC_DIR)/%.c, $(SRC_FILES))
 
-INCLUDES = $(addprefix -I, $(INC_DIR))
+INCLUDES = $(addprefix -I, $(INCDIR))
 
-OBJ_FILES = $(SRC_FILES:.c=.o)
+SRC = $(addprefix $(SRCDIR)/, $(SRC_FILES))
 
-OBJS = $(patsubst %.o, $(OBJ_DIR)/%.o, $(OBJ_FILES))
+OBJ = $(addprefix $(OBJDIR)/, $(SRC_FILES:.c=.o))
 
 
-# Colors
+ifdef TERM
+# My colors
 
 RESET =		\033[0m
 RED =		\033[31m
 GREEN =		\033[32m
 YELLOW =	\033[33m
 WHITE =		\033[37m
+endif
 
 
 # Rules
 
 all: $(NAME)
 
-# The line below won't run if the .o files don't exist or were not modified
+# The line below won't run if the object files don't exist or were not modified
 
-$(NAME): $(OBJ_DIR) $(OBJS)
+$(NAME): $(OBJDIR) $(OBJ) $(INCDIR)/libft.h
 	@echo "$(WHITE)Archiving object files...$(RESET)"
-	@ar rcs $(NAME) $(OBJS)
+	@$(AR) $(NAME) $(OBJ)
 	@echo "$(WHITE)Indexing...$(RESET)"
 	@ranlib $(NAME)
 	@echo "$(GREEN)libft is ready.$(RESET)"
 
-$(OBJ_DIR):
-	@mkdir -p $(OBJ_DIR)
+$(OBJDIR):
+	@mkdir -p $(OBJDIR)
 	@echo "$(GREEN)Build directory created.$(RESET)"
 
 # The line below won't run if the source files don't exist or were not modified
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
 	@$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 
 clean:
 	@echo "$(WHITE)Cleaning object files...$(RESET)"
-	@$(RM) $(OBJ_DIR)
+	@$(RM) $(OBJDIR)
 	@echo "$(YELLOW)All object files were removed.$(RESET)"
 
 fclean: clean
