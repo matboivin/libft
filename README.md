@@ -1,4 +1,4 @@
-# libft at 42
+# libft
 
 libft is a school project at [42 Paris](https://www.42.fr) campus.
 
@@ -16,6 +16,6 @@ In order to have a deeper understanding of C programming and data structures, 42
 - Additional functions: more functions required by 42
 - Personal functions
 
-The 'ft' in front of function's names stands for 'fourty two".
+The 'ft' in front of function's names stands for 'fourty two'.
 
 My functions currently lack documentation. The libft project aims to be expanded and improved throughout the years.
