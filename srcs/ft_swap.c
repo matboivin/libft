@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** This function swaps the value of two integers whose addresses are entered
+** as parameters.
+*/
+
 void	ft_swap(int *a, int *b)
 {
 	int		temp;

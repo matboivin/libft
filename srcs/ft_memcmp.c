@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/*
+** Recoded memcmp libc function that compares the first n bytes of the object
+** pointed to by s1 to the first n bytes of the object pointed to by s2. It
+** returns an integer greater than, equal to, or less than 0, if the object
+** pointed to by s1 is greater than, equal to, or less than the object pointed
+** to by s2, respectively.
+*/
+
 int		ft_memcmp(void const *s1, void const *s2, size_t n)
 {
 	size_t			i;

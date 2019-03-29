@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** This function outputs the string s to the file descriptor fd followed
+** by a ’\n’.
+*/
+
 void	ft_putendl_fd(char const *s, int fd)
 {
 	if (s)

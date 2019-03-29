@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Recoded strrchr libc function that searches for the last occurrence of the
+** character c (an unsigned char) in the string pointed to, by the argument s.
+*/
+
 char	*ft_strrchr(char const *s, int c)
 {
 	size_t	i;

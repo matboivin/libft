@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/*
+** Recoded strncmp libc function that compares at most n characters of the
+** string pointed to, by s1 to the string pointed to by s2. The comparison is
+** done lexicographically.
+** Return value is < 0 to indicate s1 is less than s2,
+** > 0 to indicate s2 is less than s1,
+** = 0 to indicate s1 is equal to s2.
+*/
+
 int		ft_strncmp(char const *s1, char const *s2, size_t n)
 {
 	size_t	i;

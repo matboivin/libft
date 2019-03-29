@@ -12,15 +12,21 @@
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+/*
+** Recoded memset libc function that copies the character c (an unsigned char)
+** to the first n characters of the string pointed to, by the argument s. It
+** returns a pointer to the memory area s.
+*/
+
+void	*ft_memset(void *s, int c, size_t len)
 {
 	unsigned char	*ptr;
 
-	ptr = (unsigned char *)b;
+	ptr = (unsigned char *)s;
 	while (len > 0)
 	{
 		*ptr++ = c;
 		len--;
 	}
-	return (b);
+	return (s);
 }

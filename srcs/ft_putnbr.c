@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+** This function outputs the integer n to the standard output.
+*/
+
 void	ft_putnbr(int n)
 {
 	ft_putnbr_fd(n, 1);

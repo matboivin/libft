@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+** This function reverses the order of characters in a string.
+*/
+
 char	*ft_strrev(char *s)
 {
 	size_t	i;

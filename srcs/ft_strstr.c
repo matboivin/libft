@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+** Recoded strstr libc function that finds the first occurrence of the substring
+** needle in the string s. The terminating '\0' characters are not compared. It
+** returns a pointer to the first occurrence in s of any of the entire sequence
+** of characters specified in needle, or a null pointer otherwise.
+*/
+
 char	*ft_strstr(char const *s, char const *needle)
 {
 	size_t	i;

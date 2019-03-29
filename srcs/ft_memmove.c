@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Recoded memmove libc function that copies n characters from src to dst. It
+** returns a pointer to the destination, which is dst.
+*/
+
 void	*ft_memmove(void *dst, void const *src, size_t len)
 {
 	unsigned char	*from;

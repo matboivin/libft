@@ -13,6 +13,10 @@
 #include "libft.h"
 #include <string.h>
 
+/*
+** This function outputs the string s to the standard output.
+*/
+
 void	ft_putstr(char const *s)
 {
 	if (s)

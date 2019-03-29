@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+** Recoded strncat libc function that appends no more than n characters of the
+** string pointed to by src to the end of the string pointed to by dst and
+** nul-terminates the resulting string. It returns a pointer to the resulting
+** concatenated string dst.
+*/
+
 char	*ft_strncat(char *dst, char const *src, size_t n)
 {
 	size_t		i;

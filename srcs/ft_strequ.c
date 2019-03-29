@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** This function lexicographically compares s1 and s2. If the two strings are
+** identical the function returns 1, else zero value is returned.
+*/
+
 int		ft_strequ(char const *s1, char const *s2)
 {
 	if (!s1 || !s2)

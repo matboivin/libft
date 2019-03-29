@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+** Recoded strlcat libc function that appends the string pointed to by src to
+** the end of the string pointed to by dst and nul-terminates the resulting
+** string. It returns the length of the concatenated string whether or not it
+** was possible to copy it all.
+*/
+
 size_t		ft_strlcat(char *dst, char const *src, size_t size)
 {
 	size_t		i;

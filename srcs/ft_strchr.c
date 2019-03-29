@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Recoded strchr libc function that searches for the first occurrence of the
+** character c (an unsigned char) in the string pointed to by the argument s.
+*/
+
 char	*ft_strchr(char const *s, int c)
 {
 	while (*s && *s != (char)c)
