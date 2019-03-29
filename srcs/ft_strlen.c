@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Recoded strlen libc function that computes the length of the string str up
+** to, but not including the terminating null character.
+*/
+
 size_t		ft_strlen(char const *s)
 {
 	size_t	i;

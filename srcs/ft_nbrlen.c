@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** This function computes the length (count of digits) of the integer passed
+** as an argument.
+*/
+
 size_t		ft_nbrlen(int n)
 {
 	size_t	i;

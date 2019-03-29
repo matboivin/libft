@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Recoded isdigit libc function that returns a non-zero integer if a character
+** passed as an argument is a numeric character, else zero value is returned.
+*/
+
 int		ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');

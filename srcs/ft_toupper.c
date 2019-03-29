@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Recoded toupper libc function that converts a lowercase alphabet to an
+** uppercase alphabet, if the argument passed is an lowercase alphabet.
+*/
+
 int		ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')

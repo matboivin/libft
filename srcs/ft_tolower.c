@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Recoded tolower libc function that converts an uppercase alphabet to an
+** lowercase alphabet, if the argument passed is a uppercase alphabet.
+*/
+
 int		ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')

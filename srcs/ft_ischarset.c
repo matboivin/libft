@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** This function returns a non-zero integer if a character passed as an argument
+** is present in the second argument, else zero value is returned.
+*/
+
 int		ft_ischarset(char c, char *set)
 {
 	int		i;

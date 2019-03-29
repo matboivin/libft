@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** This function converts an integer value passed as an argument to a string
+** representation.
+*/
+
 char	*ft_itoa(int n)
 {
 	unsigned int	nb;

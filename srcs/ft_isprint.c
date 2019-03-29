@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Recoded isprint libc function that returns a non-zero integer if a character
+** passed as an argument is a printable character, else zero value is returned.
+*/
+
 int		ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);

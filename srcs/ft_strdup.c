@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+** Recoded strdup libc function that creates a duplicate of the string pointed
+** to by src, and returns a pointer to the new copy. It allocates the memory for
+** the new string by calling malloc().
+*/
+
 char	*ft_strdup(char const *src)
 {
 	size_t	len;

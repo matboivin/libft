@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+** Recoded atoi libc function that converts a string to an integer.
+** It takes a string argument which is supposed to be a representation of an
+** integral number. It returns the converted integral number as an int value,
+** else zero value is returned.
+*/
+
 int		ft_atoi(char const *str)
 {
 	size_t				i;

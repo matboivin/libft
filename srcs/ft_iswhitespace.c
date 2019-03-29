@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** This function returns a non-zero integer if a character passed as an argument
+** is a whitespace character, else zero value is returned.
+*/
+
 int		ft_iswhitespace(int c)
 {
 	return (c == ' ' || c == '\n' || c == '\t');

@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Recoded isalpha libc function that returns a non-zero integer if a character
+** passed as an argument is an alphabet, else zero value is returned.
+*/
+
 int		ft_isalpha(int c)
 {
 	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
