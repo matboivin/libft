@@ -14,7 +14,7 @@
 
 /*
 ** This function computes the length (count of digits) of the integer passed
-** as an argument.
+** as an argument (e.g., length of 100 is 3, length of 42 is 2). 
 */
 
 size_t		ft_nbrlen(int n)

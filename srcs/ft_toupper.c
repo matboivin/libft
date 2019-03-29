@@ -14,7 +14,7 @@
 
 /*
 ** Recoded toupper libc function that converts a lowercase alphabet to an
-** uppercase alphabet, if the argument passed is an lowercase alphabet.
+** uppercase alphabet, if the argument passed is a lowercase alphabet.
 */
 
 int		ft_toupper(int c)
