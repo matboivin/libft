@@ -14,7 +14,7 @@
 
 /*
 ** Recoded tolower libc function that converts an uppercase alphabet to an
-** lowercase alphabet, if the argument passed is a uppercase alphabet.
+** lowercase alphabet, if the argument passed is an uppercase alphabet.
 */
 
 int		ft_tolower(int c)
