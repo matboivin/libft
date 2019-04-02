@@ -28,7 +28,7 @@ In the terminal go to an appropriate folder where you want to clone this repo an
 git clone https://github.com/rrsw/libft/
 ```
 
-Then move to the newly created directory.
+Then move to the newly created directory:
 ```
 cd libft/
 ```
