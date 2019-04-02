@@ -6,7 +6,7 @@
 /*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 13:46:03 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/26 10:24:44 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/04/01 16:07:00 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*
 ** This function computes the length (count of digits) of the integer passed
-** as an argument (e.g., length of 100 is 3, length of 42 is 2). 
+** as an argument (e.g., length of 100 is 3, length of 42 is 2).
 */
 
 size_t		ft_nbrlen(int n)
