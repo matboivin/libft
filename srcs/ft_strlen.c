@@ -13,7 +13,7 @@
 #include "libft.h"
 
 /*
-** Recoded strlen libc function that computes the length of the string str up
+** Recoded strlen libc function that computes the length of the string s up
 ** to, but not including the terminating null character.
 */
 

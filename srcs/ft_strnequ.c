@@ -13,7 +13,7 @@
 #include "libft.h"
 
 /*
-** This function lexicographically compares s1 and s2  up to n characters or
+** This function lexicographically compares s1 and s2 up to n characters or
 ** until a ’\0’ is reached. If the two strings are identical the function
 ** returns 1, else zero value is returned.
 */
@@ -22,7 +22,5 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	if (!s1 || !s2)
 		return (0);
-	if (ft_strncmp(s1, s2, n) == 0)
-		return (1);
-	return (0);
+		return (ft_strncmp(s1, s2, n) == 0);
 }

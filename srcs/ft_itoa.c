@@ -27,14 +27,14 @@ char	*ft_itoa(int n)
 		return (ft_strdup("-2147483648"));
 	nb = n;
 	len = ft_nbrlen(nb);
-	if (!(ptr = (char *)malloc(sizeof(ptr) * len + 1)))
+	if (!(ptr = (char *)malloc(sizeof(*ptr) * len + 1)))
 		return (NULL);
 	ptr[len] = '\0';
 	len--;
 	ptr[0] = (n < 0 ? '-' : '0');
 	if (n < 0)
 		nb *= -1;
-	while (len > (n < 0 ? 1 : 0) && nb > 9)
+	while (len > (n < 0 ? (size_t)1 : (size_t)0) && nb > 9)
 	{
 		ptr[len--] = nb % 10 + '0';
 		nb /= 10;

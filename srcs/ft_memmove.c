@@ -13,7 +13,7 @@
 #include "libft.h"
 
 /*
-** Recoded memmove libc function that copies n characters from src to dst. It
+** Recoded memmove libc function that copies len characters from src to dst. It
 ** returns a pointer to the destination, which is dst.
 */
 

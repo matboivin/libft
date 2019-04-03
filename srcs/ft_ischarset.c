@@ -24,5 +24,5 @@ int		ft_ischarset(char c, char *set)
 	i = 0;
 	while (set[i] && set[i] != c)
 		i++;
-	return (set[i] && set[i] == c);
+	return (set[i] == c);
 }

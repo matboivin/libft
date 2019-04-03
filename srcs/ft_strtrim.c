@@ -31,7 +31,6 @@ char	*ft_strtrim(char const *s)
 	if (!s)
 		return (NULL);
 	i = 0;
-	len = 0;
 	j = ft_strlen(s) - 1;
 	while (s && ft_iswhitespace(*(s + i)))
 		i++;
@@ -40,8 +39,6 @@ char	*ft_strtrim(char const *s)
 	while (s && ft_iswhitespace(*(s + j)))
 		j--;
 	len = (j - i) + 1;
-	if (!(ptr = (char *)malloc(sizeof(ptr) * len)))
-		return (NULL);
 	ptr = ft_strsub(s, i, len);
 	return (ptr);
 }

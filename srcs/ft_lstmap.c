@@ -31,7 +31,6 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 			return (NULL);
 		ptr = dst;
 		lst = lst->next;
-		tmp = tmp->next;
 		while (lst)
 		{
 			tmp = f(lst);
@@ -39,7 +38,6 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 				return (NULL);
 			dst = dst->next;
 			lst = lst->next;
-			tmp = tmp->next;
 		}
 		return (ptr);
 	}

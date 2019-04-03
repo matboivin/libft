@@ -13,9 +13,9 @@
 #include "libft.h"
 
 /*
-** Recoded strcat libc function that appends the string pointed to by src to the
-** end of the string pointed to by dst and nul-terminates the resulting string.
-** It returns a pointer to the resulting concatenated string dst.
+** Recoded strcat libc function that appends the string pointed to by s2 to the
+** end of the string pointed to by s1 and nul-terminates the resulting string.
+** It returns a pointer to the resulting concatenated string s1.
 */
 
 char	*ft_strcat(char *s1, char const *s2)
