@@ -6,7 +6,7 @@
 /*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 18:29:38 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/17 18:35:05 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/04/03 18:52:19 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int		ft_memcmp(void const *s1, void const *s2, size_t n)
 		return (0);
 	while (i < n)
 	{
-			if (ptr1[i] != ptr2[i])
-				return (ptr1[i] - ptr2[i]);
+		if (ptr1[i] != ptr2[i])
+			return (ptr1[i] - ptr2[i]);
 		i++;
 	}
 	return (0);
