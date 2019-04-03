@@ -1,6 +1,6 @@
 # libft
 
-libft is a school project at [42 Paris](https://www.42.fr) campus.
+libft is an individual school project at [42 Paris](https://www.42.fr) campus.
 
 42 is a private, non-profit and tuition-free Computer Science school based on peer-to-peer learning and hands-on projects.
 
@@ -18,4 +18,28 @@ In order to have a deeper understanding of C programming and data structures, 42
 
 The 'ft' in front of function's names stands for 'fourty two'.
 
-My functions currently lack documentation. The libft project aims to be expanded and improved throughout the years.
+
+## Installing
+
+GNU make and a C compiler are required.
+
+In the terminal go to an appropriate folder where you want to clone this repo and run:
+```
+git clone https://github.com/rrsw/libft/
+```
+
+Then move to the newly created directory:
+```
+cd libft/
+```
+
+Build the libft. To do so, run:
+```
+make
+```
+
+## Goal and contributing
+
+**The libft project aims to be expanded and improved throughout the years.**
+
+Feel free to submit a pull request, issue or suggestion.
