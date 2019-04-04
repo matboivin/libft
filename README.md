@@ -20,7 +20,7 @@ The 'ft' in front of function's names stands for 'fourty two'.
 
 ## Requirements
 
-GNU make and a C compiler
+* GNU make and a C compiler
 
 ## Installing
 
@@ -39,8 +39,14 @@ Build the libft. To do so, run:
 make
 ```
 
+## Usage
+
+TODO
+
 ## Goal and contributing
 
 **The libft project aims to be expanded and improved throughout the years.**
 
 Feel free to submit a pull request, issue or suggestion.
+
+TODO: add [get-next-line](https://github.com/rrsw/get-next-line)
