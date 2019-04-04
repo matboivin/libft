@@ -18,10 +18,11 @@ In order to have a deeper understanding of C programming and data structures, 42
 
 The 'ft' in front of function's names stands for 'fourty two'.
 
+## Requirements
+
+GNU make and a C compiler
 
 ## Installing
-
-GNU make and a C compiler are required.
 
 In the terminal go to an appropriate folder where you want to clone this repo and run:
 ```
