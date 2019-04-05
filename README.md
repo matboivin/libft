@@ -22,8 +22,8 @@ The 'ft' in front of function's names stands for 'fourty two'.
 - [Getting Started](#getting-started)
 	- [Prerequisites](#prerequisites)
   - [Installing](#installing)
-- [Contributing](#contributing)
 - [Future improvements](#future-improvements)
+- [Contributing](#contributing)
 
 
 ## Function list
@@ -101,12 +101,13 @@ make
 
 TODO: complete usage description
 
-## Contributing
-
-Feel free to submit a pull request, issue or suggestion.
-
 ## Future improvements
 
 - [ ] add [get-next-line](https://github.com/rrsw/get-next-line)
 - [ ] fix ft_memcmp
 - [ ] fix ft_itoa and ft_atoi for more portability
+
+
+## Contributing
+
+Feel free to submit a pull request, issue or suggestion.
