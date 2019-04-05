@@ -49,4 +49,6 @@ TODO
 
 Feel free to submit a pull request, issue or suggestion.
 
-TODO: add [get-next-line](https://github.com/rrsw/get-next-line)
+## TODO list & improvements
+
+* add [get-next-line](https://github.com/rrsw/get-next-line)
