@@ -30,20 +30,18 @@ The 'ft' in front of function's names stands for 'fourty two'.
 
 | Memory | Input/Output | Char | String | List | Conversion | Misc. |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ft_memalloc | ft_putchar_fd | ft_isalpha | ft_toupper | ft_lstadd | ft_atoi | ft_nbrlen |
-| ft_memccpy | ft_putchar | ft_isalnum | ft_tolower| ft_lstdel | ft_itoa | ft_swap |
+| ft_memalloc | ft_putchar_fd | ft_isalpha | ft_strlen | ft_lstadd | ft_atoi | ft_nbrlen |
+| ft_memccpy | ft_putchar | ft_isalnum | ft_strdup | ft_lstdel | ft_itoa | ft_swap |
 | ft_memchr | ft_putstr_fd | ft_isdigit | ft_strclr | ft_lstdelone | | |
 | ft_memcmp | ft_putstr | ft_isprint | ft_strdel | ft_lstiter | | |
 | ft_memcpy | ft_putnbr_fd| ft_isascii | ft_strnew | ft_lstmap | | |
-| ft_memdel | ft_putnbr | ft_iswhitespace | ft_strlen | ft_lstnew | | |
-| ft_memmove | ft_putendl_fd | ft_ischarset| ft_strdup  | | | |
-| ft_memset | ft_putendl | | ft_strcat | | | |
-| ft_bzero | | | ft_strncat | | | |
+| ft_memdel | ft_putnbr | ft_iswhitespace | ft_strcpy | ft_lstnew | | |
+| ft_memmove | ft_putendl_fd | ft_ischarset| ft_strncpy | | | |
+| ft_memset | ft_putendl | ft_toupper | ft_strcat | | | |
+| ft_bzero | | ft_tolower | ft_strncat | | | |
 | | | | ft_strlcat | | | |
 | | | | ft_strchr | | | |
 | | | | ft_strnchr | | | |
-| | | | ft_strcpy | | | |
-| | | | ft_strncpy | | | |
 | | | | ft_strcmp | | | |
 | | | | ft_strncmp | | | |
 | | | | ft_strjoin | | | |
