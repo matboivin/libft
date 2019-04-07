@@ -92,6 +92,7 @@ SRC_FILES = ft_memset.c \
 	ft_swap.c \
 	ft_strrev.c \
 	ft_nbrlen.c \
+	get_next_line.c \
 
 
 INCLUDES = $(addprefix -I, $(INCDIR))
