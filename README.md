@@ -94,7 +94,7 @@ TODO: complete usage description
 
 ## Future improvements
 
-- [ ] add [get-next-line](https://github.com/rrsw/get-next-line)
+- [X] add [get-next-line](https://github.com/rrsw/get-next-line)
 - [ ] fix ft_memcmp
 - [ ] fix ft_itoa and ft_atoi for more portability
 
