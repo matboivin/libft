@@ -30,35 +30,33 @@ The 'ft' in front of function's names stands for 'fourty two'.
 
 | Memory | Input/Output | Char | String | List | Conversion | Misc. |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ft_memalloc | ft_putchar_fd | ft_isalpha | ft_strlen | ft_lstadd | ft_atoi | ft_nbrlen |
-| ft_memccpy | ft_putchar | ft_isalnum | ft_strdup | ft_lstdel | ft_itoa | ft_swap |
-| ft_memchr | ft_putstr_fd | ft_isdigit | ft_strclr | ft_lstdelone | | |
-| ft_memcmp | ft_putstr | ft_isprint | ft_strdel | ft_lstiter | | |
-| ft_memcpy | ft_putnbr_fd| ft_isascii | ft_strnew | ft_lstmap | | |
-| ft_memdel | ft_putnbr | ft_iswhitespace | ft_strcpy | ft_lstnew | | |
-| ft_memmove | ft_putendl_fd | ft_ischarset| ft_strncpy | | | |
-| ft_memset | ft_putendl | ft_toupper | ft_strcat | | | |
-| ft_bzero | | ft_tolower | ft_strncat | | | |
-| | | | ft_strlcat | | | |
-| | | | ft_strchr | | | |
-| | | | ft_strnchr | | | |
-| | | | ft_strcmp | | | |
-| | | | ft_strncmp | | | |
-| | | | ft_strjoin | | | |
-| | | | ft_strequ | | | |
-| | | | ft_strnequ | | | |
-| | | | ft_striter | | | |
-| | | | ft_striteri | | | |
-| | | | ft_strmap | | | |
-| | | | ft_strmapi | | | |
-| | | | ft_strstr | | | |
-| | | |	ft_strnstr | | | |
-| | | | ft_strchr | | | |
-| | | | ft_strrchr | | | |
-| | | | ft_strsplit | | | |
-| | | | ft_strsub | | | |
-| | | | ft_strtrim | | | |
-| | | | ft_strrev | | | |
+| [ft_bzero](srcs/ft_bzero.c) | [ft_putchar_fd](srcs/ft_putchar_fd.c) | [ft_toupper](srcs/ft_toupper.c) | [ft_strlen](srcs/ft_strlen.c) | [ft_lstadd](srcs/ft_lstadd.c) | [ft_atoi](srcs/ft_atoi.c) | [ft_nbrlen](srcs/ft_nbrlen.c) |
+| [ft_memalloc](srcs/ft_memalloc.c) | [ft_putchar](srcs/ft_putchar.c) | [ft_tolower](srcs/ft_tolower.c) | [ft_strdup](srcs/ft_strdup.c) | [ft_lstdel](srcs/ft_lstdel.c) | [ft_itoa](srcs/ft_itoa.c) | [ft_swap](srcs/ft_swap.c) |
+| [ft_memchr](srcs/ft_memchr.c) | [ft_putstr_fd](srcs/ft_putstr_fd.c) | [ft_isalpha](srcs/ft_isalpha.c) | [ft_strclr](srcs/ft_strclr.c) | [ft_lstdelone](srcs/ft_lstdelone.c) | | |
+| [ft_memcmp](srcs/ft_memcmp.c) | [ft_putstr](srcs/ft_putstr.c) | [ft_isalnum](srcs/ft_isalnum.c) | [ft_strdel](srcs/ft_strdel.c) | [ft_lstiter](srcs/ft_lstiter.c) | | |
+| [ft_memcpy](srcs/ft_memcpy.c) | [ft_putnbr_fd](srcs/ft_putnbr_fd.c) | [ft_isdigit](srcs/ft_isdigit.c) | [ft_strnew](srcs/ft_strnew.c) | [ft_lstmap](srcs/ft_lstmap.c) | | |
+| [ft_memccpy](srcs/ft_memccpy.c) | [ft_putnbr](srcs/ft_putnbr.c) | [ft_isascii](srcs/ft_isascii.c) | [ft_strcpy](srcs/ft_strcpy.c) | [ft_lstnew](srcs/ft_lstnew.c) | | |
+| [ft_memmove](srcs/ft_memmove.c) | [ft_putendl_fd](srcs/ft_putendl_fd.c) | [ft_isprint](srcs/ft_isprint.c) | [ft_strncpy](srcs/ft_strncpy.c) | | | |
+| [ft_memset](srcs/ft_memset.c) | [ft_putendl](srcs/ft_putendl.c) | [ft_ischarset](srcs/ft_ischarset.c) | [ft_strcat](srcs/ft_strcat.c) | | | |
+| [ft_memdel](srcs/ft_memdel.c) | [get_next_line](srcs/get_next_line.c) | [ft_iswhitespace](srcs/ft_iswhitespace.c) | [ft_strncat](srcs/ft_strncat.c) | | | |
+| | | | [ft_strlcat](srcs/ft_strlcat.c) | | | |
+| | | | [ft_strcmp](srcs/ft_strcmp.c) | | | |
+| | | | [ft_strncmp](srcs/ft_strncmp.c) | | | |
+| | | | [ft_strjoin](srcs/ft_strjoin.c) | | | |
+| | | | [ft_strequ](srcs/ft_strequ.c) | | | |
+| | | | [ft_strnequ](srcs/ft_strnequ.c) | | | |
+| | | | [ft_striter](srcs/ft_striter.c) | | | |
+| | | | [ft_striteri](srcs/ft_striteri.c) | | | |
+| | | | [ft_strmap](srcs/ft_strmap.c) | | | |
+| | | | [ft_strmapi](srcs/ft_strmapi.c) | | | |
+| | | | [ft_strstr](srcs/ft_strstr.c) | | | |
+| | | |	[ft_strnstr](srcs/ft_strnstr.c) | | | |
+| | | | [ft_strchr](srcs/ft_strchr.c) | | | |
+| | | | [ft_strrchr](srcs/ft_strrchr.c) | | | |
+| | | | [ft_strsplit](srcs/ft_strsplit.c) | | | |
+| | | | [ft_strsub](srcs/ft_strsub.c) | | | |
+| | | | [ft_strtrim](srcs/ft_strtrim.c) | | | |
+| | | | [ft_strrev](srcs/ft_strrev.c) | | | |
 
 ## Motivation
 
@@ -95,6 +93,7 @@ TODO: complete usage description
 ## Future improvements
 
 - [X] add [get-next-line](https://github.com/rrsw/get-next-line)
+- [ ] add fixed version of get_next_line
 - [ ] fix ft_memcmp
 - [ ] fix ft_itoa and ft_atoi for more portability
 
