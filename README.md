@@ -23,6 +23,7 @@ The 'ft' in front of function's names stands for 'fourty two'.
 	- [Prerequisites](#prerequisites)
   - [Installing](#installing)
 - [Future improvements](#future-improvements)
+- [Acknowledgements](#acknowledgements)
 - [Contributing](#contributing)
 
 
@@ -88,6 +89,21 @@ cd libft/
 make
 ```
 
+4. To remove the object files, run:
+```
+make clean
+```
+
+5. To remove the object files and delete the libft, run:
+```
+make fclean
+```
+
+6. To remove object files, libft and to build it again run:
+```
+make re
+```
+
 TODO: complete usage description
 
 ## Future improvements
@@ -97,6 +113,9 @@ TODO: complete usage description
 - [ ] fix ft_memcmp
 - [ ] fix ft_itoa and ft_atoi for more portability
 
+## Acknowledgements
+
+School project done at [42 Paris](https://www.42.fr).
 
 ## Contributing
 
