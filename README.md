@@ -37,7 +37,7 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 |[ft_memcmp](srcs/ft_memcmp.c)|[ft_putstr](srcs/ft_putstr.c)|[ft_isalnum](srcs/ft_isalnum.c)|[ft_strdel](srcs/ft_strdel.c)|[ft_lstiter](srcs/ft_lstiter.c)| | |
 |[ft_memcpy](srcs/ft_memcpy.c)|[ft_putnbr_fd](srcs/ft_putnbr_fd.c)|[ft_isdigit](srcs/ft_isdigit.c)|[ft_strnew](srcs/ft_strnew.c)|[ft_lstmap](srcs/ft_lstmap.c)| | |
 |[ft_memccpy](srcs/ft_memccpy.c)|[ft_putnbr](srcs/ft_putnbr.c)|[ft_isascii](srcs/ft_isascii.c)|[ft_strcpy](srcs/ft_strcpy.c)|[ft_lstnew](srcs/ft_lstnew.c)| | |
-|[ft_memmove](srcs/ft_memmove.c)|[ft_putendl_fd](srcs/ft_putendl_fd.c)|[ft_isprint](srcs/ft_isprint.c)|[ft_strncpy(srcs/ft_strncpy.c)| | | |
+|[ft_memmove](srcs/ft_memmove.c)|[ft_putendl_fd](srcs/ft_putendl_fd.c)|[ft_isprint](srcs/ft_isprint.c)|[ft_strncpy](srcs/ft_strncpy.c)| | | |
 |[ft_memset](srcs/ft_memset.c)|[ft_putendl](srcs/ft_putendl.c)|[ft_ischarset](srcs/ft_ischarset.c)|[ft_strcat](srcs/ft_strcat.c)| | | |
 |[ft_memdel](srcs/ft_memdel.c)| |[ft_iswhitespace](srcs/ft_iswhitespace.c)|[ft_strncat](srcs/ft_strncat.c)| | | |
 | | | |[ft_strlcat](srcs/ft_strlcat.c)| | | |
