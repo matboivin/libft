@@ -6,7 +6,7 @@
 /*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2019/04/03 17:20:28 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/04/17 13:05:50 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 
 static char		*strjoindel(char *s1, char *s2)
 {
-	size_t	i;
-	size_t	j;
-	char	*s;
+	size_t		i;
+	size_t		j;
+	char		*s;
 
 	i = 0;
 	j = ft_strlen(s2);
@@ -51,8 +51,8 @@ static char		*strjoindel(char *s1, char *s2)
 
 static int		isline(char **tmp, char **line)
 {
-	size_t	end;
-	char	*nl;
+	size_t		end;
+	char		*nl;
 
 	if ((nl = ft_strchr(*tmp, '\n')))
 	{
@@ -73,11 +73,11 @@ static int		isline(char **tmp, char **line)
 ** read.
 */
 
-int		get_next_line(const int fd, char **line)
+int				get_next_line(const int fd, char **line)
 {
-	int				rval;
-	char			buff[BUFF_SIZE + 1];
-	static char		*tmp;
+	int			rval;
+	char		buff[BUFF_SIZE + 1];
+	static char	*tmp;
 
 	if (!line || fd < 0 || BUFF_SIZE < 1)
 		return (-1);
