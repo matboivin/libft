@@ -6,7 +6,7 @@
 #    By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/09 09:17:58 by mboivin           #+#    #+#              #
-#    Updated: 2019/05/12 13:29:32 by mboivin          ###   ########.fr        #
+#    Updated: 2019/05/12 15:00:12 by mboivin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -136,6 +136,7 @@ SRC_FILES +=	ft_swap.c \
 
 # ********************************** Rules *********************************** #
 
+.PHONY: all
 all: $(NAME)
 
 $(NAME): $(OBJDIR) $(OBJ) $(INCDIR)/libft.h
@@ -151,19 +152,21 @@ $(OBJDIR):
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	$(QUIET) $(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 
+.PHONY: debug
 debug: CFLAGS=-g
 debug: re
 
+.PHONY: clean
 clean:
 	$(ECHO) "Cleaning object files..."
 	$(QUIET) $(RM) $(OBJDIR)
 	$(ECHO) "$(YELLOW)All object files were removed.$(EOC)"
 
+.PHONY: fclean
 fclean: clean
 	$(ECHO) "Removing $(NAME)..."
 	$(QUIET) $(RM) $(NAME)
 	$(ECHO) "$(RED)$(NAME) has been deleted.$(EOC)"
 
+.PHONY: re
 re: fclean all
-
-.PHONY: all clean fclean re debug
