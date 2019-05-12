@@ -6,7 +6,7 @@
 #    By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/09 09:17:58 by mboivin           #+#    #+#              #
-#    Updated: 2019/05/12 12:58:43 by mboivin          ###   ########.fr        #
+#    Updated: 2019/05/12 13:29:32 by mboivin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,9 @@ OBJDIR =		objs
 INCLUDES =		$(addprefix -I, $(INCDIR))
 SRC =			$(addprefix $(SRCDIR)/, $(SRC_FILES))
 OBJ =			$(addprefix $(OBJDIR)/, $(SRC_FILES:.c=.o))
+
+.SUFFIXES:
+.SUFFIXES: .c .o .h
 
 # ********************************* Colors *********************************** #
 
@@ -137,7 +140,7 @@ all: $(NAME)
 
 $(NAME): $(OBJDIR) $(OBJ) $(INCDIR)/libft.h
 	$(ECHO) "Archiving object files..."
-	$(QUIET) $(AR) $(ARFLAGS) $(NAME) $(OBJ)
+	$(QUIET) $(AR) $(ARFLAGS) $@ $(OBJ)
 	$(ECHO) "$(GREEN)libft is ready.$(EOC)"
 
 $(OBJDIR):
