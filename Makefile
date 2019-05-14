@@ -6,34 +6,34 @@
 #    By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/09 09:17:58 by mboivin           #+#    #+#              #
-#    Updated: 2019/05/14 10:15:37 by mboivin          ###   ########.fr        #
+#    Updated: 2019/05/14 10:17:33 by mboivin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # ________________________________ Variables _________________________________ #
 
-NAME 		=		libft.a
-SHELL 		=		/bin/sh
-CC 			=		gcc
-RM 			=		rm -rf
-AR 			=		ar
-ARFLAGS 	=		-rcs
-CFLAGS 		?=		-Wall -Wextra -Werror
-CPPFLAGS 	=		-I$(INC_DIR)
+NAME		=		libft.a
+SHELL		=		/bin/sh
+CC			=		gcc
+RM			=		rm -rf
+AR			=		ar
+ARFLAGS		=		-rcs
+CFLAGS		?=		-Wall -Wextra -Werror
+CPPFLAGS	=		-I$(INC_DIR)
 
-QUIET 		=		@
-ECHO 		=		@echo
+QUIET		=		@
+ECHO		=		@echo
 ifneq ($(QUIET),@)
-ECHO 		=		@true
+ECHO		=		@true
 endif
 
-SRC_DIR 	=		srcs
-INC_DIR 	=		includes
-OBJ_DIR 	=		objs
+SRC_DIR		=		srcs
+INC_DIR		=		includes
+OBJ_DIR		=		objs
 
-INCLUDES 	=		$(addprefix -I, $(INC_DIR))
-SRC 		=		$(addprefix $(SRC_DIR)/, $(SRC_FILES))
-OBJ 		=		$(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o))
+INCLUDES	=		$(addprefix -I, $(INC_DIR))
+SRC			=		$(addprefix $(SRC_DIR)/, $(SRC_FILES))
+OBJ			=		$(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o))
 
 .SUFFIXES:
 .SUFFIXES: .c .o .h
@@ -41,11 +41,11 @@ OBJ 		=		$(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o))
 # __________________________________ Colors __________________________________ #
 
 ifdef TERM
-EOC 		=		\033[0m
-RED 		=		\033[38;5;88m
+EOC			=		\033[0m
+RED			=		\033[38;5;88m
 YELLOW		=		\033[38;5;178m
-GREEN 		=		\x1b[32;01m
-PURPLE 		=		\033[38;5;98m
+GREEN		=		\x1b[32;01m
+PURPLE		=		\033[38;5;98m
 BLUE		=		\033[34;01m
 GREY		=		\033[38;5;242m
 endif
