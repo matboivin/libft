@@ -6,52 +6,55 @@
 #    By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/09 09:17:58 by mboivin           #+#    #+#              #
-#    Updated: 2019/05/12 16:25:24 by mboivin          ###   ########.fr        #
+#    Updated: 2019/05/14 10:15:37 by mboivin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# ******************************** Variables ********************************* #
+# ________________________________ Variables _________________________________ #
 
-NAME 		:=		libft.a
-SHELL 		:=		/bin/sh
-CC 			:=		gcc
-RM 			:=		rm -rf
-AR 			:=		ar
-ARFLAGS 	:=		-rcs
+NAME 		=		libft.a
+SHELL 		=		/bin/sh
+CC 			=		gcc
+RM 			=		rm -rf
+AR 			=		ar
+ARFLAGS 	=		-rcs
 CFLAGS 		?=		-Wall -Wextra -Werror
-CPPFLAGS 	:=		-I $(INCDIR)
-QUIET 		:=		@
-ECHO 		:=		@echo
+CPPFLAGS 	=		-I$(INC_DIR)
+
+QUIET 		=		@
+ECHO 		=		@echo
 ifneq ($(QUIET),@)
-ECHO 		:=		@true
+ECHO 		=		@true
 endif
 
-SRCDIR 		:=		srcs
-INCDIR 		:=		includes
-OBJDIR 		:=		objs
+SRC_DIR 	=		srcs
+INC_DIR 	=		includes
+OBJ_DIR 	=		objs
 
-INCLUDES 	:=		$(addprefix -I, $(INCDIR))
-SRC 		:=		$(addprefix $(SRCDIR)/, $(SRC_FILES))
-OBJ 		:=		$(addprefix $(OBJDIR)/, $(SRC_FILES:.c=.o))
+INCLUDES 	=		$(addprefix -I, $(INC_DIR))
+SRC 		=		$(addprefix $(SRC_DIR)/, $(SRC_FILES))
+OBJ 		=		$(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o))
 
 .SUFFIXES:
 .SUFFIXES: .c .o .h
 
-# ********************************* Colors *********************************** #
+# __________________________________ Colors __________________________________ #
 
 ifdef TERM
-EOC 		:=		\033[0m
-RED 		:=		\033[31m
-GREEN 		:=		\033[32m
-YELLOW 		:=		\033[33m
-WHITE 		:=		\033[37m
+EOC 		=		\033[0m
+RED 		=		\033[38;5;88m
+YELLOW		=		\033[38;5;178m
+GREEN 		=		\x1b[32;01m
+PURPLE 		=		\033[38;5;98m
+BLUE		=		\033[34;01m
+GREY		=		\033[38;5;242m
 endif
 
-# ********************************* C Files ********************************** #
+# _________________________________ C Files __________________________________ #
 
 # Memory functions
 
-SRC_FILES	:=		ft_bzero.c \
+SRC_FILES	=		ft_bzero.c \
 					ft_memset.c \
 					ft_memcpy.c \
 					ft_memccpy.c \
@@ -59,7 +62,7 @@ SRC_FILES	:=		ft_bzero.c \
 					ft_memchr.c \
 					ft_memcmp.c \
 					ft_memalloc.c \
-					ft_memdel.c
+					ft_memdel.c \
 
 # Input/Output functions
 
@@ -70,7 +73,7 @@ SRC_FILES 	+=		ft_putchar.c \
 					ft_putchar_fd.c \
 					ft_putstr_fd.c \
 					ft_putendl_fd.c \
-					ft_putnbr_fd.c
+					ft_putnbr_fd.c \
 
 # Char recon functions
 
@@ -83,7 +86,7 @@ SRC_FILES 	+=		ft_toupper.c \
 					ft_isprint.c \
 					ft_iswhitespace.c \
 					ft_isspace.c \
-					ft_ischarset.c
+					ft_ischarset.c \
 
 # String functions
 
@@ -113,7 +116,7 @@ SRC_FILES 	+=		ft_strlen.c \
 					ft_strjoin.c \
 					ft_strtrim.c \
 					ft_strsplit.c \
-					ft_strrev.c
+					ft_strrev.c \
 
 # List functions
 
@@ -122,35 +125,36 @@ SRC_FILES 	+=		ft_lstnew.c \
 					ft_lstdel.c \
 					ft_lstadd.c \
 					ft_lstiter.c \
-					ft_lstmap.c
+					ft_lstmap.c \
 
 # Conversion functions
 
 SRC_FILES 	+=		ft_atoi.c \
-					ft_itoa.c
+					ft_itoa.c \
 
 # Miscellaneous functions
 
 SRC_FILES 	+=		ft_swap.c \
 					ft_nbrlen.c \
-					get_next_line.c
+					get_next_line.c \
 
-# ********************************** Rules *********************************** #
+# __________________________________ Rules ___________________________________ #
 
 .PHONY: all
 all: $(NAME)
 
-$(NAME): $(OBJDIR) $(OBJ) $(INCDIR)/libft.h
-	$(ECHO) "Archiving object files..."
+$(NAME): $(OBJ_DIR) $(OBJ) $(INC_DIR)/libft.h
+	$(ECHO) "$(GREY)Archiving$(EOC) $(PURPLE)object files$(EOC) $(GREY)...$(EOC)"
 	$(QUIET) $(AR) $(ARFLAGS) $@ $(OBJ)
-	$(ECHO) "$(GREEN)libft is ready.$(EOC)"
+	$(ECHO) "$(GREEN)⟹  $(NAME) is ready.$(EOC)"
 
-$(OBJDIR):
-	$(ECHO) "Making directory $@..."
+$(OBJ_DIR):
+	$(ECHO) "$(GREY)Making directory $(EOC)$(PURPLE)$@$(EOC) $(GREY)...$(EOC)"
 	$(QUIET) mkdir -p $@
-	$(ECHO) "$(GREEN)Build directory created.$(EOC)"
+	$(ECHO) "$(GREEN)Build directory succesfully created.$(EOC)"
 
-$(OBJDIR)/%.o: $(SRCDIR)/%.c
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	$(ECHO) "$(GREY)Compiling$(EOC) $(BLUE)$<$(EOC) $(GREY)->$(EOC) $(PURPLE)$@$(EOC) $(GREY)...$(EOC)"
 	$(QUIET) $(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 
 .PHONY: debug
@@ -159,15 +163,15 @@ debug: re
 
 .PHONY: clean
 clean:
-	$(ECHO) "Cleaning object files..."
-	$(QUIET) $(RM) $(OBJDIR)
-	$(ECHO) "$(YELLOW)All object files were removed.$(EOC)"
+	$(ECHO) "$(GREY)Cleaning $(EOC)$(PURPLE)object files$(EOC) $(GREY)...$(EOC)"
+	$(QUIET) $(RM) $(OBJ_DIR)
+	$(ECHO) "$(GREEN)⟹  All object files succesfully cleaned.$(EOC)"
 
 .PHONY: fclean
 fclean: clean
-	$(ECHO) "Removing $(NAME)..."
+	$(ECHO) "$(GREY)Cleaning $(EOC)$(YELLOW)$(NAME)$(EOC) $(GREY)...$(EOC)"
 	$(QUIET) $(RM) $(NAME)
-	$(ECHO) "$(RED)$(NAME) has been deleted.$(EOC)"
+	$(ECHO) "$(GREEN)⟹  $(NAME) has been succesfully deleted.$(EOC)"
 
 .PHONY: re
 re: fclean all
