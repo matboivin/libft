@@ -1,0 +1,22 @@
+# Visual Studio code
+*.vscode/
+
+# Object files
+**.o
+
+# Shared object
+**.so
+
+# MacOs custom attr
+**.DS_Store
+
+# Libraries
+**.a
+
+# Exe
+*.exe
+*.app
+
+# Debug files
+**.dSYM
+*.swp
