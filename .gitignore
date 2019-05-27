@@ -1,22 +1,24 @@
+# Mac Os
+.DS_Store
+.Spotlight-V100
+.Trashes
+
 # Visual Studio code
-*.vscode/
+*.vscode
 
-# Object files
-**.o
-
-# Shared object
-**.so
-
-# MacOs custom attr
-**.DS_Store
+# C extensions
+#  Object files
+*.o
+#  Shared object
+*.so
 
 # Libraries
-**.a
+*.a
 
 # Exe
 *.exe
 *.app
 
 # Debug files
-**.dSYM
+*.dSYM
 *.swp
