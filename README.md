@@ -7,6 +7,15 @@ libft is an individual school project at [42 Paris](https://www.42.fr) campus.
 42 is a private, non-profit and tuition-free Computer Science school based on peer-to-peer learning and hands-on projects.
 
 > First C project: many implementations of the Standard C Library functions, and additional functions.
+<br>
+
+### Table of Contents
+
+- [Function list](#function-list)
+- [Prerequisites](#prerequisites)
+- [Future improvements](#future-improvements)
+- [Acknowledgements](#acknowledgements)
+<br>
 
 In order to have a deeper understanding of C programming and data structures, 42 first school project is to implement some of the Standard C Library functions. It enables us to get a glimpse on basic algorithms and to create our own functions. The purpose is also to let us enrich this personal library in the future.
 
@@ -17,14 +26,7 @@ In order to have a deeper understanding of C programming and data structures, 42
 The *'ft'* in front of function's names stands for *'fourty two'*. :)
 
 **The libft project aims to be expanded and improved throughout the years.**
-
-
-## Table of Contents
-
-- [Function list](#function-list)
-- [Prerequisites](#prerequisites)
-- [Future improvements](#future-improvements)
-
+<br>
 
 ## Function list
 
@@ -62,8 +64,10 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 ### Prerequisites
 
 * GNU make and a C compiler
+* valgrind to check for memory leaks
+<br>
 
-## Future improvements
+### Future improvements
 
 - [X] add [get-next-line](https://github.com/rrsw/get-next-line)
 - [X] add ft_isspace and use it in ft_atoi
@@ -71,3 +75,7 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 - [ ] fix ft_memcmp
 - [ ] fix ft_itoa and ft_atoi for more portability
 - [ ] add testing
+
+### Acknowledgements
+
+School project done at [42 Paris](https://www.42.fr).
