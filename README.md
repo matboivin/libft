@@ -75,6 +75,7 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 - [ ] fix ft_memcmp
 - [ ] fix ft_itoa and ft_atoi for more portability
 - [ ] add testing
+<br>
 
 ### Acknowledgements
 
