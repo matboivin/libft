@@ -16,17 +16,14 @@ In order to have a deeper understanding of C programming and data structures, 42
 
 The *'ft'* in front of function's names stands for *'fourty two'*. :)
 
+**The libft project aims to be expanded and improved throughout the years.**
+
 
 ## Table of Contents
 
 - [Function list](#function-list)
-- [Motivation](#motivation)
-- [Getting Started](#getting-started)
-	- [Prerequisites](#prerequisites)
-  - [Installing](#installing)
+- [Prerequisites](#prerequisites)
 - [Future improvements](#future-improvements)
-- [Acknowledgements](#acknowledgements)
-- [Contributing](#contributing)
 
 
 ## Function list
@@ -61,52 +58,10 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 | | | |[ft_strtrim](srcs/ft_strtrim.c)| | | |
 | | | |[ft_strrev](srcs/ft_strrev.c)| | | |
 
-## Motivation
-
-Understand data structures and basic algorithms.
-
-**The libft project aims to be expanded and improved throughout the years.**
-
-
-## Getting Started
 
 ### Prerequisites
 
 * GNU make and a C compiler
-
-### Installing
-
-1. In the terminal go to an appropriate folder where you want to clone this repo and run:
-```
-git clone https://github.com/rrsw/libft/
-```
-
-2. Then move to the newly created directory:
-```
-cd libft/
-```
-
-3. Build the libft. To do so, run:
-```
-make
-```
-
-4. To remove the object files, run:
-```
-make clean
-```
-
-5. To remove the object files and delete the libft, run:
-```
-make fclean
-```
-
-6. To remove object files, libft and to build it again run:
-```
-make re
-```
-
-TODO: complete usage description
 
 ## Future improvements
 
@@ -115,11 +70,4 @@ TODO: complete usage description
 - [ ] add fixed version of get_next_line
 - [ ] fix ft_memcmp
 - [ ] fix ft_itoa and ft_atoi for more portability
-
-## Acknowledgements
-
-School project done at [42 Paris](https://www.42.fr).
-
-## Contributing
-
-Feel free to submit a pull request, issue or suggestion.
+- [ ] add testing
