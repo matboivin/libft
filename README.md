@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/rrsw/fillit.svg?branch=master)](https://travis-ci.org/rrsw/fillit)
-
 # libft
 
 libft is an individual school project at [42 Paris](https://www.42.fr) campus.
