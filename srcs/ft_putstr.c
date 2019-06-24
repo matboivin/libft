@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:21 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/16 20:01:15 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/06/24 23:20:26 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@
 void	ft_putstr(char const *s)
 {
 	if (s)
-		ft_putstr_fd(s, 1);
+		write(1, s, ft_strlen(s));
 }
