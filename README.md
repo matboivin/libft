@@ -67,12 +67,8 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 
 ### Future improvements
 
-- [X] add [get-next-line](https://github.com/rrsw/get-next-line)
-- [X] add ft_isspace and use it in ft_atoi
-- [ ] add fixed version of get_next_line
-- [ ] fix ft_memcmp
-- [ ] fix ft_itoa and ft_atoi for more portability
-- [ ] add testing
+- [ ] add new version of [get-next-line](https://github.com/rrsw/get-next-line)
+- [ ] add automated testing
 <br>
 
 ### Acknowledgements
