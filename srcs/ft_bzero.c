@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 17:56:59 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/17 18:09:23 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/06/24 23:11:40 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,11 @@
 ** containing '\0') to that area.
 */
 
-void	ft_bzero(void *s, size_t n)
+void				ft_bzero(void *s, size_t n)
 {
-	unsigned char	*ptr;
+	unsigned char	*p;
 
-	ptr = (unsigned char *)s;
-	while (n > 0)
-	{
-		*ptr++ = '\0';
-		n--;
-	}
+	p = (unsigned char *)s;
+	while (n--)
+		*p++ = '\0';
 }

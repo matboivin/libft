@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:38:02 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/27 18:48:56 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/06/26 21:14:52 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,23 @@
 ** characters specified in needle, or a null pointer otherwise.
 */
 
-char	*ft_strnstr(char const *s, char const *needle, size_t len)
+char		*ft_strnstr(char const *s, char const *needle, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	char	*ptr;
+	char	*p;
 	char	*tmp;
 
 	i = 0;
 	if (ft_strlen(needle) == 0)
 		return ((char *)s);
 	j = ft_strlen(needle);
-	ptr = (char *)s;
+	p = (char *)s;
 	tmp = (char *)needle;
-	while (ptr[i] && (i + j) <= len)
+	while (p[i] && (i + j) <= len)
 	{
-		if (ft_strnequ(ptr + i, tmp, j))
-			return ((char *)(ptr + i));
+		if (ft_strnequ(p + i, tmp, j))
+			return ((char *)(p + i));
 		i++;
 	}
 	return (NULL);

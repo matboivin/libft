@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 18:54:45 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/17 19:01:26 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/06/24 23:24:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** It returns a pointer to the resulting concatenated string s1.
 */
 
-char	*ft_strcat(char *s1, char const *s2)
+char		*ft_strcat(char *s1, char const *s2)
 {
 	size_t	i;
 	size_t	j;

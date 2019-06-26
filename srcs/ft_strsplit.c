@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/26 14:14:58 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/06/24 23:26:25 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 
 static size_t	count_words(char *s, char c)
 {
-	size_t	i;
-	size_t	j;
+	size_t		i;
+	size_t		j;
 
 	i = 0;
 	j = 0;
@@ -37,9 +37,9 @@ static size_t	count_words(char *s, char c)
 
 static char		*get_words(char *s, size_t j, size_t i)
 {
-	size_t	k;
-	size_t	len;
-	char	*word;
+	size_t		k;
+	size_t		len;
+	char		*word;
 
 	k = 0;
 	len = i - j;
@@ -59,18 +59,18 @@ static char		*get_words(char *s, size_t j, size_t i)
 
 char			**ft_strsplit(char const *s, char c)
 {
-	size_t	words;
-	size_t	i;
-	size_t	j;
-	size_t	n;
-	char	**ptr;
+	size_t		words;
+	size_t		i;
+	size_t		j;
+	size_t		n;
+	char		**p;
 
 	if (!s || s == 0)
 		return (NULL);
 	i = 0;
 	n = 0;
 	words = count_words((char *)s, c);
-	if (!(ptr = (char **)malloc(sizeof(*ptr) * words + 1)))
+	if (!(p = (char **)malloc(sizeof(*p) * words + 1)))
 		return (NULL);
 	while (s[i] && n < words)
 	{
@@ -79,9 +79,9 @@ char			**ft_strsplit(char const *s, char c)
 		j = i;
 		while (s[i] && s[i] != c)
 			i++;
-		ptr[n] = get_words((char *)s, j, i);
+		p[n] = get_words((char *)s, j, i);
 		n++;
 	}
-	ptr[n] = NULL;
-	return (ptr);
+	p[n] = NULL;
+	return (p);
 }

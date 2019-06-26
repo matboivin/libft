@@ -30,10 +30,6 @@ OBJ			=		$(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o))
 
 ifdef TERM
 EOC			=		\033[0m
-RED			=		\033[38;5;88m
-YELLOW		=		\033[38;5;178m
-GREEN		=		\x1b[32;01m
-PURPLE		=		\033[38;5;98m
 BLUE		=		\033[34;01m
 GREY		=		\033[38;5;242m
 endif
@@ -132,17 +128,17 @@ SRC_FILES 	+=		ft_swap.c \
 all: $(NAME)
 
 $(NAME): $(OBJ_DIR) $(OBJ) $(INC_DIR)/libft.h
-	$(ECHO) "$(GREY)Archiving$(EOC) $(PURPLE)object files$(EOC) $(GREY)...$(EOC)"
+	$(ECHO) "$(GREY)Archiving object files ...$(EOC)"
 	$(QUIET) $(AR) $(ARFLAGS) $@ $(OBJ)
-	$(ECHO) "$(GREEN)⟹  $(NAME) is ready.$(EOC)"
+	$(ECHO) "$(BLUE)⟹  $(NAME) is ready.$(EOC)"
 
 $(OBJ_DIR):
-	$(ECHO) "$(GREY)Making directory $(EOC)$(PURPLE)$@$(EOC) $(GREY)...$(EOC)"
+	$(ECHO) "$(GREY)Making directory $@$ ...$(EOC)"
 	$(QUIET) mkdir -p $@
-	$(ECHO) "$(GREEN)Build directory succesfully created.$(EOC)"
+	$(ECHO) "$(BLUE)Build directory succesfully created.$(EOC)"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	$(ECHO) "$(GREY)Compiling$(EOC) $(BLUE)$<$(EOC) $(GREY)->$(EOC) $(PURPLE)$@$(EOC) $(GREY)...$(EOC)"
+	$(ECHO) "$(GREY)Compiling $< -> $@ ..."
 	$(QUIET) $(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 
 .PHONY: debug
@@ -151,15 +147,15 @@ debug: re
 
 .PHONY: clean
 clean:
-	$(ECHO) "$(GREY)Cleaning $(EOC)$(PURPLE)object files$(EOC) $(GREY)...$(EOC)"
+	$(ECHO) "$(GREY)Cleaning object files ...$(EOC)"
 	$(QUIET) $(RM) $(OBJ_DIR)
-	$(ECHO) "$(GREEN)⟹  All object files succesfully cleaned.$(EOC)"
+	$(ECHO) "$(BLUE)⟹  All object files succesfully cleaned.$(EOC)"
 
 .PHONY: fclean
 fclean: clean
-	$(ECHO) "$(GREY)Cleaning $(EOC)$(YELLOW)$(NAME)$(EOC) $(GREY)...$(EOC)"
+	$(ECHO) "$(GREY)Cleaning $(NAME) ...$(EOC)"
 	$(QUIET) $(RM) $(NAME)
-	$(ECHO) "$(GREEN)⟹  $(NAME) has been succesfully deleted.$(EOC)"
+	$(ECHO) "$(BLUE)⟹  $(NAME) has been succesfully deleted.$(EOC)"
 
 .PHONY: re
 re: fclean all

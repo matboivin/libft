@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 12:20:18 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/09 14:18:36 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/06/24 23:25:32 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** was possible to copy it all.
 */
 
-size_t		ft_strlcat(char *dst, char const *src, size_t size)
+size_t			ft_strlcat(char *dst, char const *src, size_t size)
 {
 	size_t		i;
 	size_t		len1;

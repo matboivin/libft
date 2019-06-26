@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 18:52:22 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/17 18:54:23 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/06/26 21:14:11 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** = 0 to indicate s1 is equal to s2.
 */
 
-int		ft_strncmp(char const *s1, char const *s2, size_t n)
+int			ft_strncmp(char const *s1, char const *s2, size_t n)
 {
 	size_t	i;
 

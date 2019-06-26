@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 19:23:45 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/26 17:15:35 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/06/24 23:17:06 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,12 @@
 ** returns a pointer to the memory area s.
 */
 
-void	*ft_memset(void *s, int c, size_t len)
+void				*ft_memset(void *s, int c, size_t len)
 {
-	unsigned char	*ptr;
+	unsigned char	*p;
 
-	ptr = (unsigned char *)s;
-	while (len > 0)
-	{
-		*ptr++ = c;
-		len--;
-	}
+	p = (unsigned char *)s;
+	while (len--)
+		*p++ = c;
 	return (s);
 }

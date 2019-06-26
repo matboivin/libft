@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 18:35:42 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/27 13:07:36 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/06/26 21:23:51 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** or after n bytes have been copied, whichever comes first.
 */
 
-void	*ft_memccpy(void *dst, void const *src, int c, size_t n)
+void				*ft_memccpy(void *dst, void const *src, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*to;

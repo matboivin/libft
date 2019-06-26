@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 18:24:08 by mboivin           #+#    #+#             */
-/*   Updated: 2019/04/01 16:06:42 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/06/24 23:16:48 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** returns a pointer to the destination, which is dst.
 */
 
-void	*ft_memmove(void *dst, void const *src, size_t len)
+void				*ft_memmove(void *dst, void const *src, size_t len)
 {
 	unsigned char	*from;
 	unsigned char	*to;

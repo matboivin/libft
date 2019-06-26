@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:41:37 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/26 16:02:46 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/06/26 21:15:04 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** character c (an unsigned char) in the string pointed to, by the argument s.
 */
 
-char	*ft_strrchr(char const *s, int c)
+char		*ft_strrchr(char const *s, int c)
 {
 	size_t	i;
 

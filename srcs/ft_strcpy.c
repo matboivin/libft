@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 18:39:26 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/17 18:41:19 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/06/26 21:13:20 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** dst. It returns a pointer to the destination string dst.
 */
 
-char	*ft_strcpy(char *dst, char const *src)
+char		*ft_strcpy(char *dst, char const *src)
 {
 	size_t	i;
 

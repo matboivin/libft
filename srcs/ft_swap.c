@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 13:41:41 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/22 13:42:34 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/06/26 21:15:29 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 ** as parameters.
 */
 
-void	ft_swap(int *a, int *b)
+void		ft_swap(int *a, int *b)
 {
-	int		temp;
+	int		tmp;
 
-	temp = *a;
+	tmp = *a;
 	*a = *b;
-	*b = temp;
+	*b = tmp;
 }
