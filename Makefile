@@ -1,40 +1,24 @@
-# ________________________________ Variables _________________________________ #
-
-NAME		=		libft.a
-SHELL		=		/bin/sh
-CC			=		gcc
-RM			=		rm -rf
-AR			=		ar
-ARFLAGS		=		-rcs
-CFLAGS		?=		-Wall -Wextra -Werror
-CPPFLAGS	=		-I$(INC_DIR)
-
-QUIET		=		@
-ECHO		=		@echo
-ifneq ($(QUIET),@)
-ECHO		=		@true
-endif
-
-SRC_DIR		=		srcs
-INC_DIR		=		includes
-OBJ_DIR		=		objs
-
-INCLUDES	=		$(addprefix -I, $(INC_DIR))
-SRC			=		$(addprefix $(SRC_DIR)/, $(SRC_FILES))
-OBJ			=		$(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o))
+NAME := libft.a
+SHELL = /bin/sh
+CC = gcc
+RM = rm -rf
+AR = ar
+ARFLAGS = -rcs
+CFLAGS ?= -Wall -Wextra -Werror
+CPPFLAGS = -I$(INC_PATH)
 
 .SUFFIXES:
 .SUFFIXES: .c .o .h
 
-# __________________________________ Colors __________________________________ #
+INC_FILES = libft.h
+INC_PATH = inc
+INC = $(addprefix $(INC_PATH)/, $(INC_FILES))
 
-ifdef TERM
-EOC			=		\033[0m
-BLUE		=		\033[34;01m
-GREY		=		\033[38;5;242m
-endif
+SRC_PATH = src
+SRC = $(addprefix $(SRC_PATH)/, $(SRC_FILES))
 
-# _________________________________ C Files __________________________________ #
+OBJ_PATH = obj
+OBJ = $(addprefix $(OBJ_PATH)/, $(SRC_FILES:.c=.o))
 
 # Memory functions
 
@@ -122,24 +106,20 @@ SRC_FILES 	+=		ft_swap.c \
 					ft_nbrlen.c \
 					get_next_line.c \
 
-# __________________________________ Rules ___________________________________ #
-
 .PHONY: all
 all: $(NAME)
 
-$(NAME): $(OBJ_DIR) $(OBJ) $(INC_DIR)/libft.h
-	$(ECHO) "$(GREY)Archiving object files ...$(EOC)"
-	$(QUIET) $(AR) $(ARFLAGS) $@ $(OBJ)
-	$(ECHO) "$(BLUE)⟹  $(NAME) is ready.$(EOC)"
+$(NAME): $(OBJ_PATH) $(OBJ) $(INC)
+	@$(AR) $(ARFLAGS) $@ $(OBJ)
+	@echo "[OK]\t\t$(NAME) is ready"
 
-$(OBJ_DIR):
-	$(ECHO) "$(GREY)Making directory $@$ ...$(EOC)"
-	$(QUIET) mkdir -p $@
-	$(ECHO) "$(BLUE)Build directory succesfully created.$(EOC)"
+$(OBJ_PATH):
+	@mkdir -p $@
+	@echo "[OK]\t\tCreated $@$  directory"
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	$(ECHO) "$(GREY)Compiling $< -> $@ ..."
-	$(QUIET) $(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+$(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
+	@echo "[Compiling]\t$< -> $@ ..."
+	@$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 
 .PHONY: debug
 debug: CFLAGS=-g
@@ -147,15 +127,13 @@ debug: re
 
 .PHONY: clean
 clean:
-	$(ECHO) "$(GREY)Cleaning object files ...$(EOC)"
-	$(QUIET) $(RM) $(OBJ_DIR)
-	$(ECHO) "$(BLUE)⟹  All object files succesfully cleaned.$(EOC)"
+	@$(RM) $(OBJ_PATH)
+	@echo "[OK]\t\tCleaned object files"
 
 .PHONY: fclean
 fclean: clean
-	$(ECHO) "$(GREY)Cleaning $(NAME) ...$(EOC)"
-	$(QUIET) $(RM) $(NAME)
-	$(ECHO) "$(BLUE)⟹  $(NAME) has been succesfully deleted.$(EOC)"
+	@$(RM) $(NAME)
+	@echo "[OK]\t\tRemoved $(NAME)"
 
 .PHONY: re
 re: fclean all
