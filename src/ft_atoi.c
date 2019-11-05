@@ -5,18 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 11:48:21 by mboivin           #+#    #+#             */
-/*   Updated: 2019/06/26 21:38:28 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
+/*   Updated: 2019/11/05 19:47:16 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded atoi libc function that converts a string to an integer.
-** It takes a string argument which is supposed to be a representation of an
-** integral number. It returns the converted integral number as an int value,
-** else zero value is returned.
+** Recoded atoi libc function: converts a string to an integer
+**
+** str: representation of an integral number
+**
+** returns: the converted integral number as an int value
+**          zero value otherwise
 */
 
 int				ft_atoi(char const *str)
@@ -37,7 +39,7 @@ int				ft_atoi(char const *str)
 	}
 	while (*str && ft_isdigit(*str))
 	{
-		if (res >= 9223372036854775807)
+		if (res >= LLONG_MAX)
 			return (sign == 1 ? -1 : 0);
 		res = (res * 10) + (*str - '0');
 		str++;

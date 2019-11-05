@@ -5,16 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 11:41:37 by mboivin           #+#    #+#             */
-/*   Updated: 2019/06/26 21:15:04 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:24:12 by mboivin           #+#    #+#             */
+/*   Updated: 2019/11/05 19:49:25 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded strrchr libc function that searches for the last occurrence of the
-** character c (an unsigned char) in the string pointed to, by the argument s.
+** Recoded strrchr libc function: locates the last occurrence of c in the
+** string pointed to by s
+**
+** s: the string to be scanned
+** c: the character to be searched
+**
+** returns: a pointer to the located character
+**          NULL otherwise
 */
 
 char		*ft_strrchr(char const *s, int c)

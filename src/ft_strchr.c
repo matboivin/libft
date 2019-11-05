@@ -3,18 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 11:11:08 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/27 16:37:37 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:23:25 by mboivin           #+#    #+#             */
+/*   Updated: 2019/11/05 19:14:07 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded strchr libc function that searches for the first occurrence of the
-** character c (an unsigned char) in the string pointed to by the argument s.
+** Recoded strchr libc function: locates the first occurrence of c in the string
+** pointed to by s
+**
+** s: the string to be scanned
+** c: the character to be searched
+**
+** returns: a pointer to the located character
+**          NULL otherwise
 */
 
 char	*ft_strchr(char const *s, int c)

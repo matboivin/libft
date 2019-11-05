@@ -3,18 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 10:19:59 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/22 10:20:54 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:22:19 by mboivin           #+#    #+#             */
+/*   Updated: 2019/11/05 17:54:27 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded isdigit libc function that returns a non-zero integer if a character
-** passed as an argument is a numeric character, else zero value is returned.
+** Recoded isdigit libc function: checks if c is a numeric character
+**
+** c: a character
+**
+** returns: a non-zero integer if a character is a numeric character
+**          zero value otherwise
 */
 
 int		ft_isdigit(int c)

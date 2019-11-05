@@ -3,19 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 10:12:47 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/22 10:16:15 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:21:50 by mboivin           #+#    #+#             */
+/*   Updated: 2019/11/05 17:54:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded isalnum libc function that returns a non-zero integer if a character
-** passed as an argument is an alphanumeric character, else zero value is
-** returned.
+** Recoded isalnum libc function: checks if c is an alphanumeric character
+**
+** c: a character
+**
+** returns: a non-zero integer if a character is an alphanumeric character
+**          zero value otherwise
 */
 
 int		ft_isalnum(int c)

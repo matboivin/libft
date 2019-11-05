@@ -3,18 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 15:08:26 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/16 20:01:31 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:23:49 by mboivin           #+#    #+#             */
+/*   Updated: 2019/11/05 19:27:02 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded strlen libc function that computes the length of the string s up
-** to, but not including the terminating null character.
+** Recoded strlen libc function: computes the length of the string s
+**
+** s: the string whose length is to be found
+**
+** returns: the number of characters that precede the terminating NUL character
 */
 
 size_t		ft_strlen(char const *s)

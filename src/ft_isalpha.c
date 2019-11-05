@@ -3,18 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 10:16:40 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/22 12:23:11 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:21:59 by mboivin           #+#    #+#             */
+/*   Updated: 2019/11/05 17:54:16 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded isalpha libc function that returns a non-zero integer if a character
-** passed as an argument is an alphabet, else zero value is returned.
+** Recoded isalpha libc function: checks if c is an alphabet character
+**
+** c: a character
+**
+** returns: a non-zero integer if a character is an alphabet character
+**          zero value otherwise
 */
 
 int		ft_isalpha(int c)

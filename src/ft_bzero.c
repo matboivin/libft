@@ -5,17 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/17 17:56:59 by mboivin           #+#    #+#             */
-/*   Updated: 2019/06/24 23:11:40 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:21:27 by mboivin           #+#    #+#             */
+/*   Updated: 2019/11/05 17:54:08 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded bzero libc function that erases the data in the n bytes of the memory
-** starting at the location pointed to by s, by writing zeros (bytes
-** containing '\0') to that area.
+** Recoded bzero libc function: erases the data in the n bytes of the memory
+** starting at the location pointed to by s, by writing zeros
+**
+** s: an existing object to fill with zeroes
+** n: the number of bytes to fill
 */
 
 void				ft_bzero(void *s, size_t n)

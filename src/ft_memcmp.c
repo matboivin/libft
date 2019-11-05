@@ -5,19 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/17 18:29:38 by mboivin           #+#    #+#             */
-/*   Updated: 2019/06/26 21:23:53 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:22:54 by mboivin           #+#    #+#             */
+/*   Updated: 2019/11/05 19:08:47 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded memcmp libc function that compares the first n bytes of the object
-** pointed to by s1 to the first n bytes of the object pointed to by s2. It
-** returns an integer greater than, equal to, or less than 0, if the object
-** pointed to by s1 is greater than, equal to, or less than the object pointed
-** to by s2, respectively.
+** Recoded memcmp libc function: compares byte string s1 against byte string s2
+** Both strings are assumed to be n bytes long
+**
+** s1, s2: pointers to the buffers to be compared
+** n: the number of bytes to be compared
+**
+** returns: zero if the two strings are identical
+**          otherwise the difference between the first two differing bytes
 */
 
 int					ft_memcmp(void const *s1, void const *s2, size_t n)

@@ -5,18 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 12:20:18 by mboivin           #+#    #+#             */
-/*   Updated: 2019/06/24 23:25:32 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:23:37 by mboivin           #+#    #+#             */
+/*   Updated: 2019/11/05 19:25:34 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded strlcat libc function that appends the string pointed to by src to
-** the end of the string pointed to by dst and nul-terminates the resulting
-** string. It returns the length of the concatenated string whether or not it
-** was possible to copy it all.
+** Recoded strlcat libc function: appends the NUL-terminated string src to the
+** end of dst at most size − dst length − 1 bytes, NUL-terminating the result
+**
+** dst: a pointer to the destination string
+** src: a pointer to the source string
+** size: the size of the destination buffer
+**
+** returns: the total length of the string (dst + src)
 */
 
 size_t			ft_strlcat(char *dst, char const *src, size_t size)

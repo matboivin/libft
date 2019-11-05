@@ -5,20 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/17 18:52:22 by mboivin           #+#    #+#             */
-/*   Updated: 2019/06/26 21:14:11 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:23:56 by mboivin           #+#    #+#             */
+/*   Updated: 2019/11/05 19:28:59 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded strncmp libc function that compares at most n characters of the
-** string pointed to, by s1 to the string pointed to by s2. The comparison is
-** done lexicographically.
-** Return value is < 0 to indicate s1 is less than s2,
-** > 0 to indicate s2 is less than s1,
-** = 0 to indicate s1 is equal to s2.
+** Recoded strncmp libc function: lexicographically compares the null-terminated
+** strings s1 and s2
+**
+** s1, s2: pointers to the buffers to be compared
+** n: the number of bytes to be compared
+**
+** returns: zero if the two strings are identical
+**          otherwise the difference between the first two differing bytes
 */
 
 int			ft_strncmp(char const *s1, char const *s2, size_t n)
