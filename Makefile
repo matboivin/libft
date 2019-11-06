@@ -80,11 +80,11 @@ SRC_FILES 	+=		ft_strlen.c \
 					ft_strmapi.c \
 					ft_strequ.c \
 					ft_strnequ.c \
-					ft_strsub.c \
 					ft_strjoin.c \
 					ft_strtrim.c \
-					ft_strsplit.c \
+					ft_split.c \
 					ft_strrev.c \
+					ft_substr.c \
 
 # List functions
 

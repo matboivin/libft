@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/17 17:43:57 by mboivin           #+#    #+#             */
-/*   Updated: 2019/06/24 23:26:55 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/06 18:32:48 by mboivin           #+#    #+#             */
+/*   Updated: 2019/11/06 18:32:59 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** This function allocates (with malloc(3)) and returns a “fresh” substring
-** from the string given as argument. The substring begins at index start and is
-** of size len. If start and len aren’t refering to a valid substring, the
-** behavior is undefined. If the allocation fails, the function returns NULL.
+** Function: allocates (with malloc(3)) and returns a substring from the string
+** given in argument. It begins at index ’start’ and is of maximum size ’len’
+**
+** s: the string from which create the substring
+** start: the start index of the substring in the string
+** len: the maximum length of the substring
+**
+** returns: the substring
+**          NULL otherwise
 */
 
-char		*ft_strsub(char const *s, unsigned int start, size_t len)
+char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*str;

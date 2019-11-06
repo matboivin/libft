@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/05 19:55:07 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/06 18:46:21 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,8 @@ size_t				ft_strlcat(char *dst, char const *src, size_t size);
 char				*ft_strchr(char const *s, int c);
 char				*ft_strrchr(char const *s, int c);
 char				*ft_strstr(char const *s, char const *needle);
-char				*ft_strnstr(char const *s, char const *needle, size_t len);
+char				*ft_strnstr(
+	char const *haystack, char const *needle, size_t len);
 int					ft_strcmp(char const *s1, char const *s2);
 int					ft_strncmp(char const *s1, char const *s2, size_t n);
 char				*ft_strnew(size_t size);
@@ -80,10 +81,10 @@ char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
-char				*ft_strsub(char const *s, unsigned int start, size_t len);
+char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
-char				*ft_strtrim(char const *s);
-char				**ft_strsplit(char const *s, char c);
+char				*ft_strtrim(char const *s1, char const *set);
+char				**ft_split(char const *s, char c);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
