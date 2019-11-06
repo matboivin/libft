@@ -3,18 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ischarset.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 14:09:32 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/22 14:11:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/06 17:15:47 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** This function returns a non-zero integer if a character passed as an argument
-** is present in the second argument, else zero value is returned.
+** Function: checks if c is present in set
+**
+** c: a character
+** set: a string
+**
+** returns: a non-zero integer if c is present in set
+**          zero value otherwise
 */
 
 int		ft_ischarset(char c, char *set)

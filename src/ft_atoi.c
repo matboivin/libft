@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/05 19:47:16 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/06 17:18:56 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 ** Recoded atoi libc function: converts a string to an integer
 **
-** str: representation of an integral number
+** str: a string representation of an integral number
 **
 ** returns: the converted integral number as an int value
 **          zero value otherwise

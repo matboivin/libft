@@ -6,15 +6,19 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:07:24 by mboivin           #+#    #+#             */
-/*   Updated: 2019/06/26 21:02:44 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/06 17:19:21 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** This function converts an integer value passed as an argument to a string
-** representation.
+** Function: converts an integer to a string representation
+**
+** n: an integer
+**
+** returns: the converted integral number as a string representation
+**          zero value otherwise
 */
 
 char			*ft_itoa(int n)

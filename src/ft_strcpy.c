@@ -6,15 +6,20 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 18:39:26 by mboivin           #+#    #+#             */
-/*   Updated: 2019/06/26 21:13:20 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/06 17:31:32 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded strcpy libc function that copies the string pointed to, by src to
-** dst. It returns a pointer to the destination string dst.
+** Recoded strcpy libc function: copies the string src to dst,
+** NUL-terminating the result
+**
+** dst: a pointer to the destination string
+** src: a pointer to the source string
+**
+** returns: a pointer to the destination string dst
 */
 
 char		*ft_strcpy(char *dst, char const *src)
