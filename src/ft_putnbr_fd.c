@@ -6,14 +6,17 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 15:15:11 by mboivin           #+#    #+#             */
-/*   Updated: 2019/06/26 21:07:43 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/08 18:44:55 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** This function outputs the integer n to the file descriptor fd.
+** Function: outputs the integer n to given file descriptor
+**
+** n: the integer to output
+** fd: the file descriptor on which to write
 */
 
 void				ft_putnbr_fd(int n, int fd)
