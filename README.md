@@ -11,7 +11,6 @@ libft is an individual school project at [42 Paris](https://www.42.fr) campus.
 
 - [Function list](#function-list)
 - [Prerequisites](#prerequisites)
-- [Future improvements](#future-improvements)
 - [Acknowledgements](#acknowledgements)
 <br>
 
@@ -28,47 +27,110 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 
 ## Function list
 
-|Memory|Input/Output|Char|String|List|Conversion|Misc.|
-|:---:|:---:|:---:|:---: |:--:|:---:|:---:|
-|[ft_bzero](srcs/ft_bzero.c)|[ft_putchar_fd](srcs/ft_putchar_fd.c)|[ft_toupper](srcs/ft_toupper.c)|[ft_strlen](srcs/ft_strlen.c)|[ft_lstadd](srcs/ft_lstadd.c)|[ft_atoi](srcs/ft_atoi.c)|[ft_nbrlen](srcs/ft_nbrlen.c)|
-|[ft_memalloc](srcs/ft_memalloc.c)|[ft_putchar](srcs/ft_putchar.c)|[ft_tolower](srcs/ft_tolower.c)|[ft_strdup](srcs/ft_strdup.c)|[ft_lstdel](srcs/ft_lstdel.c)|[ft_itoa](srcs/ft_itoa.c)|[ft_swap](srcs/ft_swap.c)|
-|[ft_memchr](srcs/ft_memchr.c)|[ft_putstr_fd](srcs/ft_putstr_fd.c)|[ft_isalpha](srcs/ft_isalpha.c)|[ft_strclr](srcs/ft_strclr.c)|[ft_lstdelone](srcs/ft_lstdelone.c)||[get_next_line](srcs/get_next_line.c)|
-|[ft_memcmp](srcs/ft_memcmp.c)|[ft_putstr](srcs/ft_putstr.c)|[ft_isalnum](srcs/ft_isalnum.c)|[ft_strdel](srcs/ft_strdel.c)|[ft_lstiter](srcs/ft_lstiter.c)| | |
-|[ft_memcpy](srcs/ft_memcpy.c)|[ft_putnbr_fd](srcs/ft_putnbr_fd.c)|[ft_isdigit](srcs/ft_isdigit.c)|[ft_strnew](srcs/ft_strnew.c)|[ft_lstmap](srcs/ft_lstmap.c)| | |
-|[ft_memccpy](srcs/ft_memccpy.c)|[ft_putnbr](srcs/ft_putnbr.c)|[ft_isascii](srcs/ft_isascii.c)|[ft_strcpy](srcs/ft_strcpy.c)|[ft_lstnew](srcs/ft_lstnew.c)| | |
-|[ft_memmove](srcs/ft_memmove.c)|[ft_putendl_fd](srcs/ft_putendl_fd.c)|[ft_isprint](srcs/ft_isprint.c)|[ft_strncpy](srcs/ft_strncpy.c)| | | |
-|[ft_memset](srcs/ft_memset.c)|[ft_putendl](srcs/ft_putendl.c)|[ft_isspace](srcs/ft_isspace.c)|[ft_strcat](srcs/ft_strcat.c)| | | |
-|[ft_memdel](srcs/ft_memdel.c)| |[ft_iswhitespace](srcs/ft_iswhitespace.c)|[ft_strncat](srcs/ft_strncat.c)| | | |
-| | |[ft_ischarset](srcs/ft_ischarset.c)|[ft_strlcat](srcs/ft_strlcat.c)| | | |
-| | | |[ft_strcmp](srcs/ft_strcmp.c)| | | |
-| | | |[ft_strncmp](srcs/ft_strncmp.c)| | | |
-| | | |[ft_strjoin](srcs/ft_strjoin.c)| | | |
-| | | |[ft_strequ](srcs/ft_strequ.c)| | | |
-| | | |[ft_strnequ](srcs/ft_strnequ.c)| | | |
-| | | |[ft_striter](srcs/ft_striter.c)| | | |
-| | | |[ft_striteri](srcs/ft_striteri.c)| | | |
-| | | |[ft_strmap](srcs/ft_strmap.c)| | | |
-| | | |[ft_strmapi](srcs/ft_strmapi.c)| | | |
-| | | |[ft_strstr](srcs/ft_strstr.c)| | | |
-| | | |[ft_strnstr](srcs/ft_strnstr.c)| | | |
-| | | |[ft_strchr](srcs/ft_strchr.c)| | | |
-| | | |[ft_strrchr](srcs/ft_strrchr.c)| | | |
-| | | |[ft_strsplit](srcs/ft_strsplit.c)| | | |
-| | | |[ft_strsub](srcs/ft_strsub.c)| | | |
-| | | |[ft_strtrim](srcs/ft_strtrim.c)| | | |
-| | | |[ft_strrev](srcs/ft_strrev.c)| | | |
+### Memory functions
 
+| Name                                |Description                                  |
+|:------------------------------------|:--------------------------------------------|
+|[ft_bzero](src/ft_bzero.c)           |                                             |
+|[ft_memalloc](src/ft_memalloc.c)     |                                             |
+|[ft_memccpy](src/ft_memccpy.c)       |                                             |
+|[ft_memchr](src/ft_memchr.c)         |                                             |
+|[ft_memcmp](src/ft_memcmp.c)         |                                             |
+|[ft_memcpy](src/ft_memcpy.c)         |                                             |
+|[ft_memdel](src/ft_memdel.c)         |                                             |
+|[ft_memmove](src/ft_memmove.c)       |                                             |
+|[ft_memset](src/ft_memset.c)         |                                             |
+
+### Input/Output functions
+
+| Name                                |Description                                  |
+|:------------------------------------|:--------------------------------------------|
+|[ft_putchar](src/ft_putchar.c)       |                                             |
+|[ft_putchar_fd](src/ft_putchar_fd.c) |                                             |
+|[ft_putendl](src/ft_putendl.c)       |                                             |
+|[ft_putendl_fd](src/ft_putendl_fd.c) |                                             |
+|[ft_putnbr](src/ft_putnbr.c)         |                                             |
+|[ft_putnbr_fd](src/ft_putnbr_fd.c)   |                                             |
+|[ft_putstr](src/ft_putstr.c)         |                                             |
+|[ft_putstr_fd](src/ft_putstr_fd.c)   |                                             |
+
+### Char recon functions
+
+| Name                                |Description                                  |
+|:------------------------------------|:--------------------------------------------|
+|[ft_tolower](src/ft_tolower.c)       |                                             |
+|[ft_toupper](src/ft_toupper.c)       |                                             |
+|[ft_isalnum](src/ft_isalnum.c)       |                                             |
+|[ft_isalpha](src/ft_isalpha.c)       |                                             |
+|[ft_isascii](src/ft_isascii.c)       |                                             |
+|[ft_ischarset](src/ft_ischarset.c)   |                                             |
+|[ft_isdigit](src/ft_isdigit.c)       |                                             |
+|[ft_isprint](src/ft_isprint.c)       |                                             |
+|[ft_isspace](src/ft_isspace.c)       |                                             |
+|[ft_iswhitespace](src/ft_iswhitespace.c)|                                             |
+
+### String functions
+
+| Name                                |Description                                  |
+|:------------------------------------|:--------------------------------------------|
+|[ft_split](src/ft_split.c)           |                                             |
+|[ft_strcat](src/ft_strcat.c)         |                                             |
+|[ft_strchr](src/ft_strchr.c)         |                                             |
+|[ft_strclr](src/ft_strclr.c)         |                                             |
+|[ft_strcmp](src/ft_strcmp.c)         |                                             |
+|[ft_strcpy](src/ft_strcpy.c)         |                                             |
+|[ft_strdel](src/ft_strdel.c)         |                                             |
+|[ft_strdup](src/ft_strdup.c)         |                                             |
+|[ft_strequ](src/ft_strequ.c)         |                                             |
+|[ft_striter](src/ft_striter.c)       |                                             |
+|[ft_striteri](src/ft_striteri.c)     |                                             |
+|[ft_strjoin](src/ft_strjoin.c)       |                                             |
+|[ft_strlcat](src/ft_strlcat.c)       |                                             |
+|[ft_strlen](src/ft_strlen.c)         |                                             |
+|[ft_strmap](src/ft_strmap.c)         |                                             |
+|[ft_strmapi](src/ft_strmapi.c)       |                                             |
+|[ft_strncat](src/ft_strncat.c)       |                                             |
+|[ft_strncmp](src/ft_strncmp.c)       |                                             |
+|[ft_strncpy](src/ft_strncpy.c)       |                                             |
+|[ft_strnequ](src/ft_strnequ.c)       |                                             |
+|[ft_strnew](src/ft_strnew.c)         |                                             |
+|[ft_strnstr](src/ft_strnstr.c)       |                                             |
+|[ft_strrchr](src/ft_strrchr.c)       |                                             |
+|[ft_strrev](src/ft_strrev.c)         |                                             |
+|[ft_strstr](src/ft_strstr.c)         |                                             |
+|[ft_strtrim](src/ft_strtrim.c)       |                                             |
+|[ft_substr](src/ft_substr.c)         |                                             |
+
+### Conversion functions
+
+| Name                                |Description                                  |
+|:------------------------------------|:--------------------------------------------|
+|[ft_atoi](src/ft_atoi.c)             |                                             |
+|[ft_itoa](src/ft_itoa.c)             |                                             |
+
+### List functions
+
+| Name                                |Description                                  |
+|:------------------------------------|:--------------------------------------------|
+|[ft_lstadd](src/ft_lstadd.c)         |                                             |
+|[ft_lstdel](src/ft_lstdel.c)         |                                             |
+|[ft_lstdelone](src/ft_lstdelone.c)   |                                             |
+|[ft_lstiter](src/ft_lstiter.c)       |                                             |
+|[ft_lstmap](src/ft_lstmap.c)         |                                             |
+|[ft_lstnew](src/ft_lstnew.c)         |                                             |
+
+### Miscellaneous functions
+
+| Name                                |Description                                  |
+|:------------------------------------|:--------------------------------------------|
+|[ft_swap](src/ft_swap.c)             |                                             |
+|[ft_nbrlen](src/ft_nbrlen.c)         |                                             |
+|[get_next_line](src/get_next_line.c) |                                             |
 
 ### Prerequisites
 
 * GNU make and a C compiler
 * valgrind to check for memory leaks
-<br>
-
-### Future improvements
-
-- [ ] add new version of [get-next-line](https://github.com/rrsw/get-next-line)
-- [ ] add automated testing
 <br>
 
 ### Acknowledgements
