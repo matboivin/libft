@@ -90,7 +90,7 @@ SRC_FILES 	+=		ft_split.c \
 
 # List functions
 
-SRC_FILES 	+=		ft_lstadd.c \
+SRC_FILES 	+=		ft_lstadd_front.c \
 					ft_lstdel.c \
 					ft_lstdelone.c \
 					ft_lstiter.c \

@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:36:30 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/26 09:49:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/12 15:58:13 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** This function adds the element new at the beginnning of the list.
+** function: adds the element new at the beginning of the list
+**
+** alst: the address of a pointer to the first link of a list
+** new: the address of a pointer to the element to add to the list
+**
+** returns: None
 */
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstadd_front(t_list **alst, t_list *new)
 {
 	if (alst && new)
 	{

@@ -114,7 +114,7 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 
 | Name                                |Description                                  |
 |:------------------------------------|:--------------------------------------------|
-|[ft_lstadd](src/ft_lstadd.c)         |                                             |
+|[ft_lstadd_front](src/ft_lstadd_front.c) |                                         |
 |[ft_lstdel](src/ft_lstdel.c)         |                                             |
 |[ft_lstdelone](src/ft_lstdelone.c)   |                                             |
 |[ft_lstiter](src/ft_lstiter.c)       |                                             |
