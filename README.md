@@ -32,6 +32,7 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 | Name                                |Description                                  |
 |:------------------------------------|:--------------------------------------------|
 |[ft_bzero](src/ft_bzero.c)           |                                             |
+|[ft_calloc](src/ft_calloc.c)         |                                             |
 |[ft_memalloc](src/ft_memalloc.c)     |                                             |
 |[ft_memccpy](src/ft_memccpy.c)       |                                             |
 |[ft_memchr](src/ft_memchr.c)         |                                             |
@@ -67,7 +68,7 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 |[ft_isdigit](src/ft_isdigit.c)       |                                             |
 |[ft_isprint](src/ft_isprint.c)       |                                             |
 |[ft_isspace](src/ft_isspace.c)       |                                             |
-|[ft_iswhitespace](src/ft_iswhitespace.c)|                                             |
+|[ft_iswhitespace](src/ft_iswhitespace.c)|                                          |
 
 ### String functions
 
@@ -86,6 +87,7 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 |[ft_striteri](src/ft_striteri.c)     |                                             |
 |[ft_strjoin](src/ft_strjoin.c)       |                                             |
 |[ft_strlcat](src/ft_strlcat.c)       |                                             |
+|[ft_strlcpy](src/ft_strlcpy.c)       |                                             |
 |[ft_strlen](src/ft_strlen.c)         |                                             |
 |[ft_strmap](src/ft_strmap.c)         |                                             |
 |[ft_strmapi](src/ft_strmapi.c)       |                                             |
