@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 13:43:03 by mboivin           #+#    #+#             */
-/*   Updated: 2019/06/26 21:15:10 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/19 12:27:19 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,18 @@
 char		*ft_strrev(char *s)
 {
 	size_t	i;
-	size_t	j;
-	int		temp;
+	size_t	s_len;
+	int		tmp;
 
 	i = 0;
-	j = ft_strlen(s) - 1;
-	while (i < j)
+	s_len = ft_strlen(s) - 1;
+	while (i < s_len)
 	{
-		temp = s[i];
-		s[i] = s[j];
-		s[j] = temp;
+		tmp = s[i];
+		s[i] = s[s_len];
+		s[s_len] = tmp;
 		i++;
-		j--;
+		s_len--;
 	}
 	return (s);
 }

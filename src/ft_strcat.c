@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 18:54:45 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/06 17:21:29 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/19 12:19:02 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@
 
 char		*ft_strcat(char *s1, char const *s2)
 {
+	size_t	dst_len;
 	size_t	i;
-	size_t	j;
 
-	i = ft_strlen(s1);
-	j = 0;
-	while (s2[j])
+	dst_len = ft_strlen(s1);
+	i = 0;
+	while (s2[i])
 	{
-		s1[i + j] = s2[j];
-		j++;
+		s1[dst_len + i] = s2[i];
+		i++;
 	}
-	s1[i + j] = '\0';
+	s1[dst_len + i] = '\0';
 	return (s1);
 }

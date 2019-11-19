@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:49 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/05 19:27:02 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/19 12:22:24 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@
 
 size_t		ft_strlen(char const *s)
 {
-	size_t	i;
+	size_t	len;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
 }

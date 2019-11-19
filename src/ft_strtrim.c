@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:43:57 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/08 18:36:37 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/19 12:35:28 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,21 +27,21 @@
 char		*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
-	size_t	j;
+	size_t	s1_len;
 	size_t	len;
-	char	*p;
+	char	*trimmedstr;
 
-	if (!s)
+	if (!s1)
 		return (NULL);
 	i = 0;
-	j = ft_strlen(s) - 1;
-	while (s && ft_ischarset(*(s + i), set))
+	s1_len = ft_strlen(s1) - 1;
+	while (s1 && ft_ischarset(*(s1 + i), set))
 		i++;
-	if (*(s + i) == '\0')
-		return (ft_strdup(s + i));
-	while (s && ft_ischarset(*(s + j), set))
-		j--;
-	len = (j - i) + 1;
-	p = ft_strsub(s, i, len);
-	return (p);
+	if (*(s1 + i) == '\0')
+		return (ft_strdup(s1 + i));
+	while (s1 && ft_ischarset(*(s1 + s1_len), set))
+		s1_len--;
+	len = (s1_len - i) + 1;
+	trimmedstr = ft_substr(s1, i, len);
+	return (trimmedstr);
 }

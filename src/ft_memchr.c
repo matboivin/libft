@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:47 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/05 19:08:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/19 12:38:45 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,16 @@
 void				*ft_memchr(void const *s, int c, size_t n)
 {
 	size_t			i;
-	unsigned char	*p;
-	unsigned char	uc;
+	unsigned char	*from;
+	unsigned char	to_find;
 
 	i = 0;
-	uc = (unsigned char)c;
-	p = (unsigned char *)s;
+	from = (unsigned char *)s;
+	to_find = (unsigned char)c;
 	while (n--)
 	{
-		if (p[i] == uc)
-			return (p + i);
+		if (from[i] == to_find)
+			return (from + i);
 		i++;
 	}
 	return (NULL);

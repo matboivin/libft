@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/06 18:26:26 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/19 12:36:03 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **          NULL otherwise
 */
 
-static size_t	count_words(char *s, char c)
+static size_t	count_strings(char *s, char c)
 {
 	size_t		i;
 	size_t		j;
@@ -39,53 +39,53 @@ static size_t	count_words(char *s, char c)
 	return (j);
 }
 
-static char		*get_words(char *s, size_t j, size_t i)
+static char		*get_splitted_strings(char *s, size_t j, size_t i)
 {
 	size_t		k;
 	size_t		len;
-	char		*word;
+	char		*splittedstr;
 
 	k = 0;
 	len = i - j;
 	if (j > i)
 		return (0);
-	if (!(word = (char *)malloc(sizeof(word) * len + 1)))
+	if (!(splittedstr = (char *)malloc(sizeof(splittedstr) * len + 1)))
 		return (NULL);
 	while (k < len)
 	{
-		word[k] = s[j];
+		splittedstr[k] = s[j];
 		k++;
 		j++;
 	}
-	word[k] = '\0';
-	return (word);
+	splittedstr[k] = '\0';
+	return (splittedstr);
 }
 
 char			**ft_split(char const *s, char c)
 {
-	size_t		words;
+	size_t		s_count;
+	size_t		len;
 	size_t		i;
 	size_t		j;
-	size_t		n;
-	char		**p;
+	char		**arr;
 
 	if (!s || s == 0)
 		return (NULL);
+	s_count = count_strings((char *)s, c);
+	len = 0;
 	i = 0;
-	n = 0;
-	words = count_words((char *)s, c);
-	if (!(p = (char **)malloc(sizeof(*p) * words + 1)))
+	if (!(arr = (char **)malloc(sizeof(*arr) * s_count + 1)))
 		return (NULL);
-	while (s[i] && n < words)
+	while (s[i] && len < s_count)
 	{
 		while (s[i] && s[i] == c)
 			i++;
 		j = i;
 		while (s[i] && s[i] != c)
 			i++;
-		p[n] = get_words((char *)s, j, i);
-		n++;
+		arr[len] = get_splitted_strings((char *)s, j, i);
+		len++;
 	}
-	p[n] = NULL;
-	return (p);
+	arr[len] = NULL;
+	return (arr);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2019/04/17 13:05:50 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/19 12:41:16 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,29 +21,29 @@
 static char		*strjoindel(char *s1, char *s2)
 {
 	size_t		i;
-	size_t		j;
-	char		*s;
+	size_t		s2_len;
+	char		*concatstr;
 
 	i = 0;
-	j = ft_strlen(s2);
+	s2_len = ft_strlen(s2);
 	if (s1)
 		i = ft_strlen(s1);
-	if (!(s = ft_strnew(i + j)))
+	if (!(concatstr = ft_strnew(i + s2_len)))
 		return (NULL);
 	if (s1)
 	{
-		ft_memcpy(s, s1, i);
+		ft_memcpy(concatstr, s1, i);
 		ft_strdel(&s1);
 	}
-	ft_memcpy(s + i, s2, j);
-	return (s);
+	ft_memcpy(concatstr + i, s2, s2_len);
+	return (concatstr);
 }
 
 /*
 ** This function checks for newline character in the content pointed to by tmp.
 ** nl is a pointer to the first occurence of a newline character.
 ** If nl is not NULL, the line and the tmp content are updated.
-** end is passed as the end parameter (size_t) for ft_strsub, since when two
+** end is passed as the end parameter (size_t) for ft_substr, since when two
 ** pointers are subtracted, both shall point to elements of the same array
 ** object, the result is the difference of the indices of the two array
 ** elements.
@@ -57,7 +57,7 @@ static int		isline(char **tmp, char **line)
 	if ((nl = ft_strchr(*tmp, '\n')))
 	{
 		end = (nl - *tmp);
-		*line = ft_strsub(*tmp, 0, end);
+		*line = ft_substr(*tmp, 0, end);
 		ft_strcpy(*tmp, (nl + 1));
 		return (1);
 	}
@@ -75,7 +75,7 @@ static int		isline(char **tmp, char **line)
 
 int				get_next_line(const int fd, char **line)
 {
-	int			rval;
+	int			ret_value;
 	char		buff[BUFF_SIZE + 1];
 	static char	*tmp;
 
@@ -83,15 +83,15 @@ int				get_next_line(const int fd, char **line)
 		return (-1);
 	if (tmp && isline(&tmp, line))
 		return (1);
-	while ((rval = read(fd, buff, BUFF_SIZE)) > 0)
+	while ((ret_value = read(fd, buff, BUFF_SIZE)) > 0)
 	{
-		buff[rval] = '\0';
+		buff[ret_value] = '\0';
 		if (!(tmp = strjoindel(tmp, buff)))
 			return (-1);
 		if (isline(&tmp, line))
 			return (1);
 	}
-	if (rval == -1 || rval == 0)
+	if (ret_value == -1 || ret_value == 0)
 		*line = NULL;
 	if (tmp && *tmp)
 	{
@@ -99,5 +99,5 @@ int				get_next_line(const int fd, char **line)
 		ft_strdel(&tmp);
 		return (1);
 	}
-	return (rval);
+	return (ret_value);
 }

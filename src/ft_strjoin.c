@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:25:33 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/06 18:38:16 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/19 12:36:47 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,15 @@
 
 char		*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	char	*s;
+	size_t	len;
+	char	*concatstr;
 
 	if (!s1 || !s2)
 		return (NULL);
-	i = ft_strlen(s1) + ft_strlen(s2);
-	if (!(s = (char *)malloc(sizeof(*s) * (i + 1))))
+	len = ft_strlen(s1) + ft_strlen(s2);
+	if (!(concatstr = (char *)malloc(sizeof(*concatstr) * (len + 1))))
 		return (NULL);
-	ft_strcpy(s, s1);
-	ft_strcat(s, s2);
-	return (s);
+	ft_strcpy(concatstr, s1);
+	ft_strcat(concatstr, s2);
+	return (concatstr);
 }
