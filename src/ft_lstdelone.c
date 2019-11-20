@@ -3,30 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:34:37 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/26 11:53:18 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 19:55:13 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** This function takes as a parameter a link’s pointer address and frees the
-** memory of the link’s content using the function del given as a parameter,
-** then frees the link’s memory using free(3). The memory of next musnt not be
-** freed under any circumstance. Finally, the pointer to the link that was just
-** freed must be set to NULL (quite similar to the function ft_memdel in the
-** mandatory part).
+** function: Takes as a parameter an element and frees the memory of the
+** element’s content using the function del given as a parameter
+** The memory of next must not be freed under any circumstance
+**
+** lst: The element to free
+** new:  The address of the function to delete the content
 */
 
-void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+void		ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (alst && del)
+	t_list	*cursor;
+
+	if (lst && del)
 	{
-		del((*alst)->content, (*alst)->content_size);
-		free(*alst);
-		*alst = NULL;
+		cursor = *lst;
+		del(cursor->content);
+		free(cursor);
+		*lst = NULL;
 	}
 }
