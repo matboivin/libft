@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 17:33:28 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 17:53:24 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 18:23:36 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 /*
 ** function: Allocates (with malloc(3)) and returns a new element.
