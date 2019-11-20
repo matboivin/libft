@@ -5,43 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 16:33:24 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/13 13:37:26 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/20 17:33:28 by mboivin           #+#    #+#             */
+/*   Updated: 2019/11/20 17:53:24 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
 /*
-** This function allocates (with malloc(3)) and returns a “fresh” link. The
-** variables content and content_size of the new link are initialized by copy
-** of the parameters of the function. If the parameter content is nul, the
-** variable content is initialized to NULL and the variable content_size is
-** initialized to 0 even if the parameter content_size isn’t. The variable next
-** is initialized to NULL. If the allocation fails, the function returns NULL.
+** function: Allocates (with malloc(3)) and returns a new element.
+** The variable content is initialized with the value of the parameter content.
+** The variable next is initialized to NULL.
+**
+** content: The content to create the new element with
+**
+** returns: The new element
 */
 
-t_list		*ft_lstnew(void const *content, size_t content_size)
+t_list		*ft_lstnew(void *content)
 {
-	t_list	*lstnew;
+	t_list	*new_elem;
 
-	if (!(lstnew = (t_list *)malloc(sizeof(*lstnew))))
+	if (!(new_elem = (t_list *)malloc(sizeof(*new_elem))))
 		return (NULL);
-	if (!content)
-	{
-		lstnew->content = NULL;
-		lstnew->content_size = 0;
-	}
-	else
-	{
-		if (!(lstnew->content = malloc(sizeof(*content) * content_size)))
-		{
-			free(lstnew);
-			return (NULL);
-		}
-		ft_memcpy(lstnew->content, content, content_size);
-		lstnew->content_size = content_size;
-	}
-	lstnew->next = NULL;
-	return (lstnew);
+	new_elem->content = content;
+	new_elem->next = NULL;
+	return (new_elem);
 }
