@@ -6,21 +6,21 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 16:48:25 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/08 18:33:33 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 18:13:14 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: applies the function f to each character of the string passed as
+** Function: Applies the function f to each character of the string passed as
 ** argument to create a new string (with malloc(3)) resulting from successive
 ** applications of f
 **
-** s: the string on which to iterate
-** f: the function to apply to each character
+** s: The string on which to iterate
+** f: The function to apply to each character
 **
-** returns: the string created from the successive applications of f
+** returns: The string created from the successive applications of f
 **          NULL otherwise
 */
 

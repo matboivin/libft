@@ -6,21 +6,21 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:37 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/19 12:19:50 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 18:12:34 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded strlcat libc function: appends the NUL-terminated string src to the
+** Recoded strlcat libc function: Appends the NUL-terminated string src to the
 ** end of dst at most size − dst length − 1 bytes, NUL-terminating the result
 **
-** dst: a pointer to the destination string
-** src: a pointer to the source string
-** size: the size of the destination buffer
+** dst: A pointer to the destination string
+** src: A pointer to the source string
+** size: The size of the destination buffer
 **
-** returns: the total length of the string (dst + src)
+** returns: The total length of the string (dst + src)
 */
 
 size_t			ft_strlcat(char *dst, char const *src, size_t size)

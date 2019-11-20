@@ -6,25 +6,20 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:24:29 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/05 19:51:37 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 18:15:04 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded toupper libc function that converts a lowercase alphabet to an
-** uppercase alphabet, if the argument passed is a lowercase alphabet.
-*/
-
-/*
-** Recoded toupper libc function: converts a lower-case letter to the
+** Recoded toupper libc function: Converts a lower-case letter to the
 ** corresponding upper-case letter
 **
-** c: a character
+** c: A character
 **
-** returns: the corresponding upper-case letter
-**          otherwise the argument is returned unchanged
+** returns: The corresponding upper-case letter
+**          Otherwise the argument is returned unchanged
 */
 
 int		ft_toupper(int c)

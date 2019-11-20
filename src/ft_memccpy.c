@@ -6,22 +6,22 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:37 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/05 18:01:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 18:08:47 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded memccpy libc function: copies bytes from memory area src to dst
+** Recoded memccpy libc function: Copies bytes from memory area src to dst
 ** stopping after the first occurrence of c or n bytes have been copied
 **
-** dst: the pointer to the destination array where the content is to be copied
-** src: the pointer to the source of data to be copied
-** c: the value to stop copying at
-** n: the maximum number of bytes to copy
+** dst: The pointer to the destination array where the content is to be copied
+** src: The pointer to the source of data to be copied
+** c: The value to stop copying at
+** n: The maximum number of bytes to copy
 **
-** returns: a pointer to the first byte after c in dst
+** returns: A pointer to the first byte after c in dst
 **          NULL otherwise
 */
 

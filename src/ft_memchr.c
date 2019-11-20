@@ -6,20 +6,20 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:47 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/19 12:38:45 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 18:09:02 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded memchr libc function: locates the first occurrence of c
+** Recoded memchr libc function: Locates the first occurrence of c
 **
-** s: the pointer to the block of memory where the search is performed
-** c: the value to find
-** n: the number of bytes to be analyzed
+** s: The pointer to the block of memory where the search is performed
+** c: The value to find
+** n: The number of bytes to be analyzed
 **
-** returns: a pointer to the byte located
+** returns: A pointer to the byte located
 **          NULL otherwise
 */
 

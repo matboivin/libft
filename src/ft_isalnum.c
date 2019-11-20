@@ -6,19 +6,19 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:50 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/05 17:54:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 17:54:59 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded isalnum libc function: checks if c is an alphanumeric character
+** Recoded isalnum libc function: Checks if c is an alphanumeric character
 **
-** c: a character
+** c: A character
 **
-** returns: a non-zero integer if a character is an alphanumeric character
-**          zero value otherwise
+** returns: A non-zero integer if a character is an alphanumeric character
+**          Zero value otherwise
 */
 
 int		ft_isalnum(int c)

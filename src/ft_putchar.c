@@ -6,16 +6,16 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:35:55 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/08 18:39:03 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 18:10:16 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: outputs the character c to the standard output.
+** Function: Outputs the character c to the standard output.
 **
-** c: the character to output
+** c: The character to output
 */
 
 void	ft_putchar(char c)

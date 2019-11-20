@@ -6,20 +6,20 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:34 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/19 11:49:33 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 17:54:45 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded calloc libc function: allocates enough space for count objects that
+** Recoded calloc libc function: Allocates enough space for count objects that
 ** are size bytes of memory each
 **
-** count: the number of elements to be allocated
-** size: the size of elements
+** count: The number of elements to be allocated
+** size: The size of elements
 **
-** returns: a pointer to the allocated memory filled with bytes of value zero
+** returns: A pointer to the allocated memory filled with bytes of value zero
 **          NULL otherwise
 */
 

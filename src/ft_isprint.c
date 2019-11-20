@@ -6,19 +6,19 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:29 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/05 17:54:34 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 17:55:58 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded isprint libc function: checks if c is a printable character
+** Recoded isprint libc function: Checks if c is a printable character
 **
-** c: a character
+** c: A character
 **
-** returns: a non-zero integer if a character is a printable character
-**          zero value otherwise
+** returns: A non-zero integer if a character is a printable character
+**          Zero value otherwise
 */
 
 int		ft_isprint(int c)

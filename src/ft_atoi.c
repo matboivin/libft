@@ -6,19 +6,19 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/19 11:46:53 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 17:54:21 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded atoi libc function: converts a string to an integer
+** Recoded atoi libc function: Converts a string to an integer
 **
-** str: a string representation of an integral number
+** str: A string representation of an integral number
 **
-** returns: the converted integral number as an int value
-**          zero value otherwise
+** returns: The converted integral number as an int value
+**          Zero value otherwise
 */
 
 int				ft_atoi(char const *str)

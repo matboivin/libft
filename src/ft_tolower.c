@@ -6,20 +6,20 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:24:21 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/05 19:51:01 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 18:14:48 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded tolower libc function: converts an upper-case letter to the
+** Recoded tolower libc function: Converts an upper-case letter to the
 ** corresponding lower-case letter
 **
-** c: a character
+** c: A character
 **
-** returns: the corresponding lower-case letter
-**          otherwise the argument is returned unchanged
+** returns: The corresponding lower-case letter
+**          Otherwise the argument is returned unchanged
 */
 
 int		ft_tolower(int c)

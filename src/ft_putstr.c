@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:21 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/08 18:42:05 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 18:11:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include <string.h>
 
 /*
-** Function: outputs the string c to the standard output
+** Function: Outputs the string c to the standard output
 **
-** s: the string to output
+** s: The string to output
 */
 
 void	ft_putstr(char const *s)

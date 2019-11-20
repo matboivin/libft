@@ -6,21 +6,21 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 18:32:48 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/19 12:41:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 18:14:29 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: allocates (with malloc(3)) and returns a substring from the string
+** Function: Allocates (with malloc(3)) and returns a substring from the string
 ** given in argument. It begins at index ’start’ and is of maximum size ’len’
 **
-** s: the string from which create the substring
-** start: the start index of the substring in the string
-** len: the maximum length of the substring
+** s: The string from which create the substring
+** start: The start index of the substring in the string
+** len: The maximum length of the substring
 **
-** returns: the substring
+** returns: The substring
 **          NULL otherwise
 */
 

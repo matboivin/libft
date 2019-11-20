@@ -6,20 +6,20 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:24:12 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/05 19:49:25 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 18:14:02 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded strrchr libc function: locates the last occurrence of c in the
+** Recoded strrchr libc function: Locates the last occurrence of c in the
 ** string pointed to by s
 **
-** s: the string to be scanned
-** c: the character to be searched
+** s: The string to be scanned
+** c: The character to be searched
 **
-** returns: a pointer to the located character
+** returns: A pointer to the located character
 **          NULL otherwise
 */
 

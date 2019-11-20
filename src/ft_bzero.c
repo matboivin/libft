@@ -6,18 +6,18 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:27 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/12 15:43:31 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 17:54:31 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded bzero libc function: erases the data in the n bytes of the memory
+** Recoded bzero libc function: Erases the data in the n bytes of the memory
 ** starting at the location pointed to by s, by writing zeros
 **
-** s: an existing object to fill with zeroes
-** n: the number of bytes to fill
+** s: An existing object to fill with zeroes
+** n: The number of bytes to fill
 */
 
 void				ft_bzero(void *s, size_t n)

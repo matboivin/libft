@@ -6,20 +6,20 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/19 12:36:03 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 18:11:18 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: allocates (with malloc(3)) and returns an array of strings
+** Function: Allocates (with malloc(3)) and returns an array of strings
 ** obtained by splitting s using the character c as a delimiter
 **
-** s: the string to be split
-** c: the delimiter character
+** s: The string to be split
+** c: The delimiter character
 **
-** returns: the array of new strings ended by a NULL pointer
+** returns: The array of new strings ended by a NULL pointer
 **          NULL otherwise
 */
 

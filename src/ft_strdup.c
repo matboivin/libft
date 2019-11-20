@@ -6,19 +6,19 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:32 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/05 19:16:16 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 18:12:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded strdup libc function: allocates sufficient memory for a copy of the
+** Recoded strdup libc function: Allocates sufficient memory for a copy of the
 ** string s1, does the copy, and returns a pointer to it
 **
-** src: the string to be copied
+** src: The string to be copied
 **
-** returns: a pointer to the copy
+** returns: A pointer to the copy
 **          NULL otherwise
 */
 

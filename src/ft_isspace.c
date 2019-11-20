@@ -6,19 +6,19 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 10:22:44 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/06 17:17:01 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 17:56:18 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded isspace libc function: checks if c is a space character
+** Recoded isspace libc function: Checks if c is a space character
 **
-** c: a character
+** c: A character
 **
-** returns: a non-zero integer if a character is a space character
-**          zero value otherwise
+** returns: A non-zero integer if a character is a space character
+**          Zero value otherwise
 */
 
 int		ft_isspace(int c)
