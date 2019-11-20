@@ -6,27 +6,31 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:37:24 by mboivin           #+#    #+#             */
-/*   Updated: 2019/06/26 21:11:25 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/20 20:01:59 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** This function iterates the list lst and applies the function f to each link.
+** function: Iterates the list lst and applies the function f to the content of
+** each element
+**
+** lst: The address of a pointer to a element
+** f: The address of the function to iterate on the list
 */
 
-void		ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void		ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*tmp;
+	t_list	*cursor;
 
 	if (lst)
 	{
-		tmp = lst;
-		while (tmp)
+		cursor = lst;
+		while (cursor)
 		{
-			f(tmp);
-			tmp = tmp->next;
+			f(cursor);
+			cursor = cursor->next;
 		}
 	}
 }
