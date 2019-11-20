@@ -91,11 +91,12 @@ SRC_FILES 	+=		ft_split.c \
 # List functions
 
 SRC_FILES 	+=		ft_lstadd_front.c \
+					ft_lstnew.c \
+					ft_lstsize.c \
 					ft_lstdel.c \
 					ft_lstdelone.c \
 					ft_lstiter.c \
 					ft_lstmap.c \
-					ft_lstnew.c \
 
 # Conversion functions
 
