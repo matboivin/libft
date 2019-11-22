@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:38:13 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 20:03:18 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/22 15:03:02 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 **
 ** lst: The address of a pointer to a element
 ** f: The address of the function to iterate on the list
+** del: The address of the function to delete the content
 **
 ** returns: The new list
 **          NULL otherwise
@@ -27,31 +28,29 @@
 
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
+	t_list	*cursor;
+	t_list	*next_node;
+	t_list	*new_lst;
+	t_list	*alst;
 
-}
-
-t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
-{
-	t_list	*tmp;
-	t_list	*dst;
-	t_list	*p;
-
-	if (lst)
+	if (lst && f)
 	{
-		tmp = f(lst);
-		if (!(dst = ft_lstnew(tmp->content, tmp->content_size)))
+		cursor = lst;
+		if (!(new_lst = ft_lstnew(cursor->content)))
 			return (NULL);
-		p = dst;
-		lst = lst->next;
-		while (lst)
+		alst = new_lst;
+		while (cursor)
 		{
-			tmp = f(lst);
-			if (!(dst->next = ft_lstnew(tmp->content, tmp->content_size)))
+			f(cursor);
+			next_node = cursor->next;
+			if (!(new_lst->next = ft_lstnew(next_node->content)))
 				return (NULL);
-			dst = dst->next;
-			lst = lst->next;
+			if (del)
+				ft_lstdelone(cursor, del);
+			cursor = next_node;
+			new_lst = new_lst->next;
 		}
-		return (p);
+		return (alst);
 	}
 	return (NULL);
 }
