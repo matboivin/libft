@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:34:37 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/22 14:39:17 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/22 16:55:58 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void		ft_lstdelone(t_list *lst, void (*del)(void *))
 
 	if (lst && del)
 	{
-		cursor = *lst;
+		cursor = lst;
 		del(cursor->content);
 		free(cursor);
-		*lst = NULL;
+		lst = NULL;
 	}
 }

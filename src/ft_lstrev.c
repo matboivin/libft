@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:28:52 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/22 14:59:06 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/22 16:53:48 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
+#include "libft.h"
 
 /*
 ** function: Reverses the order of a list’s elements
