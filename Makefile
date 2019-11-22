@@ -90,7 +90,8 @@ SRC_FILES 	+=		ft_split.c \
 
 # List functions
 
-SRC_FILES 	+=		ft_lstnew.c \
+SRC_FILES 	+=		ft_lstat.c \
+					ft_lstnew.c \
 					ft_lstadd_front.c \
 					ft_lstsize.c \
 					ft_lstlast.c \
