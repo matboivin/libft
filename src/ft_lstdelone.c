@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:34:37 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 19:55:13 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/22 14:39:17 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** The memory of next must not be freed under any circumstance
 **
 ** lst: The element to free
-** new:  The address of the function to delete the content
+** del: The address of the function to delete the content
 */
 
 void		ft_lstdelone(t_list *lst, void (*del)(void *))
