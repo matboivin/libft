@@ -114,14 +114,16 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 
 | Name                                |Description                                  |
 |:------------------------------------|:--------------------------------------------|
-|[ft_lstadd_back](src/ft_lstadd_back.c) |                                         |
-|[ft_lstadd_front](src/ft_lstadd_front.c) |                                         |
+|[ft_lstat](src/ft_lstat.c)           |                                             |
+|[ft_lstadd_back](src/ft_lstadd_back.c) |                                             |
+|[ft_lstadd_front](src/ft_lstadd_front.c) |                                             |
 |[ft_lstclear](src/ft_lstclear.c)     |                                             |
 |[ft_lstdelone](src/ft_lstdelone.c)   |                                             |
 |[ft_lstiter](src/ft_lstiter.c)       |                                             |
 |[ft_lstlast](src/ft_lstlast.c)       |                                             |
 |[ft_lstmap](src/ft_lstmap.c)         |                                             |
 |[ft_lstnew](src/ft_lstnew.c)         |                                             |
+|[ft_lstrev](src/ft_lstrev.c)         |                                             |
 |[ft_lstsize](src/ft_lstsize.c)       |                                             |
 
 ### Miscellaneous functions
