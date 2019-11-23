@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 21:50:45 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/23 22:36:48 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/23 22:43:01 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: searches for an element that stores a given data
+** function: Searches for an element that stores a given data
 **
 ** alst: The address of a pointer to the first link of a list
 ** data_ref: The searched data
