@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 21:50:45 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/23 22:35:13 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/23 22:36:48 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** function: searches for an element that stores a given data
 **
 ** alst: The address of a pointer to the first link of a list
-** data_ref: the searched data
+** data_ref: The searched data
 **
 ** returns: The element
 **          NULL otherwise
