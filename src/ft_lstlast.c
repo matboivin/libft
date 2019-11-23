@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:38:18 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 19:40:37 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/23 22:48:21 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,12 @@ t_list		*ft_lstlast(t_list *lst)
 {
 	t_list	*cursor;
 
-	cursor = lst;
-	if (!lst)
-		return (NULL);
-	while (cursor->next)
-		cursor = cursor->next;
-	return (cursor);
+	if (lst)
+	{
+		cursor = lst;
+		while (cursor->next)
+			cursor = cursor->next;
+		return (cursor);
+	}
+	return (NULL);
 }
