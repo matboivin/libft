@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:23:57 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/22 16:55:18 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/23 22:31:25 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,16 @@ t_list				*ft_lstat(t_list *alst, unsigned int nbr)
 	t_list			*cursor;
 	unsigned int	i;
 
-	if (!alst)
-		return (NULL);
-	i = 0;
-	cursor = alst;
-	while (cursor->next && i != nbr)
+	if (alst)
 	{
-		cursor = cursor->next;
-		i++;
+		i = 0;
+		cursor = alst;
+		while (cursor->next && i != nbr)
+		{
+			cursor = cursor->next;
+			i++;
+		}
+		return (cursor);
 	}
-	return (cursor);
+	return (NULL);
 }
