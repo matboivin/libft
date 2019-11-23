@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/23 22:34:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/23 22:39:35 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ t_list				*ft_lstmap(
 
 t_list				*ft_lstat(t_list *alst, unsigned int nbr);
 t_list				*ft_lstfind(t_list *alst, void *data_ref);
+void				ft_lstiterif(t_list *lst, void (*f)(void *), void *data_ref);
 void				ft_lstrev(t_list **alst);
 void				ft_lstswap(
 	t_list *a, t_list *prev_a, t_list *b, t_list *prev_b);

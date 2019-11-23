@@ -103,6 +103,7 @@ SRC_FILES 	+=		ft_lstat.c \
 					ft_lstrev.c \
 					ft_lstswap \
 					ft_lstfind.c \
+					ft_lstiterif.c \
 
 # Conversion functions
 
