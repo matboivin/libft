@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 15:21:39 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 18:10:37 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/23 19:15:28 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** s: The string to output
 */
 
-void	ft_putendl(char const *s)
+void	ft_putendl(char *s)
 {
 	if (s)
 	{

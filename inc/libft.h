@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/22 16:53:14 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/23 19:15:43 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,12 @@ void				*ft_memset(void *s, int c, size_t len);
 
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
-void				ft_putendl(char const *s);
-void				ft_putendl_fd(char const *s, int fd);
+void				ft_putendl(char *s);
+void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
-void				ft_putstr(char const *s);
-void				ft_putstr_fd(char const *s, int fd);
+void				ft_putstr(char *s);
+void				ft_putstr_fd(char *s, int fd);
 
 int					ft_tolower(int c);
 int					ft_toupper(int c);
