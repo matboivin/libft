@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/23 22:39:35 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/23 22:43:14 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,7 @@ void				ft_lstiterif(t_list *lst, void (*f)(void *), void *data_ref);
 void				ft_lstrev(t_list **alst);
 void				ft_lstswap(
 	t_list *a, t_list *prev_a, t_list *b, t_list *prev_b);
+void				ft_lstort(t_list **alst, int (*cmp)());
 
 int					ft_atoi(char const *str);
 char				*ft_itoa(int n);

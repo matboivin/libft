@@ -104,6 +104,7 @@ SRC_FILES 	+=		ft_lstat.c \
 					ft_lstswap \
 					ft_lstfind.c \
 					ft_lstiterif.c \
+					ft_lstort.c \
 
 # Conversion functions
 
