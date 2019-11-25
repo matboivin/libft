@@ -101,10 +101,10 @@ SRC_FILES 	+=		ft_lstat.c \
 					ft_lstiter.c \
 					ft_lstmap.c \
 					ft_lstrev.c \
-					ft_lstswap \
+					ft_lstswap.c \
 					ft_lstfind.c \
 					ft_lstiterif.c \
-					ft_lstort.c \
+					ft_lstsort.c \
 
 # Conversion functions
 
@@ -135,6 +135,10 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 .PHONY: debug
 debug: CFLAGS=-g
 debug: re
+
+.PHONY: test
+test: re
+	bash tests/test.sh .
 
 .PHONY: clean
 clean:
