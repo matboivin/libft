@@ -118,6 +118,7 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 |[ft_lstadd_front](src/ft_lstadd_front.c) |Adds the element new at the beginning of the list |
 |[ft_lstat](src/ft_lstat.c)           |Finds the Nth element of the list |
 |[ft_lstclear](src/ft_lstclear.c)     |Deletes and frees the given element and every successor of that element |
+|[ft_lstdelif](src/ft_lstdelif.c)   |TErases off the list all elements, whose data is "equal" to the reference data |
 |[ft_lstdelone](src/ft_lstdelone.c)   |Takes as a parameter an element and frees the memory of the element’s content using the function del given as a parameter |
 |[ft_lstfind](src/ft_lstfind.c)       |Searches for an element that stores a given data |
 |[ft_lstiter](src/ft_lstiter.c)       |Iterates the list lst and applies the function f to the content of each element |

@@ -96,6 +96,7 @@ SRC_FILES 	+=		ft_lstat.c \
 					ft_lstsize.c \
 					ft_lstlast.c \
 					ft_lstadd_back.c \
+					ft_lstdelif.c \
 					ft_lstdelone.c \
 					ft_lstclear.c \
 					ft_lstiter.c \
