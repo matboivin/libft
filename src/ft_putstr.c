@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:21 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/23 19:15:55 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/11/26 14:05:54 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string.h>
 
 /*
-** Function: Outputs the string c to the standard output
+** Function: Outputs the string s to the standard output
 **
 ** s: The string to output
 */
