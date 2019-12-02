@@ -6,20 +6,20 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 18:11:18 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/02 22:35:52 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Allocates (with malloc(3)) and returns an array of strings
+** Function: Allocates (with malloc(3)) and returns an resultay of strings
 ** obtained by splitting s using the character c as a delimiter
 **
 ** s: The string to be split
 ** c: The delimiter character
 **
-** returns: The array of new strings ended by a NULL pointer
+** returns: The result of new strings ended by a NULL pointer
 **          NULL otherwise
 */
 
@@ -67,14 +67,14 @@ char			**ft_split(char const *s, char c)
 	size_t		len;
 	size_t		i;
 	size_t		j;
-	char		**arr;
+	char		**result;
 
 	if (!s || s == 0)
 		return (NULL);
 	s_count = count_strings((char *)s, c);
 	len = 0;
 	i = 0;
-	if (!(arr = (char **)malloc(sizeof(*arr) * s_count + 1)))
+	if (!(result = (char **)malloc(sizeof(*result) * s_count + 1)))
 		return (NULL);
 	while (s[i] && len < s_count)
 	{
@@ -83,9 +83,9 @@ char			**ft_split(char const *s, char c)
 		j = i;
 		while (s[i] && s[i] != c)
 			i++;
-		arr[len] = get_splitted_strings((char *)s, j, i);
+		result[len] = get_splitted_strings((char *)s, j, i);
 		len++;
 	}
-	arr[len] = NULL;
-	return (arr);
+	result[len] = NULL;
+	return (result);
 }
