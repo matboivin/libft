@@ -57,6 +57,7 @@ SRC_FILES 	+=		ft_tolower.c \
 					ft_islower.c \
 					ft_isprint.c \
 					ft_isspace.c \
+					ft_isupper.c \
 
 # String functions
 
