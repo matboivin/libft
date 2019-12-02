@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:43:57 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 18:14:19 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/02 23:12:54 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,22 @@
 
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	s1_len;
+	size_t	start;
+	size_t	end;
 	size_t	len;
 	char	*trimmedstr;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
-	i = 0;
-	s1_len = ft_strlen(s1) - 1;
-	while (s1 && ft_ischarset(*(s1 + i), set))
-		i++;
-	if (*(s1 + i) == '\0')
-		return (ft_strdup(s1 + i));
-	while (s1 && ft_ischarset(*(s1 + s1_len), set))
-		s1_len--;
-	len = (s1_len - i) + 1;
-	trimmedstr = ft_substr(s1, i, len);
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	while (s1[start] && ft_ischarset(s1[start], set))
+		start++;
+	if (!s1[start])
+		return (ft_strdup(s1 + start));
+	while (s1[start] && ft_ischarset(s1[end], set))
+		end--;
+	len = (end - start) + 1;
+	trimmedstr = ft_substr(s1, start, len);
 	return (trimmedstr);
 }
