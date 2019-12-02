@@ -54,6 +54,7 @@ SRC_FILES 	+=		ft_tolower.c \
 					ft_isblank.c \
 					ft_ischarset.c \
 					ft_isdigit.c \
+					ft_islower.c \
 					ft_isprint.c \
 					ft_isspace.c \
 
