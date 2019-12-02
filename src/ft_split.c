@@ -6,24 +6,22 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/02 23:04:49 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/02 23:32:19 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Allocates (with malloc(3)) and returns an resultay of strings
-** obtained by splitting s using the character c as a delimiter
+** Auxiliary function: Computes the number of strings to split
 **
-** s: The string to be split
+** s: The total string to be split
 ** c: The delimiter character
 **
-** returns: The result of new strings ended by a NULL pointer
-**          NULL otherwise
+** returns: The number of substrings delimited by c
 */
 
-static size_t	count_strings(char *s, char c)
+static size_t	count_strings(char const *s, char c)
 {
 	size_t		i;
 	size_t		j;
@@ -39,53 +37,74 @@ static size_t	count_strings(char *s, char c)
 	return (j);
 }
 
-static char		*get_splitted_strings(char *s, size_t j, size_t i)
+/*
+** Auxiliary function: Allocates and copies a splitted string
+**
+** s: The total string to be split
+** i: The index of the last non-delimiter character in s
+** c_index: The index of the last delimiter character in s
+**
+** returns: The splitted string
+*/
+
+static char		*get_splitted_strings(char const *s, size_t i, size_t c_index)
 {
-	size_t		k;
+	size_t		j;
 	size_t		len;
 	char		*splittedstr;
 
-	k = 0;
-	len = i - j;
-	if (j > i)
+	if (c_index > i)
 		return (0);
-	if (!(splittedstr = (char *)malloc(sizeof(char) * len + 1)))
+	j = 0;
+	len = i - c_index;
+	if (!(splittedstr = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	while (k < len)
+	while (j < len)
 	{
-		splittedstr[k] = s[j];
-		k++;
+		splittedstr[j] = s[c_index];
+		c_index++;
 		j++;
 	}
-	splittedstr[k] = '\0';
+	splittedstr[j] = '\0';
 	return (splittedstr);
 }
 
+/*
+** Function: Allocates (with malloc(3)) and returns an result of strings
+** obtained by splitting s using the character c as a delimiter
+**
+** s: The string to be split
+** c: The delimiter character
+**
+** returns: The result of new strings ended by a NULL pointer
+**          NULL otherwise
+*/
+
 char			**ft_split(char const *s, char c)
 {
-	size_t		s_count;
-	size_t		len;
+	size_t		str_count;
+	size_t		c_index;
 	size_t		i;
 	size_t		j;
 	char		**result;
 
-	if (!s || s == 0)
+	if (!s)
 		return (NULL);
-	s_count = count_strings((char *)s, c);
-	len = 0;
+	str_count = count_strings(s, c);
 	i = 0;
-	if (!(result = (char **)malloc(sizeof(*result) * s_count + 1)))
+	j = 0;
+	if (!(result = (char **)malloc(sizeof(char*) * (str_count + 1))))
 		return (NULL);
-	while (s[i] && len < s_count)
+	while (s[i] && j < str_count)
 	{
 		while (s[i] && s[i] == c)
 			i++;
-		j = i;
+		c_index = i;
 		while (s[i] && s[i] != c)
 			i++;
-		result[len] = get_splitted_strings((char *)s, j, i);
-		len++;
+		result[j] = get_splitted_strings(s, i, c_index);
+		j++;
 	}
-	result[len] = NULL;
+	result[j] = NULL;
 	return (result);
 }
