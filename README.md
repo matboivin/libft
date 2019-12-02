@@ -64,11 +64,11 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 |[ft_isalnum](src/ft_isalnum.c)       |Checks if `c` is an alphanumeric character |
 |[ft_isalpha](src/ft_isalpha.c)       |Checks if `c` is an alphabet character |
 |[ft_isascii](src/ft_isascii.c)       |Checks if `c` is a 7-bit US-ASCII character code between 0 and octal 0177 inclusive |
+|[ft_isblank](src/ft_isblank.c)|Checks if `c` is a space or tab character |
 |[ft_ischarset](src/ft_ischarset.c)   |Checks if `c` is present in `set` |
 |[ft_isdigit](src/ft_isdigit.c)       |Checks if `c` is a numeric character |
 |[ft_isprint](src/ft_isprint.c)       |Checks if `c` is a printable character |
 |[ft_isspace](src/ft_isspace.c)       |Checks if `c` is a space character |
-|[ft_iswhitespace](src/ft_iswhitespace.c)|Checks if `c` is a whitespace character |
 
 ### String functions
 

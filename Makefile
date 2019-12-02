@@ -51,11 +51,11 @@ SRC_FILES 	+=		ft_tolower.c \
 					ft_isalnum.c \
 					ft_isalpha.c \
 					ft_isascii.c \
+					ft_isblank.c \
 					ft_ischarset.c \
 					ft_isdigit.c \
 					ft_isprint.c \
 					ft_isspace.c \
-					ft_iswhitespace.c \
 
 # String functions
 
