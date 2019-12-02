@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:36:30 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 17:56:55 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/02 23:41:59 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	if (alst && new)
+	if (alst && *alst && new)
 	{
 		new->next = *alst;
 		*alst = new;

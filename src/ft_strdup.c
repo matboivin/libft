@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:32 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/02 22:25:51 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/02 23:37:01 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char		*ft_strdup(char const *s1)
 	char	*s;
 
 	len = ft_strlen(s1);
-	if (!(s = (char *)malloc(sizeof(*s) * len + 1)))
+	if (!(s = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	s = ft_strcpy(s, s1);
 	return (s);
