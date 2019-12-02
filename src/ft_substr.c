@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 18:32:48 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 18:14:29 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/02 23:05:04 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,19 @@
 **          NULL otherwise
 */
 
-char		*ft_substr(char const *s, unsigned int start, size_t len)
+char				*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	char	*substr;
+	unsigned int	i;
+	char			*substr;
 
 	i = 0;
 	if (!s)
 		return (NULL);
-	if (!(substr = (char*)malloc(sizeof(*substr) * len + 1)))
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (!(substr = (char*)malloc(sizeof(char) * len + 1)))
 		return (NULL);
-	while (len--)
+	while (s[start + i] && len--)
 	{
 		substr[i] = s[start + i];
 		i++;
