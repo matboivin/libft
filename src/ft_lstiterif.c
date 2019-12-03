@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 21:40:44 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/02 23:40:59 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/03 12:37:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 ** f: The address of the function to iterate on the list
 ** data_ref: The data to be compared to the content
 */
-
 
 void		ft_lstiterif(t_list *lst, void (*f)(void *), void *data_ref)
 {
