@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:28:52 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/03 21:14:08 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/03 21:37:46 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void		ft_lstrev(t_list **lst)
 	t_list	*next_node;
 
 	cursor = *lst;
+	prev_node = NULL;
+	next_node = NULL;
 	while (cursor->next)
 	{
 		next_node = cursor->next;
