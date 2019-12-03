@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/03 12:37:24 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/03 19:09:16 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,25 +91,25 @@ char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 
 t_list				*ft_lstnew(void *content);
-void				ft_lstadd_front(t_list **alst, t_list *new);
+void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);
 t_list				*ft_lstlast(t_list *lst);
-void				ft_lstadd_back(t_list **alst, t_list *new);
-void				ft_lstdelif(t_list **alst, void *data_ref);
+void				ft_lstadd_back(t_list **lst, t_list *new);
+void				ft_lstdelif(t_list **lst, void *data_ref);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(
 	t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-t_list				*ft_lstat(t_list *alst, unsigned int nbr);
-t_list				*ft_lstfind(t_list *alst, void *data_ref);
+t_list				*ft_lstat(t_list *lst, unsigned int nbr);
+t_list				*ft_lstfind(t_list *lst, void *data_ref);
 void				ft_lstiterif(
 	t_list *lst, void (*f)(void *), void *data_ref);
-void				ft_lstrev(t_list **alst);
+void				ft_lstrev(t_list **lst);
 void				ft_lstswap(
 	t_list *a, t_list *prev_a, t_list *b, t_list *prev_b);
-void				ft_lstort(t_list **alst, int (*cmp)());
+void				ft_lstort(t_list **lst, int (*cmp)());
 
 int					ft_atoi(char const *str);
 char				*ft_itoa(int n);

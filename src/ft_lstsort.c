@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 22:20:19 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/23 22:42:46 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/03 19:09:57 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,21 @@
 ** function: Sorts the list’s contents by ascending order by comparing two links
 ** thanks to a function that can compare the content held in those two links
 **
-** alst: The address of a pointer to the first link of a list
+** lst: The address of a pointer to the first link of a list
 ** cmp: The comparison function
 */
 
-void		ft_lstort(t_list **alst, int (*cmp)())
+void		ft_lstort(t_list **lst, int (*cmp)())
 {
 	t_list	*cursor;
 	t_list	*next_node;
 	t_list	*tmp;
 
-	if (*alst)
+	if (!lst || !cmp)
+		return ;
+	if (*lst)
 	{
-		cursor = (*alst);
+		cursor = (*lst);
 		while (cursor)
 		{
 			next_node = cursor->next;

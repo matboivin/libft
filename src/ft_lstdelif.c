@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 22:08:20 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/02 23:42:13 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/03 19:06:10 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,20 @@
 ** function: Erases off the list all elements, whose data is "equal" to the
 ** reference data
 **
-** alst: The address of a pointer to the first link of a list
+** lst: The address of a pointer to the first link of a list
 ** data_ref: The data to be compared to the content
 */
 
-void		ft_lstdelif(t_list **alst, void *data_ref)
+void		ft_lstdelif(t_list **lst, void *data_ref)
 {
 	t_list	*cursor;
 	t_list	*node;
 
-	if (alst && *alst)
+	if (!lst || !data_ref)
+		return ;
+	if (*lst)
 	{
-		cursor = (*alst);
+		cursor = *lst;
 		while (cursor)
 		{
 			if (cursor->content == data_ref)

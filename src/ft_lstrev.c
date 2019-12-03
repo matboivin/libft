@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:28:52 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/22 16:53:48 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/03 19:14:44 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 /*
 ** function: Reverses the order of a list’s elements
 **
-** alst: The address of a pointer to the first link of a list
+** lst: The address of a pointer to the first link of a list
 */
 
-void		ft_lstrev(t_list **alst)
+void		ft_lstrev(t_list **lst)
 {
 	t_list	*cursor;
 	t_list	*prev_node;
 	t_list	*next_node;
 
-	cursor = *alst;
+	cursor = *lst;
 	while (cursor->next)
 	{
 		next_node = cursor->next;
@@ -32,5 +32,5 @@ void		ft_lstrev(t_list **alst)
 		prev_node = cursor;
 		cursor = next_node;
 	}
-	*alst = prev_node;
+	*lst = prev_node;
 }

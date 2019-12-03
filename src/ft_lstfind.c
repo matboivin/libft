@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 21:50:45 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/23 22:43:01 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/03 19:08:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,20 @@
 /*
 ** function: Searches for an element that stores a given data
 **
-** alst: The address of a pointer to the first link of a list
+** lst: The address of a pointer to the first link of a list
 ** data_ref: The searched data
 **
 ** returns: The element
 **          NULL otherwise
 */
 
-t_list		*ft_lstfind(t_list *alst, void *data_ref)
+t_list		*ft_lstfind(t_list *lst, void *data_ref)
 {
 	t_list	*cursor;
 
-	if (alst)
+	if (lst)
 	{
-		cursor = alst;
+		cursor = lst;
 		while (cursor)
 		{
 			if (cursor->content == data_ref)
