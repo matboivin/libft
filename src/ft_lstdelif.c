@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 22:08:20 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/03 19:06:10 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/03 21:09:35 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,24 +22,22 @@
 
 void		ft_lstdelif(t_list **lst, void *data_ref)
 {
-	t_list	*cursor;
 	t_list	*node;
 
 	if (!lst || !data_ref)
 		return ;
 	if (*lst)
 	{
-		cursor = *lst;
-		while (cursor)
+		while ((*lst))
 		{
-			if (cursor->content == data_ref)
+			if ((*lst)->content == data_ref)
 			{
-				node = cursor;
-				cursor = cursor->next;
+				node = (*lst);
+				(*lst) = (*lst)->next;
 				free(node);
 			}
 			else
-				cursor = cursor->next;
+				(*lst) = (*lst)->next;
 		}
 	}
 }
