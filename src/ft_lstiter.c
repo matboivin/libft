@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:37:24 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/02 23:41:05 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/03 20:50:44 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void		ft_lstiter(t_list *lst, void (*f)(void *))
 	cursor = lst;
 	while (cursor)
 	{
-		f(cursor);
+		f(cursor->content);
 		cursor = cursor->next;
 	}
 }
