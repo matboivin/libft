@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/02 23:32:19 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/03 20:00:54 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static char		*get_splitted_strings(char const *s, size_t i, size_t c_index)
 		return (0);
 	j = 0;
 	len = i - c_index;
-	if (!(splittedstr = (char *)malloc(sizeof(char) * (len + 1))))
+	if (!(splittedstr = (char *)malloc((len + 1) * sizeof(char))))
 		return (NULL);
 	while (j < len)
 	{
@@ -93,7 +93,7 @@ char			**ft_split(char const *s, char c)
 	str_count = count_strings(s, c);
 	i = 0;
 	j = 0;
-	if (!(result = (char **)malloc(sizeof(char*) * (str_count + 1))))
+	if (!(result = (char **)malloc((str_count + 1) * sizeof(char*))))
 		return (NULL);
 	while (s[i] && j < str_count)
 	{

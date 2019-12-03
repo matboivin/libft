@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 18:32:48 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/02 23:38:42 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/03 20:03:13 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char				*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start > ft_strlen(s))
 		return (ft_strdup(""));
-	if (!(substr = (char*)malloc(sizeof(char) * (len + 1))))
+	if (!(substr = (char *)malloc((len + 1) * sizeof(char))))
 		return (NULL);
 	while (s[start + i] && len--)
 	{
