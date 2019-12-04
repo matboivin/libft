@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:38:13 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/03 21:13:25 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/04 23:39:06 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,26 +28,29 @@
 
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_lst;
-	t_list	*alst;
+	t_list	*cursor;
+ 	t_list	*new_lst;
+ 	t_list	*alst;
 
-	if (lst && f && del)
+	if (!lst || !f)
+		return (NULL);
+	cursor = lst;
+	if (!(new_lst = (t_list *)malloc(sizeof(t_list))))
+		return (NULL);
+	if (!(new_lst = f(lst->content)))
+		return (NULL);
+	alst = new_lst;
+	while (cursor)
 	{
-		if (!(new_lst = ft_lstnew(f(lst->content))))
+		cursor = cursor->next;
+		if (!(new_lst = (t_list *)malloc(sizeof(t_list))))
 			return (NULL);
-		alst = new_lst;
-		lst = lst->next;
-		while (lst)
+		new_lst = new_lst->next;
+		if (!(new_lst = f(lst->content)))
 		{
-			if (!(new_lst->next = ft_lstnew(f(lst->content))))
-			{
-				ft_lstdelone(new_lst->next, del);
-				return (NULL);
-			}
-			lst = lst->next;
-			new_lst = new_lst->next;
+			del(new_lst->content);
+			return (NULL);
 		}
-		return (alst);
 	}
-	return (NULL);
+	return (alst);
 }
