@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:41:33 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/03 21:10:57 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/04 23:45:15 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,12 @@
 
 void		ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (lst && *lst)
-		ft_lstlast(*lst)->next = new;
-	else if (!lst && !(*lst))
-		*lst = new;
+	t_list	*cursor;
+
+	if (!lst || !new)
+ 		return ;
+	cursor = *lst;
+	while (cursor->next)
+		cursor = cursor->next;
+	cursor = new;
 }
