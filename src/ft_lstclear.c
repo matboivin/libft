@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:46:51 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/03 21:09:55 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/04 23:48:03 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ void		ft_lstclear(t_list **lst, void (*del)(void *))
 		while (cursor)
 		{
 			next = cursor->next;
-			ft_lstdelone(cursor, del);
+			del(cursor->content);
+			free(cursor);
 			cursor = next;
 		}
 		*lst = NULL;
