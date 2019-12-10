@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:38:13 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/10 15:09:23 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/10 15:29:44 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,22 +35,19 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	if (!lst || !f)
 		return (NULL);
 	cursor = lst;
-	if (!(new_lst = (t_list *)malloc(sizeof(t_list))))
-		return (NULL);
-	if (!(new_lst = f(lst->content)))
+	if (!(new_lst = ft_lstnew(f(cursor->content))))
 		return (NULL);
 	alst = new_lst;
+	cursor = cursor->next;
 	while (cursor)
 	{
-		cursor = cursor->next;
-		if (!(new_lst = (t_list *)malloc(sizeof(t_list))))
-			return (NULL);
-		new_lst = new_lst->next;
-		if (!(new_lst = f(lst->content)))
+		if (!(new_lst->next = ft_lstnew(f(cursor->content))))
 		{
 			del(new_lst->content);
 			return (NULL);
 		}
+		new_lst = new_lst->next;
+		cursor = cursor->next;
 	}
 	return (alst);
 }
