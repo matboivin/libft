@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 22:20:19 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/03 21:09:02 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/12 22:00:00 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void		ft_lstort(t_list **lst, int (*cmp)())
 
 	if (!lst || !cmp)
 		return ;
-	cursor = (*lst);
+	cursor = *lst;
 	if (*lst)
 	{
 		while (cursor)

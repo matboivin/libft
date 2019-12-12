@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 21:50:45 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/03 21:12:22 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/12 22:21:47 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 t_list		*ft_lstfind(t_list *lst, void *data_ref)
 {
-	if (lst)
+	if (lst && data_ref)
 	{
 		while (lst)
 		{
