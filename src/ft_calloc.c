@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:34 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 17:54:45 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/12 11:49:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,10 @@
 void				*ft_calloc(size_t count, size_t size)
 {
 	void			*arr;
-	unsigned char	*p;
 
 	arr = malloc(count * size);
 	if (!arr)
 		return (NULL);
-	p = (unsigned char *)arr;
-	while (count--)
-		*p++ = '\0';
+	arr = ft_memset(arr, 0, count * size);
 	return (arr);
 }
