@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 18:17:57 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/03 21:08:14 by mboivin          ###   ########.fr       */
+/*   Updated: 2019/12/12 22:31:28 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: Counts the number of elements int a list
+** function: Counts the number of elements in a list
 **
 ** lst: The beginning of the list
 **
