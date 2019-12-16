@@ -4,7 +4,7 @@ CC = gcc
 RM = rm -rf
 AR = ar
 ARFLAGS = -rcs
-CFLAGS ?= -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 CPPFLAGS = -I$(INC_PATH)
 
 .SUFFIXES:
@@ -137,7 +137,7 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	@$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 
 .PHONY: debug
-debug: CFLAGS=-g
+debug: CFLAGS+=-g3
 debug: re
 
 .PHONY: test
