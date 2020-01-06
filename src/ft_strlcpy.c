@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:26:24 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 18:12:46 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/01/06 13:09:03 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*
 ** Recoded strlcpy libc function: Copies up to size − 1 characters from
-** the NUL-terminated string src to dst, NUL-terminating the result
+** the NULL-terminated string src to dst, NULL-terminating the result
 **
 ** dst: A pointer to the destination string
 ** src: A pointer to the source string

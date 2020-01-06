@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:49 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 18:12:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/01/06 13:09:15 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **
 ** s: The string whose length is to be found
 **
-** returns: The number of characters that precede the terminating NUL character
+** returns: The number of characters that precede the terminating NULL character
 */
 
 size_t		ft_strlen(char const *s)
