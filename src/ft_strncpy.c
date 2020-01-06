@@ -6,16 +6,21 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 18:48:29 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/26 14:15:55 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/01/06 18:16:33 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded strncpy libc function that copies up to n characters from the string
-** pointed to by src to dst. In a case where the length of src is less than
-** that of n, the remainder of dst will be padded with null bytes.
+** Recoded strncpy libc function: Copies up to len characters from
+** the NULL-terminated string src to dst, NULL-terminating the result
+**
+** dst: A pointer to the destination string
+** src: A pointer to the source string
+** len: The maximum number of bytes to copy
+**
+** returns: A pointer to the destination string dst
 */
 
 char	*ft_strncpy(char *dst, char const *src, size_t len)
