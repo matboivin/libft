@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/03 20:59:55 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/01/13 12:18:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@
 # include <string.h>
 # include <limits.h>
 
-# define BUFF_SIZE 4096
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
 
 typedef struct		s_list
 {
@@ -115,6 +117,6 @@ char				*ft_itoa(int n);
 
 void				ft_swap(int *a, int *b);
 size_t				ft_nbrlen(int n);
-int					get_next_line(const int fd, char **line);
+int					get_next_line(int fd, char **line);
 
 #endif
