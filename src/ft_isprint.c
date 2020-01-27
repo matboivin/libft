@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:29 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 17:55:58 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/01/27 18:27:08 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **
 ** c: A character
 **
-** returns: A non-zero integer if a character is a printable character
+** returns: A non-zero integer if c is a printable character
 **          Zero value otherwise
 */
 

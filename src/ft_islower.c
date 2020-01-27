@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 22:07:41 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/02 22:09:22 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/01/27 18:27:02 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **
 ** c: A character
 **
-** returns: A non-zero integer if a character is a lower-case letter
+** returns: A non-zero integer if c is a lower-case letter
 **          Zero value otherwise
 */
 

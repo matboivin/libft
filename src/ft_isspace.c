@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 10:22:44 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 17:56:18 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/01/27 18:27:13 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **
 ** c: A character
 **
-** returns: A non-zero integer if a character is a space character
+** returns: A non-zero integer if c is a space character
 **          Zero value otherwise
 */
 

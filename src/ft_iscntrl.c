@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 22:14:33 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/02 22:17:24 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/01/27 18:26:53 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **
 ** c: A character
 **
-** returns: A non-zero integer if a character is a control character
+** returns: A non-zero integer if c is a control character
 **          Zero value otherwise
 */
 
