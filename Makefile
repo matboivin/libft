@@ -11,7 +11,7 @@ CPPFLAGS = -I$(INC_PATH)
 .SUFFIXES: .c .o .h
 
 INC_FILES = libft.h
-INC_PATH = inc
+INC_PATH = includes
 INC = $(addprefix $(INC_PATH)/, $(INC_FILES))
 
 SRC_PATH = src
@@ -139,10 +139,6 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 .PHONY: debug
 debug: CFLAGS+=-g3
 debug: re
-
-.PHONY: test
-test: re
-	bash tests/test.sh .
 
 .PHONY: clean
 clean:
