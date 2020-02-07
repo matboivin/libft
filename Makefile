@@ -18,7 +18,7 @@ SRC_PATH = src
 SRC = $(addprefix $(SRC_PATH)/, $(SRC_FILES))
 
 OBJ_PATH = obj
-OBJ = $(addprefix $(OBJ_PATH)/, $(SRC_FILES:.c=.o))
+OBJ = $(addprefix $(OBJ_PATH)/, $(SRC_FILES:%.c=%.o))
 
 # Memory functions
 
