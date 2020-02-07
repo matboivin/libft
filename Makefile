@@ -5,7 +5,7 @@ RM = rm -rf
 AR = ar
 ARFLAGS = -rcs
 CFLAGS = -Wall -Wextra -Werror
-CPPFLAGS = -I$(INC_PATH)
+IFLAGS = -I$(INC_PATH)
 
 .SUFFIXES:
 .SUFFIXES: .c .o .h
@@ -134,7 +134,7 @@ $(OBJ_PATH):
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	@echo "[Compiling]\t$< -> $@ ..."
-	@$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
 
 .PHONY: debug
 debug: CFLAGS+=-g3
