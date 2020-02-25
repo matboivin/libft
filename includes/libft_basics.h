@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/02/25 15:58:06 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/02/25 18:45:22 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void				ft_putstr_fd(char *s, int fd);
 
 int					ft_tolower(int c);
 int					ft_toupper(int c);
-int					ft_isalnum(int c);
+t_bool				ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isblank(int c);
