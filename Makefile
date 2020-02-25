@@ -1,4 +1,5 @@
 NAME := libft.a
+
 SHELL = /bin/sh
 CC = gcc
 RM = rm -rf
@@ -7,132 +8,131 @@ ARFLAGS = -rcs
 CFLAGS = -Wall -Wextra -Werror
 IFLAGS = -I$(INC_PATH)
 
-.SUFFIXES:
+.SUFFIXE:
 .SUFFIXES: .c .o .h
 
-INC_FILES = libft.h
-INC_PATH = includes
-INC = $(addprefix $(INC_PATH)/, $(INC_FILES))
-
-SRC_PATH = src
-SRC = $(addprefix $(SRC_PATH)/, $(SRC_FILES))
-
+INC_PATH = $(shell find includes -type d)
+SRC_PATH = $(shell find src -type d)
 OBJ_PATH = obj
-OBJ = $(addprefix $(OBJ_PATH)/, $(SRC_FILES:%.c=%.o))
+
+vpath %.c $(foreach dir, $(SRC_PATH), $(dir):)
+
+OBJ = $(addprefix $(OBJ_PATH)/, $(SRC:%.c=%.o))
 
 # Memory functions
 
-SRC_FILES	=		ft_bzero.c \
-					ft_calloc.c \
-					ft_memalloc.c \
-					ft_memccpy.c \
-					ft_memchr.c \
-					ft_memcmp.c \
-					ft_memcpy.c \
-					ft_memdel.c \
-					ft_memmove.c \
-					ft_memset.c \
+SRC		=		ft_bzero.c \
+				ft_calloc.c \
+				ft_memalloc.c \
+				ft_memccpy.c \
+				ft_memchr.c \
+				ft_memcmp.c \
+				ft_memcpy.c \
+				ft_memdel.c \
+				ft_memmove.c \
+				ft_memset.c \
 
 # Input/Output functions
 
-SRC_FILES 	+=		ft_putchar.c \
-					ft_putchar_fd.c \
-					ft_putendl.c \
-					ft_putendl_fd.c \
-					ft_putnbr.c \
-					ft_putnbr_fd.c \
-					ft_putstr.c \
-					ft_putstr_fd.c \
+SRC		+=		ft_putchar.c \
+				ft_putchar_fd.c \
+				ft_putendl.c \
+				ft_putendl_fd.c \
+				ft_putnbr.c \
+				ft_putnbr_fd.c \
+				ft_putstr.c \
+				ft_putstr_fd.c \
 
 # Char recon functions
 
-SRC_FILES 	+=		ft_tolower.c \
-					ft_toupper.c \
-					ft_isalnum.c \
-					ft_isalpha.c \
-					ft_isascii.c \
-					ft_isblank.c \
-					ft_ischarset.c \
-					ft_iscntrl.c \
-					ft_isdigit.c \
-					ft_islower.c \
-					ft_isprint.c \
-					ft_isspace.c \
-					ft_isupper.c \
+SRC		+=		ft_tolower.c \
+				ft_toupper.c \
+				ft_isalnum.c \
+				ft_isalpha.c \
+				ft_isascii.c \
+				ft_isblank.c \
+				ft_ischarset.c \
+				ft_iscntrl.c \
+				ft_isdigit.c \
+				ft_islower.c \
+				ft_isprint.c \
+				ft_isspace.c \
+				ft_isupper.c \
 
 # String functions
 
-SRC_FILES 	+=		ft_split.c \
-					ft_strcat.c \
-					ft_strchr.c \
-					ft_strclr.c \
-					ft_strcmp.c \
-					ft_strcpy.c \
-					ft_strdel.c \
-					ft_strdup.c \
-					ft_strequ.c \
-					ft_striter.c \
-					ft_striteri.c \
-					ft_strjoin.c \
-					ft_strlcat.c \
-					ft_strlcpy.c \
-					ft_strlen.c \
-					ft_strmap.c \
-					ft_strmapi.c \
-					ft_strncat.c \
-					ft_strncmp.c \
-					ft_strncpy.c \
-					ft_strnequ.c \
-					ft_strnew.c \
-					ft_strnstr.c \
-					ft_strrchr.c \
-					ft_strrev.c \
-					ft_strstr.c \
-					ft_strtrim.c \
-					ft_substr.c \
+SRC		+=		ft_split.c \
+				ft_strcat.c \
+				ft_strchr.c \
+				ft_strclr.c \
+				ft_strcmp.c \
+				ft_strcpy.c \
+				ft_strdel.c \
+				ft_strdup.c \
+				ft_strequ.c \
+				ft_striter.c \
+				ft_striteri.c \
+				ft_strjoin.c \
+				ft_strlcat.c \
+				ft_strlcpy.c \
+				ft_strlen.c \
+				ft_strmap.c \
+				ft_strmapi.c \
+				ft_strncat.c \
+				ft_strncmp.c \
+				ft_strncpy.c \
+				ft_strnequ.c \
+				ft_strnew.c \
+				ft_strnstr.c \
+				ft_strrchr.c \
+				ft_strrev.c \
+				ft_strstr.c \
+				ft_strtrim.c \
+				ft_substr.c \
 
 # List functions
 
-SRC_FILES 	+=		ft_lstat.c \
-					ft_lstnew.c \
-					ft_lstadd_front.c \
-					ft_lstsize.c \
-					ft_lstlast.c \
-					ft_lstadd_back.c \
-					ft_lstdelif.c \
-					ft_lstdelone.c \
-					ft_lstclear.c \
-					ft_lstiter.c \
-					ft_lstmap.c \
-					ft_lstrev.c \
-					ft_lstswap.c \
-					ft_lstfind.c \
-					ft_lstiterif.c \
-					ft_lstsort.c \
+SRC		+=		ft_lstat.c \
+				ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstsize.c \
+				ft_lstlast.c \
+				ft_lstadd_back.c \
+				ft_lstdelif.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
+				ft_lstiter.c \
+				ft_lstmap.c \
+				ft_lstrev.c \
+				ft_lstswap.c \
+				ft_lstfind.c \
+				ft_lstiterif.c \
+				ft_lstsort.c \
 
 # Conversion functions
 
-SRC_FILES 	+=		ft_atoi.c \
-					ft_itoa.c \
+SRC		+=		ft_atoi.c \
+				ft_itoa.c \
 
-# Miscellaneous functions
+# Int functions
 
-SRC_FILES 	+=		ft_swap.c \
-					ft_nbrlen.c \
-					get_next_line.c \
+SRC		+=		ft_swap.c \
+				ft_nbrlen.c \
+
+# GNL
+
+SRC		+=		get_next_line.c \
 
 .PHONY: all
 all: $(NAME)
 
-$(NAME): $(OBJ_PATH) $(OBJ) $(INC)
+$(NAME)	: $(OBJ)
 	@$(AR) $(ARFLAGS) $@ $(OBJ)
 	@echo "[OK]\t\t$(NAME) is ready"
 
-$(OBJ_PATH):
-	@mkdir -p $@
+$(OBJ_PATH)/%.o : %.c
+	@mkdir -p $(OBJ_PATH)
 	@echo "[OK]\t\tCreated $@$  directory"
-
-$(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	@echo "[Compiling]\t$< -> $@ ..."
 	@$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
 
