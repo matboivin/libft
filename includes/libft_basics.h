@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/02/25 18:45:22 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/02/25 19:02:16 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,16 @@ void				ft_putstr_fd(char *s, int fd);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 t_bool				ft_isalnum(int c);
-int					ft_isalpha(int c);
-int					ft_isascii(int c);
-int					ft_isblank(int c);
-int					ft_ischarset(char c, char const *set);
-int					ft_iscntrl(int c);
-int					ft_isdigit(int c);
-int					ft_islower(int c);
-int					ft_isprint(int c);
-int					ft_isspace(int c);
-int					ft_isupper(int c);
+t_bool				ft_isalpha(int c);
+t_bool				ft_isascii(int c);
+t_bool				ft_isblank(int c);
+t_bool				ft_ischarset(char c, char const *set);
+t_bool				ft_iscntrl(int c);
+t_bool				ft_isdigit(int c);
+t_bool				ft_islower(int c);
+t_bool				ft_isprint(int c);
+t_bool				ft_isspace(int c);
+t_bool				ft_isupper(int c);
 
 char				**ft_split(char const *s, char c);
 char				*ft_strcat(char *s1, char const *s2);

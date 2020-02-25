@@ -6,71 +6,79 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/02/25 17:55:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/02/25 19:00:43 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Allocates (with malloc(3)), frees the first pointer if it exists,
-** and returns a new string, result of the concatenation of dst and src
+** Function: Allocates a new string, result of the concatenation of store and
+** buffer, frees the first pointer if it exists
 **
-** tmp: A pointer to the destination string
-** buff: A pointer to the source string
+** s1: A pointer to the destination string
+** s2: A pointer to the source string
 **
 ** returns: The new string
 **          NULL otherwise
 */
 
-static char		*ft_strjoindel(char *tmp, char *buff)
+char			*ft_strjoindel(char *s1, char *s2)
 {
-	char		*concatstr;
-	size_t		i;
-	size_t		len_buff;
+	char		*result;
+	size_t		len_s1;
+	size_t		len_s2;
+	size_t		len;
 
-	i = 0;
-	len_buff = ft_strlen(buff);
-	if (tmp)
-		i = ft_strlen(tmp);
-	concatstr = ft_strnew(i + len_buff);
-	if (!concatstr)
+	len_s1 = 0;
+	len_s2 = ft_strlen(s2);
+	if (s1)
+		len_s1 = ft_strlen(s1);
+	len = len_s1 + len_s2;
+	result = (char *)malloc((len + 1) * sizeof(char));
+	if (result == NULL)
 		return (NULL);
-	if (tmp)
+	if (s1)
 	{
-		ft_memcpy(concatstr, tmp, i);
-		ft_strdel(&tmp);
+		ft_strlcpy(result, s1, (len_s1 + 1));
+		ft_strdel(&s1);
 	}
-	ft_memcpy(concatstr + i, buff, len_buff);
-	return (concatstr);
+	ft_strlcpy(result + len_s1, s2, (len_s2 + 1));
+	return (result);
 }
 
 /*
-** function: Checks for a newline character in the content pointed to by tmp
-** and updates the content of tmp and line
+** function: Checks for a newline character in the content pointed to by store
+** and updates the content of store and line
 **
-** tmp: Read content
+** store: Read content
 ** line: The value of what has been read
 **
 ** returns: 1 if a newline character has been found
 **          0 otherwise
 */
 
-static int		is_line(char **tmp, char **line)
+static t_bool	is_line(char **store, char **line)
 {
 	char		*found;
 	size_t		end;
+	size_t		len;
 
-	if (!(found = ft_strchr(*tmp, '\n')))
-		return (0);
-	end = found - *tmp;
-	*line = ft_substr(*tmp, 0, end);
-	ft_strcpy(*tmp, (found + 1));
-	return (1);
+	len = 0;
+	found = NULL;
+	if ((found = ft_strchr(*store, '\n')))
+	{
+		end = found - *store;
+		len = ft_strlen(found);
+		*line = ft_substr(*store, 0, end);
+		ft_strlcpy(*store, (found + 1), (len + 1));
+		return (true);
+	}
+	return (false);
 }
 
 /*
-** function: Gets a line read from a file descriptor, without the newline
+** Function: Gets a line read from a file descriptor, without the newline
 **
 ** fd: File descriptor for reading
 ** line: The value of what has been read
@@ -83,28 +91,25 @@ static int		is_line(char **tmp, char **line)
 int				get_next_line(int fd, char **line)
 {
 	int			bytes_read;
-	char		buff[BUFFER_SIZE + 1];
-	static char	*tmp;
+	char		buffer[BUFFER_SIZE + 1];
+	static char	*store;
 
 	if (!line || fd < 0 || BUFFER_SIZE < 1)
 		return (-1);
-	if (tmp && is_line(&tmp, line))
+	if (store && is_line(&store, line) == true)
 		return (1);
-	while ((bytes_read = read(fd, buff, BUFFER_SIZE)) > 0)
+	while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
 	{
-		buff[bytes_read] = '\0';
-		if (!(tmp = ft_strjoindel(tmp, buff)))
+		buffer[bytes_read] = '\0';
+		if (!(store = ft_strjoindel(store, buffer)))
 			return (-1);
-		if (is_line(&tmp, line))
+		if (is_line(&store, line) == true)
 			return (1);
 	}
-	if (bytes_read == -1 || bytes_read == 0)
-		*line = NULL;
-	if (tmp && *tmp)
-	{
-		*line = ft_strdup(tmp);
-		ft_strdel(&tmp);
-		return (1);
-	}
+	if (store && *store)
+		*line = ft_strdup(store);
+	else if (bytes_read == -1 || bytes_read == 0)
+		*line = ft_strdup("");
+	ft_strdel(&store);
 	return (bytes_read);
 }

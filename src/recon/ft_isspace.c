@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 10:22:44 by mboivin           #+#    #+#             */
-/*   Updated: 2020/01/27 18:27:13 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/02/25 18:51:06 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@
 **          Zero value otherwise
 */
 
-int		ft_isspace(int c)
+t_bool	ft_isspace(int c)
 {
-	return (c == ' ' || c == '\f' || c == '\t' \
-		|| c == '\v' || c == '\n' || c == '\r');
+	if (c == ' ' || c == '\f' || c == '\t' \
+		|| c == '\v' || c == '\n' || c == '\r')
+		return (true);
+	return (false);
 }
