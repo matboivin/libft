@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 22:20:19 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/12 22:00:00 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/02/25 18:36:37 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void		ft_lstort(t_list **lst, int (*cmp)())
 	t_list	*next_node;
 	t_list	*tmp;
 
-	if (!lst || !cmp)
+	if (lst == NULL || cmp == NULL)
 		return ;
 	cursor = *lst;
 	if (*lst)

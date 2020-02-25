@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/01/13 12:16:53 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/02/25 17:55:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ static char		*ft_strjoindel(char *tmp, char *buff)
 	len_buff = ft_strlen(buff);
 	if (tmp)
 		i = ft_strlen(tmp);
-	if (!(concatstr = ft_strnew(i + len_buff)))
+	concatstr = ft_strnew(i + len_buff);
+	if (!concatstr)
 		return (NULL);
 	if (tmp)
 	{

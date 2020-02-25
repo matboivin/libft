@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 16:48:25 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 18:13:14 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/02/25 18:30:37 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,20 @@
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
-	char	*str;
+	char	*result;
 
 	if (s && f)
 	{
 		i = 0;
-		if (!(str = ft_memalloc(ft_strlen(s) + 1)))
+		result = ft_memalloc(ft_strlen(s) + 1);
+		if (result == NULL)
 			return (NULL);
 		while (s[i])
 		{
-			str[i] = f(i, s[i]);
+			result[i] = f(i, s[i]);
 			i++;
 		}
-		return (str);
+		return (result);
 	}
 	return (NULL);
 }

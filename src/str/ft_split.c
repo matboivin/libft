@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/03 20:00:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/02/25 18:44:26 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,22 +51,23 @@ static char		*get_splitted_strings(char const *s, size_t i, size_t c_index)
 {
 	size_t		j;
 	size_t		len;
-	char		*splittedstr;
+	char		*result;
 
 	if (c_index > i)
 		return (0);
 	j = 0;
 	len = i - c_index;
-	if (!(splittedstr = (char *)malloc((len + 1) * sizeof(char))))
+	result = (char *)malloc((len + 1) * sizeof(char));
+	if (result == NULL)
 		return (NULL);
 	while (j < len)
 	{
-		splittedstr[j] = s[c_index];
+		result[j] = s[c_index];
 		c_index++;
 		j++;
 	}
-	splittedstr[j] = '\0';
-	return (splittedstr);
+	result[j] = '\0';
+	return (result);
 }
 
 /*
@@ -88,7 +89,7 @@ char			**ft_split(char const *s, char c)
 	size_t		j;
 	char		**result;
 
-	if (!s)
+	if (s == NULL)
 		return (NULL);
 	str_count = count_strings(s, c);
 	i = 0;

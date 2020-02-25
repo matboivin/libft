@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:43:57 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/02 23:12:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/02/25 18:31:34 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ char		*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 	size_t	len;
-	char	*trimmedstr;
+	char	*result;
 
-	if (!s1 || !set)
+	if (s1 == NULL || set == NULL)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
@@ -42,6 +42,6 @@ char		*ft_strtrim(char const *s1, char const *set)
 	while (s1[start] && ft_ischarset(s1[end], set))
 		end--;
 	len = (end - start) + 1;
-	trimmedstr = ft_substr(s1, start, len);
-	return (trimmedstr);
+	result = ft_substr(s1, start, len);
+	return (result);
 }

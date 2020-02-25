@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 21:17:01 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/12 21:59:11 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/02/25 18:36:51 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void		ft_lstswap(t_list *a, t_list *prev_a, t_list *b, t_list *prev_b)
 {
 	t_list	*tmp;
 
-	if (!a || !b || !prev_a || !prev_b)
+	if (a == NULL || b == NULL || prev_a == NULL || prev_b == NULL)
 		return ;
 	if (prev_a)
 		prev_a->next = b;
