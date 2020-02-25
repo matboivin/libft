@@ -126,7 +126,7 @@ SRC		+=		get_next_line.c \
 .PHONY: all
 all: $(NAME)
 
-$(NAME)	: $(OBJ)
+$(NAME): $(OBJ)
 	@$(AR) $(ARFLAGS) $@ $(OBJ)
 	@echo "[OK]\t\t$(NAME) is ready"
 
