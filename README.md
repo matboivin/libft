@@ -85,6 +85,7 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 |[ft_striter](src/str/ft_striter.c)            |Applies the function `f` to each character of the string passed as argument |
 |[ft_striteri](src/str/ft_striteri.c)          |Applies the function `f` to each character of the string passed as argument, and passing its index as first argument |
 |[ft_strjoin](src/str/ft_strjoin.c)            |Allocates (with `malloc(3)`) and returns a new string, result of the concatenation of `s1` and `s2` |
+|[ft_strjoindel](src/str/ft_strjoindel.c)      |Allocates (with `malloc(3)`) and returns a new string, result of the concatenation of `s1` and `s2`, frees s1 if it exists |
 |[ft_strlcat](src/str/ft_strlcat.c)            |Appends the NUL-terminated string `src` to the end of `dst` at most `size` − `dst` length − 1 bytes, NUL-terminating the result |
 |[ft_strlcpy](src/str/ft_strlcpy.c)            |Copies up to size − 1 characters from the NUL-terminated string `src` to `dst`, NUL-terminating the result |
 |[ft_strlen](src/str/ft_strlen.c)              |Computes the length of the string `s` |

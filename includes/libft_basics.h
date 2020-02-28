@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/02/25 19:02:16 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/02/28 15:17:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ int					ft_strequ(char const *s1, char const *s2);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strjoindel(char *s1, char *s2);
 size_t				ft_strlcat(char *dst, char const *src, size_t size);
 size_t				ft_strlcpy(char *dst, char const *src, size_t size);
 size_t				ft_strlen(char const *s);
