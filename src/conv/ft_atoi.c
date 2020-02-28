@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 17:54:21 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/02/28 15:23:56 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int				ft_atoi(char const *str)
 
 	result = 0;
 	sign = 1;
-	while (ft_isspace(*str))
+	while (ft_isspace(*str) == true)
 		str++;
 	if (*str == '+')
 		str++;
@@ -37,7 +37,7 @@ int				ft_atoi(char const *str)
 		sign = -1;
 		str++;
 	}
-	while (*str && ft_isdigit(*str))
+	while (*str && ft_isdigit(*str) == true)
 	{
 		if (result >= LLONG_MAX)
 			return (sign == 1 ? -1 : 0);
