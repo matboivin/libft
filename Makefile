@@ -127,13 +127,15 @@ SRC		+=		get_next_line.c \
 .PHONY: all
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ_PATH) $(OBJ)
 	@$(AR) $(ARFLAGS) $@ $(OBJ)
 	@echo "[OK]\t\t$(NAME) is ready"
 
+$(OBJ_PATH):
+	@mkdir -p $@
+	@echo "[OK]\t\tCreated $@ directory"
+
 $(OBJ_PATH)/%.o : %.c
-	@mkdir -p $(OBJ_PATH)
-	@echo "[OK]\t\tCreated $@$  directory"
 	@echo "[Compiling]\t$< -> $@ ..."
 	@$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
 
