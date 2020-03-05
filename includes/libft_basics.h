@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/02/28 15:17:23 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/03/05 14:10:30 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,17 @@ void				ft_putstr_fd(char *s, int fd);
 
 int					ft_tolower(int c);
 int					ft_toupper(int c);
-t_bool				ft_isalnum(int c);
-t_bool				ft_isalpha(int c);
-t_bool				ft_isascii(int c);
-t_bool				ft_isblank(int c);
-t_bool				ft_ischarset(char c, char const *set);
-t_bool				ft_iscntrl(int c);
-t_bool				ft_isdigit(int c);
-t_bool				ft_islower(int c);
-t_bool				ft_isprint(int c);
-t_bool				ft_isspace(int c);
-t_bool				ft_isupper(int c);
+bool				ft_isalnum(int c);
+bool				ft_isalpha(int c);
+bool				ft_isascii(int c);
+bool				ft_isblank(int c);
+bool				ft_ischarset(char c, char const *set);
+bool				ft_iscntrl(int c);
+bool				ft_isdigit(int c);
+bool				ft_islower(int c);
+bool				ft_isprint(int c);
+bool				ft_isspace(int c);
+bool				ft_isupper(int c);
 
 char				**ft_split(char const *s, char c);
 char				*ft_strcat(char *s1, char const *s2);

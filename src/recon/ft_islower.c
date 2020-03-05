@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 22:07:41 by mboivin           #+#    #+#             */
-/*   Updated: 2020/02/25 18:50:35 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/03/05 14:09:33 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **          Zero value otherwise
 */
 
-t_bool	ft_islower(int c)
+bool	ft_islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (true);

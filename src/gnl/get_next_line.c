@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/02/28 15:19:07 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/03/05 14:10:53 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **          0 otherwise
 */
 
-static t_bool	is_line(char **store, char **line)
+static bool		is_line(char **store, char **line)
 {
 	char		*found;
 	size_t		end;

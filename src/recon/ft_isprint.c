@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:29 by mboivin           #+#    #+#             */
-/*   Updated: 2020/02/25 18:50:47 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/03/05 14:09:36 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **          Zero value otherwise
 */
 
-t_bool	ft_isprint(int c)
+bool	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (true);
