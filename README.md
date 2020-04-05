@@ -9,17 +9,19 @@ libft is an individual school project at [42 Paris](https://www.42.fr) campus.
 
 ### Table of Contents
 
-- [Function list](#function-list)
 - [Prerequisites](#prerequisites)
+- [Function list](#function-list)
 - [Acknowledgements](#acknowledgements)
 <br>
 
-In order to have a deeper understanding of C programming and data structures, 42 first school project is to implement some of the Standard C Library functions. It enables us to get a glimpse on basic algorithms and to create our own functions. The purpose is also to let us enrich this personal library in the future.
+The libft project is about implementing some of the Standard C Library functions to get a glimpse on basic algorithms. This personal library aims to be expanded and improved throughout the years.
 
-The *'ft'* in front of function's names stands for *'fourty two'*. :)
-
-**The libft project aims to be expanded and improved throughout the years.**
+The 'ft' in front of function names stands for 'fourty two'.
 <br>
+
+### Prerequisites
+
+GNU make and a C compiler.
 
 ## Function list
 
@@ -143,12 +145,6 @@ The *'ft'* in front of function's names stands for *'fourty two'*. :)
 | Name                                         |Description                     |
 |:---------------------------------------------|:-------------------------------|
 |[get_next_line](src/gnl/get_next_line.c)      |Reads a file line by line       |
-
-
-### Prerequisites
-
-* GNU make and a C compiler
-* valgrind to check for memory leaks
 <br>
 
 ### Acknowledgements
