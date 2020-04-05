@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:07:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/05 12:53:46 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/05 12:54:10 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,23 @@ char			*ft_itoa(int n)
 	long int	nbr;
 	int			nbr_len;
 	int			sign;
-	char		*str_repr;
+	char		*result;
 
 	nbr = n;
 	nbr_len = ft_nbrlen(nbr);
-	if (!(str_repr = ft_strnew(nbr_len)))
+	if (!(result = ft_strnew(nbr_len)))
 		return (NULL);
 	sign = 0;
 	if (n < 0)
 	{
-		str_repr[0] = '-';
+		result[0] = '-';
 		sign = 1;
 		nbr = -nbr;
 	}
 	while (nbr_len-- > sign)
 	{
-		str_repr[nbr_len] = nbr % 10 + '0';
+		result[nbr_len] = nbr % 10 + '0';
 		nbr /= 10;
 	}
-	return (str_repr);
+	return (result);
 }
