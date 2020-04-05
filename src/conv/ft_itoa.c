@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:07:24 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 17:56:42 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/05 12:53:46 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@
 char			*ft_itoa(int n)
 {
 	long int	nbr;
-	size_t		nbr_len;
-	size_t		sign;
+	int			nbr_len;
+	int			sign;
 	char		*str_repr;
 
 	nbr = n;
