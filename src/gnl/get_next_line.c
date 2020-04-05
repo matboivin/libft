@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/03/05 14:10:53 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/05 12:51:25 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int				get_next_line(int fd, char **line)
 	}
 	if (store && *store)
 		*line = ft_strdup(store);
-	else if (bytes_read == -1 || bytes_read == 0)
+	else
 		*line = ft_strdup("");
 	ft_strdel(&store);
 	return (bytes_read);
