@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 14:19:35 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/19 12:28:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/09 21:55:20 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char		*ft_strstr(char const *s, char const *needle)
 	to_find = (char *)needle;
 	while (from[i])
 	{
-		while (to_find[j] && from[i + j] == to_find[j])
+		while (from[i] && to_find[j] && from[i + j] == to_find[j])
 			j++;
 		if (to_find[j] == '\0')
 			return ((char *)(from + i));
