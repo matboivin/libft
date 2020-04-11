@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/03/05 14:10:30 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/11 12:05:52 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int					ft_atoi(char const *str);
 char				*ft_itoa(int n);
 
 void				ft_swap(int *a, int *b);
-size_t				ft_nbrlen(int n);
+int					ft_nbrlen(int n);
 int					get_next_line(int fd, char **line);
 
 #endif

@@ -17,8 +17,6 @@ OBJ_PATH = obj
 
 vpath %.c $(foreach dir, $(SRC_PATH), $(dir):)
 
-OBJ = $(addprefix $(OBJ_PATH)/, $(SRC:%.c=%.o))
-
 # Memory functions
 
 SRC		=		ft_bzero.c \
@@ -123,6 +121,8 @@ SRC		+=		ft_swap.c \
 # GNL
 
 SRC		+=		get_next_line.c \
+
+OBJ = $(addprefix $(OBJ_PATH)/, $(SRC:%.c=%.o))
 
 .PHONY: all
 all: $(NAME)
