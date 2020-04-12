@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/12 20:33:36 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/12 21:12:50 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ char				*ft_strrev(char *s);
 char				*ft_strstr(const char *s, const char *needle);
 char				*ft_strtrim(const char *s1, const char *set);
 char				*ft_substr(const char *s, unsigned int start, size_t len);
+char				*ft_strupcase(char *s);
+char				*ft_strlowcase(char *s);
 
 int					ft_atoi(const char *str);
 int					ft_atoi_base(const char *str, int base);

@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 17:24:29 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 18:15:04 by mboivin          ###   ########.fr       */
+/*   Created: 2020/04/12 20:55:19 by mboivin           #+#    #+#             */
+/*   Updated: 2020/04/12 21:11:51 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded toupper libc function: Converts a lower-case letter to the
-** corresponding upper-case letter
-**
-** c: A character
-**
-** returns: The corresponding upper-case letter
-**          Otherwise the argument is returned unchanged
+** Function: Converts all lower-case letters of a string to upper-case letters
 */
 
-int		ft_toupper(int c)
+char		*ft_strupcase(char *s)
 {
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
-	return (c);
+	int		i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
+		i++;
+	}
+	return (s);
 }

@@ -88,6 +88,8 @@ SRC		+=		ft_split.c \
 				ft_strstr.c \
 				ft_strtrim.c \
 				ft_substr.c \
+				ft_strupcase.c \
+				ft_strlowcase.c \
 
 # List functions
 

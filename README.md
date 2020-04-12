@@ -57,8 +57,6 @@ GNU make and a C compiler.
 
 | Name                                         |Description                     |
 |:---------------------------------------------|:-------------------------------|
-|[ft_tolower](src/recon/ft_tolower.c)          |Converts an upper-case letter to the corresponding lower-case letter |
-|[ft_toupper](src/recon/ft_toupper.c)          |Converts a lower-case letter to the corresponding upper-case letter |
 |[ft_isalnum](src/recon/ft_isalnum.c)          |Checks if `c` is an alphanumeric character |
 |[ft_isalpha](src/recon/ft_isalpha.c)          |Checks if `c` is an alphabet character |
 |[ft_isascii](src/recon/ft_isascii.c)          |Checks if `c` is a 7-bit US-ASCII character code between 0 and octal 0177 inclusive |
@@ -104,6 +102,10 @@ GNU make and a C compiler.
 |[ft_strstr](src/str/ft_strstr.c)              |Finds the first occurrence of the substring `needle` in the string `s` |
 |[ft_strtrim](src/str/ft_strtrim.c)            |Allocates (with `malloc(3)`) and returns a copy of the string given as argument without the characters specified in the set argument at the beginning and the end of the string |
 |[ft_substr](src/str/ft_substr.c)              |Allocates (with `malloc(3)`) and returns a substring from the string given in argument. It begins at index `start` and is of maximum size `len` |
+|[ft_strlowcase](src/str/ft_strlowcase.c)              |Converts all upper-case letters of a string to lower-case letters |
+|[ft_strupcase](src/str/ft_strupcase.c)              |Converts all lower-case letters of a string to upper-case letters |
+|[ft_tolower](src/str/ft_tolower.c)          |Converts an upper-case letter to the corresponding lower-case letter |
+|[ft_toupper](src/str/ft_toupper.c)          |Converts a lower-case letter to the corresponding upper-case letter |
 
 ### Int functions
 
