@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/12 20:24:28 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/12 20:28:21 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static bool		ft_isbase(int c, int base)
 **          Zero value otherwise
 */
 
-int				ft_atoi_base(const char *str, int base)
+int				ft_atoi_base(char const *str, int base)
 {
 	int			result;
 	int			sign;
