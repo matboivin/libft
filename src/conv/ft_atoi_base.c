@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/12 19:33:00 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/12 19:40:14 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static bool		ft_isbase(int c, int base)
 ** Recoded atoi libc function: Converts a string to an integer (base 10)
 **
 ** str: A string representation of a number
-** base: An integer (0 to 16)
+** base: An integer (2 to 16)
 **
 ** returns: The converted number as an int value
 **          Zero value otherwise
@@ -68,6 +68,8 @@ int				ft_atoi_base(const char *str, int base)
 	int			result;
 	int			sign;
 
+	if (base < 2 || base > 16)
+		return (0);
 	result = 0;
 	sign = 1;
 	while (ft_isspace(*str) == true)
