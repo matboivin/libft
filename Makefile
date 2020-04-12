@@ -111,6 +111,7 @@ SRC		+=		ft_lstat.c \
 # Conversion functions
 
 SRC		+=		ft_atoi.c \
+				ft_atoi_base \
 				ft_itoa.c \
 
 # Int functions

@@ -6,12 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:21 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/26 14:05:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/12 18:36:16 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 /*
 ** Function: Outputs the string s to the standard output

@@ -117,6 +117,7 @@ GNU make and a C compiler.
 | Name                                         |Description                     |
 |:---------------------------------------------|:-------------------------------|
 |[ft_atoi](src/conv/ft_atoi.c)                 |Converts a string to an integer |
+|[ft_atoi_base](src/conv/ft_atoi_base.c)       |Converts a string (base N <= 16) to an integer |
 |[ft_itoa](src/conv/ft_itoa.c)                 |Converts an integer to a string representation |
 
 ### List functions
