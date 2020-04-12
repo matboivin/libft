@@ -113,11 +113,13 @@ SRC		+=		ft_lstat.c \
 SRC		+=		ft_atoi.c \
 				ft_atoi_base \
 				ft_itoa.c \
+				ft_itoa_base \
 
 # Int functions
 
 SRC		+=		ft_swap.c \
 				ft_nbrlen.c \
+				ft_nbrlen_base.c \
 
 # GNL
 

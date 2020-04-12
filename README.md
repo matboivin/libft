@@ -111,6 +111,7 @@ GNU make and a C compiler.
 |:---------------------------------------------|:-------------------------------|
 |[ft_swap](src/int/ft_swap.c)                  |Swaps the value of two integers |
 |[ft_nbrlen](src/int/ft_nbrlen.c)              |Computes the length of the integer passed as an argument|
+|[ft_nbrlen_base](src/int/ft_nbrlen_base.c)    |Computes the length of the integer passed as an argument using the specified base |
 
 ### Conversion functions
 
@@ -119,6 +120,7 @@ GNU make and a C compiler.
 |[ft_atoi](src/conv/ft_atoi.c)                 |Converts a string to an integer |
 |[ft_atoi_base](src/conv/ft_atoi_base.c)       |Converts a string (base N <= 16) to an integer |
 |[ft_itoa](src/conv/ft_itoa.c)                 |Converts an integer to a string representation |
+|[ft_itoa_base](src/conv/ft_itoa_base.c)       |Converts an integer to a string representation using the specified base |
 
 ### List functions
 
