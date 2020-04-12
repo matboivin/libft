@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:25 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 18:11:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/12 20:34:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **          NULL otherwise
 */
 
-char	*ft_strchr(char const *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s && *s != (char)c)
 		s++;

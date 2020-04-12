@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 18:54:45 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 18:11:28 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/12 20:34:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 ** returns: A pointer to the destination string s1
 */
 
-char		*ft_strcat(char *s1, char const *s2)
+char		*ft_strcat(char *s1, const char *s2)
 {
 	size_t	dst_len;
 	size_t	i;

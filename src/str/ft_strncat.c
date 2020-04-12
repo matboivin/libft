@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 12:15:10 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/19 12:23:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/12 20:34:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** concatenated string dst.
 */
 
-char		*ft_strncat(char *dst, char const *src, size_t n)
+char		*ft_strncat(char *dst, const char *src, size_t n)
 {
 	size_t	i;
 	size_t	dst_len;

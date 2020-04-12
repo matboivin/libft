@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:26:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/01/06 13:09:03 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/12 20:34:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 ** returns: The total length of src
 */
 
-size_t		ft_strlcpy(char *dst, char const *src, size_t size)
+size_t		ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	src_len;

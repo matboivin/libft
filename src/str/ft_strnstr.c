@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:24:03 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 18:13:50 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/12 20:34:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 **          is returned
 */
 
-char		*ft_strnstr(char const *haystack, char const *needle, size_t len)
+char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	needle_len;

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 18:45:04 by mboivin           #+#    #+#             */
-/*   Updated: 2019/06/26 21:13:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/12 20:34:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 ** = 0 to indicate s1 is equal to s2.
 */
 
-int			ft_strcmp(char const *s1, char const *s2)
+int			ft_strcmp(const char *s1, const char *s2)
 {
 	size_t	i;
 

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2020/02/25 18:44:26 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/12 20:34:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** returns: The number of substrings delimited by c
 */
 
-static size_t	count_strings(char const *s, char c)
+static size_t	count_strings(const char *s, char c)
 {
 	size_t		i;
 	size_t		j;
@@ -47,7 +47,7 @@ static size_t	count_strings(char const *s, char c)
 ** returns: The splitted string
 */
 
-static char		*get_splitted_strings(char const *s, size_t i, size_t c_index)
+static char		*get_splitted_strings(const char *s, size_t i, size_t c_index)
 {
 	size_t		j;
 	size_t		len;
@@ -81,7 +81,7 @@ static char		*get_splitted_strings(char const *s, size_t i, size_t c_index)
 **          NULL otherwise
 */
 
-char			**ft_split(char const *s, char c)
+char			**ft_split(const char *s, char c)
 {
 	size_t		str_count;
 	size_t		c_index;

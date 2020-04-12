@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 14:19:35 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/09 21:55:20 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/12 20:34:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** of characters specified in needle, or a null pointer otherwise.
 */
 
-char		*ft_strstr(char const *s, char const *needle)
+char		*ft_strstr(const char *s, const char *needle)
 {
 	size_t	i;
 	size_t	j;

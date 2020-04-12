@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:43:57 by mboivin           #+#    #+#             */
-/*   Updated: 2020/02/25 18:31:34 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/12 20:34:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 **          NULL otherwise
 */
 
-char		*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	start;
 	size_t	end;
