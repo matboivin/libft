@@ -53,22 +53,6 @@ GNU make and a C compiler.
 |[ft_putstr_fd](src/io/ft_putstr_fd.c)         |Outputs the string `s` to given file descriptor |
 |[ft_putstr](src/io/ft_putstr.c)               |Outputs the string `s` to the standard output |
 
-### Char recon functions
-
-| Name                                         |Description                     |
-|:---------------------------------------------|:-------------------------------|
-|[ft_isalnum](src/recon/ft_isalnum.c)          |Checks if `c` is an alphanumeric character |
-|[ft_isalpha](src/recon/ft_isalpha.c)          |Checks if `c` is an alphabet character |
-|[ft_isascii](src/recon/ft_isascii.c)          |Checks if `c` is a 7-bit US-ASCII character code between 0 and octal 0177 inclusive |
-|[ft_isblank](src/recon/ft_isblank.c)          |Checks if `c` is a space or tab character |
-|[ft_ischarset](src/recon/ft_ischarset.c)      |Checks if `c` is present in `set` |
-|[ft_iscntrl](src/recon/ft_iscntrl.c)          |Checks if `c` is a control character |
-|[ft_isdigit](src/recon/ft_isdigit.c)          |Checks if `c` is a numeric character |
-|[ft_islower](src/recon/ft_islower.c)          |Checks if `c` is a lower-case character |
-|[ft_isprint](src/recon/ft_isprint.c)          |Checks if `c` is a printable character |
-|[ft_isspace](src/recon/ft_isspace.c)          |Checks if `c` is a space character |
-|[ft_isupper](src/recon/ft_isupper.c)          |Checks if `c` is a upper-case character |
-
 ### String functions
 
 | Name                                         |Description                     |
@@ -104,8 +88,29 @@ GNU make and a C compiler.
 |[ft_substr](src/str/ft_substr.c)              |Allocates (with `malloc(3)`) and returns a substring from the string given in argument. It begins at index `start` and is of maximum size `len` |
 |[ft_strlowcase](src/str/ft_strlowcase.c)              |Converts all upper-case letters of a string to lower-case letters |
 |[ft_strupcase](src/str/ft_strupcase.c)              |Converts all lower-case letters of a string to upper-case letters |
+
+### Char functions
+
+| Name                                         |Description                     |
+|:---------------------------------------------|:-------------------------------|
 |[ft_tolower](src/str/ft_tolower.c)          |Converts an upper-case letter to the corresponding lower-case letter |
 |[ft_toupper](src/str/ft_toupper.c)          |Converts a lower-case letter to the corresponding upper-case letter |
+
+### Char recon functions
+
+| Name                                         |Description                     |
+|:---------------------------------------------|:-------------------------------|
+|[ft_isalnum](src/recon/ft_isalnum.c)          |Checks if `c` is an alphanumeric character |
+|[ft_isalpha](src/recon/ft_isalpha.c)          |Checks if `c` is an alphabet character |
+|[ft_isascii](src/recon/ft_isascii.c)          |Checks if `c` is a 7-bit US-ASCII character code between 0 and octal 0177 inclusive |
+|[ft_isblank](src/recon/ft_isblank.c)          |Checks if `c` is a space or tab character |
+|[ft_ischarset](src/recon/ft_ischarset.c)      |Checks if `c` is present in `set` |
+|[ft_iscntrl](src/recon/ft_iscntrl.c)          |Checks if `c` is a control character |
+|[ft_isdigit](src/recon/ft_isdigit.c)          |Checks if `c` is a numeric character |
+|[ft_islower](src/recon/ft_islower.c)          |Checks if `c` is a lower-case character |
+|[ft_isprint](src/recon/ft_isprint.c)          |Checks if `c` is a printable character |
+|[ft_isspace](src/recon/ft_isspace.c)          |Checks if `c` is a space character |
+|[ft_isupper](src/recon/ft_isupper.c)          |Checks if `c` is a upper-case character |
 
 ### Int functions
 

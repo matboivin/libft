@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 15:21:39 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/26 14:06:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/14 16:34:38 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putendl(char *s)
 {
 	if (s)
 	{
-		write(1, s, ft_strlen(s));
-		write(1, "\n", 1);
+		write(STDOUT_FILENO, s, ft_strlen(s));
+		write(STDOUT_FILENO, "\n", 1);
 	}
 }
