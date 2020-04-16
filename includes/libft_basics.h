@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/16 18:22:50 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/16 18:45:41 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,8 @@ int					ft_atoi(const char *s);
 int					ft_atoi_base(const char *s, int base);
 char				*ft_itoa(int n);
 char				*ft_itoa_base(int n, int base);
+char				*ft_utoa(unsigned long long n);
+char				*ft_utoa_base(unsigned long long n, int base);
 
 void				ft_swap(int *a, int *b);
 int					ft_nbrlen(int n);

@@ -1,64 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_utoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/23 11:07:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/16 18:54:57 by mboivin          ###   ########.fr       */
+/*   Created: 2020/04/16 18:35:51 by mboivin           #+#    #+#             */
+/*   Updated: 2020/04/16 18:45:18 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Returns the necessary value for base conversion
-*/
-
-static int		conv_val(int n, int base)
-{
-	if (n % base < 10)
-		return ('0');
-	else
-		return ('A' - 10);
-	return (0);
-}
-
-/*
-** Function: Converts an integer to a string representation using the specified
-** base
+** Function: Converts an unsigned integer to a string representation
 **
 ** n: An integer
-** base: An integer (2 to 16)
 **
 ** returns: The converted number as a string representation
 **          Zero value otherwise
 */
 
-char			*ft_itoa_base(int n, int base)
+char					*ft_utoa(unsigned long long n)
 {
-	char		*result;
-	long int	nbr;
-	int			nbr_len;
-	int			sign;
+	char				*result;
+	unsigned long long	nbr;
+	int					nbr_len;
 
-	if (base < 2 || base > 16)
+	if (n == 0)
 		return (ft_strdup("0"));
 	nbr = n;
-	sign = 0;
-	if (n < 0)
-		nbr = -nbr;
-	if (n < 0 && base == 10)
-		sign = -1;
-	nbr_len = ft_nbrlen_base(nbr, base);
+	nbr_len = ft_nbrlen(nbr);
 	result = ft_strnew(nbr_len);
 	if (result == NULL)
 		return (NULL);
-	while (nbr_len-- > sign)
+	while (nbr != 0 && nbr_len-- > 0)
 	{
-		result[nbr_len] = (nbr % base) + conv_val(nbr, base);
-		nbr /= base;
+		result[nbr_len] = nbr % 10 + '0';
+		nbr /= 10;
 	}
 	return (result);
 }

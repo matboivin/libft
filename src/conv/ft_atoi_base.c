@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/16 18:11:55 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/16 18:55:06 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** Function: Returns the necessary value for base conversion
 */
 
-static int		atoi_val(int c)
+static int		conv_val(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (c - '0');
@@ -80,7 +80,7 @@ int				ft_atoi_base(const char *s, int base)
 		i++;
 	while (s[i] && ft_isbase(s[i], base) == true)
 	{
-		result = (result * base) + atoi_val(s[i]);
+		result = (result * base) + conv_val(s[i]);
 		i++;
 	}
 	return (sign * result);

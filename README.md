@@ -128,6 +128,8 @@ GNU make and a C compiler.
 |[ft_atoi_base](src/conv/ft_atoi_base.c)       |Converts a string (base N <= 16) to an integer |
 |[ft_itoa](src/conv/ft_itoa.c)                 |Converts an integer to a string representation |
 |[ft_itoa_base](src/conv/ft_itoa_base.c)       |Converts an integer to a string representation using the specified base |
+|[ft_utoa](src/conv/ft_utoa.c)                 |Converts an unsigned integer to a string representation |
+|[ft_utoa_base](src/conv/ft_utoa_base.c)       |Converts an unsigned integer to a string representation using the specified base |
 
 ### List functions
 
