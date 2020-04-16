@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/12 20:34:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/16 18:11:55 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,35 +56,32 @@ static bool		ft_isbase(int c, int base)
 /*
 ** Recoded atoi libc function: Converts a string to an integer (base 10)
 **
-** str: A string representation of a number
+** s: A string representation of a number
 ** base: An integer (2 to 16)
 **
 ** returns: The converted number as an int value
 **          Zero value otherwise
 */
 
-int				ft_atoi_base(const char *str, int base)
+int				ft_atoi_base(const char *s, int base)
 {
+	int			i;
 	int			result;
 	int			sign;
 
 	if (base < 2 || base > 16)
 		return (0);
+	i = 0;
 	result = 0;
-	sign = 1;
-	while (ft_isspace(*str) == true)
-		str++;
-	if (*str == '+')
-		str++;
-	else if (*str == '-')
+	while (ft_isspace(s[i]) == true)
+		i++;
+	sign = (s[i] == '-') ? -1 : 1;
+	if (s[i] == '+' || s[i] == '-')
+		i++;
+	while (s[i] && ft_isbase(s[i], base) == true)
 	{
-		sign = -1;
-		str++;
-	}
-	while (*str && ft_isbase(*str, base) == true)
-	{
-		result = (result * base) + atoi_val(*str);
-		str++;
+		result = (result * base) + atoi_val(s[i]);
+		i++;
 	}
 	return (sign * result);
 }

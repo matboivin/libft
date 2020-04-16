@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/12 20:34:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/16 18:21:43 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,34 +15,29 @@
 /*
 ** Recoded atoi libc function: Converts a string to an integer
 **
-** str: A string representation of an integral number
+** s: A string representation of an integral number
 **
 ** returns: The converted integral number as an int value
 **          Zero value otherwise
 */
 
-int				ft_atoi(const char *str)
+int				ft_atoi(const char *s)
 {
-	long long	result;
+	int			i;
+	int			result;
 	int			sign;
 
+	i = 0;
 	result = 0;
-	sign = 1;
-	while (ft_isspace(*str) == true)
-		str++;
-	if (*str == '+')
-		str++;
-	else if (*str == '-')
+	while (ft_isspace(s[i]) == true)
+		i++;
+	sign = (s[i] == '-') ? -1 : 1;
+	if (s[i] == '+' || s[i] == '-')
+		i++;
+	while (s[i] && ft_isdigit(s[i]) == true)
 	{
-		sign = -1;
-		str++;
+		result = (result * 10) + (s[i] - '0');
+		i++;
 	}
-	while (*str && ft_isdigit(*str) == true)
-	{
-		if (result >= LLONG_MAX)
-			return (sign == 1 ? -1 : 0);
-		result = (result * 10) + (*str - '0');
-		str++;
-	}
-	return ((int)sign * result);
+	return (sign * result);
 }
