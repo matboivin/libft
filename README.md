@@ -119,6 +119,7 @@ GNU make and a C compiler.
 |[ft_swap](src/int/ft_swap.c)                  |Swaps the value of two integers |
 |[ft_nbrlen](src/int/ft_nbrlen.c)              |Computes the length of the integer passed as an argument|
 |[ft_nbrlen_base](src/int/ft_nbrlen_base.c)    |Computes the length of the integer passed as an argument using the specified base |
+|[ft_unbrlen_base](src/int/ft_unbrlen_base.c)  |Computes the length of the unsigned integer passed as an argument using the specified base |
 
 ### Conversion functions
 

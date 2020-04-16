@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 18:35:51 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/16 18:45:18 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/16 19:54:02 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char					*ft_utoa(unsigned long long n)
 	if (n == 0)
 		return (ft_strdup("0"));
 	nbr = n;
-	nbr_len = ft_nbrlen(nbr);
+	nbr_len = ft_unbrlen_base(nbr, 10);
 	result = ft_strnew(nbr_len);
 	if (result == NULL)
 		return (NULL);

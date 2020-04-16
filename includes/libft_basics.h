@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/16 18:45:41 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/16 19:51:08 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ char				*ft_utoa_base(unsigned long long n, int base);
 void				ft_swap(int *a, int *b);
 int					ft_nbrlen(int n);
 int					ft_nbrlen_base(int n, int base);
+int					ft_unbrlen_base(unsigned long long n, int base);
 int					get_next_line(int fd, char **line);
 
 #endif
