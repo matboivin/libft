@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 18:44:40 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/16 19:52:43 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/16 22:55:34 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int				conv_val(int n, int base)
 	if (n % base < 10)
 		return ('0');
 	else
-		return ('A' - 10);
+		return ('a' - 10);
 	return (0);
 }
 
