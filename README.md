@@ -81,6 +81,7 @@ GNU make and a C compiler.
 |[ft_strnequ](src/str/ft_strnequ.c)            |Lexicographically compares `s1` and `s2` up to `n` characters or  until a ’\0’ is reached |
 |[ft_strnew](src/str/ft_strnew.c)              |Allocates (with `malloc(3)`) and returns a “fresh” string ending with ’\0’ |
 |[ft_strnstr](src/str/ft_strnstr.c)            |Locates the first occurrence of the null-terminated string `needle` in the null-terminated string `haystack` |
+|[ft_strprepend](src/str/ft_strprepend.c)            |Allocates a new string, result of the concatenation of prefix and s |
 |[ft_strrchr](src/str/ft_strrchr.c)            |Locates the last occurrence of `c` in the string pointed to by `s` |
 |[ft_strrev](src/str/ft_strrev.c)              |Reverses the order of characters in a string |
 |[ft_strstr](src/str/ft_strstr.c)              |Finds the first occurrence of the substring `needle` in the string `s` |
