@@ -83,6 +83,7 @@ SRC		+=		ft_split.c \
 				ft_strnequ.c \
 				ft_strnew.c \
 				ft_strnstr.c \
+				ft_strprepend.c \
 				ft_strrchr.c \
 				ft_strrev.c \
 				ft_strstr.c \
