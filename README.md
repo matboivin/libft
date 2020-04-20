@@ -83,6 +83,7 @@ GNU make and a C compiler.
 |[ft_strnstr](src/str/ft_strnstr.c)            |Locates the first occurrence of the null-terminated string `needle` in the null-terminated string `haystack` |
 |[ft_strprepend](src/str/ft_strprepend.c)            |Allocates a new string, result of the concatenation of prefix and s |
 |[ft_strrchr](src/str/ft_strrchr.c)            |Locates the last occurrence of `c` in the string pointed to by `s` |
+|[ft_strrep](src/str/ft_strrep.c)              |Copies a string `dst` to a newly allocated string and frees `dst` |
 |[ft_strrev](src/str/ft_strrev.c)              |Reverses the order of characters in a string |
 |[ft_strstr](src/str/ft_strstr.c)              |Finds the first occurrence of the substring `needle` in the string `s` |
 |[ft_strtrim](src/str/ft_strtrim.c)            |Allocates (with `malloc(3)`) and returns a copy of the string given as argument without the characters specified in the set argument at the beginning and the end of the string |

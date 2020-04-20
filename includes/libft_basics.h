@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/17 12:27:33 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/20 20:01:58 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ char				*ft_strnstr(
 	const char *haystack, const char *needle, size_t len);
 char				*ft_strprepend(const char *prefix, char *s);
 char				*ft_strrchr(const char *s, int c);
+char				*ft_strrep(char *src, int size);
 char				*ft_strrev(char *s);
 char				*ft_strstr(const char *s, const char *needle);
 char				*ft_strtrim(const char *s1, const char *set);
