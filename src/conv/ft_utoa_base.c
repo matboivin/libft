@@ -6,24 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 18:44:40 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/16 22:55:34 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/25 20:13:46 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-** Function: Returns the necessary value for base conversion
-*/
-
-static int				conv_val(int n, int base)
-{
-	if (n % base < 10)
-		return ('0');
-	else
-		return ('a' - 10);
-	return (0);
-}
 
 /*
 ** Function: Converts an unsigned integer to a string representation using the
@@ -39,20 +26,20 @@ static int				conv_val(int n, int base)
 char					*ft_utoa_base(unsigned long long n, int base)
 {
 	char				*result;
-	unsigned long long	nbr;
-	int					nbr_len;
+	int					n_len;
+	unsigned long long	rem;
 
 	if (n == 0 || base < 2 || base > 16)
 		return (ft_strdup("0"));
-	nbr = n;
-	nbr_len = ft_unbrlen_base(nbr, base);
-	result = ft_strnew(nbr_len);
+	n_len = ft_unbrlen_base(n, base);
+	result = ft_strnew(n_len);
 	if (result == NULL)
 		return (NULL);
-	while (nbr != 0 && nbr_len-- > 0)
+	while (n != 0 && n_len-- > 0)
 	{
-		result[nbr_len] = (nbr % base) + conv_val(nbr, base);
-		nbr /= base;
+		rem = n % base;
+		result[n_len] = (rem < 10) ? rem + '0' : rem - 10 + 'a';
+		n /= base;
 	}
 	return (result);
 }
