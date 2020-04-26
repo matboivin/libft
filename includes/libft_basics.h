@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/20 20:01:58 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/26 22:21:04 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ char				*ft_strlowcase(char *s);
 
 int					ft_atoi(const char *s);
 int					ft_atoi_base(const char *s, int base);
+char				*ft_atos(char c);
 char				*ft_itoa(int n);
 char				*ft_itoa_base(int n, int base);
 char				*ft_utoa(unsigned long long n);

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/02/25 15:58:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/04/26 22:09:35 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,6 @@
 # include "libft_define.h"
 # include "libft_basics.h"
 # include "libft_list.h"
+# include "libft_printf.h"
 
 #endif

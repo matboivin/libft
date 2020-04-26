@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   conv_percent.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 17:23:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/26 22:21:13 by mboivin          ###   ########.fr       */
+/*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
+/*   Updated: 2020/04/26 22:10:17 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded strlen libc function: Computes the length of the string s
+** Function: Handles percent character
 **
-** s: The string whose length is to be found
+** spec: A structure containing the retrieved formatting data
+** ap: A pointer to the list of arguments
 **
-** returns: The number of characters that precede the terminating NULL character
+** returns: The count of printed characters
 */
 
-size_t		ft_strlen(const char *s)
+int			conv_percent(t_spec *spec, va_list ap)
 {
-	size_t	len;
+	int		printed;
+	char	*buffer;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	(void)ap;
+	buffer = ft_strdup("%");
+	if (buffer == NULL)
+		return (-1);
+	printed = format_char(buffer, spec);
+	free(buffer);
+	return (printed);
 }

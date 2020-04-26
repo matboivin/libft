@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 17:23:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/26 22:21:13 by mboivin          ###   ########.fr       */
+/*   Created: 2020/04/11 11:54:32 by mboivin           #+#    #+#             */
+/*   Updated: 2020/04/26 22:10:38 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Recoded strlen libc function: Computes the length of the string s
-**
-** s: The string whose length is to be found
-**
-** returns: The number of characters that precede the terminating NULL character
-*/
-
-size_t		ft_strlen(const char *s)
+int			ft_printf(const char *format, ...)
 {
-	size_t	len;
+	va_list	ap;
+	int		printed;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	va_start(ap, format);
+	printed = construct_output(format, ap);
+	va_end(ap);
+	return (printed);
 }

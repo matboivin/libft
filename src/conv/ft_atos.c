@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_atos.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 17:23:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/26 22:21:13 by mboivin          ###   ########.fr       */
+/*   Created: 2020/04/26 12:41:45 by mboivin           #+#    #+#             */
+/*   Updated: 2020/04/26 22:20:07 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded strlen libc function: Computes the length of the string s
+** Function: Converts a single char to a string
 **
-** s: The string whose length is to be found
+** c: A char
 **
-** returns: The number of characters that precede the terminating NULL character
+** returns: The converted char as a string representation
+**          Zero value otherwise
 */
 
-size_t		ft_strlen(const char *s)
+char		*ft_atos(char c)
 {
-	size_t	len;
+	char	*result;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	result = ft_strnew(1);
+	if (result == NULL)
+		return (NULL);
+	result = ft_memset(result, c, 1);
+	return (result);
 }

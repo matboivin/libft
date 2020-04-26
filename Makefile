@@ -116,6 +116,7 @@ SRC		+=		ft_lstat.c \
 
 SRC		+=		ft_atoi.c \
 				ft_atoi_base.c \
+				ft_atos.c \
 				ft_itoa.c \
 				ft_itoa_base.c \
 				ft_utoa.c \
@@ -131,6 +132,23 @@ SRC		+=		ft_swap.c \
 # GNL
 
 SRC		+=		get_next_line.c \
+
+# ft_printf
+
+SRC		+=		ft_printf.c \
+				conv_char.c \
+				conv_int.c \
+				conv_p.c \
+				conv_percent.c \
+				conv_s.c \
+				conv_uint.c \
+				format_csp.c \
+				format_nbr.c \
+				format_utils.c \
+				init_struct.c \
+				parsing.c \
+				parsing_fields.c \
+				parsing_utils.c \
 
 OBJ = $(addprefix $(OBJ_PATH)/, $(SRC:%.c=%.o))
 

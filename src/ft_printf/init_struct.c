@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   init_struct.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 17:23:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/26 22:21:13 by mboivin          ###   ########.fr       */
+/*   Created: 2020/04/11 13:17:16 by mboivin           #+#    #+#             */
+/*   Updated: 2020/04/26 22:10:40 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded strlen libc function: Computes the length of the string s
-**
-** s: The string whose length is to be found
-**
-** returns: The number of characters that precede the terminating NULL character
+** Array of structures: pointers to conversion functions matching types
 */
 
-size_t		ft_strlen(const char *s)
+struct s_conv	g_conv[] =
 {
-	size_t	len;
-
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
-}
+	{'c', &conv_c},
+	{'s', &conv_s},
+	{'p', &conv_p},
+	{'d', &conv_int},
+	{'i', &conv_int},
+	{'o', &conv_o},
+	{'u', &conv_uint},
+	{'x', &conv_hex},
+	{'X', &conv_hex},
+	{'%', &conv_percent}
+};
