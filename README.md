@@ -14,6 +14,18 @@ The 'ft' in front of function names stands for 'fourty two'.
 
 GNU make and a C compiler.
 
+### Installing
+
+Clone the repository, change it to your working directory and run:
+```console
+make
+```
+
+To use the library:
+```console
+gcc foo.c -L. -lft
+```
+
 ### Acknowledgements
 
 School project done at [42 Paris](https://www.42.fr).
