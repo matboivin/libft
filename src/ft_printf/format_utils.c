@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:20:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/26 22:10:35 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/05/01 14:44:34 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,7 @@ int				put_zeroes(int len, t_spec *spec)
 
 int				is_prefix(int c)
 {
-	if (c == ' ' || c == '+' || c == '-')
-		return (1);
-	return (0);
+	return (c == ' ' || c == '+' || c == '-');
 }
 
 /*

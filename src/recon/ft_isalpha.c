@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:59 by mboivin           #+#    #+#             */
-/*   Updated: 2020/03/05 14:09:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/05/01 14:39:30 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@
 **          Zero value otherwise
 */
 
-bool	ft_isalpha(int c)
+int		ft_isalpha(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (true);
-	return (false);
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:09 by mboivin           #+#    #+#             */
-/*   Updated: 2020/03/05 14:09:15 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/05/01 14:39:43 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@
 **          Zero value otherwise
 */
 
-bool	ft_isascii(int c)
+int		ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (true);
-	return (false);
+	return (c >= 0 && c <= 127);
 }

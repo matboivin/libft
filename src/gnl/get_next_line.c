@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/26 22:13:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/05/01 14:38:18 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static char		*ft_strjoin_gnl(char *s1, char *s2)
 **          0 otherwise
 */
 
-static bool		is_line(char **store, char **line)
+static int		is_line(char **store, char **line)
 {
 	char		*found;
 	size_t		end;
@@ -72,9 +72,9 @@ static bool		is_line(char **store, char **line)
 		len = ft_strlen(found);
 		*line = ft_substr(*store, 0, end);
 		ft_strlcpy(*store, (found + 1), (len + 1));
-		return (true);
+		return (1);
 	}
-	return (false);
+	return (0);
 }
 
 /*
@@ -96,14 +96,14 @@ int				get_next_line(int fd, char **line)
 
 	if (!line || fd < 0 || BUFFER_SIZE < 1)
 		return (-1);
-	if (store && is_line(&store, line) == true)
+	if (store && is_line(&store, line))
 		return (1);
 	while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
 	{
 		buffer[bytes_read] = '\0';
 		if (!(store = ft_strjoin_gnl(store, buffer)))
 			return (-1);
-		if (is_line(&store, line) == true)
+		if (is_line(&store, line))
 			return (1);
 	}
 	if (store && *store)
