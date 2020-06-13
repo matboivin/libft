@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/26 22:10:22 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/13 16:55:35 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ int				conv_o(t_spec *spec, va_list ap)
 
 	arg = length_uint(spec, ap);
 	buffer = ft_utoa_base(arg, 8);
-	if (spec->flag & alt)
+	if (spec->flag & ALT)
 		buffer = add_prefix(buffer, spec);
 	if (buffer == NULL)
 		return (-1);
@@ -105,7 +105,7 @@ int				conv_hex(t_spec *spec, va_list ap)
 	buffer = ft_utoa_base(arg, 16);
 	if (spec->type == 'X')
 		buffer = ft_strupcase(buffer);
-	if (spec->flag & alt)
+	if (spec->flag & ALT)
 		buffer = add_prefix(buffer, spec);
 	if (buffer == NULL)
 		return (-1);

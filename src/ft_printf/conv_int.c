@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/26 22:10:11 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/13 16:54:58 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int				conv_int(t_spec *spec, va_list ap)
 
 	arg = length_int(spec, ap);
 	buffer = ft_itoa_base(arg, 10);
-	if (arg >= 0 && (spec->flag & plus || spec->flag & space))
+	if (arg >= 0 && (spec->flag & PLUS || spec->flag & SPACE))
 		buffer = add_prefix(buffer, spec);
 	if (buffer == NULL)
 		return (-1);

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/05/29 18:39:28 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/13 17:01:41 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ int			format_int(char *s, int pad, int len, t_spec *spec)
 		spec->width--;
 		zeroes--;
 	}
-	if (spec->flag & zero && spec->prec == -1 && is_prefix(s[0]))
+	if (spec->flag & ZERO && spec->prec == -1 && is_prefix(s[0]))
 		printed += write(STDOUT_FILENO, s++, 1);
-	if (!(spec->flag & leftalign) && spec->width > (int)ft_strlen(s))
+	if (!(spec->flag & LEFTALIGN) && spec->width > (int)ft_strlen(s))
 		printed += put_padding(pad, len, spec);
 	if (spec->prec >= (int)ft_strlen(s))
 	{
@@ -46,7 +46,7 @@ int			format_int(char *s, int pad, int len, t_spec *spec)
 		printed += put_zeroes(zeroes, spec);
 	}
 	printed += write(STDOUT_FILENO, s, ft_strlen(s));
-	if (spec->flag & leftalign && spec->width > (int)ft_strlen(s))
+	if (spec->flag & LEFTALIGN && spec->width > (int)ft_strlen(s))
 		printed += put_padding(pad, len, spec);
 	return (printed);
 }
@@ -69,11 +69,11 @@ int			format_zero(char *s, t_spec *spec)
 	len = 0;
 	if (is_prefix(s[0]))
 		spec->width--;
-	if (!(spec->flag & leftalign) && spec->width >= (int)ft_strlen(s))
+	if (!(spec->flag & LEFTALIGN) && spec->width >= (int)ft_strlen(s))
 		printed += put_padding(' ', len, spec);
 	if (is_prefix(s[0]))
 		printed += write(STDOUT_FILENO, s, 1);
-	if (spec->flag & leftalign && spec->width >= (int)ft_strlen(s))
+	if (spec->flag & LEFTALIGN && spec->width >= (int)ft_strlen(s))
 		printed += put_padding(' ', len, spec);
 	return (printed);
 }
@@ -96,8 +96,8 @@ int			format_nbr(char *s, t_spec *spec, int arg)
 
 	printed = 0;
 	len = (spec->prec >= (int)ft_strlen(s)) ? spec->prec : (int)ft_strlen(s);
-	pad = (spec->flag & zero && spec->prec == -1 \
-		&& !(spec->flag & leftalign)) ? '0' : ' ';
+	pad = (spec->flag & ZERO && spec->prec == -1 \
+		&& !(spec->flag & LEFTALIGN)) ? '0' : ' ';
 	if (spec->prec == 0 && arg == 0)
 		printed += format_zero(s, spec);
 	else

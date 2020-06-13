@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 12:35:35 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/26 22:10:43 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/13 16:57:01 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,15 @@ void			get_flags(const char **format, t_spec *spec)
 	while (**format && ft_strchr(flags, **format))
 	{
 		if (**format == '-')
-			spec->flag |= leftalign;
+			spec->flag |= LEFTALIGN;
 		else if (**format == '0')
-			spec->flag |= zero;
+			spec->flag |= ZERO;
 		else if (**format == '+')
-			spec->flag |= plus;
+			spec->flag |= PLUS;
 		else if (**format == ' ')
-			spec->flag |= space;
+			spec->flag |= SPACE;
 		else if (**format == '#')
-			spec->flag |= alt;
+			spec->flag |= ALT;
 		else
 			break ;
 		(*format)++;
@@ -65,7 +65,7 @@ void			get_width(const char **format, t_spec *spec, va_list ap)
 	if (spec->width < 0)
 	{
 		spec->width = -spec->width;
-		spec->flag |= leftalign;
+		spec->flag |= LEFTALIGN;
 	}
 }
 

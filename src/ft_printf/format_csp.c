@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/26 22:22:43 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/13 16:56:01 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ int			format_char(char *s, t_spec *spec)
 
 	printed = 0;
 	pad = ' ';
-	if (!(spec->flag & leftalign) && spec->width > 1)
+	if (!(spec->flag & LEFTALIGN) && spec->width > 1)
 	{
-		if (s[0] == '%' && spec->flag & zero)
+		if (s[0] == '%' && spec->flag & ZERO)
 			pad = '0';
 		printed += put_padding(pad, 1, spec);
 	}
 	printed += write(STDOUT_FILENO, s, 1);
-	if (spec->flag & leftalign && spec->width > 1)
+	if (spec->flag & LEFTALIGN && spec->width > 1)
 		printed += put_padding(pad, 1, spec);
 	return (printed);
 }
@@ -58,14 +58,14 @@ int			format_str(char *s, t_spec *spec)
 	printed = 0;
 	len = ft_strlen(s);
 	pad = ' ';
-	if (!(spec->flag & leftalign) && spec->width > (int)ft_strlen(s))
+	if (!(spec->flag & LEFTALIGN) && spec->width > (int)ft_strlen(s))
 	{
-		if (spec->flag & zero)
+		if (spec->flag & ZERO)
 			pad = '0';
 		printed += put_padding(pad, len, spec);
 	}
 	printed += write(STDOUT_FILENO, s, len);
-	if (spec->flag & leftalign && spec->width > (int)ft_strlen(s))
+	if (spec->flag & LEFTALIGN && spec->width > (int)ft_strlen(s))
 		printed += put_padding(' ', len, spec);
 	return (printed);
 }
@@ -84,7 +84,7 @@ int			format_ptr(char *s, t_spec *spec)
 	int		printed;
 
 	printed = 0;
-	if (!(spec->flag & leftalign) && spec->width > (int)ft_strlen(s))
+	if (!(spec->flag & LEFTALIGN) && spec->width > (int)ft_strlen(s))
 		printed += put_padding(' ', ft_strlen(s), spec);
 	if (spec->prec >= (int)ft_strlen(s))
 	{
@@ -93,7 +93,7 @@ int			format_ptr(char *s, t_spec *spec)
 		printed += put_zeroes(ft_strlen(s), spec);
 	}
 	printed += write(STDOUT_FILENO, s, ft_strlen(s));
-	if (spec->flag & leftalign && spec->width > (int)ft_strlen(s))
+	if (spec->flag & LEFTALIGN && spec->width > (int)ft_strlen(s))
 		printed += put_padding(' ', ft_strlen(s), spec);
 	return (printed);
 }

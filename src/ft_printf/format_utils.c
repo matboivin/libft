@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:20:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/05/01 14:44:34 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/13 16:56:37 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,9 +93,9 @@ char			*add_prefix(char *s, t_spec *spec)
 		result = ft_strprepend(oct_prefix, s);
 	else if (spec->type == 'd' || spec->type == 'i')
 	{
-		if (spec->flag & plus)
+		if (spec->flag & PLUS)
 			result = ft_strprepend("+", s);
-		else if (spec->flag & space)
+		else if (spec->flag & SPACE)
 			result = ft_strprepend(" ", s);
 	}
 	return (result);
