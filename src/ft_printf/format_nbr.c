@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/15 14:48:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/15 15:08:41 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ int			format_nbr(char *s, t_spec *spec, int arg)
 	int		pad;
 
 	printed = 0;
-	len = (spec->prec >= (int)ft_strlen(s)) ? spec->prec : ft_strlen(s);
+	len = (spec->prec >= (int)ft_strlen(s)) ? spec->prec : (int)ft_strlen(s);
 	pad = (spec->flag & ZERO && spec->prec == -1 \
 		&& !(spec->flag & LEFTALIGN)) ? '0' : ' ';
 	if (spec->prec == 0 && arg == 0)
