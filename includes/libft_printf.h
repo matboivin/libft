@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_printf.h                                     :+:      :+:    :+:   */
+/*   libft_dprintf.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 11:51:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/13 16:54:39 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/15 14:47:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_PRINTF_H
-# define LIBFT_PRINTF_H
+#ifndef LIBFT_DPRINTF_H
+# define LIBFT_DPRINTF_H
 
 # include <stdarg.h>
 
@@ -31,6 +31,7 @@ typedef struct			s_spec
 	int					prec;
 	int					modifier;
 	char				type;
+	int					dst_fd;
 }						t_spec;
 
 typedef	int				(*t_conv_func)(t_spec *spec, va_list ap);
@@ -44,12 +45,13 @@ typedef struct			s_conv
 extern struct s_conv	g_conv[];
 
 int						ft_printf(const char *format, ...);
+int						ft_dprintf(int fd, const char *format, ...);
 
-int						construct_output(const char *format, va_list ap);
+int						construct_output(int fd, const char *format, va_list ap);
 int						output(t_spec *spec, va_list ap);
 
-void					create_spec(t_spec *spec);
-int						parse_formatting(const char **format, va_list ap);
+void					create_spec(int fd, t_spec *spec);
+int						parse_formatting(int fd, const char **format, va_list ap);
 void					get_flags(const char **format, t_spec *spec);
 void					get_width(
 	const char **format, t_spec *spec, va_list ap);

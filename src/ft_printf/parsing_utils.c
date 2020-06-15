@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 21:18:36 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/26 22:10:45 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/15 14:39:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@
 ** Function: Inits the spec data structure
 */
 
-void		create_spec(t_spec *spec)
+void		create_spec(int fd, t_spec *spec)
 {
 	spec->flag = 0;
 	spec->prec = -1;
 	spec->width = 0;
 	spec->modifier = 0;
 	spec->type = '\0';
+	spec->dst_fd = fd;
 }
 
 /*

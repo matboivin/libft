@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 12:33:13 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/26 22:10:48 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/15 14:39:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ int			output(t_spec *spec, va_list ap)
 ** returns: The count of printed characters
 */
 
-int			parse_formatting(const char **format, va_list ap)
+int			parse_formatting(int fd, const char **format, va_list ap)
 {
 	t_spec	spec;
 
-	create_spec(&spec);
+	create_spec(fd, &spec);
 	get_flags(format, &spec);
 	get_width(format, &spec, ap);
 	get_precision(format, &spec, ap);
@@ -65,7 +65,7 @@ int			parse_formatting(const char **format, va_list ap)
 ** returns: The count of printed characters
 */
 
-int			construct_output(const char *format, va_list ap)
+int			construct_output(int fd, const char *format, va_list ap)
 {
 	int		printed;
 
@@ -77,11 +77,11 @@ int			construct_output(const char *format, va_list ap)
 		if (*format == '%')
 		{
 			format++;
-			printed += parse_formatting(&format, ap);
+			printed += parse_formatting(fd, &format, ap);
 		}
 		else
 		{
-			printed += write(STDOUT_FILENO, format, 1);
+			printed += write(fd, format, 1);
 			format++;
 		}
 	}

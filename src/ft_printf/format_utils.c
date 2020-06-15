@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:20:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/13 16:56:37 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/15 14:39:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int				put_padding(int pad, int len, t_spec *spec)
 
 	printed = 0;
 	while (spec->width-- > len)
-		printed += write(STDOUT_FILENO, &pad, 1);
+		printed += write(spec->dst_fd, &pad, 1);
 	return (printed);
 }
 
@@ -49,7 +49,7 @@ int				put_zeroes(int len, t_spec *spec)
 	printed = 0;
 	zeroes = spec->prec - len;
 	while (zeroes--)
-		printed += write(STDOUT_FILENO, "0", 1);
+		printed += write(spec->dst_fd, "0", 1);
 	return (printed);
 }
 
