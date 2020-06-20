@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/21 00:09:55 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/21 00:27:43 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int		ft_islower(int c);
 int		ft_isprint(int c);
 int		ft_isspace(int c);
 int		ft_isupper(int c);
+int		ft_isnumeric(char *s);
 
 char	**ft_split(const char *s, char c);
 char	*ft_strcat(char *s1, const char *s2);
