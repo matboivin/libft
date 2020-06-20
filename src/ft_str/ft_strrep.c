@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/20 19:47:13 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/20 20:01:29 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/20 22:53:21 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char			*ft_strrep(char *src, int size)
 	if (!src || size < 0)
 		return (NULL);
 	i = 0;
-	result = (char *)malloc((size + 1) * sizeof(char));
+	result = ft_strnew(size);
 	if (result == NULL)
 		return (NULL);
 	while (src[i] && i < size)

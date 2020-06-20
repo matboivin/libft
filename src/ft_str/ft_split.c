@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/16 18:26:48 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/20 22:51:32 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static char		*get_strings(const char *s, size_t i, size_t c_index)
 		return (0);
 	j = 0;
 	len = i - c_index;
-	result = (char *)malloc((len + 1) * sizeof(char));
+	result = ft_strnew(len);
 	if (result == NULL)
 		return (NULL);
 	while (j < len)

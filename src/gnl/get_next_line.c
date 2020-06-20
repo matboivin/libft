@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/05/01 14:38:18 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/06/20 22:54:21 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static char		*ft_strjoin_gnl(char *s1, char *s2)
 	if (s1)
 		len_s1 = ft_strlen(s1);
 	len = len_s1 + len_s2;
-	result = (char *)malloc((len + 1) * sizeof(char));
+	result = ft_strnew(len);
 	if (result == NULL)
 		return (NULL);
 	if (s1)
