@@ -92,6 +92,7 @@ SRC		+=		ft_split.c			\
 				ft_substr.c			\
 				ft_strupcase.c		\
 				ft_strlowcase.c		\
+				ft_tablen.c			\
 
 # List functions
 
