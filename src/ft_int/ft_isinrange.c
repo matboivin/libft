@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 18:59:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/06 19:04:41 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/06 19:08:11 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@
 
 int		ft_isinrange(int x, int start, int end)
 {
-	return (start <= x && x <= end);
+	return (x >= start && x <= end);
 }
