@@ -93,7 +93,11 @@ SRC		+=		ft_split.c			\
 				ft_substr.c			\
 				ft_strupcase.c		\
 				ft_strlowcase.c		\
-				ft_tablen.c			\
+
+# Array functions
+
+SRC		+=		ft_tablen.c			\
+				ft_tabdel.c			\
 
 # List functions
 
