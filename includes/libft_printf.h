@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_dprintf.h                                    :+:      :+:    :+:   */
+/*   libft_printf.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 11:51:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/15 14:47:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/06 19:27:25 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_DPRINTF_H
-# define LIBFT_DPRINTF_H
+#ifndef LIBFT_PRINTF_H
+# define LIBFT_PRINTF_H
 
 # include <stdarg.h>
 
@@ -47,11 +47,13 @@ extern struct s_conv	g_conv[];
 int						ft_printf(const char *format, ...);
 int						ft_dprintf(int fd, const char *format, ...);
 
-int						construct_output(int fd, const char *format, va_list ap);
+int						construct_output(
+	int fd, const char *format, va_list ap);
 int						output(t_spec *spec, va_list ap);
 
 void					create_spec(int fd, t_spec *spec);
-int						parse_formatting(int fd, const char **format, va_list ap);
+int						parse_formatting(
+	int fd, const char **format, va_list ap);
 void					get_flags(const char **format, t_spec *spec);
 void					get_width(
 	const char **format, t_spec *spec, va_list ap);
