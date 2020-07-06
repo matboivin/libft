@@ -129,6 +129,7 @@ SRC		+=		ft_atoi.c			\
 				ft_itoa_base.c		\
 				ft_utoa.c			\
 				ft_utoa_base.c		\
+				ft_strtod.c			\
 
 # Int functions
 
