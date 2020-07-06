@@ -57,6 +57,7 @@ SRC		+=		ft_tolower.c		\
 				ft_isspace.c		\
 				ft_isupper.c		\
 				ft_isnumeric.c		\
+				ft_charcount.c		\
 
 # String functions
 
