@@ -61,6 +61,7 @@ SRC		+=		ft_tolower.c		\
 # String functions
 
 SRC		+=		ft_split.c			\
+				ft_strappend.c		\
 				ft_strcat.c			\
 				ft_strchr.c			\
 				ft_strclr.c			\

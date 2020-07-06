@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/06 16:03:06 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/06 16:15:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int		ft_isupper(int c);
 int		ft_isnumeric(char *s);
 
 char	**ft_split(const char *s, char c);
+char	*ft_strappend(char *s, char *suffix);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strchr(const char *s, int c);
 void	ft_strclr(char *s);
