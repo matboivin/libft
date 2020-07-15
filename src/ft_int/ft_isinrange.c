@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 18:59:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/06 19:08:11 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/15 12:34:55 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** Function: Checks whether a number is in a given range
 **
 ** c: A number
-** star: Range start
+** start: Range start
 ** end: Range end
 **
 ** returns: A non-zero integer if c is in the range
