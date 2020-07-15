@@ -137,7 +137,8 @@ SRC		+=		ft_swap.c			\
 				ft_nbrlen.c			\
 				ft_nbrlen_base.c	\
 				ft_unbrlen_base.c	\
-				ft_isinrange.c		\
+				ft_n_range.c		\
+				ft_f_range.c		\
 
 # GNL
 

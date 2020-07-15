@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isinrange.c                                     :+:      :+:    :+:   */
+/*   ft_f_range.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 18:59:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/15 12:34:55 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/15 15:56:26 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Checks whether a number is in a given range
+** Function: Checks whether a double is in a given range
 **
-** c: A number
+** x: A number
 ** start: Range start
 ** end: Range end
 **
-** returns: A non-zero integer if c is in the range
+** returns: A non-zero integer if x is in the range
 **          Zero value otherwise
 */
 
-int		ft_isinrange(int x, int start, int end)
+int		ft_f_range(double x, double start, double end)
 {
 	return (x >= start && x <= end);
 }

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/06 21:19:02 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/15 15:56:31 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,8 @@ void	ft_swap(int *a, int *b);
 int		ft_nbrlen(int n);
 int		ft_nbrlen_base(int n, int base);
 int		ft_unbrlen_base(unsigned long long n, int base);
-int		ft_isinrange(int x, int start, int end);
+int		ft_n_range(int x, int start, int end);
+int		ft_f_range(double x, double start, double end);
 
 int		get_next_line(int fd, char **line);
 
