@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/20 22:54:21 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/19 19:27:35 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **          NULL otherwise
 */
 
-static char		*ft_strjoin_gnl(char *s1, char *s2)
+static char		*ft_strjoindelone(char *s1, char *s2)
 {
 	char		*result;
 	size_t		len_s1;
@@ -58,7 +58,7 @@ static char		*ft_strjoin_gnl(char *s1, char *s2)
 **          0 otherwise
 */
 
-static int		is_line(char **store, char **line)
+static bool		ft_is_line(char **store, char **line)
 {
 	char		*found;
 	size_t		end;
@@ -72,9 +72,9 @@ static int		is_line(char **store, char **line)
 		len = ft_strlen(found);
 		*line = ft_substr(*store, 0, end);
 		ft_strlcpy(*store, (found + 1), (len + 1));
-		return (1);
+		return (true);
 	}
-	return (0);
+	return (false);
 }
 
 /*
@@ -96,14 +96,14 @@ int				get_next_line(int fd, char **line)
 
 	if (!line || fd < 0 || BUFFER_SIZE < 1)
 		return (-1);
-	if (store && is_line(&store, line))
+	if (store && ft_is_line(&store, line) == true)
 		return (1);
 	while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
 	{
 		buffer[bytes_read] = '\0';
-		if (!(store = ft_strjoin_gnl(store, buffer)))
+		if (!(store = ft_strjoindelone(store, buffer)))
 			return (-1);
-		if (is_line(&store, line))
+		if (ft_is_line(&store, line) == true)
 			return (1);
 	}
 	if (store && *store)

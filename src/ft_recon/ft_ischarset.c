@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 14:09:32 by mboivin           #+#    #+#             */
-/*   Updated: 2020/05/01 14:40:08 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/19 19:23:36 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **          Zero value otherwise
 */
 
-int		ft_ischarset(char c, const char *set)
+bool	ft_ischarset(char c, const char *set)
 {
 	int	i;
 
@@ -30,6 +30,6 @@ int		ft_ischarset(char c, const char *set)
 	while (set[i] && set[i] != c)
 		i++;
 	if (set[i] == c)
-		return (1);
-	return (0);
+		return (true);
+	return (false);
 }

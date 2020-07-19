@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 18:59:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/15 15:55:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/19 19:17:49 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **          Zero value otherwise
 */
 
-int		ft_n_range(int x, int start, int end)
+bool	ft_n_range(int x, int start, int end)
 {
-	return (x >= start && x <= end);
+	return (start <= x && x <= end);
 }

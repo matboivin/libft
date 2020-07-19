@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 22:14:33 by mboivin           #+#    #+#             */
-/*   Updated: 2020/05/01 14:40:27 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/19 19:18:52 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **          Zero value otherwise
 */
 
-int		ft_iscntrl(int c)
+bool	ft_iscntrl(int c)
 {
 	return ((c >= 0 && c <= 31) || c == 127);
 }

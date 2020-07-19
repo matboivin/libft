@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 18:59:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/15 15:56:26 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/19 19:17:13 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **          Zero value otherwise
 */
 
-int		ft_f_range(double x, double start, double end)
+bool	ft_f_range(double x, double start, double end)
 {
-	return (x >= start && x <= end);
+	return (start <= x && x <= end);
 }

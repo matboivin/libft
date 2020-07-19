@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:19 by mboivin           #+#    #+#             */
-/*   Updated: 2020/05/01 14:40:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/19 19:19:04 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **          Zero value otherwise
 */
 
-int		ft_isdigit(int c)
+bool	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }

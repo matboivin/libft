@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:50 by mboivin           #+#    #+#             */
-/*   Updated: 2020/05/01 14:39:16 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/19 19:23:02 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **          Zero value otherwise
 */
 
-int		ft_isalnum(int c)
+bool	ft_isalnum(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	return (ft_isalpha(c) == true || ft_isdigit(c) == true);
 }
