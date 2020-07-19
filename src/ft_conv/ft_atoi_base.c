@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/05/11 16:05:42 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/19 21:26:22 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ static int		conv_val(int c)
 ** c: A character
 ** base: The given base
 **
-** returns: A non-zero integer if c is present in base
-**          Zero value otherwise
+** returns: true if c is present in base
+**          false otherwise
 */
 
-static int		ft_isbase(int c, int base)
+static bool		ft_isbase(int c, int base)
 {
 	const char	*lower_hex = "0123456789abcdef";
 	const char	*upper_hex = "0123456789ABCDEF";
@@ -47,10 +47,10 @@ static int		ft_isbase(int c, int base)
 	while (i < base)
 	{
 		if ((lower_hex[i] == c) || (upper_hex[i] == c))
-			return (1);
+			return (true);
 		i++;
 	}
-	return (0);
+	return (false);
 }
 
 /*
@@ -73,12 +73,12 @@ int				ft_atoi_base(const char *s, int base)
 		return (0);
 	i = 0;
 	result = 0;
-	while (ft_isspace(s[i]))
+	while (ft_isspace(s[i]) == true)
 		i++;
 	sign = (s[i] == '-') ? -1 : 1;
 	if (s[i] == '+' || s[i] == '-')
 		i++;
-	while (s[i] && ft_isbase(s[i], base))
+	while (s[i] && ft_isbase(s[i], base) == true)
 	{
 		result = (result * base) + conv_val(s[i]);
 		i++;

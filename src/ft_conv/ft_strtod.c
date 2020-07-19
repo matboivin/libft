@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/06 21:19:36 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/19 21:27:54 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static double	decimal_val(const char *s, char **endptr)
 	i = 0;
 	result = 0.0;
 	val = 0.1;
-	while (s[i] && ft_isdigit(s[i]))
+	while (s[i] && ft_isdigit(s[i]) == true)
 	{
 		result = result + (s[i] - '0') * val;
 		val /= 10;
@@ -53,12 +53,12 @@ double			ft_strtod(const char *s, char **endptr)
 
 	i = 0;
 	result = 0.0;
-	while (ft_isspace(s[i]))
+	while (ft_isspace(s[i]) == true)
 		i++;
 	sign = (s[i] == '-') ? -1 : 1;
 	if (s[i] == '+' || s[i] == '-')
 		i++;
-	while (s[i] && ft_isdigit(s[i]))
+	while (s[i] && ft_isdigit(s[i]) == true)
 	{
 		result = (result * 10) + (s[i] - '0');
 		i++;
