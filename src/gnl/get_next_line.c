@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/19 19:27:35 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/19 20:17:19 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 ** Function: Allocates a new string, result of the concatenation of s1 and s2,
 ** frees the first pointer if it exists
 **
-** s1: A pointer to the destination string
-** s2: A pointer to the source string
+** s1: A pointer to the first string to be copied
+** s2: A pointer to the second string to be copied
 **
 ** returns: The new string
 **          NULL otherwise
@@ -54,8 +54,8 @@ static char		*ft_strjoindelone(char *s1, char *s2)
 ** store: Read content
 ** line: The value of what has been read
 **
-** returns: 1 if a newline character has been found
-**          0 otherwise
+** returns: true if a newline character has been found
+**          false otherwise
 */
 
 static bool		ft_is_line(char **store, char **line)

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/19 19:22:19 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/19 20:15:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,18 @@ int			format_int(char *s, int pad, int len, t_spec *spec)
 
 	printed = 0;
 	zeroes = ft_strlen(s);
-	if (spec->prec >= (int)ft_strlen(s) && is_prefix(s[0]) == true)
+	if (spec->prec >= (int)ft_strlen(s) && ft_is_prefix(s[0]) == true)
 	{
 		spec->width--;
 		zeroes--;
 	}
-	if (spec->flag & ZERO && spec->prec == -1 && is_prefix(s[0]) == true)
+	if (spec->flag & ZERO && spec->prec == -1 && ft_is_prefix(s[0]) == true)
 		printed += write(spec->dst_fd, s++, 1);
 	if (!(spec->flag & LEFTALIGN) && spec->width > (int)ft_strlen(s))
 		printed += put_padding(pad, len, spec);
 	if (spec->prec >= (int)ft_strlen(s))
 	{
-		if (is_prefix(s[0]) == true)
+		if (ft_is_prefix(s[0]) == true)
 			printed += write(spec->dst_fd, s++, 1);
 		printed += put_zeroes(zeroes, spec);
 	}
@@ -67,11 +67,11 @@ int			format_zero(char *s, t_spec *spec)
 
 	printed = 0;
 	len = 0;
-	if (is_prefix(s[0]) == true)
+	if (ft_is_prefix(s[0]) == true)
 		spec->width--;
 	if (!(spec->flag & LEFTALIGN) && spec->width >= (int)ft_strlen(s))
 		printed += put_padding(' ', len, spec);
-	if (is_prefix(s[0]) == true)
+	if (ft_is_prefix(s[0]) == true)
 		printed += write(spec->dst_fd, s, 1);
 	if (spec->flag & LEFTALIGN && spec->width >= (int)ft_strlen(s))
 		printed += put_padding(' ', len, spec);

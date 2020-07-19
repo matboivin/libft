@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 11:51:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/19 19:20:52 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/19 20:15:18 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int						format_zero(char *s, t_spec *spec);
 int						format_char(char *s, t_spec *spec);
 int						put_padding(int pad, int len, t_spec *spec);
 int						put_zeroes(int len, t_spec *spec);
-bool					is_prefix(int c);
+bool					ft_is_prefix(int c);
 char					*add_prefix(char *s, t_spec *spec);
 
 #endif
