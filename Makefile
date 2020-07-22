@@ -75,6 +75,7 @@ SRC		+=		ft_split.c			\
 				ft_striteri.c		\
 				ft_strjoin.c		\
 				ft_strjoindel.c		\
+				ft_strjoindelone.c	\
 				ft_strlcat.c		\
 				ft_strlcpy.c		\
 				ft_strlen.c			\
