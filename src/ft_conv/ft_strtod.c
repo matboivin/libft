@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/19 21:27:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/23 21:02:57 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ double			ft_strtod(const char *s, char **endptr)
 	if (s[i] == '.')
 	{
 		i++;
-		result = result + decimal_val(s, endptr);
+		result = result + decimal_val(s + i, endptr);
 	}
 	else
 		*endptr = ft_strdup(s);
