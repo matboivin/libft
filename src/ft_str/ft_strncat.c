@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 12:15:10 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/12 20:34:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/31 23:45:22 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char		*ft_strncat(char *dst, const char *src, size_t n)
 
 	i = 0;
 	dst_len = ft_strlen(dst);
-	while (src[i] && i < n)
+	while (src[i] && (i < n))
 	{
 		dst[dst_len] = src[i];
 		dst_len++;

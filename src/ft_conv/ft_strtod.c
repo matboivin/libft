@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/23 21:02:57 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/31 23:56:14 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,9 @@ double			ft_strtod(const char *s, char **endptr)
 	while (ft_isspace(s[i]) == true)
 		i++;
 	sign = (s[i] == '-') ? -1 : 1;
-	if (s[i] == '+' || s[i] == '-')
+	if ((s[i] == '+') || (s[i] == '-'))
 		i++;
-	while (s[i] && ft_isdigit(s[i]) == true)
+	while (s[i] && (ft_isdigit(s[i]) == true))
 	{
 		result = (result * 10) + (s[i] - '0');
 		i++;

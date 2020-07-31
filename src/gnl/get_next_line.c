@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/25 18:41:23 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/31 23:50:40 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,9 @@ int				get_next_line(int fd, char **line)
 	char		buffer[BUFFER_SIZE + 1];
 	static char	*store;
 
-	if (!line || fd < 0 || BUFFER_SIZE < 1)
+	if ((!line) || (fd < 0) || (BUFFER_SIZE < 1))
 		return (-1);
-	if (store && ft_is_line(&store, line) == true)
+	if (store && (ft_is_line(&store, line) == true))
 		return (1);
 	while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/20 22:51:32 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/31 23:51:02 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static size_t	count_strings(const char *s, char c)
 	j = 0;
 	while (s[i])
 	{
-		if (s[i] != c && (i == 0 || s[i - 1] == c))
+		if ((s[i] != c) && ((i == 0) || (s[i - 1] == c)))
 			j++;
 		i++;
 	}
@@ -96,12 +96,12 @@ char			**ft_split(const char *s, char c)
 	j = 0;
 	if (!(result = (char **)malloc((str_count + 1) * sizeof(char*))))
 		return (NULL);
-	while (s[i] && j < str_count)
+	while (s[i] && (j < str_count))
 	{
-		while (s[i] && s[i] == c)
+		while (s[i] && (s[i] == c))
 			i++;
 		c_index = i;
-		while (s[i] && s[i] != c)
+		while (s[i] && (s[i] != c))
 			i++;
 		result[j] = get_strings(s, i, c_index);
 		j++;

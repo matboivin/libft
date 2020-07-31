@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/19 21:26:22 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/31 23:55:42 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,9 +76,9 @@ int				ft_atoi_base(const char *s, int base)
 	while (ft_isspace(s[i]) == true)
 		i++;
 	sign = (s[i] == '-') ? -1 : 1;
-	if (s[i] == '+' || s[i] == '-')
+	if ((s[i] == '+') || (s[i] == '-'))
 		i++;
-	while (s[i] && ft_isbase(s[i], base) == true)
+	while (s[i] && (ft_isbase(s[i], base) == true))
 	{
 		result = (result * base) + conv_val(s[i]);
 		i++;

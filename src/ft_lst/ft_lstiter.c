@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:37:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/02/25 18:35:17 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/31 23:37:13 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 void		ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst == NULL || f == NULL)
+	if ((lst == NULL) || (f == NULL))
 		return ;
 	while (lst)
 	{

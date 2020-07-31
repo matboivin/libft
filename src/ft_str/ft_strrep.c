@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/20 19:47:13 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/20 22:53:21 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/31 23:47:20 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ char			*ft_strrep(char *src, int size)
 	char		*result;
 	int			i;
 
-	if (!src || size < 0)
+	if ((src == NULL) || (size < 0))
 		return (NULL);
 	i = 0;
 	result = ft_strnew(size);
 	if (result == NULL)
 		return (NULL);
-	while (src[i] && i < size)
+	while (src[i] && (i < size))
 	{
 		result[i] = src[i];
 		i++;

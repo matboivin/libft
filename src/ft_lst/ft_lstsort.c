@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 22:20:19 by mboivin           #+#    #+#             */
-/*   Updated: 2020/02/25 18:36:37 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/31 23:54:43 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@
 ** cmp: The comparison function
 */
 
-void		ft_lstort(t_list **lst, int (*cmp)())
+void		ft_lstsort(t_list **lst, int (*cmp)())
 {
 	t_list	*cursor;
 	t_list	*next_node;
 	t_list	*tmp;
 
-	if (lst == NULL || cmp == NULL)
+	if ((lst == NULL) || (cmp == NULL))
 		return ;
 	cursor = *lst;
 	if (*lst)

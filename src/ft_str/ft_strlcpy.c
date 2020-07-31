@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:26:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/12 20:34:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/31 23:44:53 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t size)
 	src_len = ft_strlen(src);
 	if (size == 0)
 		return (src_len);
-	while (src[i] && i < (size - 1))
+	while (src[i] && (i < (size - 1)))
 	{
 		dst[i] = src[i];
 		i++;

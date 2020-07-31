@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 13:41:41 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/12 20:14:03 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/31 23:39:57 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void		ft_swap(int *a, int *b)
 {
 	int		tmp;
 
-	if (a == NULL || b == NULL)
+	if ((a == NULL) || (b == NULL))
 		return ;
 	tmp = *a;
 	*a = *b;

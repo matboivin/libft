@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:10 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 18:09:41 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/31 23:39:27 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void				*ft_memmove(void *dst, void const *src, size_t len)
 	unsigned char	*from;
 	unsigned char	*to;
 
-	if (len == 0 || dst == src)
+	if ((len == 0) || (dst == src))
 		return (dst);
 	from = (unsigned char *)dst;
 	to = (unsigned char *)src;

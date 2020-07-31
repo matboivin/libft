@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:37 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/12 20:34:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/31 23:44:47 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ size_t			ft_strlcat(char *dst, const char *src, size_t size)
 	src_len = ft_strlen(src);
 	if (size <= dst_len)
 		return (src_len + size);
-	while (dst[i] && i < (size - 1))
+	while (dst[i] && (i < (size - 1)))
 		i++;
-	while (*src && i < (size - 1))
+	while (*src && (i < (size - 1)))
 	{
 		dst[i] = *src;
 		src++;

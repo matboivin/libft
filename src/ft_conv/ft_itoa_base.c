@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:07:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/16 22:56:01 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/07/31 23:33:31 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ static int		conv_val(int n, int base)
 {
 	if (n % base < 10)
 		return ('0');
-	else
-		return ('a' - 10);
-	return (0);
+	return ('a' - 10);
 }
 
 /*
@@ -43,7 +41,7 @@ char			*ft_itoa_base(int n, int base)
 	int			nbr_len;
 	int			sign;
 
-	if (n == 0 || base < 2 || base > 16)
+	if ((n == 0) || (base < 2) || (base > 16))
 		return (ft_strdup("0"));
 	nbr = n;
 	nbr_len = ft_nbrlen_base(nbr, base);
