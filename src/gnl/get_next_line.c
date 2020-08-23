@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:50:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/08/23 16:57:57 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ int				get_next_line(int fd, char **line)
 		bytes_read = 1;
 	}
 	else
-		*line = ft_strdup("");
+		*line = NULL;
 	ft_strdel(&store);
 	return (bytes_read);
 }
