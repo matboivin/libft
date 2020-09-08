@@ -17,9 +17,18 @@ OBJ_PATH = obj
 
 vpath %.c $(foreach dir, $(SRC_PATH), $(dir):)
 
+INC_FILES	=	libft_basics.h		\
+				libft_define.h		\
+				libft.h				\
+				libft_includes.h	\
+				libft_list.h		\
+				libft_printf.h		\
+
+INC			=	$(addprefix includes/, $(INC_FILES))
+
 # Memory functions
 
-SRC		=		ft_bzero.c			\
+SRC			=	ft_bzero.c			\
 				ft_calloc.c			\
 				ft_memalloc.c		\
 				ft_memccpy.c		\
@@ -32,7 +41,7 @@ SRC		=		ft_bzero.c			\
 
 # Input/Output functions
 
-SRC		+=		ft_putchar.c		\
+SRC			+=	ft_putchar.c		\
 				ft_putchar_fd.c		\
 				ft_putendl.c		\
 				ft_putendl_fd.c		\
@@ -43,7 +52,7 @@ SRC		+=		ft_putchar.c		\
 
 # Char recon functions
 
-SRC		+=		ft_tolower.c		\
+SRC			+=	ft_tolower.c		\
 				ft_toupper.c		\
 				ft_isalnum.c		\
 				ft_isalpha.c		\
@@ -61,7 +70,7 @@ SRC		+=		ft_tolower.c		\
 
 # String functions
 
-SRC		+=		ft_split.c			\
+SRC			+=	ft_split.c			\
 				ft_strappend.c		\
 				ft_strcat.c			\
 				ft_strchr.c			\
@@ -99,12 +108,12 @@ SRC		+=		ft_split.c			\
 
 # Array functions
 
-SRC		+=		ft_tablen.c			\
+SRC			+=	ft_tablen.c			\
 				ft_tabdel.c			\
 
 # List functions
 
-SRC		+=		ft_lstat.c			\
+SRC			+=	ft_lstat.c			\
 				ft_lstnew.c			\
 				ft_lstadd_front.c	\
 				ft_lstsize.c		\
@@ -123,7 +132,7 @@ SRC		+=		ft_lstat.c			\
 
 # Conversion functions
 
-SRC		+=		ft_atoi.c			\
+SRC			+=	ft_atoi.c			\
 				ft_atoi_base.c		\
 				ft_atos.c			\
 				ft_itoa.c			\
@@ -134,7 +143,7 @@ SRC		+=		ft_atoi.c			\
 
 # Int functions
 
-SRC		+=		ft_swap.c			\
+SRC			+=	ft_swap.c			\
 				ft_nbrlen.c			\
 				ft_nbrlen_base.c	\
 				ft_unbrlen_base.c	\
@@ -143,11 +152,11 @@ SRC		+=		ft_swap.c			\
 
 # GNL
 
-SRC		+=		get_next_line.c		\
+SRC			+=	get_next_line.c		\
 
 # ft_printf
 
-SRC		+=		ft_printf.c			\
+SRC			+=	ft_printf.c			\
 				ft_dprintf.c		\
 				conv_char.c			\
 				conv_int.c			\
@@ -168,7 +177,7 @@ OBJ = $(addprefix $(OBJ_PATH)/, $(SRC:%.c=%.o))
 .PHONY: all
 all: $(NAME)
 
-$(NAME): $(OBJ_PATH) $(OBJ)
+$(NAME): $(OBJ_PATH) $(OBJ) $(INC)
 	@$(AR) $(ARFLAGS) $@ $(OBJ)
 	@echo "\nOK\t\t$(NAME) is ready"
 
