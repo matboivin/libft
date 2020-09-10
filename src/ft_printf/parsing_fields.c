@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 12:35:35 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/19 21:28:50 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 22:37:44 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,10 @@ void			get_width(const char **format, t_spec *spec, va_list ap)
 		spec->width = get_arg(ap);
 		(*format)++;
 	}
-	else if (ft_isdigit(**format) == true)
+	else if (ft_isdigit(**format))
 	{
 		spec->width = get_digits(*format);
-		while (ft_isdigit(**format) == true)
+		while (ft_isdigit(**format))
 			(*format)++;
 	}
 	if (spec->width < 0)
@@ -87,10 +87,10 @@ void			get_precision(const char **format, t_spec *spec, va_list ap)
 			spec->prec = get_arg(ap);
 			(*format)++;
 		}
-		else if (ft_isdigit(**format) == true)
+		else if (ft_isdigit(**format))
 		{
 			spec->prec = get_digits(*format);
-			while (ft_isdigit(**format) == true)
+			while (ft_isdigit(**format))
 				(*format)++;
 		}
 		else

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/02/25 15:58:41 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 22:19:59 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ typedef struct		s_list
 
 t_list				*ft_lstat(t_list *lst, unsigned int nbr);
 t_list				*ft_lstnew(void *content);
-void				ft_lstadd_back(t_list **lst, t_list *new);
-void				ft_lstadd_front(t_list **lst, t_list *new);
+void				ft_lstappend(t_list **lst, t_list *new_elem);
+void				ft_lstprepend(t_list **lst, t_list *new_elem);
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstdelif(t_list **lst, void *data_ref);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));

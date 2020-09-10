@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:00 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:53:57 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 22:29:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void				*ft_memcpy(void *dst, void const *src, size_t n)
 	unsigned char	*to;
 	unsigned char	*from;
 
-	if ((dst == NULL) && (src == NULL))
+	if (!dst && !src)
 		return (0);
 	i = 0;
 	to = (unsigned char *)dst;

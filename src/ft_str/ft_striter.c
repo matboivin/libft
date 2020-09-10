@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 21:43:05 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:43:18 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 23:08:48 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	if ((s == NULL) || (f == NULL))
+	if (!s || !f)
 		return ;
 	while (*s)
 		f(s++);

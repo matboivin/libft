@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_put_padding.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/20 19:41:33 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:34:52 by mboivin          ###   ########.fr       */
+/*   Created: 2020/04/16 23:20:53 by mboivin           #+#    #+#             */
+/*   Updated: 2020/09/10 23:52:13 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: Adds the element new at the end of the list
+** Function: Outputs the padding to the standard output
 **
-** lst: The address of a pointer to the first link of a list
-** new: The address of a pointer to the element to add to the list
+** pad: The pad character (either space or 0)
+** len: The size of the output string
+** spec: A structure containing the retrieved formatting data
+**
+** returns: The count of printed characters
 */
 
-void		ft_lstadd_back(t_list **lst, t_list *new)
+int			ft_put_padding(int pad, int len, t_spec *spec)
 {
-	t_list	*cursor;
+	int		printed;
 
-	if ((lst == NULL) || (new == NULL))
-		return ;
-	cursor = *lst;
-	if (*lst)
-	{
-		while (cursor->next)
-			cursor = cursor->next;
-		cursor->next = new;
-	}
-	else
-		*lst = new;
+	printed = 0;
+	while (spec->width-- > len)
+		printed += write(spec->dst_fd, &pad, 1);
+	return (printed);
 }

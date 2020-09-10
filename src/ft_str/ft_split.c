@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:51:02 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 23:07:42 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static char		*get_strings(const char *s, size_t i, size_t c_index)
 	j = 0;
 	len = i - c_index;
 	result = ft_strnew(len);
-	if (result == NULL)
+	if (!result)
 		return (NULL);
 	while (j < len)
 	{
@@ -89,7 +89,7 @@ char			**ft_split(const char *s, char c)
 	size_t		j;
 	char		**result;
 
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	str_count = count_strings(s, c);
 	i = 0;

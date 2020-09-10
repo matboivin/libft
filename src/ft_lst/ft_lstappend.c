@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conv_percent.c                                     :+:      :+:    :+:   */
+/*   ft_lstappend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/15 14:39:23 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/20 19:41:33 by mboivin           #+#    #+#             */
+/*   Updated: 2020/09/10 22:19:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Handles percent character
+** function: Adds the new element at the end of the list
 **
-** spec: A structure containing the retrieved formatting data
-** ap: A pointer to the list of arguments
-**
-** returns: The count of printed characters
+** lst: The address of a pointer to the first link of a list
+** new_elem: The address of a pointer to the element to add to the list
 */
 
-int			conv_percent(t_spec *spec, va_list ap)
+void		ft_lstappend(t_list **lst, t_list *new_elem)
 {
-	int		printed;
-	char	*buffer;
+	t_list	*cursor;
 
-	(void)ap;
-	buffer = ft_strdup("%");
-	if (buffer == NULL)
-		return (-1);
-	printed = format_char(buffer, spec);
-	free(buffer);
-	return (printed);
+	if (!lst || !new_elem)
+		return ;
+	cursor = *lst;
+	if (*lst)
+	{
+		while (cursor->next)
+			cursor = cursor->next;
+		cursor->next = new_elem;
+	}
+	else
+		*lst = new_elem;
 }

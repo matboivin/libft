@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conv_char.c                                        :+:      :+:    :+:   */
+/*   ft_put_zeroes.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/15 14:39:23 by mboivin          ###   ########.fr       */
+/*   Created: 2020/04/16 23:20:53 by mboivin           #+#    #+#             */
+/*   Updated: 2020/09/10 23:52:05 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Handles type c
+** Function: Outputs zeroes to the standard output
 **
+** len: The size of the output string
 ** spec: A structure containing the retrieved formatting data
-** ap: A pointer to the list of arguments
 **
 ** returns: The count of printed characters
 */
 
-int			conv_c(t_spec *spec, va_list ap)
+int			ft_put_zeroes(int len, t_spec *spec)
 {
 	int		printed;
-	char	c;
-	char	*buffer;
+	int		zeroes;
 
-	c = va_arg(ap, int);
-	if (spec->modifier == 'l')
-		buffer = ft_atos((wchar_t)c);
-	else
-		buffer = ft_atos(c);
-	if (buffer == NULL)
-		return (-1);
-	printed = format_char(buffer, spec);
-	free(buffer);
+	printed = 0;
+	zeroes = spec->prec - len;
+	while (zeroes--)
+		printed += write(spec->dst_fd, "0", 1);
 	return (printed);
 }

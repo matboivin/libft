@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   format_nbr.c                                       :+:      :+:    :+:   */
+/*   ft_printf_nbr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/19 20:15:39 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 23:05:13 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,31 +23,31 @@
 ** returns: The count of printed characters
 */
 
-int			format_int(char *s, int pad, int len, t_spec *spec)
+static int	ft_printf_int(char *s, int pad, int len, t_spec *spec)
 {
 	int		printed;
 	int		zeroes;
 
 	printed = 0;
 	zeroes = ft_strlen(s);
-	if (spec->prec >= (int)ft_strlen(s) && ft_is_prefix(s[0]) == true)
+	if (spec->prec >= (int)ft_strlen(s) && ft_is_prefix(s[0]))
 	{
 		spec->width--;
 		zeroes--;
 	}
-	if (spec->flag & ZERO && spec->prec == -1 && ft_is_prefix(s[0]) == true)
+	if (spec->flag & ZERO && spec->prec == -1 && ft_is_prefix(s[0]))
 		printed += write(spec->dst_fd, s++, 1);
 	if (!(spec->flag & LEFTALIGN) && spec->width > (int)ft_strlen(s))
-		printed += put_padding(pad, len, spec);
+		printed += ft_put_padding(pad, len, spec);
 	if (spec->prec >= (int)ft_strlen(s))
 	{
-		if (ft_is_prefix(s[0]) == true)
+		if (ft_is_prefix(s[0]))
 			printed += write(spec->dst_fd, s++, 1);
-		printed += put_zeroes(zeroes, spec);
+		printed += ft_put_zeroes(zeroes, spec);
 	}
 	printed += write(spec->dst_fd, s, ft_strlen(s));
 	if (spec->flag & LEFTALIGN && spec->width > (int)ft_strlen(s))
-		printed += put_padding(pad, len, spec);
+		printed += ft_put_padding(pad, len, spec);
 	return (printed);
 }
 
@@ -60,21 +60,21 @@ int			format_int(char *s, int pad, int len, t_spec *spec)
 ** returns: The count of printed characters
 */
 
-int			format_zero(char *s, t_spec *spec)
+static int	ft_printf_zero(char *s, t_spec *spec)
 {
 	int		printed;
 	int		len;
 
 	printed = 0;
 	len = 0;
-	if (ft_is_prefix(s[0]) == true)
+	if (ft_is_prefix(s[0]))
 		spec->width--;
 	if (!(spec->flag & LEFTALIGN) && spec->width >= (int)ft_strlen(s))
-		printed += put_padding(' ', len, spec);
-	if (ft_is_prefix(s[0]) == true)
+		printed += ft_put_padding(' ', len, spec);
+	if (ft_is_prefix(s[0]))
 		printed += write(spec->dst_fd, s, 1);
 	if (spec->flag & LEFTALIGN && spec->width >= (int)ft_strlen(s))
-		printed += put_padding(' ', len, spec);
+		printed += ft_put_padding(' ', len, spec);
 	return (printed);
 }
 
@@ -88,7 +88,7 @@ int			format_zero(char *s, t_spec *spec)
 ** returns: The count of printed characters
 */
 
-int			format_nbr(char *s, t_spec *spec, int arg)
+int			ft_printf_nbr(char *s, t_spec *spec, int arg)
 {
 	int		printed;
 	int		len;
@@ -96,11 +96,13 @@ int			format_nbr(char *s, t_spec *spec, int arg)
 
 	printed = 0;
 	len = (spec->prec >= (int)ft_strlen(s)) ? spec->prec : (int)ft_strlen(s);
-	pad = (spec->flag & ZERO && spec->prec == -1 \
-		&& !(spec->flag & LEFTALIGN)) ? '0' : ' ';
-	if (spec->prec == 0 && arg == 0)
-		printed += format_zero(s, spec);
+	if (spec->flag & ZERO && spec->prec == -1 && !(spec->flag & LEFTALIGN))
+		pad = '0';
 	else
-		printed += format_int(s, pad, len, spec);
+		pad = ' ';
+	if (spec->prec == 0 && arg == 0)
+		printed += ft_printf_zero(s, spec);
+	else
+		printed += ft_printf_int(s, pad, len, spec);
 	return (printed);
 }

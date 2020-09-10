@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:54 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:53:47 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 22:29:26 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int					ft_memcmp(void const *s1, void const *s2, size_t n)
 	unsigned char	*p1;
 	unsigned char	*p2;
 
-	if ((s1 == NULL) && (s2 == NULL))
+	if (!s1 && !s2)
 		return (0);
 	i = 0;
 	p1 = (unsigned char *)s1;

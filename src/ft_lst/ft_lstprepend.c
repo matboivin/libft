@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstprepend.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:36:30 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/03 20:47:19 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 22:19:46 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: Adds the element new at the beginning of the list
+** function: Adds the new element at the beginning of the list
 **
 ** lst: The address of a pointer to the first link of a list
-** new: The address of a pointer to the element to add to the list
+** new_elem: The address of a pointer to the element to add to the list
 */
 
-void		ft_lstadd_front(t_list **lst, t_list *new)
+void		ft_lstprepend(t_list **lst, t_list *new_elem)
 {
-	if (lst && new)
+	if (lst && new_elem)
 	{
-		new->next = *lst;
-		*lst = new;
+		new_elem->next = *lst;
+		*lst = new_elem;
 	}
 }

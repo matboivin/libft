@@ -1,16 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conv_s.c                                           :+:      :+:    :+:   */
+/*   ft_handle_str.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/15 14:41:21 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 23:05:30 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Function: Handles type s and outputs s to the standard output
+**
+** s: A string representation of the formatted input
+** spec: A structure containing the retrieved formatting data
+**
+** returns: The count of printed characters
+*/
+
+static int	ft_printf_str(char *s, t_spec *spec)
+{
+	int		printed;
+	int		len;
+	int		pad;
+
+	printed = 0;
+	len = ft_strlen(s);
+	pad = ' ';
+	if (!(spec->flag & LEFTALIGN) && spec->width > (int)ft_strlen(s))
+	{
+		if (spec->flag & ZERO)
+			pad = '0';
+		printed += ft_put_padding(pad, len, spec);
+	}
+	printed += write(spec->dst_fd, s, len);
+	if (spec->flag & LEFTALIGN && spec->width > (int)ft_strlen(s))
+		printed += ft_put_padding(' ', len, spec);
+	return (printed);
+}
 
 /*
 ** Function: Handles wide characters using the specified length
@@ -20,13 +50,13 @@
 ** returns: A string representation of the wide character
 */
 
-char		*length_wchar(wchar_t *arg)
+static char	*length_wchar(wchar_t *arg)
 {
 	char	*result;
 	char	*tmp;
 
 	result = ft_strnew(1);
-	if (result == NULL)
+	if (!result)
 		return (NULL);
 	while (*arg)
 	{
@@ -46,14 +76,14 @@ char		*length_wchar(wchar_t *arg)
 ** returns: The count of printed characters
 */
 
-int			conv_s(t_spec *spec, va_list ap)
+int			ft_handle_str(t_spec *spec, va_list ap)
 {
 	int		printed;
 	char	*arg;
 	char	*buffer;
 
 	arg = va_arg(ap, char *);
-	if (arg == NULL)
+	if (!arg)
 		buffer = ft_strdup("(null)");
 	else if (spec->modifier == 'l')
 		buffer = length_wchar((wchar_t *)arg);
@@ -61,9 +91,9 @@ int			conv_s(t_spec *spec, va_list ap)
 		buffer = ft_strdup(arg);
 	if (spec->prec >= 0 && spec->prec < (int)ft_strlen(buffer))
 		buffer = ft_strrep(buffer, spec->prec);
-	if (buffer == NULL)
+	if (!buffer)
 		return (-1);
-	printed = format_str(buffer, spec);
+	printed = ft_printf_str(buffer, spec);
 	free(buffer);
 	return (printed);
 }

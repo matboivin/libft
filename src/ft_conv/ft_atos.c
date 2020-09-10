@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 12:41:45 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/26 22:20:07 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 22:16:40 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char		*ft_atos(char c)
 	char	*result;
 
 	result = ft_strnew(1);
-	if (result == NULL)
+	if (!result)
 		return (NULL);
 	result = ft_memset(result, c, 1);
 	return (result);

@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   get_arg.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 13:41:41 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:30:10 by mboivin          ###   ########.fr       */
+/*   Created: 2020/04/21 21:18:36 by mboivin           #+#    #+#             */
+/*   Updated: 2020/09/10 22:59:51 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Swaps the value of two integers whose addresses are entered
-** as parameters
+** Function: Retrieves the corresponding argument to fill a specifier field
+**
+** ap: A pointer to the list of arguments
+**
+** returns: The argument
 */
 
-void		ft_swap(int *a, int *b)
+int			get_arg(va_list ap)
 {
-	int		tmp;
+	int		field;
 
-	if (!a || !b)
-		return ;
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+	field = va_arg(ap, int);
+	return (field);
 }

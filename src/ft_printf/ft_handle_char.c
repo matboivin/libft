@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   format_csp.c                                       :+:      :+:    :+:   */
+/*   ft_handle_char.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/11 13:19:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/15 14:47:59 by mboivin          ###   ########.fr       */
+/*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
+/*   Updated: 2020/09/10 23:01:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** returns: The count of printed characters
 */
 
-int			format_char(char *s, t_spec *spec)
+static int	ft_printf_char(char *s, t_spec *spec)
 {
 	int		printed;
 	int		pad;
@@ -32,68 +32,60 @@ int			format_char(char *s, t_spec *spec)
 	{
 		if (s[0] == '%' && spec->flag & ZERO)
 			pad = '0';
-		printed += put_padding(pad, 1, spec);
+		printed += ft_put_padding(pad, 1, spec);
 	}
 	printed += write(spec->dst_fd, s, 1);
 	if (spec->flag & LEFTALIGN && spec->width > 1)
-		printed += put_padding(pad, 1, spec);
+		printed += ft_put_padding(pad, 1, spec);
 	return (printed);
 }
 
 /*
-** Function: Handles type s and outputs s to the standard output
+** Function: Handles type c
 **
-** s: A string representation of the formatted input
 ** spec: A structure containing the retrieved formatting data
+** ap: A pointer to the list of arguments
 **
 ** returns: The count of printed characters
 */
 
-int			format_str(char *s, t_spec *spec)
+int			ft_handle_char(t_spec *spec, va_list ap)
 {
 	int		printed;
-	int		len;
-	int		pad;
+	char	c;
+	char	*buffer;
 
-	printed = 0;
-	len = ft_strlen(s);
-	pad = ' ';
-	if (!(spec->flag & LEFTALIGN) && spec->width > (int)ft_strlen(s))
-	{
-		if (spec->flag & ZERO)
-			pad = '0';
-		printed += put_padding(pad, len, spec);
-	}
-	printed += write(spec->dst_fd, s, len);
-	if (spec->flag & LEFTALIGN && spec->width > (int)ft_strlen(s))
-		printed += put_padding(' ', len, spec);
+	c = va_arg(ap, int);
+	if (spec->modifier == 'l')
+		buffer = ft_atos((wchar_t)c);
+	else
+		buffer = ft_atos(c);
+	if (!buffer)
+		return (-1);
+	printed = ft_printf_char(buffer, spec);
+	free(buffer);
 	return (printed);
 }
 
 /*
-** Function: Handles type p and outputs s to the standard output
+** Function: Handles percent character
 **
-** s: A string representation of the formatted input
 ** spec: A structure containing the retrieved formatting data
+** ap: A pointer to the list of arguments
 **
 ** returns: The count of printed characters
 */
 
-int			format_ptr(char *s, t_spec *spec)
+int			ft_handle_percent(t_spec *spec, va_list ap)
 {
 	int		printed;
+	char	*buffer;
 
-	printed = 0;
-	if (!(spec->flag & LEFTALIGN) && spec->width > (int)ft_strlen(s))
-		printed += put_padding(' ', ft_strlen(s), spec);
-	if (spec->prec >= (int)ft_strlen(s))
-	{
-		printed += write(spec->dst_fd, s, 2);
-		s += 2;
-		printed += put_zeroes(ft_strlen(s), spec);
-	}
-	printed += write(spec->dst_fd, s, ft_strlen(s));
-	if (spec->flag & LEFTALIGN && spec->width > (int)ft_strlen(s))
-		printed += put_padding(' ', ft_strlen(s), spec);
+	(void)ap;
+	buffer = ft_strdup("%");
+	if (!buffer)
+		return (-1);
+	printed = ft_printf_char(buffer, spec);
+	free(buffer);
 	return (printed);
 }

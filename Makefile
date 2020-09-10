@@ -113,22 +113,22 @@ SRC			+=	ft_tablen.c			\
 
 # List functions
 
-SRC			+=	ft_lstat.c			\
-				ft_lstnew.c			\
-				ft_lstadd_front.c	\
-				ft_lstsize.c		\
-				ft_lstlast.c		\
-				ft_lstadd_back.c	\
+SRC			+=	ft_lstappend.c		\
+				ft_lstat.c			\
+				ft_lstclear.c		\
 				ft_lstdelif.c		\
 				ft_lstdelone.c		\
-				ft_lstclear.c		\
-				ft_lstiter.c		\
-				ft_lstmap.c			\
-				ft_lstrev.c			\
-				ft_lstswap.c		\
 				ft_lstfind.c		\
+				ft_lstiter.c		\
 				ft_lstiterif.c		\
+				ft_lstlast.c		\
+				ft_lstmap.c			\
+				ft_lstnew.c			\
+				ft_lstprepend.c		\
+				ft_lstrev.c			\
+				ft_lstsize.c		\
 				ft_lstsort.c		\
+				ft_lstswap.c		\
 
 # Conversion functions
 
@@ -156,21 +156,23 @@ SRC			+=	get_next_line.c		\
 
 # ft_printf
 
-SRC			+=	ft_printf.c			\
-				ft_dprintf.c		\
-				conv_char.c			\
-				conv_int.c			\
-				conv_p.c			\
-				conv_percent.c		\
-				conv_s.c			\
-				conv_uint.c			\
-				format_csp.c		\
-				format_nbr.c		\
-				format_utils.c		\
-				init_struct.c		\
-				parsing.c			\
-				parsing_fields.c	\
-				parsing_utils.c		\
+SRC			+=	ft_printf.c				\
+				ft_dprintf.c			\
+				ft_add_prefix.c			\
+				ft_construct_output.c	\
+				ft_handle_char.c		\
+				ft_handle_int.c			\
+				ft_handle_ptr.c			\
+				ft_handle_str.c			\
+				ft_handle_uint.c		\
+				ft_is_prefix.c			\
+				ft_parse_format.c		\
+				ft_printf_nbr.c			\
+				ft_put_padding.c		\
+				ft_put_zeroes.c			\
+				get_arg.c				\
+				get_digits.c			\
+				parsing_fields.c		\
 
 OBJ = $(addprefix $(OBJ_PATH)/, $(SRC:%.c=%.o))
 

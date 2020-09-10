@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 16:24:41 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:43:29 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 23:08:59 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void		ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t	i;
 
 	i = 0;
-	if ((s == NULL) || (f == NULL))
+	if (!s || !f)
 		return ;
 	while (s && s[i])
 	{

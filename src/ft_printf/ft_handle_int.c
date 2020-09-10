@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conv_int.c                                         :+:      :+:    :+:   */
+/*   ft_handle_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/15 14:39:23 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 23:00:15 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** returns: The argument
 */
 
-intmax_t		length_int(t_spec *spec, va_list ap)
+static intmax_t	length_int(t_spec *spec, va_list ap)
 {
 	if (spec->modifier == 0)
 		return (va_arg(ap, int));
@@ -45,7 +45,7 @@ intmax_t		length_int(t_spec *spec, va_list ap)
 ** returns: The count of printed characters
 */
 
-int				conv_int(t_spec *spec, va_list ap)
+int				ft_handle_int(t_spec *spec, va_list ap)
 {
 	int			printed;
 	intmax_t	arg;
@@ -54,10 +54,10 @@ int				conv_int(t_spec *spec, va_list ap)
 	arg = length_int(spec, ap);
 	buffer = ft_itoa_base(arg, 10);
 	if (arg >= 0 && (spec->flag & PLUS || spec->flag & SPACE))
-		buffer = add_prefix(buffer, spec);
-	if (buffer == NULL)
+		buffer = ft_add_prefix(buffer, spec);
+	if (!buffer)
 		return (-1);
-	printed = format_nbr(buffer, spec, arg);
+	printed = ft_printf_nbr(buffer, spec, arg);
 	free(buffer);
 	return (printed);
 }

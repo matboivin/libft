@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 15:16:05 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:44:19 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 23:09:40 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ char			*ft_strjoindel(char *s1, char *s2)
 	size_t		len_s2;
 	size_t		size;
 
-	if ((s1 == NULL) || (s2 == NULL))
+	if (!s1 || !s2)
 		return (NULL);
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
 	size = len_s1 + len_s2;
 	result = ft_strnew(size);
-	if (result == NULL)
+	if (!result)
 		return (NULL);
 	ft_strlcpy(result, s1, (len_s1 + 1));
 	ft_strlcpy(result + len_s1, s2, (len_s2 + 1));

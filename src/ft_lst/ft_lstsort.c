@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 22:20:19 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:54:43 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 22:28:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void		ft_lstsort(t_list **lst, int (*cmp)())
 	t_list	*next_node;
 	t_list	*tmp;
 
-	if ((lst == NULL) || (cmp == NULL))
+	if (!lst || !cmp)
 		return ;
 	cursor = *lst;
 	if (*lst)

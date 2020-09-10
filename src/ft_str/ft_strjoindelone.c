@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/22 15:21:27 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 23:09:49 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char		*ft_strjoindelone(char *s1, char *s2)
 		len_s1 = ft_strlen(s1);
 	len = len_s1 + len_s2;
 	result = ft_strnew(len);
-	if (result == NULL)
+	if (!result)
 		return (NULL);
 	if (s1)
 	{

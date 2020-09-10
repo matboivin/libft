@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conv_uint.c                                        :+:      :+:    :+:   */
+/*   ft_handle_uint.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/15 14:39:23 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 23:06:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** returns: The argument
 */
 
-uintmax_t		length_uint(t_spec *spec, va_list ap)
+static uintmax_t	length_uint(t_spec *spec, va_list ap)
 {
 	if (spec->modifier == 0)
 		return (va_arg(ap, unsigned int));
@@ -45,17 +45,17 @@ uintmax_t		length_uint(t_spec *spec, va_list ap)
 ** returns: The count of printed characters
 */
 
-int				conv_uint(t_spec *spec, va_list ap)
+int					ft_handle_uint(t_spec *spec, va_list ap)
 {
-	int			printed;
-	uintmax_t	arg;
-	char		*buffer;
+	int				printed;
+	uintmax_t		arg;
+	char			*buffer;
 
 	arg = length_uint(spec, ap);
 	buffer = ft_utoa_base(arg, 10);
-	if (buffer == NULL)
+	if (!buffer)
 		return (-1);
-	printed = format_nbr(buffer, spec, arg);
+	printed = ft_printf_nbr(buffer, spec, arg);
 	free(buffer);
 	return (printed);
 }
@@ -69,19 +69,19 @@ int				conv_uint(t_spec *spec, va_list ap)
 ** returns: The count of printed characters
 */
 
-int				conv_o(t_spec *spec, va_list ap)
+int					ft_handle_oct(t_spec *spec, va_list ap)
 {
-	int			printed;
-	uintmax_t	arg;
-	char		*buffer;
+	int				printed;
+	uintmax_t		arg;
+	char			*buffer;
 
 	arg = length_uint(spec, ap);
 	buffer = ft_utoa_base(arg, 8);
 	if (spec->flag & ALT)
-		buffer = add_prefix(buffer, spec);
-	if (buffer == NULL)
+		buffer = ft_add_prefix(buffer, spec);
+	if (!buffer)
 		return (-1);
-	printed = format_nbr(buffer, spec, arg);
+	printed = ft_printf_nbr(buffer, spec, arg);
 	free(buffer);
 	return (printed);
 }
@@ -95,21 +95,21 @@ int				conv_o(t_spec *spec, va_list ap)
 ** returns: The count of printed characters
 */
 
-int				conv_hex(t_spec *spec, va_list ap)
+int					ft_handle_hex(t_spec *spec, va_list ap)
 {
-	int			printed;
-	uintmax_t	arg;
-	char		*buffer;
+	int				printed;
+	uintmax_t		arg;
+	char			*buffer;
 
 	arg = length_uint(spec, ap);
 	buffer = ft_utoa_base(arg, 16);
 	if (spec->type == 'X')
 		buffer = ft_strupcase(buffer);
 	if (spec->flag & ALT)
-		buffer = add_prefix(buffer, spec);
-	if (buffer == NULL)
+		buffer = ft_add_prefix(buffer, spec);
+	if (!buffer)
 		return (-1);
-	printed = format_nbr(buffer, spec, arg);
+	printed = ft_printf_nbr(buffer, spec, arg);
 	free(buffer);
 	return (printed);
 }

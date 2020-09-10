@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_struct.c                                      :+:      :+:    :+:   */
+/*   ft_is_prefix.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/11 13:17:16 by mboivin           #+#    #+#             */
-/*   Updated: 2020/06/15 14:39:23 by mboivin          ###   ########.fr       */
+/*   Created: 2020/04/16 23:20:53 by mboivin           #+#    #+#             */
+/*   Updated: 2020/09/10 23:51:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Array of structures: pointers to conversion functions matching types
+** Function: Checks if c is a prefix
+**
+** c: A character
+**
+** returns: A non-zero integer if c is a prefix
+**          Zero value otherwise
 */
 
-struct s_conv	g_conv[] =
+bool	ft_is_prefix(int c)
 {
-	{'c', &conv_c},
-	{'s', &conv_s},
-	{'p', &conv_p},
-	{'d', &conv_int},
-	{'i', &conv_int},
-	{'o', &conv_o},
-	{'u', &conv_uint},
-	{'x', &conv_hex},
-	{'X', &conv_hex},
-	{'%', &conv_percent}
-};
+	return ((c == ' ') || (c == '+') || (c == '-'));
+}

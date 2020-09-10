@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:29:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:52:16 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 23:10:52 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ char			*ft_strprepend(const char *prefix, char *s)
 	size_t		len_s;
 	size_t		len;
 
-	if ((prefix == NULL) || (s == NULL))
+	if (!prefix || !s)
 		return (NULL);
 	len_prefix = ft_strlen(prefix);
 	len_s = ft_strlen(s);
 	len = len_prefix + len_s;
 	result = ft_strnew(len);
-	if (result == NULL)
+	if (!result)
 		return (NULL);
 	ft_strlcpy(result, prefix, (len_prefix + 1));
 	ft_strlcpy(result + len_prefix, s, (len_s + 1));

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:14:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:43:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/10 23:08:35 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 int		ft_strequ(const char *s1, const char *s2)
 {
-	if ((s1 == NULL) || (s2 == NULL))
+	if (!s1 || !s2)
 		return (0);
 	return (ft_strcmp(s1, s2) == 0);
 }
