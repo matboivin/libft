@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:34 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/16 13:59:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/16 23:37:28 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 **          specified size
 */
 
-void		*realloc(void *ptr, size_t size)
+void		*ft_realloc(void *ptr, size_t size)
 {
 	void	*result;
 
