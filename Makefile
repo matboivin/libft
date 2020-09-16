@@ -38,6 +38,8 @@ SRC			=	ft_bzero.c			\
 				ft_memdel.c			\
 				ft_memmove.c		\
 				ft_memset.c			\
+				ft_realloc.c		\
+				ft_reallocarray.c	\
 
 # Input/Output functions
 

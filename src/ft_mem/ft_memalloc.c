@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 19:21:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:29:05 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/16 14:01:55 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@
 
 void		*ft_memalloc(size_t size)
 {
-	void	*p;
+	void	*result;
 
-	p = malloc(size);
-	if (!p)
+	result = malloc(size);
+	if (!result)
 		return (NULL);
-	p = ft_memset(p, 0, size);
-	return (p);
+	result = ft_memset(result, 0, size);
+	return (result);
 }

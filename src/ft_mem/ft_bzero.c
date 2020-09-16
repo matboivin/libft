@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:27 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 17:54:31 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/16 14:03:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@
 
 void				ft_bzero(void *s, size_t n)
 {
-	unsigned char	*p;
+	unsigned char	*result;
 
-	p = (unsigned char *)s;
+	result = (unsigned char *)s;
 	while (n--)
-		*p++ = '\0';
+		*result++ = '\0';
 }
