@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:16:16 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:17:33 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 static int		conv_val(int c)
 {
 	if (c >= '0' && c <= '9')
-		return (c - '0');
+		return (c - ZERO);
 	else if (c >= 'a' && c <= 'f')
-		return (c - 'a' + 10);
+		return (c - 'a' + DEC_BASE);
 	else if (c >= 'A' && c <= 'F')
-		return (c - 'A' + 10);
+		return (c - 'A' + DEC_BASE);
 	return (0);
 }
 
@@ -69,14 +69,14 @@ int				ft_atoi_base(const char *s, int base)
 	int			result;
 	int			sign;
 
-	if (base < 2 || base > 16)
+	if (base < BINARY_BASE || base > HEX_BASE)
 		return (0);
 	i = 0;
 	result = 0;
 	while (ft_isspace(s[i]))
 		i++;
-	sign = (s[i] == '-') ? -1 : 1;
-	if ((s[i] == '+') || (s[i] == '-'))
+	sign = (s[i] == MINUS) ? -1 : 1;
+	if ((s[i] == PLUS) || (s[i] == MINUS))
 		i++;
 	while (s[i] && ft_isbase(s[i], base))
 	{

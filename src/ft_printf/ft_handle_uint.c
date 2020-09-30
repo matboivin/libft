@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:06:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:12:40 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int					ft_handle_uint(t_spec *spec, va_list ap)
 	char			*buffer;
 
 	arg = length_uint(spec, ap);
-	buffer = ft_utoa_base(arg, 10);
+	buffer = ft_utoa_base(arg, DEC_BASE);
 	if (!buffer)
 		return (-1);
 	printed = ft_printf_nbr(buffer, spec, arg);
@@ -76,8 +76,8 @@ int					ft_handle_oct(t_spec *spec, va_list ap)
 	char			*buffer;
 
 	arg = length_uint(spec, ap);
-	buffer = ft_utoa_base(arg, 8);
-	if (spec->flag & ALT)
+	buffer = ft_utoa_base(arg, OCT_BASE);
+	if (spec->flag & ALT_FORM)
 		buffer = ft_add_prefix(buffer, spec);
 	if (!buffer)
 		return (-1);
@@ -102,10 +102,10 @@ int					ft_handle_hex(t_spec *spec, va_list ap)
 	char			*buffer;
 
 	arg = length_uint(spec, ap);
-	buffer = ft_utoa_base(arg, 16);
+	buffer = ft_utoa_base(arg, HEX_BASE);
 	if (spec->type == 'X')
 		buffer = ft_strupcase(buffer);
-	if (spec->flag & ALT)
+	if (spec->flag & ALT_FORM)
 		buffer = ft_add_prefix(buffer, spec);
 	if (!buffer)
 		return (-1);

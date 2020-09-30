@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:12:45 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/30 14:54:19 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static bool		ft_is_line(char **store, char **line)
 
 	len = 0;
 	found = NULL;
-	if ((found = ft_strchr(*store, '\n')))
+	if ((found = ft_strchr(*store, NEWLINE)))
 	{
 		end = found - *store;
 		len = ft_strlen(found);

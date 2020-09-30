@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:05:13 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:00:33 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	ft_printf_int(char *s, int pad, int len, t_spec *spec)
 		spec->width--;
 		zeroes--;
 	}
-	if (spec->flag & ZERO && spec->prec == -1 && ft_is_prefix(s[0]))
+	if (spec->flag & ZERO_PAD && spec->prec == -1 && ft_is_prefix(s[0]))
 		printed += write(spec->dst_fd, s++, 1);
 	if (!(spec->flag & LEFTALIGN) && spec->width > (int)ft_strlen(s))
 		printed += ft_put_padding(pad, len, spec);
@@ -70,11 +70,11 @@ static int	ft_printf_zero(char *s, t_spec *spec)
 	if (ft_is_prefix(s[0]))
 		spec->width--;
 	if (!(spec->flag & LEFTALIGN) && spec->width >= (int)ft_strlen(s))
-		printed += ft_put_padding(' ', len, spec);
+		printed += ft_put_padding(SPACE, len, spec);
 	if (ft_is_prefix(s[0]))
 		printed += write(spec->dst_fd, s, 1);
 	if (spec->flag & LEFTALIGN && spec->width >= (int)ft_strlen(s))
-		printed += ft_put_padding(' ', len, spec);
+		printed += ft_put_padding(SPACE, len, spec);
 	return (printed);
 }
 
@@ -96,10 +96,10 @@ int			ft_printf_nbr(char *s, t_spec *spec, int arg)
 
 	printed = 0;
 	len = (spec->prec >= (int)ft_strlen(s)) ? spec->prec : (int)ft_strlen(s);
-	if (spec->flag & ZERO && spec->prec == -1 && !(spec->flag & LEFTALIGN))
-		pad = '0';
+	if (spec->flag & ZERO_PAD && spec->prec == -1 && !(spec->flag & LEFTALIGN))
+		pad = ZERO;
 	else
-		pad = ' ';
+		pad = SPACE;
 	if (spec->prec == 0 && arg == 0)
 		printed += ft_printf_zero(s, spec);
 	else

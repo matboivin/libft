@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 11:51:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:53:06 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/30 14:56:36 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@
 typedef enum			e_flag
 {
 	LEFTALIGN = 1 << 0,
-	ZERO = 1 << 1,
-	PLUS = 1 << 2,
-	SPACE = 1 << 3,
-	ALT = 1 << 4
+	ZERO_PAD = 1 << 1,
+	PLUS_PREF = 1 << 2,
+	SPACE_PREF = 1 << 3,
+	ALT_FORM = 1 << 4
 }						t_flag;
 
 typedef struct			s_spec

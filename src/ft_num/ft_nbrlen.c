@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 13:46:03 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/14 11:55:58 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:20:32 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int			ft_nbrlen(int n)
 		len++;
 	while (n != 0)
 	{
-		n /= 10;
+		n /= DEC_BASE;
 		len++;
 	}
 	return (len);

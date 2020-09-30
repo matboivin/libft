@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:05:41 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:11:56 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int				ft_printf_ptr(char *s, t_spec *spec)
 
 	printed = 0;
 	if (!(spec->flag & LEFTALIGN) && spec->width > (int)ft_strlen(s))
-		printed += ft_put_padding(' ', ft_strlen(s), spec);
+		printed += ft_put_padding(SPACE, ft_strlen(s), spec);
 	if (spec->prec >= (int)ft_strlen(s))
 	{
 		printed += write(spec->dst_fd, s, 2);
@@ -36,7 +36,7 @@ static int				ft_printf_ptr(char *s, t_spec *spec)
 	}
 	printed += write(spec->dst_fd, s, ft_strlen(s));
 	if (spec->flag & LEFTALIGN && spec->width > (int)ft_strlen(s))
-		printed += ft_put_padding(' ', ft_strlen(s), spec);
+		printed += ft_put_padding(SPACE, ft_strlen(s), spec);
 	return (printed);
 }
 
@@ -57,7 +57,7 @@ int						ft_handle_ptr(t_spec *spec, va_list ap)
 
 	printed = 0;
 	arg = (unsigned long long)va_arg(ap, void *);
-	buffer = ft_utoa_base(arg, 16);
+	buffer = ft_utoa_base(arg, HEX_BASE);
 	if (spec->prec == 0)
 		buffer = ft_strdup(LOWHEX_PREFIX);
 	else

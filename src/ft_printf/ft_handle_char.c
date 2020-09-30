@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:01:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:03:54 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ static int	ft_printf_char(char *s, t_spec *spec)
 	int		pad;
 
 	printed = 0;
-	pad = ' ';
+	pad = SPACE;
 	if (!(spec->flag & LEFTALIGN) && spec->width > 1)
 	{
-		if (s[0] == '%' && spec->flag & ZERO)
-			pad = '0';
+		if (s[0] == PERCENT && spec->flag & ZERO_PAD)
+			pad = ZERO;
 		printed += ft_put_padding(pad, 1, spec);
 	}
 	printed += write(spec->dst_fd, s, 1);

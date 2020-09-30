@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:05:30 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:04:13 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,16 @@ static int	ft_printf_str(char *s, t_spec *spec)
 
 	printed = 0;
 	len = ft_strlen(s);
-	pad = ' ';
+	pad = SPACE;
 	if (!(spec->flag & LEFTALIGN) && spec->width > (int)ft_strlen(s))
 	{
-		if (spec->flag & ZERO)
-			pad = '0';
+		if (spec->flag & ZERO_PAD)
+			pad = ZERO;
 		printed += ft_put_padding(pad, len, spec);
 	}
 	printed += write(spec->dst_fd, s, len);
 	if (spec->flag & LEFTALIGN && spec->width > (int)ft_strlen(s))
-		printed += ft_put_padding(' ', len, spec);
+		printed += ft_put_padding(SPACE, len, spec);
 	return (printed);
 }
 

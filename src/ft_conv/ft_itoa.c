@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:07:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:17:07 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:18:01 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ char			*ft_itoa(int n)
 		return (NULL);
 	if (n < 0)
 	{
-		result[0] = '-';
+		result[0] = MINUS;
 		nbr = -nbr;
 	}
 	while (nbr_len-- > sign)
 	{
-		result[nbr_len] = nbr % 10 + '0';
-		nbr /= 10;
+		result[nbr_len] = nbr % DEC_BASE + ZERO;
+		nbr /= DEC_BASE;
 	}
 	return (result);
 }

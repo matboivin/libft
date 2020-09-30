@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 12:33:13 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:52:42 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:03:47 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int			ft_construct_output(int fd, const char *format, va_list ap)
 	printed = 0;
 	while (*format)
 	{
-		if (*format == '%')
+		if (*format == PERCENT)
 		{
 			format++;
 			printed += ft_parse_format(fd, &format, ap);

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 12:35:35 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:37:44 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:05:28 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ void			get_flags(const char **format, t_spec *spec)
 
 	while (**format && ft_strchr(flags, **format))
 	{
-		if (**format == '-')
+		if (**format == MINUS)
 			spec->flag |= LEFTALIGN;
-		else if (**format == '0')
-			spec->flag |= ZERO;
-		else if (**format == '+')
-			spec->flag |= PLUS;
-		else if (**format == ' ')
-			spec->flag |= SPACE;
-		else if (**format == '#')
-			spec->flag |= ALT;
+		else if (**format == ZERO)
+			spec->flag |= ZERO_PAD;
+		else if (**format == PLUS)
+			spec->flag |= PLUS_PREF;
+		else if (**format == SPACE)
+			spec->flag |= SPACE_PREF;
+		else if (**format == HASH)
+			spec->flag |= ALT_FORM;
 		else
 			break ;
 		(*format)++;
@@ -51,7 +51,7 @@ void			get_flags(const char **format, t_spec *spec)
 
 void			get_width(const char **format, t_spec *spec, va_list ap)
 {
-	if (**format == '*')
+	if (**format == ASTERISK)
 	{
 		spec->width = get_arg(ap);
 		(*format)++;
@@ -79,10 +79,10 @@ void			get_width(const char **format, t_spec *spec, va_list ap)
 
 void			get_precision(const char **format, t_spec *spec, va_list ap)
 {
-	if (**format == '.')
+	if (**format == DOT)
 	{
 		(*format)++;
-		if (**format == '*')
+		if (**format == ASTERISK)
 		{
 			spec->prec = get_arg(ap);
 			(*format)++;

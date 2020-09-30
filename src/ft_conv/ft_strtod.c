@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:17:24 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/09/30 15:19:02 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ static double	decimal_val(const char *s, char **endptr)
 	val = 0.1;
 	while (s[i] && ft_isdigit(s[i]))
 	{
-		result = result + (s[i] - '0') * val;
-		val /= 10;
+		result = result + (s[i] - ZERO) * val;
+		val /= DEC_BASE;
 		i++;
 	}
 	*endptr = ft_strdup(s);
@@ -55,15 +55,15 @@ double			ft_strtod(const char *s, char **endptr)
 	result = 0.0;
 	while (ft_isspace(s[i]))
 		i++;
-	sign = (s[i] == '-') ? -1 : 1;
-	if ((s[i] == '+') || (s[i] == '-'))
+	sign = (s[i] == MINUS) ? -1 : 1;
+	if ((s[i] == PLUS) || (s[i] == MINUS))
 		i++;
 	while (s[i] && ft_isdigit(s[i]))
 	{
-		result = (result * 10) + (s[i] - '0');
+		result = (result * DEC_BASE) + (s[i] - ZERO);
 		i++;
 	}
-	if (s[i] == '.')
+	if (s[i] == DOT)
 	{
 		i++;
 		result = result + decimal_val(s + i, endptr);
