@@ -1,21 +1,31 @@
 NAME := libft.a
 
 SHELL = /bin/sh
-CC = gcc
 RM = rm -rf
+
+.SUFFIXE:
+.SUFFIXES: .c .o .h
+
+# ******************************** CC AND FLAGS ****************************** #
+
+CC = gcc
 AR = ar
 ARFLAGS = -rcs
 CFLAGS = -Wall -Wextra -Werror
 IFLAGS = -I$(INC_PATH)
 
-.SUFFIXE:
-.SUFFIXES: .c .o .h
+# ******************************** DIR AND PATHS ***************************** #
 
-INC_PATH = $(shell find includes -type d)
-SRC_PATH = $(shell find src -type d)
-OBJ_PATH = obj
+INC_PATH	=	$(shell find includes -type d)
+SRC_PATH	=	$(shell find src -type d)
+OBJ_PATH	=	obj
+
+INC			=	$(addprefix includes/, $(INC_FILES))
+OBJ			=	$(addprefix $(OBJ_PATH)/, $(SRC:%.c=%.o))
 
 vpath %.c $(foreach dir, $(SRC_PATH), $(dir):)
+
+# ********************************** FILES *********************************** #
 
 INC_FILES	=	libft_basics.h		\
 				libft_define.h		\
@@ -24,9 +34,7 @@ INC_FILES	=	libft_basics.h		\
 				libft_list.h		\
 				libft_printf.h		\
 
-INC			=	$(addprefix includes/, $(INC_FILES))
-
-# Memory functions
+# Memory functions #
 
 SRC			=	ft_bzero.c			\
 				ft_calloc.c			\
@@ -41,7 +49,7 @@ SRC			=	ft_bzero.c			\
 				ft_realloc.c		\
 				ft_reallocarray.c	\
 
-# Input/Output functions
+# Input/Output functions #
 
 SRC			+=	ft_putchar.c		\
 				ft_putchar_fd.c		\
@@ -52,7 +60,7 @@ SRC			+=	ft_putchar.c		\
 				ft_putstr.c			\
 				ft_putstr_fd.c		\
 
-# Char recon functions
+# Char recon functions #
 
 SRC			+=	ft_tolower.c		\
 				ft_toupper.c		\
@@ -70,7 +78,7 @@ SRC			+=	ft_tolower.c		\
 				ft_isnumeric.c		\
 				ft_charcount.c		\
 
-# String functions
+# String functions #
 
 SRC			+=	ft_split.c			\
 				ft_strappend.c		\
@@ -108,12 +116,12 @@ SRC			+=	ft_split.c			\
 				ft_strupcase.c		\
 				ft_strlowcase.c		\
 
-# Array functions
+# Array functions #
 
 SRC			+=	ft_tablen.c			\
 				ft_tabdel.c			\
 
-# List functions
+# List functions #
 
 SRC			+=	ft_lstappend.c		\
 				ft_lstat.c			\
@@ -132,7 +140,7 @@ SRC			+=	ft_lstappend.c		\
 				ft_lstsort.c		\
 				ft_lstswap.c		\
 
-# Conversion functions
+# Conversion functions #
 
 SRC			+=	ft_atoi.c			\
 				ft_atoi_base.c		\
@@ -143,7 +151,7 @@ SRC			+=	ft_atoi.c			\
 				ft_utoa_base.c		\
 				ft_strtod.c			\
 
-# Int functions
+# Numeric functions #
 
 SRC			+=	ft_swap.c			\
 				ft_nbrlen.c			\
@@ -152,11 +160,11 @@ SRC			+=	ft_swap.c			\
 				ft_n_range.c		\
 				ft_f_range.c		\
 
-# GNL
+# GNL #
 
 SRC			+=	get_next_line.c		\
 
-# ft_printf
+# ft_printf #
 
 SRC			+=	ft_printf.c				\
 				ft_dprintf.c			\
@@ -176,7 +184,7 @@ SRC			+=	ft_printf.c				\
 				get_digits.c			\
 				parsing_fields.c		\
 
-OBJ = $(addprefix $(OBJ_PATH)/, $(SRC:%.c=%.o))
+# ********************************** RULES *********************************** #
 
 .PHONY: all
 all: $(NAME)
@@ -185,17 +193,25 @@ $(NAME): $(OBJ_PATH) $(OBJ) $(INC)
 	@$(AR) $(ARFLAGS) $@ $(OBJ)
 	@echo "\nOK\t\t$(NAME) is ready"
 
+# OBJ DIR #
+
 $(OBJ_PATH):
 	@mkdir -p $@
 	@echo "Created\t\t$@ directory"
+
+# COMPILING #
 
 $(OBJ_PATH)/%.o : %.c
 	@echo "\r\033[KCompiling\t$< \c"
 	@$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
 
+# DEBUG #
+
 .PHONY: debug
 debug: CFLAGS+=-g3
 debug: re
+
+# CLEAN #
 
 .PHONY: clean
 clean:
