@@ -3,7 +3,7 @@
 libft is an individual school project at [42 Paris](https://www.42.fr) campus.
 
 42 is a private, non-profit and tuition-free Computer Science school based on peer-to-peer learning and hands-on projects.  
-All programs written in C follow [42 style guideline](https://github.com/matboivin/42-projects#the-norm).
+All programs written in C follow [42 style guideline](https://github.com/42Paris/norminette).
 
 > First C project: many implementations of the Standard C Library functions, and additional functions.
 
