@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 21:40:54 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/06 16:02:21 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:05:10 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,21 @@
 /*
 ** Function: Frees a 2D array
 **
-** tab: The 2D array to be freed
+** to_free: The 2D array to be freed
 */
 
-void	ft_tabdel(char **tab)
+void	ft_tabdel(char **to_free)
 {
 	int	i;
 
 	i = 0;
-	if (tab)
+	if (to_free)
 	{
-		while (tab[i])
+		while (to_free[i])
 		{
-			ft_memdel((void **)&(tab[i]));
+			ft_memdel((void **)&(to_free[i]));
 			i++;
 		}
-		ft_memdel((void **)&tab);
+		ft_memdel((void **)&to_free);
 	}
 }

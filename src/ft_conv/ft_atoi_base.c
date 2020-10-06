@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/30 15:17:33 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:08:33 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Returns the necessary value for base conversion
+** This function returns the necessary value for base conversion
 */
 
 static int		conv_val(int c)
@@ -28,7 +28,7 @@ static int		conv_val(int c)
 }
 
 /*
-** Function: Checks if c is present in base
+** This function checks if c is present in base
 **
 ** c: A character
 ** base: The given base
@@ -60,7 +60,7 @@ static bool		ft_isbase(int c, int base)
 ** base: An integer (2 to 16)
 **
 ** returns: The converted number as an int value
-**          Zero value otherwise
+**          0 otherwise
 */
 
 int				ft_atoi_base(const char *s, int base)

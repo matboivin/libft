@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 12:15:10 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:45:22 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:54:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,13 @@
 /*
 ** Recoded strncat libc function that appends no more than n characters of the
 ** string pointed to by src to the end of the string pointed to by dst and
-** nul-terminates the resulting string. It returns a pointer to the resulting
-** concatenated string dst.
+** null-terminates the resulting string
+**
+** dst: A pointer to the destination string
+** src: A pointer to the source string
+** n: The number of characters to append
+**
+** returns: A pointer to the new string
 */
 
 char		*ft_strncat(char *dst, const char *src, size_t n)

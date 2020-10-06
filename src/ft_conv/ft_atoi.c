@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/30 15:16:56 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:08:33 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** s: A string representation of an integral number
 **
 ** returns: The converted integral number as an int value
-**          Zero value otherwise
+**          0 otherwise
 */
 
 int				ft_atoi(const char *s)

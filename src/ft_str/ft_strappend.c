@@ -6,14 +6,15 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:29:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:08:02 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:40:42 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Allocates a new string, result of the concatenation of s and suffix
+** This function allocates a new string, result of the concatenation of s and
+** suffix
 **
 ** s: A pointer to the string
 ** suffix: A pointer to the suffix

@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:35:55 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/14 16:34:04 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:36:42 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Outputs the character c to the standard output.
+** This function outputs the character c to the standard output
 **
 ** c: The character to output
 */

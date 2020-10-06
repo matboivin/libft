@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 15:19:28 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/26 14:06:08 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:36:52 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Outputs the string s to given file descriptor, followed by a
+** This function outputs the string s to given file descriptor, followed by a
 ** newline
 **
 ** s: The string to output

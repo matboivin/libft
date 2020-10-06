@@ -6,15 +6,19 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:14:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:08:35 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:06:37 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** This function lexicographically compares s1 and s2. If the two strings are
-** identical the function returns 1, else zero value is returned.
+** This function lexicographically compares s1 and s2
+**
+** s1, s2: Pointers to the strings to be compared
+**
+** returns: 1 if the two strings are identical
+**          0 otherwise
 */
 
 int		ft_strequ(const char *s1, const char *s2)

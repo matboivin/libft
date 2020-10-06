@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:56 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:51:52 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:07:01 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** s1, s2: Pointers to the buffers to be compared
 ** n: The number of bytes to be compared
 **
-** returns: Zero if the two strings are identical
+** returns: 0 if the two strings are identical
 **          Otherwise the difference between the first two differing bytes
 */
 

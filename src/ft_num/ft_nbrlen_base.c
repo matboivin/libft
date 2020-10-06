@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 13:46:03 by mboivin           #+#    #+#             */
-/*   Updated: 2020/04/14 11:55:51 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:35:31 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Computes the length (count of digits) of the integer passed
+** This function computes the length (count of digits) of the integer passed
 ** as an argument using the specified base
 */
 

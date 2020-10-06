@@ -6,15 +6,15 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/30 14:54:19 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:06:06 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Checks for a newline character in the content pointed to by store
-** and updates the content of store and line
+** This function checks for a newline character in the content pointed to by
+** store and updates the content of store and line
 **
 ** store: Read content
 ** line: The value of what has been read
@@ -43,7 +43,7 @@ static bool		ft_is_line(char **store, char **line)
 }
 
 /*
-** Function: Gets a line read from a file descriptor, without the newline
+** This function gets a line read from a file descriptor, without the newline
 **
 ** fd: File descriptor for reading
 ** line: The value of what has been read

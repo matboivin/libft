@@ -6,15 +6,15 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:37 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:44:47 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:54:36 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Recoded strlcat libc function: Appends the NUL-terminated string src to the
-** end of dst at most size − dst length − 1 bytes, NUL-terminating the result
+** Recoded strlcat libc function: Appends the null-terminated string src to the
+** end of dst at most size − dst length − 1 bytes, null-terminating the result
 **
 ** dst: A pointer to the destination string
 ** src: A pointer to the source string

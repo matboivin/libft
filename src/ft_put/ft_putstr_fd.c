@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 15:12:23 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/26 14:05:50 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:37:46 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Outputs the string s to given file descriptor
+** This function outputs the string s to given file descriptor
 **
 ** s: The string to output
 ** fd: The file descriptor on which to write

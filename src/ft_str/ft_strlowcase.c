@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/12 20:58:04 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:45:08 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:49:05 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Converts all upper-case letters of a string to lower-case letters
+** This function converts all upper-case letters of s to lower-case letters
 */
 
 char		*ft_strlowcase(char *s)

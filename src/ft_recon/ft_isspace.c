@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 10:22:44 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:41:27 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:07:56 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** c: A character
 **
 ** returns: A non-zero integer if c is a space character
-**          Zero value otherwise
+**          0 otherwise
 */
 
 bool	ft_isspace(int c)

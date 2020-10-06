@@ -6,19 +6,19 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 18:35:51 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/30 15:20:06 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:08:33 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Converts an unsigned integer to a string representation
+** This function converts an unsigned integer to a string representation
 **
 ** n: An integer
 **
 ** returns: The converted number as a string representation
-**          Zero value otherwise
+**          0 otherwise
 */
 
 char					*ft_utoa(unsigned long long n)

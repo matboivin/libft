@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:45:41 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/30 15:21:21 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:37:38 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Outputs the integer n to the standard output
+** This function outputs the integer n to the standard output
 **
 ** n: The integer to output
 */

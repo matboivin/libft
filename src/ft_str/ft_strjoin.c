@@ -6,15 +6,15 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:25:33 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:09:24 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:42:19 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Allocates (with malloc(3)) and returns a new string, result of the
-** concatenation of s1 and s2
+** This function allocates (with malloc(3)) and returns a new string, result of
+** the concatenation of s1 and s2
 **
 ** s1: The prefix string
 ** s2: The suffix string

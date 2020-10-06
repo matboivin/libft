@@ -6,15 +6,15 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 18:32:48 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:12:01 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:04:33 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Allocates (with malloc(3)) and returns a substring from the string
-** given in argument. It begins at index ’start’ and is of maximum size ’len’
+** This function allocates (with malloc(3)) and returns a substring from the
+** string given in argument. It begins at index start and is of maximum size len
 **
 ** s: The string from which create the substring
 ** start: The start index of the substring in the string

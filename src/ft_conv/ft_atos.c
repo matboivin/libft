@@ -6,19 +6,19 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 12:41:45 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:16:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:08:33 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Converts a single char to a string
+** This function converts a single char to a string
 **
 ** c: A char
 **
 ** returns: The converted char as a string representation
-**          Zero value otherwise
+**          0 otherwise
 */
 
 char		*ft_atos(char c)

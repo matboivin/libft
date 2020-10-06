@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 15:15:11 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/30 15:21:17 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:37:25 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Outputs the integer n to given file descriptor
+** This function outputs the integer n to given file descriptor
 **
 ** n: The integer to output
 ** fd: The file descriptor on which to write

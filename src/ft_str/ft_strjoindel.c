@@ -6,15 +6,15 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 15:16:05 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:09:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:42:08 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Allocates a new string, result of the concatenation of s1 and s2,
-** then frees s1 and s2
+** This function allocates a new string, result of the concatenation of s1 and
+** s2, then frees s1 and s2
 **
 ** s1: A pointer to the first string to be copied
 ** s2: A pointer to the second string to be copied

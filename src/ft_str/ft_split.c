@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:07:42 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:39:53 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Auxiliary function: Computes the number of strings to split
+** This function computes the number of strings to split
 **
 ** s: The total string to be split
 ** c: The delimiter character
@@ -21,7 +21,7 @@
 ** returns: The number of substrings delimited by c
 */
 
-static size_t	count_strings(const char *s, char c)
+static size_t	ft_count_strings(const char *s, char c)
 {
 	size_t		i;
 	size_t		j;
@@ -38,7 +38,7 @@ static size_t	count_strings(const char *s, char c)
 }
 
 /*
-** Auxiliary function: Allocates and copies a splitted string
+** This function allocates and copies a splitted string
 **
 ** s: The total string to be split
 ** i: The index of the last non-delimiter character in s
@@ -47,7 +47,7 @@ static size_t	count_strings(const char *s, char c)
 ** returns: The splitted string
 */
 
-static char		*get_strings(const char *s, size_t i, size_t c_index)
+static char		*ft_get_strings(const char *s, size_t i, size_t c_index)
 {
 	size_t		j;
 	size_t		len;
@@ -71,13 +71,13 @@ static char		*get_strings(const char *s, size_t i, size_t c_index)
 }
 
 /*
-** Function: Allocates (with malloc(3)) and returns an result of strings
+** This function allocates (with malloc(3)) and returns an result of strings
 ** obtained by splitting s using the character c as a delimiter
 **
 ** s: The string to be split
 ** c: The delimiter character
 **
-** returns: The result of new strings ended by a NULL pointer
+** returns: The new strings ended by a NULL pointer
 **          NULL otherwise
 */
 
@@ -91,7 +91,7 @@ char			**ft_split(const char *s, char c)
 
 	if (!s)
 		return (NULL);
-	str_count = count_strings(s, c);
+	str_count = ft_count_strings(s, c);
 	i = 0;
 	j = 0;
 	if (!(result = (char **)malloc((str_count + 1) * sizeof(char*))))
@@ -103,7 +103,7 @@ char			**ft_split(const char *s, char c)
 		c_index = i;
 		while (s[i] && (s[i] != c))
 			i++;
-		result[j] = get_strings(s, i, c_index);
+		result[j] = ft_get_strings(s, i, c_index);
 		j++;
 	}
 	result[j] = NULL;

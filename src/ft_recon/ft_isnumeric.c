@@ -6,19 +6,19 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/21 00:23:51 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/19 19:23:51 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:07:56 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Checks if a string has only numeric characters
+** This function checks if a string has only numeric characters
 **
 ** s: A character
 **
 ** returns: A non-zero integer if s has only numeric characters
-**          Zero value otherwise
+**          0 otherwise
 */
 
 bool		ft_isnumeric(char *s)

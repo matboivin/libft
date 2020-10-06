@@ -6,15 +6,15 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 16:48:25 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:10:17 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:49:30 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Applies the function f to each character of the string passed as
-** argument to create a new string (with malloc(3)) resulting from successive
+** This function applies the function f to each character of the string passed
+** as argument to create a new string (with malloc(3)) resulting from successive
 ** applications of f
 **
 ** s: The string on which to iterate

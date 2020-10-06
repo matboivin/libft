@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 21:40:54 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 18:11:58 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:58:24 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 /*
 ** Function: Frees a string, then sets its pointer to NULL
 **
-** as: The address of a string to be freed
+** to_free: The address of a string to be freed
 */
 
-void	ft_strdel(char **as)
+void	ft_strdel(char **to_free)
 {
-	if (as && *as)
+	if (to_free && *to_free)
 	{
-		free(*as);
-		*as = NULL;
+		free(*to_free);
+		*to_free = NULL;
 	}
 }

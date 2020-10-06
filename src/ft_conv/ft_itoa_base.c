@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:07:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/30 15:16:04 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:08:33 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Returns the necessary value for base conversion
+** This function returns the necessary value for base conversion
 */
 
 static int		conv_val(int n, int base)
@@ -24,14 +24,14 @@ static int		conv_val(int n, int base)
 }
 
 /*
-** Function: Converts an integer to a string representation using the specified
-** base
+** This function converts an integer to a string representation using
+** the specified base
 **
 ** n: An integer
 ** base: An integer (2 to 16)
 **
 ** returns: The converted number as a string representation
-**          Zero value otherwise
+**          0 otherwise
 */
 
 char			*ft_itoa_base(int n, int base)

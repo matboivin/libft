@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/20 19:47:13 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:11:08 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:01:28 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Copies up to size − 1 characters from src to a new string,
+** This function copies up to size − 1 characters from src to a new string,
 ** then frees src
 **
 ** src: A pointer to the source string

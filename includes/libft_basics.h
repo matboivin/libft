@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/16 23:37:46 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:05:30 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,12 @@ bool	ft_isnumeric(char *s);
 
 char	**ft_split(const char *s, char c);
 char	*ft_strappend(char *s, char *suffix);
-char	*ft_strcat(char *s1, const char *s2);
+char	*ft_strcat(char *dst, const char *src);
 char	*ft_strchr(const char *s, int c);
 void	ft_strclr(char *s);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strcpy(char *dst, const char *src);
-void	ft_strdel(char **as);
+void	ft_strdel(char **to_free);
 char	*ft_strdup(const char *s1);
 int		ft_strequ(const char *s1, const char *s2);
 void	ft_striter(char *s, void (*f)(char *));
@@ -83,13 +83,13 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strrep(char *src, int size);
 char	*ft_strrev(char *s);
 char	*ft_strstr(const char *s, const char *needle);
-char	*ft_strtrim(const char *s1, const char *set);
+char	*ft_strtrim(const char *s, const char *set);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strupcase(char *s);
 char	*ft_strlowcase(char *s);
 
-size_t	ft_tablen(char **arr);
-void	ft_tabdel(char **tab);
+size_t	ft_tablen(char **tab);
+void	ft_tabdel(char **to_free);
 
 int		ft_atoi(const char *s);
 int		ft_atoi_base(const char *s, int base);

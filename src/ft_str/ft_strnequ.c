@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:35:36 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:04:38 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:07:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,13 @@
 
 /*
 ** This function lexicographically compares s1 and s2 up to n characters or
-** until a ’\0’ is reached. If the two strings are identical the function
-** returns 1, else zero value is returned.
+** until a ’\0’ is reached
+**
+** s1, s2: Pointers to the strings to be compared
+** n: The number of bytes to be compared
+**
+** returns: 1 if the two strings are identical
+**          0 otherwise
 */
 
 int		ft_strnequ(const char *s1, const char *s2, size_t n)

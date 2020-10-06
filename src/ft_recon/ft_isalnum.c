@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:50 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:06:46 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:07:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** c: A character
 **
 ** returns: A non-zero integer if c is an alphanumeric character
-**          Zero value otherwise
+**          0 otherwise
 */
 
 bool	ft_isalnum(int c)

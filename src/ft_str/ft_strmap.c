@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 16:33:47 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 23:10:07 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:49:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Applies the function f to each character of the string given as
+** This function applies the function f to each character of the string given as
 ** argument to create a “fresh” new string (with malloc(3)) resulting from the
 ** successive applications of f.
 **

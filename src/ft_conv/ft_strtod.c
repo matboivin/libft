@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/30 15:19:02 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 23:08:33 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Returns the decimal part
+** This function returns the decimal part
 */
 
 static double	decimal_val(const char *s, char **endptr)
@@ -42,7 +42,7 @@ static double	decimal_val(const char *s, char **endptr)
 ** set by the function to the next character in s after the numerical value
 **
 ** returns: The converted integral number as an int value
-**          Zero value otherwise
+**          0 otherwise
 */
 
 double			ft_strtod(const char *s, char **endptr)

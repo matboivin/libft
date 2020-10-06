@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 13:41:41 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:30:10 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:35:49 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Function: Swaps the value of two integers whose addresses are entered
+** This function swaps the value of two integers whose addresses are entered
 ** as parameters
 */
 
