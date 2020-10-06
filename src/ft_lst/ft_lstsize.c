@@ -6,31 +6,31 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 18:17:57 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/12 22:31:28 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:25:43 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: Counts the number of elements in a list
+** This function counts the number of nodes in a list
 **
-** lst: The beginning of the list
+** head: Pointer to the first node of a list
 **
 ** returns: The length of the list
 */
 
-int			ft_lstsize(t_list *lst)
+int			ft_lstsize(t_node *head)
 {
 	int		size;
 
 	size = 0;
-	if (lst)
+	if (head)
 	{
-		while (lst)
+		while (head)
 		{
 			size++;
-			lst = lst->next;
+			head = head->next;
 		}
 	}
 	return (size);

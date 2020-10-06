@@ -6,38 +6,38 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 22:08:20 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:22:52 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:24:33 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: Erases off the list all elements, whose data is "equal" to the
+** This function erases off the list all nodes, whose data is "equal" to the
 ** reference data
 **
-** lst: The address of a pointer to the first link of a list
+** head: Pointer to the first node of a list
 ** data_ref: The data to be compared to the content
 */
 
-void		ft_lstdelif(t_list **lst, void *data_ref)
+void		ft_lstdelif(t_node **head, void *data_ref)
 {
-	t_list	*cursor;
-	t_list	*node;
+	t_node	*cursor;
+	t_node	*to_free;
 
-	if (!lst || !data_ref)
+	if (!head || !data_ref)
 		return ;
-	node = NULL;
-	cursor = *lst;
-	if (*lst)
+	if (*head)
 	{
+		cursor = *head;
+		to_free = NULL;
 		while (cursor)
 		{
 			if (cursor->content == data_ref)
 			{
-				node = cursor;
+				to_free = cursor;
 				cursor = cursor->next;
-				free(node);
+				free(to_free);
 			}
 			else
 				cursor = cursor->next;

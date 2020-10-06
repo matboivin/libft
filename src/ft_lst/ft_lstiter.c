@@ -6,27 +6,27 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:37:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:23:18 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:16:03 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: Iterates the list lst and applies the function f to the content of
-** each element
+** This function iterates the list from node and applies the function f to the
+** content of each node
 **
-** lst: The address of a pointer to a element
+** node: Pointer to a node
 ** f: The address of the function to iterate on the list
 */
 
-void		ft_lstiter(t_list *lst, void (*f)(void *))
+void		ft_lstiter(t_node *node, void (*f)(void *))
 {
-	if (!lst || !f)
+	if (!node || !f)
 		return ;
-	while (lst)
+	while (node)
 	{
-		f(lst->content);
-		lst = lst->next;
+		f(node->content);
+		node = node->next;
 	}
 }

@@ -6,30 +6,30 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 17:33:28 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:26:50 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:20:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: Allocates (with malloc(3)) and returns a new element.
-** The variable content is initialized with the value of the parameter content.
+** This function allocates (with malloc(3)) and returns a new node
+** The variable content is initialized with the value of the parameter content
 ** The variable next is initialized to NULL.
 **
-** content: The content to create the new element with
+** p_content: The content of the new node
 **
-** returns: The new element
+** returns: The new node
 */
 
-t_list		*ft_lstnew(void *content)
+t_node		*ft_lstnew(void *p_content)
 {
-	t_list	*new_elem;
+	t_node	*result;
 
-	new_elem = (t_list *)malloc(sizeof(t_list));
-	if (!new_elem)
+	result = (t_node *)malloc(sizeof(t_node));
+	if (!result)
 		return (NULL);
-	new_elem->content = content;
-	new_elem->next = NULL;
-	return (new_elem);
+	result->content = p_content;
+	result->next = NULL;
+	return (result);
 }

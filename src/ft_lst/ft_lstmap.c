@@ -6,19 +6,19 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:38:13 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:26:32 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:20:54 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: Iterates the list lst and applies the function f to the content of
-** each element
+** This function iterates the list from node and applies the function f to the
+** content of each node
 ** Creates a new list resulting of the successive applications of the function f
-** The del function is here to delete the content of an element if needed
+** The del function is here to delete the content of a node if needed
 **
-** lst: The address of a pointer to a element
+** node: Pointer to a node
 ** f: The address of the function to iterate on the list
 ** del: The address of the function to delete the content
 **
@@ -26,18 +26,18 @@
 **          NULL otherwise
 */
 
-t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_node		*ft_lstmap(t_node *node, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*cursor;
-	t_list	*new_lst;
-	t_list	*alst;
+	t_node	*cursor;
+	t_node	*new_lst;
+	t_node	*result;
 
-	if (!lst || !f)
+	if (!node || !f || !del)
 		return (NULL);
-	cursor = lst;
+	cursor = node;
 	if (!(new_lst = ft_lstnew(f(cursor->content))))
 		return (NULL);
-	alst = new_lst;
+	result = new_lst;
 	cursor = cursor->next;
 	while (cursor)
 	{
@@ -49,5 +49,5 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_lst = new_lst->next;
 		cursor = cursor->next;
 	}
-	return (alst);
+	return (result);
 }

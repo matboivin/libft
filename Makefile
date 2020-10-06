@@ -125,7 +125,7 @@ SRC			+=	ft_tablen.c			\
 
 SRC			+=	ft_lstappend.c		\
 				ft_lstat.c			\
-				ft_lstclear.c		\
+				ft_lstdel.c		\
 				ft_lstdelif.c		\
 				ft_lstdelone.c		\
 				ft_lstfind.c		\

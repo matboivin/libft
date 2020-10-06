@@ -6,32 +6,32 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:41:33 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:19:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:15:26 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: Adds the new element at the end of the list
+** This function appends a new node to the list
 **
-** lst: The address of a pointer to the first link of a list
-** new_elem: The address of a pointer to the element to add to the list
+** head: Pointer to the first node of a list
+** new_node: Pointer to the node to add to the list
 */
 
-void		ft_lstappend(t_list **lst, t_list *new_elem)
+void		ft_lstappend(t_node **head, t_node *new_node)
 {
-	t_list	*cursor;
+	t_node	*cursor;
 
-	if (!lst || !new_elem)
+	if (!head || !new_node)
 		return ;
-	cursor = *lst;
-	if (*lst)
+	if (*head)
 	{
+		cursor = *head;
 		while (cursor->next)
 			cursor = cursor->next;
-		cursor->next = new_elem;
+		cursor->next = new_node;
 	}
 	else
-		*lst = new_elem;
+		*head = new_node;
 }

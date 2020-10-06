@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:46:51 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:22:35 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:31:18 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: Deletes and frees the given element and every successor of that
-** element, using the function del and free(3)
+** This function deletes and frees the given node and its successors using the
+** function del and free(3)
 ** Finally, the pointer to the list must be set to NULL
 **
-** lst: The adress of a pointer to a element
-** new: The adress of the function used to delete the content of the element
+** node: Pointer to a node
+** del: The adress of the function used to delete the content of the node
 */
 
-void		ft_lstclear(t_list **lst, void (*del)(void *))
+void		ft_lstdel(t_node **node, void (*del)(void *))
 {
-	t_list	*cursor;
-	t_list	*next_node;
+	t_node	*cursor;
+	t_node	*next_node;
 
-	if (!lst || !del)
+	if (!node || !del)
 		return ;
-	cursor = *lst;
-	if (*lst)
+	if (*node)
 	{
+		cursor = *node;
 		while (cursor)
 		{
 			next_node = cursor->next;
@@ -38,6 +38,6 @@ void		ft_lstclear(t_list **lst, void (*del)(void *))
 			free(cursor);
 			cursor = next_node;
 		}
-		*lst = NULL;
+		*node = NULL;
 	}
 }

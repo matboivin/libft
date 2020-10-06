@@ -6,29 +6,29 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 21:40:44 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:23:36 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:13:51 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: Iterates the list lst and applies the function f to the content of
-** elements that are "equal" to the reference information
+** This function iterates over the list from node and applies the function f to
+** the content of nodes that are "equal" to the reference data
 **
-** lst: The address of a pointer to a element
-** f: The address of the function to iterate on the list
-** data_ref: The data to be compared to the content
+** node: Pointer to a node
+** f: The address of the function to apply on the list
+** data_ref: The data to be compared to the content of each node
 */
 
-void		ft_lstiterif(t_list *lst, void (*f)(void *), void *data_ref)
+void		ft_lstiterif(t_node *node, void (*f)(void *), void *data_ref)
 {
-	if (!lst || !f || !data_ref)
+	if (!node || !f || !data_ref)
 		return ;
-	while (lst)
+	while (node)
 	{
-		if (lst->content == data_ref)
-			f(lst->content);
-		lst = lst->next;
+		if (node->content == data_ref)
+			f(node->content);
+		node = node->next;
 	}
 }

@@ -6,37 +6,37 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:19:59 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:30:40 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_LIST_H
 # define LIBFT_LIST_H
 
-typedef struct		s_list
+typedef struct		s_node
 {
 	void			*content;
-	struct s_list	*next;
-}					t_list;
+	struct s_node	*next;
+}					t_node;
 
-t_list				*ft_lstat(t_list *lst, unsigned int nbr);
-t_list				*ft_lstnew(void *content);
-void				ft_lstappend(t_list **lst, t_list *new_elem);
-void				ft_lstprepend(t_list **lst, t_list *new_elem);
-void				ft_lstclear(t_list **lst, void (*del)(void *));
-void				ft_lstdelif(t_list **lst, void *data_ref);
-void				ft_lstdelone(t_list *lst, void (*del)(void *));
-t_list				*ft_lstfind(t_list *lst, void *data_ref);
-void				ft_lstiter(t_list *lst, void (*f)(void *));
+void				ft_lstappend(t_node **head, t_node *new_node);
+t_node				*ft_lstat(t_node *head, unsigned int n);
+void				ft_lstdel(t_node **node, void (*del)(void *));
+void				ft_lstdelif(t_node **head, void *data_ref);
+void				ft_lstdelone(t_node *to_free, void (*del)(void *));
+t_node				*ft_lstfind(t_node *head, void *data_ref);
+void				ft_lstiter(t_node *node, void (*f)(void *));
 void				ft_lstiterif(
-	t_list *lst, void (*f)(void *), void *data_ref);
-t_list				*ft_lstlast(t_list *lst);
-t_list				*ft_lstmap(
-	t_list *lst, void *(*f)(void *), void (*del)(void *));
-void				ft_lstrev(t_list **lst);
-int					ft_lstsize(t_list *lst);
-void				ft_lstsort(t_list **lst, int (*cmp)());
+	t_node *lst, void (*f)(void *), void *data_ref);
+t_node				*ft_lstlast(t_node *node);
+t_node				*ft_lstmap(
+	t_node *node, void *(*f)(void *), void (*del)(void *));
+t_node				*ft_lstnew(void *p_content);
+void				ft_lstprepend(t_node **head, t_node *new_node);
+void				ft_lstrev(t_node **head);
+int					ft_lstsize(t_node *head);
+void				ft_lstsort(t_node **head, int (*cmp)());
 void				ft_lstswap(
-	t_list *a, t_list *prev_a, t_list *b, t_list *prev_b);
+	t_node *a, t_node *prev_a, t_node *b, t_node *prev_b);
 
 #endif

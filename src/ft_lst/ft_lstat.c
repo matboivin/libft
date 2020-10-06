@@ -6,33 +6,33 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:23:57 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:22:19 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:07:10 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: Finds the Nth element of the list
+** This function finds the Nth node of the list
 **
-** lst: The address of a pointer to the first link of a list
-** nbr: The element to find
+** head: Pointer to the first node of a list
+** n: The N node to find
 **
-** returns: The Nth element of the list
+** returns: The Nth node of the list
 **          NULL otherwise
 */
 
-t_list				*ft_lstat(t_list *lst, unsigned int nbr)
+t_node				*ft_lstat(t_node *head, unsigned int n)
 {
 	unsigned int	i;
 
 	i = 0;
-	if (!lst)
+	if (!head)
 		return (NULL);
-	while (lst->next && (i != nbr))
+	while (head->next && (i != n))
 	{
-		lst = lst->next;
+		head = head->next;
 		i++;
 	}
-	return (lst);
+	return (head);
 }

@@ -6,31 +6,31 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 22:20:19 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:28:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:29:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: Sorts the list’s contents by ascending order by comparing two links
-** thanks to a function that can compare the content held in those two links
+** This function sorts the list’s content by ascending order by comparing two
+** nodes thanks to a function that can compare their content
 **
-** lst: The address of a pointer to the first link of a list
+** head: Pointer to the first node of a list
 ** cmp: The comparison function
 */
 
-void		ft_lstsort(t_list **lst, int (*cmp)())
+void		ft_lstsort(t_node **head, int (*cmp)())
 {
-	t_list	*cursor;
-	t_list	*next_node;
-	t_list	*tmp;
+	t_node	*cursor;
+	t_node	*next_node;
+	t_node	*next_content;
 
-	if (!lst || !cmp)
+	if (!head || !cmp)
 		return ;
-	cursor = *lst;
-	if (*lst)
+	if (*head)
 	{
+		cursor = *head;
 		while (cursor)
 		{
 			next_node = cursor->next;
@@ -38,9 +38,9 @@ void		ft_lstsort(t_list **lst, int (*cmp)())
 			{
 				if (!cmp(cursor->content, next_node->content))
 				{
-					tmp = cursor->content;
+					next_content = cursor->content;
 					cursor->content = next_node->content;
-					next_node->content = tmp;
+					next_node->content = next_content;
 				}
 				next_node = next_node->next;
 			}

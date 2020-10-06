@@ -6,31 +6,31 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 21:50:45 by mboivin           #+#    #+#             */
-/*   Updated: 2019/12/12 22:21:47 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/06 22:15:05 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** function: Searches for an element that stores a given data
+** This function searches for a node that stores a given data
 **
-** lst: The address of a pointer to the first link of a list
+** head: Pointer to the first node of a list
 ** data_ref: The searched data
 **
-** returns: The element
+** returns: The found node
 **          NULL otherwise
 */
 
-t_list		*ft_lstfind(t_list *lst, void *data_ref)
+t_node		*ft_lstfind(t_node *head, void *data_ref)
 {
-	if (lst && data_ref)
+	if (head && data_ref)
 	{
-		while (lst)
+		while (head)
 		{
-			if (lst->content == data_ref)
-				return (lst);
-			lst = lst->next;
+			if (head->content == data_ref)
+				return (head);
+			head = head->next;
 		}
 	}
 	return (NULL);
