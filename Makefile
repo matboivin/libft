@@ -35,7 +35,7 @@ OBJ_DIR		=	obj
 INC			=	$(addprefix $(INC_DIR)/, $(INC_FILES))
 OBJ			=	$(addprefix $(OBJ_DIR)/, $(SRC:%.c=%.o))
 
-VPATH = $(addprefix $(SRC_DIR)/, $(SRC_SUBDIRS))
+VPATH		=	$(addprefix $(SRC_DIR)/, $(SRC_SUBDIRS))
 
 # ********************************** FILES *********************************** #
 
