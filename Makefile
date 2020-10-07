@@ -1,7 +1,7 @@
 NAME := libft.a
 
 SHELL = /bin/sh
-RM = rm -rf
+RM = /bin/rm
 
 .SUFFIXE:
 .SUFFIXES: .c .o .h
@@ -12,18 +12,30 @@ CC = gcc
 AR = ar
 ARFLAGS = -rcs
 CFLAGS = -Wall -Wextra -Werror
-IFLAGS = -I$(INC_PATH)
+IFLAGS = -I$(INC_DIR)
 
-# ******************************** DIR AND PATHS ***************************** #
+# ******************************* DIRS AND PATHS ***************************** #
 
-INC_PATH	=	$(shell find includes -type d)
-SRC_PATH	=	$(shell find src -type d)
-OBJ_PATH	=	obj
+SRC_SUBDIRS	=	ft_char \
+				ft_conv \
+				ft_lst \
+				ft_mem \
+				ft_num \
+				ft_printf \
+				ft_put \
+				ft_recon \
+				ft_str \
+				ft_tab \
+				gnl
 
-INC			=	$(addprefix includes/, $(INC_FILES))
-OBJ			=	$(addprefix $(OBJ_PATH)/, $(SRC:%.c=%.o))
+INC_DIR		=	includes
+SRC_DIR		=	src
+OBJ_DIR		=	obj
 
-vpath %.c $(foreach dir, $(SRC_PATH), $(dir):)
+INC			=	$(addprefix $(INC_DIR)/, $(INC_FILES))
+OBJ			=	$(addprefix $(OBJ_DIR)/, $(SRC:%.c=%.o))
+
+VPATH = $(addprefix $(SRC_DIR)/, $(SRC_SUBDIRS))
 
 # ********************************** FILES *********************************** #
 
@@ -189,19 +201,19 @@ SRC			+=	ft_printf.c				\
 .PHONY: all
 all: $(NAME)
 
-$(NAME): $(OBJ_PATH) $(OBJ) $(INC)
+$(NAME): $(OBJ_DIR) $(OBJ) $(INC)
 	@$(AR) $(ARFLAGS) $@ $(OBJ)
 	@echo "\nOK\t\t$(NAME) is ready"
 
 # OBJ DIR #
 
-$(OBJ_PATH):
+$(OBJ_DIR):
 	@mkdir -p $@
 	@echo "Created\t\t$@ directory"
 
 # COMPILING #
 
-$(OBJ_PATH)/%.o : %.c
+$(OBJ_DIR)/%.o : %.c
 	@echo "\r\033[KCompiling\t$< \c"
 	@$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
 
@@ -215,12 +227,12 @@ debug: re
 
 .PHONY: clean
 clean:
-	@$(RM) $(OBJ_PATH)
+	@$(RM) -rf $(OBJ_DIR)
 	@echo "Cleaned\t\tobject files"
 
 .PHONY: fclean
 fclean: clean
-	@$(RM) $(NAME)
+	@$(RM) -rf $(NAME)
 	@echo "Removed\t\t$(NAME)"
 
 .PHONY: re
