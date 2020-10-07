@@ -3,7 +3,7 @@ NAME := libft.a
 SHELL = /bin/sh
 RM = /bin/rm
 
-.SUFFIXE:
+.SUFFIXES:
 .SUFFIXES: .c .o .h
 
 # ******************************** CC AND FLAGS ****************************** #
@@ -173,10 +173,6 @@ SRC			+=	ft_swap.c			\
 				ft_n_range.c		\
 				ft_f_range.c		\
 
-# GNL #
-
-SRC			+=	get_next_line.c		\
-
 # ft_printf #
 
 SRC			+=	ft_printf.c				\
@@ -196,6 +192,10 @@ SRC			+=	ft_printf.c				\
 				get_arg.c				\
 				get_digits.c			\
 				parsing_fields.c		\
+
+# GNL #
+
+SRC			+=	get_next_line.c
 
 # ********************************** RULES *********************************** #
 
@@ -219,6 +219,10 @@ $(OBJ_DIR)/%.o : %.c
 	@$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
 
 # DEBUG #
+
+.PHONY: show
+show:
+	@echo "VPATH: $(VPATH)"
 
 .PHONY: debug
 debug: CFLAGS+=-g3
