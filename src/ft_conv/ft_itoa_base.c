@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:07:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:08:33 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/07 22:43:22 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,17 +43,17 @@ char			*ft_itoa_base(int n, int base)
 
 	if ((n == 0) || (base < BINARY_BASE) || (base > HEX_BASE))
 		return (ft_strdup("0"));
+	sign = 0;
 	nbr = n;
 	nbr_len = ft_nbrlen_base(nbr, base);
-	sign = (n < 0) ? 1 : 0;
-	if (n < 0)
-		nbr_len++;
 	if (!(result = ft_strnew(nbr_len)))
 		return (NULL);
 	if (n < 0)
-	{
-		result[0] = MINUS;
 		nbr = -nbr;
+	if (n < 0 && base == DEC_BASE)
+	{
+		sign = 1;
+		result[0] = MINUS;
 	}
 	while (nbr_len-- > sign)
 	{

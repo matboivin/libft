@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 17:33:28 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:20:23 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/07 23:04:32 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_node		*ft_lstnew(void *p_content)
 {
 	t_node	*result;
 
-	result = (t_node *)malloc(sizeof(t_node));
+	result = malloc(sizeof(t_node));
 	if (!result)
 		return (NULL);
 	result->content = p_content;

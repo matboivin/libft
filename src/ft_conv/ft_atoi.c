@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:08:33 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/07 23:00:58 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,9 @@ int				ft_atoi(const char *s)
 	result = 0;
 	while (ft_isspace(s[i]))
 		i++;
-	sign = (s[i] == MINUS) ? -1 : 1;
+	sign = 1;
+	if (s[i] == MINUS)
+		sign = -1;
 	if ((s[i] == PLUS) || (s[i] == MINUS))
 		i++;
 	while (s[i] && ft_isdigit(s[i]))

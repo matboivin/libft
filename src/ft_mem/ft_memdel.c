@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboivin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 21:33:43 by mboivin           #+#    #+#             */
-/*   Updated: 2018/11/26 16:08:33 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/07 23:04:03 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 ** to be freed with free(3), then puts the pointer to NULL.
 */
 
-void	ft_memdel(void **ap)
+void	ft_memdel(void **to_free)
 {
-	if (ap)
+	if (to_free)
 	{
-		free(*ap);
-		*ap = NULL;
+		free(*to_free);
+		*to_free = NULL;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:08:33 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/07 23:01:44 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,11 @@ double			ft_strtod(const char *s, char **endptr)
 
 	i = 0;
 	result = 0.0;
+	sign = 1;
 	while (ft_isspace(s[i]))
 		i++;
-	sign = (s[i] == MINUS) ? -1 : 1;
+	if (s[i] == MINUS && ft_isdigit(s[i + 1]))
+		sign = -1;
 	if ((s[i] == PLUS) || (s[i] == MINUS))
 		i++;
 	while (s[i] && ft_isdigit(s[i]))
@@ -63,11 +65,8 @@ double			ft_strtod(const char *s, char **endptr)
 		result = (result * DEC_BASE) + (s[i] - ZERO);
 		i++;
 	}
-	if (s[i] == DOT)
-	{
-		i++;
+	if (s[i++] == DOT)
 		result = result + decimal_val(s + i, endptr);
-	}
 	else
 		*endptr = ft_strdup(s);
 	return ((double)sign * result);
