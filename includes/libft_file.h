@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:21:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/08 13:45:59 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/08 16:54:18 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ typedef struct	s_file
 {
 	char		*head;
 	size_t		count;
-	char		buffer[BUFFER_SIZE + 1];
 	int			fd;
+	char		buffer[BUFFER_SIZE + 1];
 }				t_file;
 
 int				ft_fileno(t_file *stream);

@@ -40,9 +40,10 @@ VPATH		=	$(addprefix $(SRC_DIR)/, $(SRC_SUBDIRS))
 
 # ********************************** FILES *********************************** #
 
-INC_FILES	=	libft_basics.h		\
+INC_FILES	=	libft.h				\
+				libft_basics.h		\
 				libft_define.h		\
-				libft.h				\
+				libft_file.h		\
 				libft_includes.h	\
 				libft_list.h		\
 				libft_printf.h		\
