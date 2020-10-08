@@ -19,6 +19,7 @@ IFLAGS = -I$(INC_DIR)
 
 SRC_SUBDIRS	=	ft_char \
 				ft_conv \
+				ft_file \
 				ft_lst \
 				ft_mem \
 				ft_num \
@@ -26,8 +27,7 @@ SRC_SUBDIRS	=	ft_char \
 				ft_put \
 				ft_recon \
 				ft_str \
-				ft_tab \
-				gnl
+				ft_tab
 
 INC_DIR		=	includes
 SRC_DIR		=	src
@@ -138,7 +138,7 @@ SRC			+=	ft_tablen.c			\
 
 SRC			+=	ft_lstappend.c		\
 				ft_lstat.c			\
-				ft_lstdel.c		\
+				ft_lstdel.c			\
 				ft_lstdelif.c		\
 				ft_lstdelone.c		\
 				ft_lstfind.c		\
@@ -193,9 +193,11 @@ SRC			+=	ft_printf.c				\
 				get_digits.c			\
 				parsing_fields.c		\
 
-# GNL #
+# Stream functions #
 
-SRC			+=	get_next_line.c
+SRC			+=	ft_fileno.c				\
+				ft_fgetc.c				\
+				get_next_line.c
 
 # ********************************** RULES *********************************** #
 
