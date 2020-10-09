@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 18:44:40 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:08:33 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/09 17:17:48 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@
 **          0 otherwise
 */
 
-char					*ft_utoa_base(unsigned long long n, int base)
+char		*ft_utoa_base(int64_t n, int base)
 {
-	char				*result;
-	int					n_len;
-	unsigned long long	rem;
+	char	*result;
+	size_t	n_len;
+	int64_t	rem;
 
 	if ((n == 0) || (base < BINARY_BASE) || (base > HEX_BASE))
 		return (ft_strdup("0"));

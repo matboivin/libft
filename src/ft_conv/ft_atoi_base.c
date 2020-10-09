@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/07 23:01:20 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/09 16:42:43 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,25 +65,20 @@ static bool		ft_isbase(int c, int base)
 
 int				ft_atoi_base(const char *s, int base)
 {
-	int			i;
 	int			result;
 	int			sign;
 
 	if (base < BINARY_BASE || base > HEX_BASE)
 		return (0);
-	i = 0;
 	result = 0;
 	sign = 1;
-	while (ft_isspace(s[i]))
-		i++;
-	if (s[i] == MINUS)
+	while (*s && ft_isspace(*s))
+		s++;
+	if (*s == MINUS)
 		sign = -1;
-	if ((s[i] == PLUS) || (s[i] == MINUS))
-		i++;
-	while (s[i] && ft_isbase(s[i], base))
-	{
-		result = (result * base) + conv_val(s[i]);
-		i++;
-	}
+	if ((*s == PLUS) || (*s == MINUS))
+		s++;
+	while (*s && ft_isbase(*s, base))
+		result = (result * base) + conv_val(*(s++));
 	return (sign * result);
 }

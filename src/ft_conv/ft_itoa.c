@@ -6,11 +6,28 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:07:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/07 22:42:31 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/09 17:24:40 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** This function checks whether n is negative
+*/
+
+static bool	ft_is_neg(int n, int32_t *nbr, size_t *sign)
+{
+	*sign = 0;
+	*nbr = n;
+	if (n < 0)
+	{
+		*sign = 1;
+		*nbr *= -1;
+		return (true);
+	}
+	return (false);
+}
 
 /*
 ** This function converts an integer to a string representation
@@ -21,25 +38,21 @@
 **          0 otherwise
 */
 
-char			*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
-	char		*result;
-	long int	nbr;
-	int			nbr_len;
-	int			sign;
+	char	*result;
+	int32_t	nbr;
+	size_t	nbr_len;
+	size_t	sign;
+	bool	is_neg;
 
-	sign = 0;
-	nbr = n;
+	is_neg = ft_is_neg(n, &nbr, &sign);
 	nbr_len = ft_nbrlen(nbr);
 	result = ft_strnew(nbr_len);
 	if (!result)
 		return (NULL);
-	if (n < 0)
-	{
-		sign = 1;
-		nbr = -nbr;
+	if (is_neg)
 		result[0] = MINUS;
-	}
 	while (nbr_len-- > sign)
 	{
 		result[nbr_len] = nbr % DEC_BASE + ZERO;

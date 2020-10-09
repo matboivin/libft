@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_files.h                                      :+:      :+:    :+:   */
+/*   libft_file.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:21:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/08 16:54:18 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/09 17:27:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_FILES_H
-# define LIBFT_FILES_H
+#ifndef LIBFT_FILE_H
+# define LIBFT_FILE_H
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1024

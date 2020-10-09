@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/07 23:04:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/09 17:16:52 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,14 +96,14 @@ int		ft_atoi_base(const char *s, int base);
 char	*ft_atos(char c);
 char	*ft_itoa(int n);
 char	*ft_itoa_base(int n, int base);
-char	*ft_utoa(unsigned long long n);
-char	*ft_utoa_base(unsigned long long n, int base);
+char	*ft_utoa(int64_t n);
+char	*ft_utoa_base(int64_t n, int base);
 double	ft_strtod(const char *s, char **endptr);
 
 void	ft_swap(int *a, int *b);
-int		ft_nbrlen(int n);
-int		ft_nbrlen_base(int n, int base);
-int		ft_unbrlen_base(unsigned long long n, int base);
+size_t	ft_nbrlen(int n);
+size_t	ft_nbrlen_base(int n, int base);
+size_t	ft_unbrlen_base(int64_t n, int base);
 bool	ft_n_range(int x, int start, int end);
 bool	ft_f_range(double x, double start, double end);
 

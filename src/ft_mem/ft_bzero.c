@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:27 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/16 14:03:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/09 17:29:40 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@
 ** n: The number of bytes to fill
 */
 
-void				ft_bzero(void *s, size_t n)
+void		ft_bzero(void *s, size_t n)
 {
-	unsigned char	*result;
+	uint8_t	*result;
 
-	result = (unsigned char *)s;
+	result = (uint8_t *)s;
 	while (n--)
 		*result++ = '\0';
 }

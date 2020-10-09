@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:37 by mboivin           #+#    #+#             */
-/*   Updated: 2019/11/20 18:08:47 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/09 17:29:36 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,19 @@
 **          NULL otherwise
 */
 
-void				*ft_memccpy(void *dst, void const *src, int c, size_t n)
+void		*ft_memccpy(void *dst, void const *src, int c, size_t n)
 {
-	size_t			i;
-	unsigned char	*to;
-	unsigned char	*from;
+	size_t	i;
+	uint8_t	*to;
+	uint8_t	*from;
 
 	i = 0;
-	to = (unsigned char *)dst;
-	from = (unsigned char *)src;
+	to = (uint8_t *)dst;
+	from = (uint8_t *)src;
 	while (n--)
 	{
 		to[i] = from[i];
-		if (from[i] == (unsigned char)c)
+		if (from[i] == (uint8_t)c)
 			return (to + i + 1);
 		i++;
 	}

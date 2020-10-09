@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:51:22 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/08 13:44:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/09 17:29:48 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*
 ** This function reads the next character from stream and returns it as an
-** unsigned char cast to an int
+** uint8_t cast to an int
 **
 ** stream: An open file
 **         Refer to libft_files.h
@@ -23,10 +23,10 @@
 **          EOF on end of file or error
 */
 
-int					ft_fgetc(t_file *stream)
+int			ft_fgetc(t_file *stream)
 {
-	unsigned char	c;
-	size_t			bytes_read;
+	uint8_t	c;
+	size_t	bytes_read;
 
 	if (ft_fileno(stream) != -1)
 	{

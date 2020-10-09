@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 13:46:03 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/07 22:37:24 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/09 17:17:10 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 ** as an argument using the specified base
 */
 
-int			ft_nbrlen_base(int n, int base)
+size_t		ft_nbrlen_base(int n, int base)
 {
-	int		len;
+	size_t	len;
 
 	if (n == 0)
 		return (1);

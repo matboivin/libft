@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 18:45:04 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:56:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/09 17:19:46 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ int			ft_strcmp(const char *s1, const char *s2)
 	i = 0;
 	while (s1[i] && s2[i] && (s1[i] == s2[i]))
 		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	return ((uint8_t)s1[i] - (uint8_t)s2[i]);
 }

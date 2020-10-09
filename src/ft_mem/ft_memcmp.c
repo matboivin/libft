@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:54 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/10 22:29:26 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/09 17:29:24 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,17 @@
 **          Otherwise the difference between the first two differing bytes
 */
 
-int					ft_memcmp(void const *s1, void const *s2, size_t n)
+int			ft_memcmp(void const *s1, void const *s2, size_t n)
 {
-	size_t			i;
-	unsigned char	*p1;
-	unsigned char	*p2;
+	size_t	i;
+	uint8_t	*p1;
+	uint8_t	*p2;
 
 	if (!s1 && !s2)
 		return (0);
 	i = 0;
-	p1 = (unsigned char *)s1;
-	p2 = (unsigned char *)s2;
+	p1 = (uint8_t *)s1;
+	p2 = (uint8_t *)s2;
 	while (i < n)
 	{
 		if (p1[i] != p2[i])

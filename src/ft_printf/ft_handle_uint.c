@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/30 15:12:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/09 17:28:24 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ static uintmax_t	length_uint(t_spec *spec, va_list ap)
 	if (spec->modifier == 0)
 		return (va_arg(ap, unsigned int));
 	else if (spec->modifier == 'h' + 'h')
-		return ((unsigned char)va_arg(ap, int));
+		return ((uint8_t)va_arg(ap, int));
 	else if (spec->modifier == 'h')
 		return ((unsigned short)va_arg(ap, int));
 	else if (spec->modifier == 'l')
-		return (va_arg(ap, unsigned long));
+		return (va_arg(ap, uint32_t));
 	else if (spec->modifier == 'l' + 'l')
-		return (va_arg(ap, unsigned long long));
+		return (va_arg(ap, uint64_t));
 	return (0);
 }
 

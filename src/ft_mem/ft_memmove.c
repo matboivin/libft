@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:10 by mboivin           #+#    #+#             */
-/*   Updated: 2020/07/31 23:39:27 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/09 17:29:13 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@
 ** returns: The original value of dst
 */
 
-void				*ft_memmove(void *dst, void const *src, size_t len)
+void		*ft_memmove(void *dst, void const *src, size_t len)
 {
-	unsigned char	*from;
-	unsigned char	*to;
+	uint8_t	*from;
+	uint8_t	*to;
 
 	if ((len == 0) || (dst == src))
 		return (dst);
-	from = (unsigned char *)dst;
-	to = (unsigned char *)src;
+	from = (uint8_t *)dst;
+	to = (uint8_t *)src;
 	if (dst < src)
 		return (ft_memcpy(from, to, len));
 	else
