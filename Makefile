@@ -202,7 +202,6 @@ SRC			+=	ft_fileno.c				\
 
 # ********************************** RULES *********************************** #
 
-.PHONY: all
 all: $(NAME)
 
 $(NAME): $(OBJ_DIR) $(OBJ) $(INC)
@@ -223,25 +222,22 @@ $(OBJ_DIR)/%.o : %.c
 
 # DEBUG #
 
-.PHONY: show
 show:
 	@echo "VPATH: $(VPATH)"
 
-.PHONY: debug
 debug: CFLAGS+=-g3
 debug: re
 
 # CLEAN #
 
-.PHONY: clean
 clean:
 	@$(RM) -rf $(OBJ_DIR)
 	@echo "Cleaned\t\tobject files"
 
-.PHONY: fclean
 fclean: clean
 	@$(RM) $(NAME)
 	@echo "Removed\t\t$(NAME)"
 
-.PHONY: re
 re: fclean all
+
+.PHONY: all show debug clean fclean re
