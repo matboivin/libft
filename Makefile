@@ -6,39 +6,7 @@ RM = /bin/rm
 .SUFFIXES:
 .SUFFIXES: .c .o .h
 
-# ******************************** CC AND FLAGS ****************************** #
-
-CC = gcc
-AR = ar
-
-ARFLAGS = -rcs
-CFLAGS = -Wall -Wextra -Werror
-IFLAGS = -I$(INC_DIR)
-
-# ******************************* DIRS AND PATHS ***************************** #
-
-SRC_SUBDIRS	=	ft_char \
-				ft_conv \
-				ft_file \
-				ft_lst \
-				ft_mem \
-				ft_num \
-				ft_printf \
-				ft_put \
-				ft_recon \
-				ft_str \
-				ft_tab
-
-INC_DIR		=	includes
-SRC_DIR		=	src
-OBJ_DIR		=	obj
-
-INC			=	$(addprefix $(INC_DIR)/, $(INC_FILES))
-OBJ			=	$(addprefix $(OBJ_DIR)/, $(SRC:%.c=%.o))
-
-VPATH		=	$(addprefix $(SRC_DIR)/, $(SRC_SUBDIRS))
-
-# ********************************** FILES *********************************** #
+# ********************************** INCLUDES ******************************** #
 
 INC_FILES	=	libft.h				\
 				libft_basics.h		\
@@ -46,11 +14,13 @@ INC_FILES	=	libft.h				\
 				libft_file.h		\
 				libft_includes.h	\
 				libft_list.h		\
-				libft_printf.h		\
+				libft_printf.h
+
+# *********************************** C FILES ******************************** #
 
 # Memory functions #
 
-SRC			=	ft_bzero.c			\
+SRC_FILES	=	ft_bzero.c			\
 				ft_calloc.c			\
 				ft_memalloc.c		\
 				ft_memccpy.c		\
@@ -61,22 +31,22 @@ SRC			=	ft_bzero.c			\
 				ft_memmove.c		\
 				ft_memset.c			\
 				ft_realloc.c		\
-				ft_reallocarray.c	\
+				ft_reallocarray.c
 
 # Input/Output functions #
 
-SRC			+=	ft_putchar.c		\
+SRC_FILES	+=	ft_putchar.c		\
 				ft_putchar_fd.c		\
 				ft_putendl.c		\
 				ft_putendl_fd.c		\
 				ft_putnbr.c			\
 				ft_putnbr_fd.c		\
 				ft_putstr.c			\
-				ft_putstr_fd.c		\
+				ft_putstr_fd.c
 
 # Char recon functions #
 
-SRC			+=	ft_tolower.c		\
+SRC_FILES	+=	ft_tolower.c		\
 				ft_toupper.c		\
 				ft_isalnum.c		\
 				ft_isalpha.c		\
@@ -90,11 +60,11 @@ SRC			+=	ft_tolower.c		\
 				ft_isspace.c		\
 				ft_isupper.c		\
 				ft_isnumeric.c		\
-				ft_charcount.c		\
+				ft_charcount.c
 
 # String functions #
 
-SRC			+=	ft_split.c			\
+SRC_FILES	+=	ft_split.c			\
 				ft_strappend.c		\
 				ft_strcat.c			\
 				ft_strchr.c			\
@@ -128,16 +98,16 @@ SRC			+=	ft_split.c			\
 				ft_strtrim.c		\
 				ft_substr.c			\
 				ft_strupcase.c		\
-				ft_strlowcase.c		\
+				ft_strlowcase.c
 
 # Array functions #
 
-SRC			+=	ft_tablen.c			\
-				ft_tabdel.c			\
+SRC_FILES	+=	ft_tablen.c			\
+				ft_tabdel.c
 
 # List functions #
 
-SRC			+=	ft_lstappend.c		\
+SRC_FILES	+=	ft_lstappend.c		\
 				ft_lstat.c			\
 				ft_lstdel.c			\
 				ft_lstdelif.c		\
@@ -152,11 +122,11 @@ SRC			+=	ft_lstappend.c		\
 				ft_lstrev.c			\
 				ft_lstsize.c		\
 				ft_lstsort.c		\
-				ft_lstswap.c		\
+				ft_lstswap.c
 
 # Conversion functions #
 
-SRC			+=	ft_atoi.c			\
+SRC_FILES	+=	ft_atoi.c			\
 				ft_atoi_base.c		\
 				ft_atos.c			\
 				ft_itoa.c			\
@@ -167,16 +137,16 @@ SRC			+=	ft_atoi.c			\
 
 # Numeric functions #
 
-SRC			+=	ft_swap.c			\
+SRC_FILES	+=	ft_swap.c			\
 				ft_nbrlen.c			\
 				ft_nbrlen_base.c	\
 				ft_unbrlen_base.c	\
 				ft_n_range.c		\
-				ft_f_range.c		\
+				ft_f_range.c
 
 # ft_printf #
 
-SRC			+=	ft_printf.c				\
+SRC_FILES	+=	ft_printf.c				\
 				ft_dprintf.c			\
 				ft_add_prefix.c			\
 				ft_construct_output.c	\
@@ -192,21 +162,55 @@ SRC			+=	ft_printf.c				\
 				ft_put_zeroes.c			\
 				get_arg.c				\
 				get_digits.c			\
-				parsing_fields.c		\
+				parsing_fields.c
 
 # Stream functions #
 
-SRC			+=	ft_fileno.c				\
+SRC_FILES	+=	ft_fileno.c				\
 				ft_fgetc.c				\
 				get_next_line.c
+
+# ********************************** OBJECTS ********************************* #
+
+OBJ_FILES	=	$(SRC_FILES:%.c=%.o)
+
+# ******************************* DIRS AND PATHS ***************************** #
+
+INC_DIR		=	includes
+SRC_DIR		=	src
+OBJ_DIR		=	obj
+
+SUB_DIRS	=	ft_char \
+				ft_conv \
+				ft_file \
+				ft_lst \
+				ft_mem \
+				ft_num \
+				ft_printf \
+				ft_put \
+				ft_recon \
+				ft_str \
+				ft_tab
+
+SRC_SUBDIRS	=	$(addprefix $(SRC_DIR)/, $(SUB_DIRS))
+
+INC			=	$(addprefix $(INC_DIR)/, $(INC_FILES))
+OBJ			=	$(addprefix $(OBJ_DIR)/, $(OBJ_FILES))
+
+VPATH		=	$(SRC_DIR) $(SRC_SUBDIRS)
+
+# ******************************** CC AND FLAGS ****************************** #
+
+CC			=	gcc
+AR			=	ar
+
+ARFLAGS		=	-rcs
+CFLAGS		=	-Wall -Wextra -Werror
+IFLAGS		=	-I$(INC_DIR)
 
 # ********************************** RULES *********************************** #
 
 all: $(NAME)
-
-$(NAME): $(OBJ_DIR) $(OBJ) $(INC)
-	@$(AR) $(ARFLAGS) $@ $(OBJ)
-	@echo "\nOK\t\t$(NAME) is ready"
 
 # OBJ DIR #
 
@@ -219,6 +223,10 @@ $(OBJ_DIR):
 $(OBJ_DIR)/%.o : %.c
 	@echo "\r\033[KCompiling\t$< \c"
 	@$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
+
+$(NAME): $(OBJ_DIR) $(OBJ) $(INC)
+	@$(AR) $(ARFLAGS) $@ $(OBJ)
+	@echo "\nOK\t\t$(NAME) is ready"
 
 # DEBUG #
 
