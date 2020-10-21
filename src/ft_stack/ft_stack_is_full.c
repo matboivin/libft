@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_stack_is_full.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/21 14:17:05 by mboivin          ###   ########.fr       */
+/*   Created: 2020/10/21 13:32:13 by mboivin           #+#    #+#             */
+/*   Updated: 2020/10/21 14:26:35 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include "libft_includes.h"
-# include "libft_define.h"
-# include "libft_basics.h"
-# include "libft_file.h"
-# include "libft_list.h"
-# include "libft_printf.h"
-# include "libft_stack.h"
+/*
+** This function checks whether the stack is full
+** Last member reached the maximum capacity (minus 1)
+*/
 
-#endif
+bool	ft_stack_is_full(t_stack *stack)
+{
+	return ((size_t)(stack->top + 1) == stack->capacity);
+}

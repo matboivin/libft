@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_pop_stack.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/21 14:17:05 by mboivin          ###   ########.fr       */
+/*   Created: 2020/10/21 13:36:22 by mboivin           #+#    #+#             */
+/*   Updated: 2020/10/21 14:19:20 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include "libft_includes.h"
-# include "libft_define.h"
-# include "libft_basics.h"
-# include "libft_file.h"
-# include "libft_list.h"
-# include "libft_printf.h"
-# include "libft_stack.h"
+/*
+** This function removes and returns the object at the top of the stack
+*/
 
-#endif
+int		ft_pop_stack(t_stack *stack)
+{
+	int	top_obj;
+
+	top_obj = ft_peek_stack(stack);
+	if (top_obj != DEFAULT_TOP_VAL)
+	{
+		stack->content[stack->top] = 0;
+		stack->top -= 1;
+	}
+	return (top_obj);
+}

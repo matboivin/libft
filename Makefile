@@ -14,7 +14,8 @@ INC_FILES	=	libft.h				\
 				libft_file.h		\
 				libft_includes.h	\
 				libft_list.h		\
-				libft_printf.h
+				libft_printf.h		\
+				libft_stack.h
 
 # *********************************** C FILES ******************************** #
 
@@ -170,6 +171,16 @@ SRC_FILES	+=	ft_fileno.c				\
 				ft_fgetc.c				\
 				get_next_line.c
 
+# Stack struct functions #
+
+SRC_FILES	+=	ft_increase_stack.c		\
+				ft_peek_stack.c			\
+				ft_pop_stack.c			\
+				ft_push_to_stack.c		\
+				ft_stack.c				\
+				ft_stack_is_empty.c		\
+				ft_stack_is_full.c
+
 # ********************************** OBJECTS ********************************* #
 
 OBJ_FILES	=	$(SRC_FILES:%.c=%.o)
@@ -189,6 +200,7 @@ SUB_DIRS	=	ft_char \
 				ft_printf \
 				ft_put \
 				ft_recon \
+				ft_stack \
 				ft_str \
 				ft_tab
 
