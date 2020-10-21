@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:21:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/09 17:27:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/21 13:00:04 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@
 typedef struct	s_file
 {
 	char		*head;
-	size_t		count;
 	int			fd;
+	size_t		count;
 	char		buffer[BUFFER_SIZE + 1];
 }				t_file;
 
