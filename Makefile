@@ -6,7 +6,7 @@ RM = /bin/rm
 .SUFFIXES:
 .SUFFIXES: .c .o .h
 
-# ********************************** INCLUDES ******************************** #
+# ********************************* INCLUDES ********************************* #
 
 INC_FILES	=	libft.h				\
 				libft_basics.h		\
@@ -17,7 +17,7 @@ INC_FILES	=	libft.h				\
 				libft_printf.h		\
 				libft_stack.h
 
-# *********************************** C FILES ******************************** #
+# ********************************* C FILES ********************************** #
 
 # Memory functions #
 
@@ -181,11 +181,11 @@ SRC_FILES	+=	ft_increase_stack.c		\
 				ft_stack_is_empty.c		\
 				ft_stack_is_full.c
 
-# ********************************** OBJECTS ********************************* #
+# ********************************* OBJECTS ********************************** #
 
 OBJ_FILES	=	$(SRC_FILES:%.c=%.o)
 
-# ******************************* DIRS AND PATHS ***************************** #
+# ****************************** DIRS AND PATHS ****************************** #
 
 INC_DIR		=	includes
 SRC_DIR		=	src
@@ -211,14 +211,14 @@ OBJ			=	$(addprefix $(OBJ_DIR)/, $(OBJ_FILES))
 
 VPATH		=	$(SRC_DIR) $(SRC_SUBDIRS)
 
-# ******************************** CC AND FLAGS ****************************** #
+# *************************** COMPILING AND FLAGS **************************** #
 
-CC			=	gcc
-AR			=	ar
+CC = gcc
+AR = ar
 
-ARFLAGS		=	-rcs
-CFLAGS		=	-Wall -Wextra -Werror
-IFLAGS		=	-I$(INC_DIR)
+ARFLAGS = -rcs
+CFLAGS = -Wall -Wextra -Werror
+CPPFLAGS = -I$(INC_DIR)
 
 # ********************************** RULES *********************************** #
 
@@ -234,7 +234,7 @@ $(OBJ_DIR):
 
 $(OBJ_DIR)/%.o : %.c
 	@echo "\r\033[KCompiling\t$< \c"
-	@$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
+	@$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<
 
 $(NAME): $(OBJ_DIR) $(OBJ) $(INC)
 	@$(AR) $(ARFLAGS) $@ $(OBJ)
