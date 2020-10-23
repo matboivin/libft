@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libft_recon.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:08:30 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:04:44 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBFT_RECON_H
+# define LIBFT_RECON_H
 
-# include "libft_define.h"
-# include "libft_mem.h"
-# include "libft_recon.h"
-# include "libft_char.h"
-# include "libft_str.h"
-# include "libft_num.h"
-# include "libft_tab.h"
-# include "libft_put.h"
-# include "libft_conv.h"
-# include "libft_file.h"
-# include "libft_stack.h"
-# include "libft_list.h"
-# include "libft_printf.h"
+# include <stdbool.h>
+
+bool	ft_isalnum(int c);
+bool	ft_isalpha(int c);
+bool	ft_isascii(int c);
+bool	ft_isblank(int c);
+bool	ft_ischarset(char c, const char *set);
+bool	ft_iscntrl(int c);
+bool	ft_isdigit(int c);
+bool	ft_islower(int c);
+bool	ft_isprint(int c);
+bool	ft_isspace(int c);
+bool	ft_isupper(int c);
+bool	ft_isnumeric(char *s);
 
 #endif

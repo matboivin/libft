@@ -9,13 +9,19 @@ RM = /bin/rm
 # ********************************* INCLUDES ********************************* #
 
 INC_FILES	=	libft.h				\
-				libft_basics.h		\
+				libft_char.h		\
+				libft_conv.h		\
 				libft_define.h		\
 				libft_file.h		\
-				libft_includes.h	\
 				libft_list.h		\
+				libft_mem.h			\
+				libft_num.h			\
 				libft_printf.h		\
-				libft_stack.h
+				libft_put.h			\
+				libft_recon.h		\
+				libft_stack.h		\
+				libft_str.h			\
+				libft_tab.h			\
 
 # ********************************* C FILES ********************************** #
 

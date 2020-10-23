@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 11:51:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/30 14:56:36 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:11:47 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define LIBFT_PRINTF_H
 
 # include <stdarg.h>
+# include <stdbool.h>
+# include <stdint.h>
+# include <unistd.h>
 
 # define OCT_PREFIX "0"
 # define LOWHEX_PREFIX "0x"

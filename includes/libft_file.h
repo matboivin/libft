@@ -6,12 +6,15 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:21:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/21 13:00:04 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:12:31 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_FILE_H
 # define LIBFT_FILE_H
+
+# include <errno.h>
+# include <stdlib.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1024

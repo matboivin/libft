@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   libft_tab.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:08:30 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:11:02 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBFT_TAB_H
+# define LIBFT_TAB_H
 
-# include "libft_define.h"
-# include "libft_mem.h"
-# include "libft_recon.h"
-# include "libft_char.h"
-# include "libft_str.h"
-# include "libft_num.h"
-# include "libft_tab.h"
-# include "libft_put.h"
-# include "libft_conv.h"
-# include "libft_file.h"
-# include "libft_stack.h"
-# include "libft_list.h"
-# include "libft_printf.h"
+# include <stdlib.h>
+
+size_t	ft_tablen(char **tab);
+void	ft_tabdel(char **to_free);
 
 #endif
