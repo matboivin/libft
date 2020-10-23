@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 22:14:33 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:07:56 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:55:22 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_recon.h"
 
 /*
 ** Recoded iscntrl libc function: Checks if c is a control character

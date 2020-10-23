@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 20:52:25 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:40:57 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:57:40 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_str.h"
 
 /*
 ** This function sets every character of the string to the value ’\0’

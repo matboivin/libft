@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/12 20:55:19 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:04:02 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:57:40 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_str.h"
 
 /*
 ** This function converts all lower-case letters of s to upper-case letters

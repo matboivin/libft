@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 15:19:28 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:36:52 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:44:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_str.h"
+#include "libft_put.h"
 
 /*
 ** This function outputs the string s to given file descriptor, followed by a

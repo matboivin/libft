@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 17:33:28 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/07 23:04:32 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:44:08 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_list.h"
 
 /*
 ** This function allocates (with malloc(3)) and returns a new node

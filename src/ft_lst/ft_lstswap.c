@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 21:17:01 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:29:56 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:44:36 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_list.h"
 
 /*
 ** This function swaps the values of two list nodes

@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 22:07:41 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:07:56 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:55:56 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_recon.h"
 
 /*
 ** Recoded islower libc function: Checks if c is a printable lower-case letter

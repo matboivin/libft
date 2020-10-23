@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 13:12:29 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/21 14:22:45 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:04:30 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_mem.h"
+#include "libft_stack.h"
 
 /*
 ** Stack (LIFO)

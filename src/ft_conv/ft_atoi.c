@@ -6,11 +6,13 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/09 16:42:52 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:34:14 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_define.h"
+#include "libft_recon.h"
+#include "libft_conv.h"
 
 /*
 ** Recoded atoi libc function: Converts a string to an integer

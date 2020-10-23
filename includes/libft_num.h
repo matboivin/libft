@@ -6,13 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:09:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:42:45 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_NUM_H
 # define LIBFT_NUM_H
-
 # include <stdbool.h>
 # include <stdint.h>
 # include <stdlib.h>

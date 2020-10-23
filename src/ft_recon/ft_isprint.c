@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:29 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:07:56 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:56:06 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_recon.h"
 
 /*
 ** Recoded isprint libc function: Checks if c is a printable character

@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:45:41 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:37:38 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:44:22 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_define.h"
+#include "libft_put.h"
 
 /*
 ** This function outputs the integer n to the standard output

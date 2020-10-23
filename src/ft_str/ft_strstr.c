@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 14:19:35 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:02:58 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:57:40 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_str.h"
 
 /*
 ** Recoded strstr libc function that finds the first occurrence of the substring

@@ -6,17 +6,24 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 11:51:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:11:47 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:45:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_PRINTF_H
 # define LIBFT_PRINTF_H
-
 # include <stdarg.h>
 # include <stdbool.h>
 # include <stdint.h>
 # include <unistd.h>
+# include "libft_define.h"
+# include "libft_recon.h"
+# include "libft_conv.h"
+# include "libft_str.h"
+
+# define ASTERISK '*'
+# define PERCENT '%'
+# define HASH '#'
 
 # define OCT_PREFIX "0"
 # define LOWHEX_PREFIX "0x"

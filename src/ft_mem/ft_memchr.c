@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:47 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/09 17:29:32 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:45:46 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdint.h>
+#include "libft_mem.h"
 
 /*
 ** Recoded memchr libc function: Locates the first occurrence of c

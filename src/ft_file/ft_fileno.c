@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:36:15 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/21 12:44:22 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:39:42 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <errno.h>
+#include "libft_file.h"
 
 /*
 ** This function examines the argument stream and returns its integer descriptor

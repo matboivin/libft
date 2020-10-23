@@ -6,13 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:09:47 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:42:37 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_MEM_H
 # define LIBFT_MEM_H
-
 # include <stdlib.h>
 
 void	ft_bzero(void *s, size_t n);

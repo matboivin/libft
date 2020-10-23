@@ -6,11 +6,13 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:51:22 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/21 12:49:39 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:39:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdint.h>
+#include <unistd.h>
+#include "libft_file.h"
 
 /*
 ** This function reads the next character from stream and returns it as an

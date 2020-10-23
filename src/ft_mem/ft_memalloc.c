@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 19:21:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:34:41 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:45:22 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_mem.h"
 
 /*
 ** This function allocates (with malloc(3)) and returns a “fresh” memory area

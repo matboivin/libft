@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 10:22:44 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:07:56 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:56:10 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_recon.h"
 
 /*
 ** Recoded isspace libc function: Checks if c is a space character

@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 21:33:43 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/07 23:04:03 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:46:06 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_mem.h"
 
 /*
 ** This function takes as a parameter the address of a memory area that needs

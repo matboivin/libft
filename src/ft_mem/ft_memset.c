@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:18 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/09 17:29:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:46:18 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdint.h>
+#include "libft_mem.h"
 
 /*
 ** Recoded memset libc function: Writes len bytes of value c to string s

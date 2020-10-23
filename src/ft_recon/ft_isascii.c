@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:09 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:07:56 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:55:07 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_recon.h"
 
 /*
 ** Recoded isascii libc function: Checks if c is a 7-bit US-ASCII character

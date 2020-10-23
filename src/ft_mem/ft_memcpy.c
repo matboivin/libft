@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:00 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/09 17:29:20 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:45:58 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdint.h>
+#include "libft_mem.h"
 
 /*
 ** Recoded memcpy libc function: Copies n bytes from memory area src to dst

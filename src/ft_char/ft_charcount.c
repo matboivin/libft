@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 14:09:32 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:32:06 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:24:08 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_char.h"
 
 /*
 ** This function counts occurrences of a character

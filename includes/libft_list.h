@@ -6,12 +6,13 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:30:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:42:31 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_LIST_H
 # define LIBFT_LIST_H
+# include <stdlib.h>
 
 typedef struct		s_node
 {

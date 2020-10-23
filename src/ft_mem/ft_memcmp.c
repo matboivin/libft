@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:54 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/09 17:29:24 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:45:52 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdint.h>
+#include "libft_mem.h"
 
 /*
 ** Recoded memcmp libc function: Compares byte string s1 against byte string s2

@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 12:33:13 by mboivin           #+#    #+#             */
-/*   Updated: 2020/09/30 15:03:47 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:48:59 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_printf.h"
 
 /*
 ** Function: Constructs the output by stopping at each percent character

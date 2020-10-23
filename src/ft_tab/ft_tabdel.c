@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 21:40:54 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:05:10 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:00:31 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_mem.h"
+#include "libft_tab.h"
 
 /*
 ** Function: Frees a 2D array

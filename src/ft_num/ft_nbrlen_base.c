@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 13:46:03 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/09 17:17:10 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:47:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_define.h"
+#include "libft_num.h"
 
 /*
 ** This function computes the length (count of digits) of the integer passed

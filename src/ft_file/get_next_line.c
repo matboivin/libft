@@ -6,11 +6,15 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:06:06 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:04:03 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdbool.h>
+#include <stdint.h>
+#include <unistd.h>
+#include "libft_str.h"
+#include "libft_file.h"
 
 /*
 ** This function checks for a newline character in the content pointed to by

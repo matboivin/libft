@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:39:53 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:07:17 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "libft_str.h"
 
 /*
 ** This function computes the number of strings to split
@@ -94,7 +95,7 @@ char			**ft_split(const char *s, char c)
 	str_count = ft_count_strings(s, c);
 	i = 0;
 	j = 0;
-	if (!(result = (char **)malloc((str_count + 1) * sizeof(char*))))
+	if (!(result = malloc((str_count + 1) * sizeof(char *))))
 		return (NULL);
 	while (s[i] && (j < str_count))
 	{

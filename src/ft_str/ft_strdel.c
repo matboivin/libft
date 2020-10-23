@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 21:40:54 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:58:24 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:07:33 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include "libft_str.h"
 
 /*
 ** Function: Frees a string, then sets its pointer to NULL

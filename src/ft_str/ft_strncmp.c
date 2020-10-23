@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:56 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/09 17:19:46 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:03:15 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdint.h>
+#include "libft_str.h"
 
 /*
 ** Recoded strncmp libc function: Lexicographically compares the null-terminated

@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:38:18 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:15:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:43:55 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_list.h"
 
 /*
 ** This function returns the last node of the list

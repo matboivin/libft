@@ -6,13 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:04:44 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:43:20 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_RECON_H
 # define LIBFT_RECON_H
-
 # include <stdbool.h>
 
 bool	ft_isalnum(int c);

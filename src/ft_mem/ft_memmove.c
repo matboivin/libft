@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:10 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/09 17:29:13 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:46:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdint.h>
+#include "libft_mem.h"
 
 /*
 ** Recoded memmove libc function: Copies len characters from src to dst

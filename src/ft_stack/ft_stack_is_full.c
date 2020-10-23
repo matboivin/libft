@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 13:32:13 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/21 14:26:35 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:57:03 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_stack.h"
 
 /*
 ** This function checks whether the stack is full

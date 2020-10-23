@@ -6,17 +6,16 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 13:08:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:11:14 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:43:28 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_STACK_H
 # define LIBFT_STACK_H
-
-# define DEFAULT_TOP_VAL -1
-
 # include <stdbool.h>
 # include <stdlib.h>
+
+# define DEFAULT_TOP_VAL -1
 
 /*
 ** Stack (LIFO)

@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 18:45:04 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/09 17:19:46 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:02:57 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdint.h>
+#include "libft_str.h"
 
 /*
 ** Recoded strcmp libc function that lexicographically compares s1 and s2

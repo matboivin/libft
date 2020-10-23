@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:36:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:22:28 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:44:14 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_list.h"
 
 /*
 ** This function prepends the new node to the list

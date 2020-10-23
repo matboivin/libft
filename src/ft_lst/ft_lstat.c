@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:23:57 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:07:10 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:42:57 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_list.h"
 
 /*
 ** This function finds the Nth node of the list

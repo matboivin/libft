@@ -6,11 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 18:44:40 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/09 17:17:48 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:37:58 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_define.h"
+#include "libft_str.h"
+#include "libft_num.h"
+#include "libft_conv.h"
 
 /*
 ** This function converts an unsigned integer to a string representation using

@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 18:17:57 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 22:25:43 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:44:20 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_list.h"
 
 /*
 ** This function counts the number of nodes in a list

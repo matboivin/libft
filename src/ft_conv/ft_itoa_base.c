@@ -6,11 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:07:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/09 17:24:50 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:37:11 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_define.h"
+#include "libft_str.h"
+#include "libft_num.h"
+#include "libft_conv.h"
 
 /*
 ** This function returns the necessary value for base conversion

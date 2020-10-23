@@ -6,11 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 14:09:32 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:07:56 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/23 23:55:35 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_recon.h"
 
 /*
 ** This function checks if c is present in set
@@ -29,7 +29,5 @@ bool	ft_ischarset(char c, const char *set)
 	i = 0;
 	while (set[i] && set[i] != c)
 		i++;
-	if (set[i] == c)
-		return (true);
-	return (false);
+	return (set[i] == c);
 }

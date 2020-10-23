@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:43:57 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/06 23:03:32 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 00:00:05 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_recon.h"
+#include "libft_str.h"
 
 /*
 ** This function allocates (with malloc(3)) and returns a copy of the string
