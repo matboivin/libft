@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:23:53 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/24 01:05:59 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,10 @@
 # define COMMA ','
 # define SPACE ' '
 # define ZERO '0'
+# define NEWLINE '\n'
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
 
 #endif
