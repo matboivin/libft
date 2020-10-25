@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 17:21:50 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:54:55 by mboivin          ###   ########.fr       */
+/*   Created: 2019/12/02 22:07:41 by mboivin           #+#    #+#             */
+/*   Updated: 2020/10/25 21:35:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_recon.h"
+#include "libft_ctype.h"
 
 /*
-** Recoded isalnum libc function: Checks if c is an alphanumeric character
+** Recoded islower libc function: Checks if c is a printable lower-case letter
 **
 ** c: A character
 **
-** returns: A non-zero integer if c is an alphanumeric character
+** returns: A non-zero integer if c is a lower-case letter
 **          0 otherwise
 */
 
-bool	ft_isalnum(int c)
+bool	ft_islower(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	return (c >= 'a' && c <= 'z');
 }

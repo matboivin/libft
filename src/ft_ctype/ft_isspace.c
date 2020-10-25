@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iscntrl.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/02 22:14:33 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:55:22 by mboivin          ###   ########.fr       */
+/*   Created: 2018/11/22 10:22:44 by mboivin           #+#    #+#             */
+/*   Updated: 2020/10/25 21:35:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_recon.h"
+#include "libft_ctype.h"
 
 /*
-** Recoded iscntrl libc function: Checks if c is a control character
+** Recoded isspace libc function: Checks if c is a space character
 **
 ** c: A character
 **
-** returns: A non-zero integer if c is a control character
+** returns: A non-zero integer if c is a space character
 **          0 otherwise
 */
 
-bool	ft_iscntrl(int c)
+bool	ft_isspace(int c)
 {
-	return ((c >= 0 && c <= 31) || (c == 127));
+	return ((c == ' ') || (c == '\f') || (c == '\t') \
+		|| (c == '\v') || (c == '\n') || (c == '\r'));
 }

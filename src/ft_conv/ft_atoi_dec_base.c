@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*   ft_atoi_dec_base.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:34:30 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/25 21:35:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_define.h"
-#include "libft_recon.h"
+#include "libft_ctype.h"
+#include "libft_char.h"
 #include "libft_conv.h"
 
 /*
-** This function returns the necessary value for base conversion
+** This function converts c to int
 */
 
-static int		conv_val(int c)
+static int		char_to_digit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (c - ZERO);
 	else if (c >= 'a' && c <= 'f')
-		return (c - 'a' + DEC_BASE);
+		return (c + DEC_BASE - 'a');
 	else if (c >= 'A' && c <= 'F')
-		return (c - 'A' + DEC_BASE);
+		return (c + DEC_BASE - 'A');
 	return (0);
 }
 
@@ -39,16 +40,15 @@ static int		conv_val(int c)
 **          false otherwise
 */
 
-static bool		ft_isbase(int c, int base)
+static bool		is_in_base(int c, int base)
 {
 	const char	*lower_hex = "0123456789abcdef";
-	const char	*upper_hex = "0123456789ABCDEF";
 	int			i;
 
 	i = 0;
 	while (i < base)
 	{
-		if ((lower_hex[i] == c) || (upper_hex[i] == c))
+		if ((lower_hex[i] == ft_tolower(c)))
 			return (true);
 		i++;
 	}
@@ -56,21 +56,21 @@ static bool		ft_isbase(int c, int base)
 }
 
 /*
-** Recoded atoi libc function: Converts a string to an integer (base 10)
+** This function converts a string to a base 10 integer
 **
 ** s: A string representation of a number
-** base: An integer (2 to 16)
+** from_base: Base of s (2 to 16)
 **
 ** returns: The converted number as an int value
 **          0 otherwise
 */
 
-int				ft_atoi_base(const char *s, int base)
+int				ft_atoi_dec_base(const char *s, int from_base)
 {
 	int			result;
 	int			sign;
 
-	if (base < BINARY_BASE || base > HEX_BASE)
+	if ((from_base < BINARY_BASE) || (from_base > HEX_BASE))
 		return (0);
 	result = 0;
 	sign = 1;
@@ -80,7 +80,7 @@ int				ft_atoi_base(const char *s, int base)
 		sign = -1;
 	if ((*s == PLUS) || (*s == MINUS))
 		s++;
-	while (*s && ft_isbase(*s, base))
-		result = (result * base) + conv_val(*(s++));
+	while (*s && is_in_base(*s, from_base))
+		result = (result * from_base) + char_to_digit(*(s++));
 	return (sign * result);
 }

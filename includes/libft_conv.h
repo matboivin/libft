@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/24 00:42:15 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/25 21:35:04 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # define OCT_BASE 8
 
 int		ft_atoi(const char *s);
-int		ft_atoi_base(const char *s, int base);
+int		ft_atoi_dec_base(const char *s, int from_base);
 char	*ft_atos(char c);
 char	*ft_itoa(int n);
 char	*ft_itoa_base(int n, int base);

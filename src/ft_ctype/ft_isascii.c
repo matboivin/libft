@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/02 22:07:41 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:55:56 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:22:09 by mboivin           #+#    #+#             */
+/*   Updated: 2020/10/25 21:35:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_recon.h"
+#include "libft_ctype.h"
 
 /*
-** Recoded islower libc function: Checks if c is a printable lower-case letter
+** Recoded isascii libc function: Checks if c is a 7-bit US-ASCII character
+** code between 0 and octal 0177 inclusive
 **
 ** c: A character
 **
-** returns: A non-zero integer if c is a lower-case letter
+** returns: A non-zero integer if c is an ASCII character
 **          0 otherwise
 */
 
-bool	ft_islower(int c)
+bool	ft_isascii(int c)
 {
-	return (c >= 'a' && c <= 'z');
+	return (c >= 0 && c <= 127);
 }

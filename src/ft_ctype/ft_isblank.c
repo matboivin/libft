@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isblank.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 17:22:09 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:55:07 by mboivin          ###   ########.fr       */
+/*   Created: 2018/11/22 10:22:44 by mboivin           #+#    #+#             */
+/*   Updated: 2020/10/25 21:35:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_recon.h"
+#include "libft_ctype.h"
 
 /*
-** Recoded isascii libc function: Checks if c is a 7-bit US-ASCII character
-** code between 0 and octal 0177 inclusive
+** This function checks if c is a space or tab character
 **
 ** c: A character
 **
-** returns: A non-zero integer if c is an ASCII character
+** returns: A non-zero integer if c is a space or tab character
 **          0 otherwise
 */
 
-bool	ft_isascii(int c)
+bool	ft_isblank(int c)
 {
-	return (c >= 0 && c <= 127);
+	return ((c == ' ') || (c == '\t'));
 }

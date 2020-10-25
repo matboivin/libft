@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 11:51:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/24 00:45:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/25 21:35:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdint.h>
 # include <unistd.h>
 # include "libft_define.h"
-# include "libft_recon.h"
+# include "libft_ctype.h"
 # include "libft_conv.h"
 # include "libft_str.h"
 

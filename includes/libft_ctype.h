@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isnumeric.c                                     :+:      :+:    :+:   */
+/*   libft_ctype.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/21 00:23:51 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/24 00:01:38 by mboivin          ###   ########.fr       */
+/*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
+/*   Updated: 2020/10/25 21:35:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "libft_recon.h"
+#ifndef LIBFT_CTYPE_H
+# define LIBFT_CTYPE_H
+# include <stdbool.h>
 
-/*
-** This function checks if a string has only numeric characters
-**
-** s: A character
-**
-** returns: A non-zero integer if s has only numeric characters
-**          0 otherwise
-*/
+bool	ft_isalnum(int c);
+bool	ft_isalpha(int c);
+bool	ft_isascii(int c);
+bool	ft_isblank(int c);
+bool	ft_ischarset(char c, const char *set);
+bool	ft_iscntrl(int c);
+bool	ft_isdigit(int c);
+bool	ft_islower(int c);
+bool	ft_isprint(int c);
+bool	ft_isspace(int c);
+bool	ft_isupper(int c);
+bool	ft_isnumeric(char *s);
 
-bool		ft_isnumeric(char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (!ft_isdigit(s[i]))
-			return (false);
-		i++;
-	}
-	return (true);
-}
+#endif

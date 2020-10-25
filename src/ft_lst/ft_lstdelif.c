@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 22:08:20 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:43:18 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/25 22:37:11 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,23 @@ void		ft_lstdelif(t_node **head, void *data_ref)
 
 	if (!head || !data_ref)
 		return ;
-	if (*head)
+	cursor = NULL;
+	to_free = NULL;
+	while (*head && (*head)->content == data_ref)
 	{
-		cursor = *head;
-		to_free = NULL;
-		while (cursor)
+		to_free = *head;
+		*head = (*head)->next;
+		free(to_free);
+	}
+	cursor = *head;
+	while (cursor)
+	{
+		if (cursor->next && cursor->next->content == data_ref)
 		{
-			if (cursor->content == data_ref)
-			{
-				to_free = cursor;
-				cursor = cursor->next;
-				free(to_free);
-			}
-			else
-				cursor = cursor->next;
+			to_free = cursor->next;
+			cursor->next = to_free->next;
+			free(to_free);
 		}
+		cursor = cursor->next;
 	}
 }

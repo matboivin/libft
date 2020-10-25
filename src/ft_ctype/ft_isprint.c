@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_recon.h                                      :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/24 00:43:20 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:22:29 by mboivin           #+#    #+#             */
+/*   Updated: 2020/10/25 21:35:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_RECON_H
-# define LIBFT_RECON_H
-# include <stdbool.h>
+#include "libft_ctype.h"
 
-bool	ft_isalnum(int c);
-bool	ft_isalpha(int c);
-bool	ft_isascii(int c);
-bool	ft_isblank(int c);
-bool	ft_ischarset(char c, const char *set);
-bool	ft_iscntrl(int c);
-bool	ft_isdigit(int c);
-bool	ft_islower(int c);
-bool	ft_isprint(int c);
-bool	ft_isspace(int c);
-bool	ft_isupper(int c);
-bool	ft_isnumeric(char *s);
+/*
+** Recoded isprint libc function: Checks if c is a printable character
+**
+** c: A character
+**
+** returns: A non-zero integer if c is a printable character
+**          0 otherwise
+*/
 
-#endif
+bool	ft_isprint(int c)
+{
+	return (c >= 32 && c <= 126);
+}

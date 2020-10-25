@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/24 00:42:31 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/25 22:39:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ void				ft_lstrev(t_node **head);
 int					ft_lstsize(t_node *head);
 void				ft_lstsort(t_node **head, int (*cmp)());
 void				ft_lstswap(
-	t_node *a, t_node *prev_a, t_node *b, t_node *prev_b);
+	t_node *prev_a, t_node *a, t_node *prev_b, t_node *b);
 
 #endif

@@ -11,6 +11,7 @@ RM = /bin/rm
 INC_FILES	=	libft.h				\
 				libft_char.h		\
 				libft_conv.h		\
+				libft_ctype.h		\
 				libft_define.h		\
 				libft_file.h		\
 				libft_list.h		\
@@ -18,7 +19,6 @@ INC_FILES	=	libft.h				\
 				libft_num.h			\
 				libft_printf.h		\
 				libft_put.h			\
-				libft_recon.h		\
 				libft_stack.h		\
 				libft_str.h			\
 				libft_tab.h			\
@@ -134,7 +134,7 @@ SRC_FILES	+=	ft_lstappend.c		\
 # Conversion functions #
 
 SRC_FILES	+=	ft_atoi.c			\
-				ft_atoi_base.c		\
+				ft_atoi_dec_base.c	\
 				ft_atos.c			\
 				ft_itoa.c			\
 				ft_itoa_base.c		\
@@ -199,13 +199,13 @@ OBJ_DIR		=	obj
 
 SUB_DIRS	=	ft_char \
 				ft_conv \
+				ft_ctype \
 				ft_file \
 				ft_lst \
 				ft_mem \
 				ft_num \
 				ft_printf \
 				ft_put \
-				ft_recon \
 				ft_stack \
 				ft_str \
 				ft_tab

@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isblank.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 10:22:44 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:55:11 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:21:59 by mboivin           #+#    #+#             */
+/*   Updated: 2020/10/25 21:35:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_recon.h"
+#include "libft_ctype.h"
 
 /*
-** This function checks if c is a space or tab character
+** Recoded isalpha libc function: Checks if c is an alphabet character
 **
 ** c: A character
 **
-** returns: A non-zero integer if c is a space or tab character
+** returns: A non-zero integer if c is an alphabet character
 **          0 otherwise
 */
 
-bool	ft_isblank(int c)
+bool	ft_isalpha(int c)
 {
-	return ((c == ' ') || (c == '\t'));
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }

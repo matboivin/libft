@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 21:17:01 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:44:36 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/10/25 22:39:42 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@
 ** prev_a, prev_b: Pointers to two previous nodes
 */
 
-void		ft_lstswap(t_node *a, t_node *prev_a, t_node *b, t_node *prev_b)
+void		ft_lstswap(t_node *prev_a, t_node *a, t_node *prev_b, t_node *b)
 {
 	t_node	*tmp;
 
 	tmp = NULL;
-	if (!a || !b || !prev_a || !prev_b)
+	if (!a || !b || !prev_b)
 		return ;
 	if (prev_a)
 		prev_a->next = b;
