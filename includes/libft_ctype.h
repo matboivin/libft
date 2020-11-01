@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/25 21:35:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/01 19:59:46 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_CTYPE_H
 # include <stdbool.h>
 
+int		ft_charcount(char c, char *s);
 bool	ft_isalnum(int c);
 bool	ft_isalpha(int c);
 bool	ft_isascii(int c);
@@ -26,5 +27,7 @@ bool	ft_isprint(int c);
 bool	ft_isspace(int c);
 bool	ft_isupper(int c);
 bool	ft_isnumeric(char *s);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 
 #endif

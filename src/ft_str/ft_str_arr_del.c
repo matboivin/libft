@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_increase_stack.c                                :+:      :+:    :+:   */
+/*   ft_str_arr_del.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 13:36:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:30:22 by mboivin          ###   ########.fr       */
+/*   Created: 2018/11/16 21:40:54 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/01 20:23:54 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_mem.h"
 #include "libft_str.h"
-#include "libft_stack.h"
 
 /*
-** This function doubles the capacity of the stack
+** Function: Frees an array of strings
+**
+** to_free: The array of strings to be freed
 */
 
-void	ft_increase_stack(t_stack *stack)
+void	ft_str_arr_del(char **to_free)
 {
-	stack->capacity *= 2;
-	stack->content = ft_reallocarray(
-		stack->content, stack->capacity, sizeof(int));
+	int	i;
+
+	i = 0;
+	if (to_free)
+	{
+		while (to_free[i])
+		{
+			ft_memdel((void **)&(to_free[i]));
+			i++;
+		}
+		ft_memdel((void **)&to_free);
+	}
 }

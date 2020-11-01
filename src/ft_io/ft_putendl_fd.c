@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_increase_stack.c                                :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 13:36:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:30:22 by mboivin          ###   ########.fr       */
+/*   Created: 2018/11/16 15:19:28 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/01 20:12:29 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_mem.h"
 #include "libft_str.h"
-#include "libft_stack.h"
+#include "libft_io.h"
 
 /*
-** This function doubles the capacity of the stack
+** This function outputs the string s to given file descriptor, followed by a
+** newline
+**
+** s: The string to output
+** fd: The file descriptor on which to write
 */
 
-void	ft_increase_stack(t_stack *stack)
+void	ft_putendl_fd(char *s, int fd)
 {
-	stack->capacity *= 2;
-	stack->content = ft_reallocarray(
-		stack->content, stack->capacity, sizeof(int));
+	if (s)
+	{
+		write(fd, s, ft_strlen(s));
+		write(fd, "\n", 1);
+	}
 }

@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_increase_stack.c                                :+:      :+:    :+:   */
+/*   ft_list_find.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 13:36:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:30:22 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/23 21:50:45 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/01 20:04:35 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_mem.h"
-#include "libft_str.h"
-#include "libft_stack.h"
+#include "libft_list.h"
 
 /*
-** This function doubles the capacity of the stack
+** This function searches for a node that stores a given data
+**
+** head: Pointer to the first node of a list
+** data_ref: The searched data
+**
+** returns: The found node
+**          NULL otherwise
 */
 
-void	ft_increase_stack(t_stack *stack)
+t_node		*ft_list_find(t_node *head, void *data_ref)
 {
-	stack->capacity *= 2;
-	stack->content = ft_reallocarray(
-		stack->content, stack->capacity, sizeof(int));
+	if (head && data_ref)
+	{
+		while (head)
+		{
+			if (head->content == data_ref)
+				return (head);
+			head = head->next;
+		}
+	}
+	return (NULL);
 }

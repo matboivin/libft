@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_increase_stack.c                                :+:      :+:    :+:   */
+/*   ft_list_delone.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 13:36:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:30:22 by mboivin          ###   ########.fr       */
+/*   Created: 2018/11/22 16:34:37 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/01 20:04:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_mem.h"
-#include "libft_str.h"
-#include "libft_stack.h"
+#include "libft_list.h"
 
 /*
-** This function doubles the capacity of the stack
+** This function takes a node and frees its content memory using the function
+** del given as a parameter
+** The memory of next must not be freed under any circumstance
+**
+** to_free: The node to free
+** del: The address of the function to delete the content
 */
 
-void	ft_increase_stack(t_stack *stack)
+void		ft_list_delone(t_node *to_free, void (*del)(void *))
 {
-	stack->capacity *= 2;
-	stack->content = ft_reallocarray(
-		stack->content, stack->capacity, sizeof(int));
+	if (!to_free || !del)
+		return ;
+	del(to_free->content);
+	free(to_free);
 }

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/24 00:07:17 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/01 20:20:34 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ static char		*ft_get_strings(const char *s, size_t i, size_t c_index)
 }
 
 /*
-** This function allocates (with malloc(3)) and returns an result of strings
+** This function allocates (with malloc(3)) and returns an array of strings
 ** obtained by splitting s using the character c as a delimiter
 **
 ** s: The string to be split

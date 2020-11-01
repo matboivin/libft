@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_increase_stack.c                                :+:      :+:    :+:   */
+/*   ft_list_append.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 13:36:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:30:22 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/20 19:41:33 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/01 20:03:26 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_mem.h"
-#include "libft_str.h"
-#include "libft_stack.h"
+#include "libft_list.h"
 
 /*
-** This function doubles the capacity of the stack
+** This function appends a new node to the list
+**
+** head: Pointer to the first node of a list
+** new_node: Pointer to the node to add to the list
 */
 
-void	ft_increase_stack(t_stack *stack)
+void		ft_list_append(t_node **head, t_node *new_node)
 {
-	stack->capacity *= 2;
-	stack->content = ft_reallocarray(
-		stack->content, stack->capacity, sizeof(int));
+	t_node	*cursor;
+
+	if (!head || !new_node)
+		return ;
+	if (*head)
+	{
+		cursor = *head;
+		while (cursor->next)
+			cursor = cursor->next;
+		cursor->next = new_node;
+	}
+	else
+		*head = new_node;
 }

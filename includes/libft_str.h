@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/24 00:43:37 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/01 20:24:03 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 # include <stdlib.h>
 
 char	**ft_split(const char *s, char c);
+size_t	ft_str_arr_len(char **arr);
+void	ft_str_arr_del(char **to_free);
+
 char	*ft_strappend(char *s, char *suffix);
 char	*ft_strcat(char *dst, const char *src);
 char	*ft_strchr(const char *s, int c);

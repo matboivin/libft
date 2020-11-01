@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_increase_stack.c                                :+:      :+:    :+:   */
+/*   ft_list_iter.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 13:36:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:30:22 by mboivin          ###   ########.fr       */
+/*   Created: 2018/11/22 16:37:24 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/01 20:04:49 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_mem.h"
-#include "libft_str.h"
-#include "libft_stack.h"
+#include "libft_list.h"
 
 /*
-** This function doubles the capacity of the stack
+** This function iterates the list from node and applies the function f to the
+** content of each node
+**
+** node: Pointer to a node
+** f: The address of the function to iterate on the list
 */
 
-void	ft_increase_stack(t_stack *stack)
+void		ft_list_iter(t_node *node, void (*f)(void *))
 {
-	stack->capacity *= 2;
-	stack->content = ft_reallocarray(
-		stack->content, stack->capacity, sizeof(int));
+	if (!node || !f)
+		return ;
+	while (node)
+	{
+		f(node->content);
+		node = node->next;
+	}
 }

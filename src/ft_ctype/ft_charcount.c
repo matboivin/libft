@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_increase_stack.c                                :+:      :+:    :+:   */
+/*   ft_charcount.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 13:36:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:30:22 by mboivin          ###   ########.fr       */
+/*   Created: 2018/11/22 14:09:32 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/01 20:00:07 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_mem.h"
-#include "libft_str.h"
-#include "libft_stack.h"
+#include "libft_ctype.h"
 
 /*
-** This function doubles the capacity of the stack
+** This function counts occurrences of a character
+**
+** c: A character
+** s: A string
+**
+** returns: The count of occurences
 */
 
-void	ft_increase_stack(t_stack *stack)
+int		ft_charcount(char c, char *s)
 {
-	stack->capacity *= 2;
-	stack->content = ft_reallocarray(
-		stack->content, stack->capacity, sizeof(int));
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			count++;
+		i++;
+	}
+	return (count);
 }

@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_increase_stack.c                                :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 13:36:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:30:22 by mboivin          ###   ########.fr       */
+/*   Created: 2019/11/05 17:24:21 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/01 20:00:16 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_mem.h"
-#include "libft_str.h"
-#include "libft_stack.h"
+#include "libft_ctype.h"
 
 /*
-** This function doubles the capacity of the stack
+** Recoded tolower libc function: Converts an upper-case letter to the
+** corresponding lower-case letter
+**
+** c: A character
+**
+** returns: The corresponding lower-case letter
+**          Otherwise the argument is returned unchanged
 */
 
-void	ft_increase_stack(t_stack *stack)
+int		ft_tolower(int c)
 {
-	stack->capacity *= 2;
-	stack->content = ft_reallocarray(
-		stack->content, stack->capacity, sizeof(int));
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
