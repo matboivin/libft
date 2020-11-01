@@ -24,7 +24,7 @@ INC_FILES	=	libft.h				\
 
 # CONVERSION FUNCTIONS #
 
-SRC_FILES	+=	ft_atoi.c			\
+SRC_FILES	=	ft_atoi.c			\
 				ft_atoi_dec_base.c	\
 				ft_atos.c			\
 				ft_itoa.c			\
@@ -106,7 +106,7 @@ SRC_FILES	+=	ft_list_append.c	\
 
 # MEMORY FUNCTIONS #
 
-SRC_FILES	=	ft_bzero.c			\
+SRC_FILES	+=	ft_bzero.c			\
 				ft_calloc.c			\
 				ft_memalloc.c		\
 				ft_memccpy.c		\
@@ -203,7 +203,7 @@ SRC_SUBDIRS	=	$(addprefix $(SRC_DIR)/, $(SUB_DIRS))
 INC			=	$(addprefix $(INC_DIR)/, $(INC_FILES))
 OBJ			=	$(addprefix $(OBJ_DIR)/, $(OBJ_FILES))
 
-VPATH		=	$(SRC_DIR) $(SRC_SUBDIRS)
+VPATH		=	$(SRC_SUBDIRS)
 
 # *************************** COMPILING AND FLAGS **************************** #
 
@@ -241,6 +241,7 @@ $(NAME): $(OBJ_DIR) $(OBJ) $(INC)
 
 show:
 	@echo "VPATH: $(VPATH)"
+	@echo "SRC_SUBDIRS: $(SRC_SUBDIRS)"
 
 # Debug build for gdb debugging #
 

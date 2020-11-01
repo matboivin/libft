@@ -6,13 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/25 21:35:39 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/01 20:43:41 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_define.h"
 #include "libft_ctype.h"
-#include "libft_char.h"
 #include "libft_conv.h"
 
 /*
