@@ -28,7 +28,6 @@ SRC_FILES	=	ft_atoi.c			\
 				ft_atoi_dec_base.c	\
 				ft_atos.c			\
 				ft_itoa.c			\
-				ft_itoa_base.c		\
 				ft_utoa.c			\
 				ft_utoa_base.c		\
 				ft_strtod.c			\

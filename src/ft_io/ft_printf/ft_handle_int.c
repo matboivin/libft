@@ -6,10 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:50:10 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/04 20:49:49 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft_num.h"
 #include "libft_printf.h"
 
 /*
@@ -52,7 +53,8 @@ int				ft_handle_int(t_spec *spec, va_list ap)
 	char		*buffer;
 
 	arg = length_int(spec, ap);
-	buffer = ft_itoa_base(arg, DEC_BASE);
+	buffer = ft_strnew(ft_nbrlen(arg));
+	ft_itoa(arg, buffer, DEC_BASE);
 	if (arg >= 0 && (spec->flag & PLUS_PREF || spec->flag & SPACE_PREF))
 		buffer = ft_add_prefix(buffer, spec);
 	if (!buffer)

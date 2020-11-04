@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:07:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:37:02 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/04 20:47:00 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,17 @@
 #include "libft_str.h"
 #include "libft_num.h"
 #include "libft_conv.h"
+
+/*
+** This function returns the necessary value for base conversion
+*/
+
+static int	conv_val(int n, int base)
+{
+	if (n % base < DEC_BASE)
+		return ('0');
+	return ('a' - DEC_BASE);
+}
 
 /*
 ** This function checks whether n is negative
@@ -33,33 +44,32 @@ static bool	ft_is_neg(int n, int32_t *nbr, size_t *sign)
 }
 
 /*
-** This function converts an integer to a string representation
+** This function converts an integer to a string representation using
+** the specified base
 **
 ** n: An integer
+** base: An integer (2 to 16)
 **
-** returns: The converted integral number as a string representation
+** returns: The converted number as a string representation
 **          0 otherwise
 */
 
-char		*ft_itoa(int n)
+void		ft_itoa(int n, char *output, int base)
 {
-	char	*result;
 	int32_t	nbr;
 	size_t	nbr_len;
 	size_t	sign;
 	bool	is_neg;
 
+	if ((n == 0) || (base < BINARY_BASE) || (base > HEX_BASE))
+		*output = '0';
 	is_neg = ft_is_neg(n, &nbr, &sign);
-	nbr_len = ft_nbrlen(nbr);
-	result = ft_strnew(nbr_len);
-	if (!result)
-		return (NULL);
-	if (is_neg)
-		result[0] = MINUS;
+	nbr_len = ft_nbrlen_base(nbr, base);
+	if (is_neg && base == DEC_BASE)
+		output[0] = MINUS;
 	while (nbr_len-- > sign)
 	{
-		result[nbr_len] = nbr % DEC_BASE + ZERO;
-		nbr /= DEC_BASE;
+		output[nbr_len] = (nbr % base) + conv_val(nbr, base);
+		nbr /= base;
 	}
-	return (result);
 }
