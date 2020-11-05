@@ -248,6 +248,9 @@ debug: re
 	@make -C tests re
 	@./tests/libft_tester
 
+check_leaks:
+	@make -C tests/ check_leaks
+
 # CLEAN #
 
 clean:
@@ -260,4 +263,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all show debug clean fclean re
+.PHONY: all show debug check_leaks clean fclean re

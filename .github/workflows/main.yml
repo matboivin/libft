@@ -12,4 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Debug
-        run: make debug
+        run: |
+          make debug
+          make check_leaks
