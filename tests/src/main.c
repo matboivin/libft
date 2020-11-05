@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_delone.c                                   :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 16:34:37 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 18:46:35 by mboivin          ###   ########.fr       */
+/*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/05 18:44:50 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_list.h"
+#include "libft_test.h"
 
-/*
-** This function takes a node and frees it
-** The memory of next must not be freed under any circumstance
-**
-** to_free: The node to free
-*/
+t_result	*g_results;
 
-void		ft_list_delone(t_node *to_free)
+int			main(void)
 {
-	if (!to_free)
-		return ;
-	free(to_free);
+	int		ret_val;
+
+	ret_val = 0;
+	launch_tests();
+	PRINT_TITLE("END OF TESTS");
+	if (g_results->passed != g_results->total)
+		ret_val = 1;
+	free_result(g_results);
+	return (ret_val);
 }

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:02:10 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/05 17:46:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,15 @@ typedef struct		s_node
 
 void				ft_list_append(t_node **head, t_node *new_node);
 t_node				*ft_list_at(t_node *head, unsigned int n);
-void				ft_list_del(t_node **node, void (*del)(void *));
+void				ft_list_del(t_node **node);
 void				ft_list_delif(t_node **head, void *data_ref);
-void				ft_list_delone(t_node *to_free, void (*del)(void *));
+void				ft_list_delone(t_node *to_free);
 t_node				*ft_list_find(t_node *head, void *data_ref);
 void				ft_list_iter(t_node *node, void (*f)(void *));
 void				ft_list_iterif(
 	t_node *lst, void (*f)(void *), void *data_ref);
 t_node				*ft_list_last(t_node *node);
-t_node				*ft_list_map(
-	t_node *node, void *(*f)(void *), void (*del)(void *));
+t_node				*ft_list_map(t_node *node, void *(*f)(void *));
 t_node				*ft_list_new(void *p_content);
 void				ft_list_prepend(t_node **head, t_node *new_node);
 void				ft_list_rev(t_node **head);

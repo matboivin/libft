@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_delone.c                                   :+:      :+:    :+:   */
+/*   ft_list_print.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 16:34:37 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 18:46:35 by mboivin          ###   ########.fr       */
+/*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/05 17:48:21 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_list.h"
+#include "libft_test.h"
 
 /*
-** This function takes a node and frees it
-** The memory of next must not be freed under any circumstance
-**
-** to_free: The node to free
+** List utils
 */
 
-void		ft_list_delone(t_node *to_free)
+void	ft_list_print(t_node *node)
 {
-	if (!to_free)
-		return ;
-	free(to_free);
+	int	i;
+
+	if (node)
+	{
+		i = 1;
+		while (node)
+		{
+			printf("node %d -> content: \"%s\"\n", i, (char *)node->content);
+			node = node->next;
+			i++;
+		}
+	}
+	else
+		printf("NULL\n");
 }

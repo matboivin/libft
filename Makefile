@@ -245,6 +245,8 @@ show:
 
 debug: CFLAGS += $(DEBUG_CFLAGS)
 debug: re
+	@make -C tests re
+	@./tests/libft_tester
 
 # CLEAN #
 

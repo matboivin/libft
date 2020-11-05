@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_delone.c                                   :+:      :+:    :+:   */
+/*   result_counter.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/22 16:34:37 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 18:46:35 by mboivin          ###   ########.fr       */
+/*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/05 16:44:03 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_list.h"
+#include "libft_test.h"
 
 /*
-** This function takes a node and frees it
-** The memory of next must not be freed under any circumstance
-**
-** to_free: The node to free
+** Result counter
 */
 
-void		ft_list_delone(t_node *to_free)
+t_result		*malloc_result(void)
 {
-	if (!to_free)
-		return ;
+	t_result	*result;
+
+	result = malloc(sizeof(t_result));
+	if (!result)
+		exit(EXIT_FAILURE);
+	result->total = 0;
+	result->passed = 0;
+	result->test_num = 0;
+	return (result);
+}
+
+void			free_result(t_result *to_free)
+{
 	free(to_free);
 }
