@@ -6,19 +6,20 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 18:25:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 18:55:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/05 19:21:08 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test.h"
 
-static void	compare_atoi(const char *s)
+static void	compare_atoi(char *s)
 {
 	int		atoi_ret;
 	int		ft_ret;
 
 	g_results->test_num++;
-	PRINT_TEST_INPUT(g_results->test_num, s, NULL);
+	PRINT_TEST_NUMBER(g_results->test_num);
+	print_test_input(s, NULL);
 	atoi_ret = atoi(s);
 	ft_ret = ft_atoi(s);
 	printf("atoi:\t\t\"%d\"\n", atoi_ret);

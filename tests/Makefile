@@ -22,6 +22,7 @@ SRC_FILES	+=	launch_tests.c				\
 				ft_list_print.c				\
 				ft_list_cmp.c				\
 				print_ref.c					\
+				print_test_input.c			\
 				result_counter.c
 
 # FUNCTION TESTS #

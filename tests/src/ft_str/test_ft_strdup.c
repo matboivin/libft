@@ -6,20 +6,21 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 17:40:55 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 17:00:42 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/05 19:21:54 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft_test.h"
 
-static void	compare_duplicates(const char *s)
+static void	compare_duplicates(char *s)
 {
 	char	*strdup_ret;
 	char	*ft_ret;
 
 	g_results->test_num++;
-	PRINT_TEST_INPUT(g_results->test_num, s, NULL);
+	PRINT_TEST_NUMBER(g_results->test_num);
+	print_test_input(s, NULL);
 	strdup_ret = strdup(s);
 	ft_ret = ft_strdup(s);
 	printf("strdup:\t\t\"%s\"\n", strdup_ret);

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 18:25:32 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 18:55:43 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/05 19:18:32 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	compare_utoa(int n, char *ref, int base)
 	char	*result;
 
 	g_results->test_num++;
-	PRINT_TEST_INPUT(g_results->test_num, NULL, NULL);
+	PRINT_TEST_NUMBER(g_results->test_num);
 	printf("Expected result:\t\"%s\"\tin base %d\n", ref, base);
 	result = ft_utoa(n, result, base);
 	printf("ft_utoa result:\t\"%s\"\n", result);

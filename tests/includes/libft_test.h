@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:45 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 18:53:47 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/05 19:17:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,15 +77,9 @@
 	printf("%s-> %s%s\n\n", COL_BLUE_B, name, COL_RESET);				\
 }
 
-# define PRINT_TEST_INPUT(num, input1, input2)							\
+# define PRINT_TEST_NUMBER(num)											\
 {																		\
 	printf("%sTest n. %d:%s", COL_BLUE, num, COL_RESET);				\
-	if (input1 && input2)												\
-		printf(" s1 -> \"%s\" | s2 -> \"%s\"",							\
-		(char *)input1, (char *)input2);								\
-	else if (input1)													\
-		printf(" input -> \"%s\"", (char *)input1);						\
-	printf("\n");														\
 }
 
 # define PRINT_TEST_LIST(test_lst)										\
@@ -168,6 +162,7 @@ void			test_ft_strlen(void);
 ** Test utils
 */
 
+void			print_test_input(char *input1, char *input2);
 void			check_return(bool condition);
 t_result		*malloc_result(void);
 void			free_result(t_result *to_free);

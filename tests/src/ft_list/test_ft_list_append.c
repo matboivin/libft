@@ -19,7 +19,7 @@ static void	test_append_00(void)
 	t_node	*test_lst;
 
 	g_results->test_num++;
-	PRINT_TEST_INPUT(g_results->test_num, NULL, NULL);
+	PRINT_TEST_NUMBER(g_results->test_num);
 	print_ref(ref, 4);
 	printf("\nft_list_append result:\n");
 	bzero(&test_lst, sizeof(test_lst));
@@ -38,7 +38,7 @@ static void	test_append_01(void)
 	t_node	*test_lst;
 
 	g_results->test_num++;
-	PRINT_TEST_INPUT(g_results->test_num, NULL, NULL);
+	PRINT_TEST_NUMBER(g_results->test_num);
 	print_ref(ref, 5);
 	printf("\nft_list_append result:\n");
 	bzero(&test_lst, sizeof(test_lst));

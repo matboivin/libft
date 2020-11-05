@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 18:25:29 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 18:56:15 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/05 19:18:08 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ static void	compare_strtod(char	*s, double ref)
 
 	endptr = NULL;
 	g_results->test_num++;
-	PRINT_TEST_INPUT(g_results->test_num, NULL, NULL);
+	PRINT_TEST_NUMBER(g_results->test_num);
+	print_test_input(NULL, NULL);
 	printf("Expected result:\t\"%f\"\n", ref);
 	result = ft_strtod(s, &endptr);
 	printf("ft_strtod result:\t\"%f\"\n", result);
