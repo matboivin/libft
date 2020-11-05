@@ -12,6 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Debug
+        run: make debug
+      - name: Check leaks
         run: |
-          make debug
-          make check_leaks
+          sudo apt-get install -y valgrind
+          valgrind -v --leak-check=full --show-leak-kinds=all ./tests/libft_tester
