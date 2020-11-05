@@ -24,11 +24,6 @@ Clone the repository, change it to your working directory and run:
 & make
 ```
 
-To use the library:
-```console
-& gcc foo.c -L. -lft
-```
-
 ### License
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
