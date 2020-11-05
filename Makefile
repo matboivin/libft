@@ -248,9 +248,6 @@ debug: re
 	@make -C tests/ re
 	@./tests/libft_tester
 
-check_leaks:
-	@make -C tests/ check_leaks
-
 # CLEAN #
 
 clean:
