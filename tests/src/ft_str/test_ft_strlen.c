@@ -6,20 +6,21 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 17:00:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/05 19:22:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft_test.h"
 
-static void	compare_lenghts(const char *s)
+static void	compare_lenghts(char *s)
 {
 	int		strlen_ret;
 	int		ft_ret;
 
 	g_results->test_num++;
-	PRINT_TEST_INPUT(g_results->test_num, s, NULL);
+	PRINT_TEST_NUMBER(g_results->test_num);
+	print_test_input(s, NULL);
 	strlen_ret = strlen(s);
 	ft_ret = ft_strlen(s);
 	printf("strlen:\t\t%d\n", strlen_ret);

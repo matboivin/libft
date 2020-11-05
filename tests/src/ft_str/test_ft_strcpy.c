@@ -6,14 +6,14 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 17:00:36 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/05 19:21:47 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft_test.h"
 
-static void	compare_copies(const char *s)
+static void	compare_copies(char *s)
 {
 	char	*strcpy_ret;
 	char	*ft_ret;
@@ -22,7 +22,8 @@ static void	compare_copies(const char *s)
 	char	*src;
 
 	g_results->test_num++;
-	PRINT_TEST_INPUT(g_results->test_num, s, NULL);
+	PRINT_TEST_NUMBER(g_results->test_num);
+	print_test_input(s, NULL);
 	dst = ft_strnew(ft_strlen(s));
 	ft_dst = ft_strnew(ft_strlen(s));
 	src = strdup(s);

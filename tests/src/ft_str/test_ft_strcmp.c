@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 18:03:10 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/05 19:21:41 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static bool	cmp_are_equals(int strcmp_ret, int ft_ret)
 	return (false);
 }
 
-static void	compare_strings(char *s1, const char *s2)
+static void	compare_strings(char *s1, char *s2)
 {
 	int		strcmp_ret;
 	int		ft_ret;
@@ -32,7 +32,8 @@ static void	compare_strings(char *s1, const char *s2)
 	strcmp_ret = 0;
 	ft_ret = 0;
 	g_results->test_num++;
-	PRINT_TEST_INPUT(g_results->test_num, s1, s2);
+	PRINT_TEST_NUMBER(g_results->test_num);
+	print_test_input(s1, s2);
 	strcmp_ret = strcmp(s1, s2);
 	ft_ret = ft_strcmp(s1, s2);
 	printf("strcmp:\t\t\"%d\"\n", strcmp_ret);

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 19:15:50 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 17:48:01 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/05 19:19:11 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	compare_list_sizes(t_node *test_lst, int expected)
 	int		size;
 
 	g_results->test_num++;
-	PRINT_TEST_INPUT(g_results->test_num, NULL, NULL);
+	PRINT_TEST_NUMBER(g_results->test_num);
 	PRINT_TEST_LIST(test_lst);
 	size = ft_list_size(test_lst);
 	printf("Expected size:\t%d\n", expected);

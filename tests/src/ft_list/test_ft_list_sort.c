@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/25 16:32:11 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 18:37:52 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/05 19:19:22 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	test_sort_00(void)
 	t_node	*test_lst;
 
 	g_results->test_num++;
-	PRINT_TEST_INPUT(g_results->test_num, NULL, NULL);
+	PRINT_TEST_NUMBER(g_results->test_num);
 	bzero(&test_lst, sizeof(test_lst));
 	ft_list_append(&test_lst, ft_list_new(TEST_STR_04));
 	ft_list_append(&test_lst,ft_list_new( TEST_STR_05));
@@ -39,7 +39,7 @@ static void	test_sort_01(void)
 	t_node	*test_lst;
 
 	g_results->test_num++;
-	PRINT_TEST_INPUT(g_results->test_num, NULL, NULL);
+	PRINT_TEST_NUMBER(g_results->test_num);
 	bzero(&test_lst, sizeof(test_lst));
 	ft_list_append(&test_lst, ft_list_new(TEST_STR_03));
 	ft_list_append(&test_lst, ft_list_new(TEST_STR_04));
