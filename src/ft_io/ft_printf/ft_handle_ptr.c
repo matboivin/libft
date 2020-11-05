@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:50:18 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/05 15:26:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,11 @@ int				ft_handle_ptr(t_spec *spec, va_list ap)
 	char		*buffer;
 
 	printed = 0;
+	buffer = NULL;
 	arg = (uint64_t)va_arg(ap, void *);
-	buffer = ft_utoa_base(arg, HEX_BASE);
+	buffer = ft_utoa(arg, buffer, HEX_BASE);
+	if (!buffer)
+		return (-1);
 	if (spec->prec == 0)
 		buffer = ft_strdup(LOWHEX_PREFIX);
 	else

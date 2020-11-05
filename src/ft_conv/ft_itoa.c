@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:07:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/04 20:47:00 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/05 15:43:44 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,17 @@
 #include "libft_conv.h"
 
 /*
-** This function returns the necessary value for base conversion
+** This function gets each digit
 */
 
-static int	conv_val(int n, int base)
+static int	digit_to_char(int32_t n, int base)
 {
-	if (n % base < DEC_BASE)
-		return ('0');
-	return ('a' - DEC_BASE);
+	int		rem;
+
+	rem = n % base;
+	if (rem < DEC_BASE)
+		return (rem + '0');
+	return (rem - DEC_BASE + 'a');
 }
 
 /*
@@ -48,28 +51,38 @@ static bool	ft_is_neg(int n, int32_t *nbr, size_t *sign)
 ** the specified base
 **
 ** n: An integer
+** output: The string representation
 ** base: An integer (2 to 16)
 **
 ** returns: The converted number as a string representation
-**          0 otherwise
+**          NULL otherwise
 */
 
-void		ft_itoa(int n, char *output, int base)
+char		*ft_itoa(int n, char *output, int base)
 {
 	int32_t	nbr;
 	size_t	nbr_len;
 	size_t	sign;
 	bool	is_neg;
 
-	if ((n == 0) || (base < BINARY_BASE) || (base > HEX_BASE))
-		*output = '0';
-	is_neg = ft_is_neg(n, &nbr, &sign);
-	nbr_len = ft_nbrlen_base(nbr, base);
-	if (is_neg && base == DEC_BASE)
-		output[0] = MINUS;
-	while (nbr_len-- > sign)
+	if ((base < BINARY_BASE) || (base > HEX_BASE))
+		return (NULL);
+	if (n == 0)
+		output = ft_strdup("0");
+	else
 	{
-		output[nbr_len] = (nbr % base) + conv_val(nbr, base);
-		nbr /= base;
+		is_neg = ft_is_neg(n, &nbr, &sign);
+		nbr_len = ft_nbrlen_base(n, base);
+		output = ft_strnew(nbr_len);
+		if (!output)
+			return (NULL);
+		if (is_neg && base == DEC_BASE)
+			output[0] = MINUS;
+		while (nbr_len-- > sign)
+		{
+			output[nbr_len] = digit_to_char(nbr, base);
+			nbr /= base;
+		}
 	}
+	return (output);
 }

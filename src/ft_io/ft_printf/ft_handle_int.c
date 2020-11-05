@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/04 20:49:49 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/05 15:08:06 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,11 @@ int				ft_handle_int(t_spec *spec, va_list ap)
 	intmax_t	arg;
 	char		*buffer;
 
+	buffer = NULL;
 	arg = length_int(spec, ap);
-	buffer = ft_strnew(ft_nbrlen(arg));
-	ft_itoa(arg, buffer, DEC_BASE);
+	buffer = ft_itoa(arg, buffer, DEC_BASE);
+	if (!buffer)
+		return (-1);
 	if (arg >= 0 && (spec->flag & PLUS_PREF || spec->flag & SPACE_PREF))
 		buffer = ft_add_prefix(buffer, spec);
 	if (!buffer)

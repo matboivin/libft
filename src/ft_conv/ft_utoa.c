@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/16 18:35:51 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:38:10 by mboivin          ###   ########.fr       */
+/*   Created: 2020/04/16 18:44:40 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/05 15:54:46 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,31 +16,54 @@
 #include "libft_conv.h"
 
 /*
-** This function converts an unsigned integer to a string representation
-**
-** n: An integer
-**
-** returns: The converted number as a string representation
-**          0 otherwise
+** This function gets each digit
 */
 
-char		*ft_utoa(int64_t n)
+static int64_t	digit_to_char(int64_t n, int base)
 {
-	char	*result;
-	int64_t	nbr;
-	size_t	nbr_len;
+	int64_t		rem;
 
-	if (n == 0)
-		return (ft_strdup("0"));
-	nbr = n;
-	nbr_len = ft_unbrlen_base(nbr, DEC_BASE);
-	result = ft_strnew(nbr_len);
-	if (!result)
+	rem = n % base;
+	if (rem < DEC_BASE)
+		return (rem + '0');
+	return (rem - DEC_BASE + 'a');
+}
+
+/*
+** This function converts an unsigned integer to a string representation using
+** the specified base
+**
+** n: An integer
+** output: The string representation
+** base: An integer (2 to 16)
+**
+** returns: The converted number as a string representation
+**          NULL otherwise
+*/
+
+char			*ft_utoa(int64_t n, char *output, int base)
+{
+	int64_t		nbr;
+	size_t		n_len;
+
+	if ((base < BINARY_BASE) || (base > HEX_BASE))
 		return (NULL);
-	while (nbr != 0 && nbr_len-- > 0)
+	if (n == 0)
+		output = ft_strdup("0");
+	else
 	{
-		result[nbr_len] = nbr % DEC_BASE + ZERO;
-		nbr /= DEC_BASE;
+		nbr = n;
+		if (n < 0)
+			nbr *= -1;
+		n_len = ft_unbrlen_base(nbr, base);
+		output = ft_strnew(n_len);
+		if (!output)
+			return (NULL);
+		while (nbr != 0 && n_len-- > 0)
+		{
+			output[n_len] = digit_to_char(nbr, base);
+			nbr /= base;
+		}
 	}
-	return (result);
+	return (output);
 }
