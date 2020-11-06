@@ -60,5 +60,6 @@ dkms.conf
 *.vscode/
 
 # Debug
+.gdb_history
 */leaks.txt
 libft_tester

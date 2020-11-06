@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:45 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 15:21:07 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/06 16:09:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@
 
 # define MIN_ARGC 1
 # define MAX_ARGC 2
+# define HELP_OPT "-h"
+# define MAX_OPTIONS 5
+# define MAX_STR_SIZE 7
+
 # define DEFAULT_VALUE 0
 # define READ_MODE "r"
 
@@ -40,7 +44,6 @@
 # define TEST_NODE_2 "2ND INPUT"
 # define TEST_NODE_3 "3RD INPUT"
 # define TEST_NODE_4 "4TH INPUT"
-
 
 /*
 ** Output formatting
@@ -123,8 +126,16 @@ typedef	struct	s_result
 extern t_result	*g_results;
 
 /*
-** Function tests
+** Test launchers
 */
+
+typedef	void	(*t_test_func)(void);
+
+typedef struct	s_launcher
+{
+	char		*category;
+	t_test_func	func;
+}				t_launcher;
 
 void			launch_tests(void);
 void			select_test(char *option);
