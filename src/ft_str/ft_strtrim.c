@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:43:57 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/25 21:35:39 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/06 14:38:47 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char		*ft_strtrim(const char *s, const char *set)
 	end = ft_strlen(s) - 1;
 	while (s[start] && ft_ischarset(s[start], set))
 		start++;
-	if (s + start == NULL)
+	if (!(s + start))
 		return (ft_strdup(s + start));
 	while (s[start] && ft_ischarset(s[end], set))
 		end--;
