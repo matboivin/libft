@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 18:25:29 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 14:24:26 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/06 16:25:00 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ void		test_ft_itoa(void)
 	g_results->test_num = 0;
 	PRINT_TEST_NAME("FT_ITOA");
 	compare_itoa(DEFAULT_VALUE, "0", DEC_BASE);
-	compare_itoa(INT_MAX, "2147483647", DEC_BASE);
-	compare_itoa(INT_MIN, "-2147483648", DEC_BASE);
+	compare_itoa(INT_MAX, TEST_STR_INTMAX, DEC_BASE);
+	compare_itoa(INT_MIN, TEST_STR_INTMIN, DEC_BASE);
 	compare_itoa(TEST_FT_NUM, "42", DEC_BASE);
 	compare_itoa(TEST_FT_NUM, "101010", BINARY_BASE);
 	PRINT_SEP();

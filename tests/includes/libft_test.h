@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:45 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 16:09:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/06 16:31:14 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@
 # define TEST_STR_03 "A     BCD EF"
 # define TEST_STR_04 "FOO"
 # define TEST_STR_05 "bar"
+# define TEST_STR_INTMAX "2147483647"
+# define TEST_STR_INTMIN "-2147483648"
 
 # define TEST_NODE_1 "1ST INPUT"
 # define TEST_NODE_2 "2ND INPUT"
@@ -161,7 +163,18 @@ void			test_ft_strtod(void);
 void			test_ft_charcount(void);
 void			test_ft_isalnum(void);
 void			test_ft_isalpha(void);
+void			test_ft_isascii(void);
+void			test_ft_isblank(void);
+void			test_ft_ischarset(void);
+void			test_ft_iscntrl(void);
 void			test_ft_isdigit(void);
+void			test_ft_islower(void);
+void			test_ft_isnumeric(void);
+void			test_ft_isprint(void);
+void			test_ft_isspace(void);
+void			test_ft_isupper(void);
+void			test_ft_tolower(void);
+void			test_ft_toupper(void);
 
 bool			check_recon_char(int ret, int ft_ret);
 

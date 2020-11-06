@@ -45,19 +45,19 @@ SRC_FILES	+=	test_ft_atoi.c				\
 
 SRC_FILES	+=	test_ft_charcount.c		\
 				test_ft_isalnum.c		\
-				test_ft_isalpha.c		test_ft_isdigit.c		\
-# 				test_ft_isascii.c		\
-# 				test_ft_isblank.c		\
-# 				test_ft_ischarset.c		\
-# 				test_ft_iscntrl.c		\
-# 				test_ft_isdigit.c		\
-# 				test_ft_islower.c		\
-# 				test_ft_isnumeric.c		\
-# 				test_ft_isprint.c		\
-# 				test_ft_isspace.c		\
-# 				test_ft_isupper.c		\
-# 				test_ft_tolower.c		\
-# 				test_ft_toupper.c
+				test_ft_isalpha.c		\
+				test_ft_isascii.c		\
+				test_ft_isblank.c		\
+				test_ft_ischarset.c		\
+				test_ft_iscntrl.c		\
+				test_ft_isdigit.c		\
+				test_ft_islower.c		\
+				test_ft_isnumeric.c		\
+				test_ft_isprint.c		\
+				test_ft_isspace.c		\
+				test_ft_isupper.c		\
+				test_ft_tolower.c		\
+				test_ft_toupper.c
 
 
 # INPUT/OUTPUT FUNCTIONS #
@@ -85,7 +85,7 @@ SRC_FILES	+=	test_ft_list_append.c	\
 SRC_FILES	+=	test_ft_strcmp.c			\
 				test_ft_strcpy.c			\
 				test_ft_strdup.c			\
-				test_ft_strlen.c			\
+				test_ft_strlen.c
 
 # ********************************* OBJECTS ********************************** #
 

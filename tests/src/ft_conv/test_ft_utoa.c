@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 18:25:32 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 14:24:42 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/06 16:33:44 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void		test_ft_utoa(void)
 	g_results->test_num = 0;
 	PRINT_TEST_NAME("FT_UTOA");
 	compare_utoa(DEFAULT_VALUE, "0", DEC_BASE);
-	compare_utoa(INT_MAX, "2147483647", DEC_BASE);
+	compare_utoa(INT_MAX, TEST_STR_INTMAX, DEC_BASE);
 	compare_utoa(INT_MIN, "2147483648", DEC_BASE);
 	compare_utoa(TEST_FT_NUM, "42", DEC_BASE);
 	compare_utoa(TEST_FT_NUM, "101010", BINARY_BASE);
