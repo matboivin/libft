@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 18:25:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 19:21:08 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/06 14:45:11 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,13 @@ void		test_ft_atoi(void)
 	g_results->test_num = 0;
 	PRINT_TEST_NAME("FT_ATOI");
 	compare_atoi("0");
+	compare_atoi("a");
+	compare_atoi("abcdef-203");
+	compare_atoi("++123");
+	compare_atoi("+-123");
+	compare_atoi("--123");
+	compare_atoi("    1abc");
+	compare_atoi("   avc");
 	compare_atoi("2147483647");
 	compare_atoi("-2147483648");
 	PRINT_SEP();

@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   check_recon_char.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 15:20:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/06 15:00:01 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdbool.h>
 #include "libft_test.h"
 
-t_result	*g_results;
+/*
+** Check return value of ctype functions tests
+*/
 
-int			main(int argc, char **argv)
+bool	check_recon_char(int ret, int ft_ret)
 {
-	int		ret_val;
-	char	*option;
-
-	ret_val = 0;
-	option = check_params(argc, argv);
-	if (!option)
-		launch_tests();
-	else
-		select_test(option);
-	PRINT_TITLE("END OF TESTS");
-	if (g_results->passed != g_results->total)
-		ret_val = 1;
-	free_result(g_results);
-	return (ret_val);
+	if ((ret == 0) && (ft_ret == 0))
+		return (true);
+	if ((ret > 0) && (ft_ret > 0))
+		return (true);
+	return (false);
 }

@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   result_counter.c                                   :+:      :+:    :+:   */
+/*   check_return.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 16:44:03 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/06 14:29:34 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdbool.h>
 #include "libft_test.h"
 
 /*
-** Result counter
+** Assert return values are the same
 */
 
-t_result		*malloc_result(void)
+void		check_return(bool condition)
 {
-	t_result	*result;
-
-	result = malloc(sizeof(t_result));
-	if (!result)
-		exit(EXIT_FAILURE);
-	result->total = 0;
-	result->passed = 0;
-	result->test_num = 0;
-	return (result);
-}
-
-void			free_result(t_result *to_free)
-{
-	free(to_free);
+	g_results->total += 1;
+	if (condition)
+	{
+		g_results->passed += 1;
+		PRINT_TEST_OK();
+	}
+	else
+		PRINT_TEST_KO();
 }

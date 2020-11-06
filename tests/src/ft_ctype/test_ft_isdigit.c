@@ -1,42 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_strtod.c                                   :+:      :+:    :+:   */
+/*   test_ft_isdigit.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/05 18:25:29 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 14:43:50 by mboivin          ###   ########.fr       */
+/*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/06 15:00:41 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <limits.h>
-#include <string.h>
+#include <ctype.h>
 #include "libft_test.h"
 
-static void	compare_strtod(char	*s, double ref)
+static void	check_isdigit(int c)
 {
-	double	result;
-	char	*endptr;
+	int		isdigit_ret;
+	int		ft_ret;
 
-	endptr = NULL;
 	g_results->test_num++;
 	PRINT_TEST_NUMBER(g_results->test_num);
-	print_test_input(NULL, NULL);
-	printf("Expected result:\t\"%f\"\n", ref);
-	result = ft_strtod(s, &endptr);
-	printf("ft_strtod result:\t\"%f\"\n", result);
-	check_return(ref == result);
-	ft_strdel(&endptr);
+	isdigit_ret = isdigit(c);
+	ft_ret = ft_isdigit(c);
+	printf("isdigit:\t\"%d\"\n", isdigit_ret);
+	printf("ft_isdigit:\t\"%d\"\n", ft_ret);
+	check_return(check_recon_char(isdigit_ret, ft_ret));
 }
 
-void		test_ft_strtod(void)
+void		test_ft_isdigit(void)
 {
 	g_results->test_num = 0;
-	PRINT_TEST_NAME("FT_STRTOD");
-	compare_strtod("0.0", 0.0);
-	compare_strtod("-10.0", -10.0);
-	compare_strtod("42.0", 42.0);
-	compare_strtod("2147483647", 2147483647.0);
+	PRINT_TEST_NAME("FT_ISDIGIT");
+	check_isdigit('0');
+	check_isdigit('1');
+	check_isdigit('2');
+	check_isdigit('9');
+	check_isdigit('a');
+	check_isdigit('A');
+	check_isdigit(';');
+	check_isdigit('.');
+	check_isdigit('!');
 	PRINT_SEP();
 }

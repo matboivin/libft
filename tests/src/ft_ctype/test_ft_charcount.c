@@ -1,42 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_strtod.c                                   :+:      :+:    :+:   */
+/*   test_ft_charcount.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/05 18:25:29 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 14:43:50 by mboivin          ###   ########.fr       */
+/*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/06 14:48:28 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <limits.h>
-#include <string.h>
+#include <ctype.h>
 #include "libft_test.h"
 
-static void	compare_strtod(char	*s, double ref)
+static void	check_charcount(int c, char *s, int expected)
 {
-	double	result;
-	char	*endptr;
+	int		ft_ret;
 
-	endptr = NULL;
 	g_results->test_num++;
 	PRINT_TEST_NUMBER(g_results->test_num);
-	print_test_input(NULL, NULL);
-	printf("Expected result:\t\"%f\"\n", ref);
-	result = ft_strtod(s, &endptr);
-	printf("ft_strtod result:\t\"%f\"\n", result);
-	check_return(ref == result);
-	ft_strdel(&endptr);
+	ft_ret = ft_charcount(c, s);
+	printf("Expected count:\t\"%d\"\n", expected);
+	printf("ft_charcount:\t\"%d\"\n", ft_ret);
+	check_return(expected == ft_ret);
 }
 
-void		test_ft_strtod(void)
+void		test_ft_charcount(void)
 {
 	g_results->test_num = 0;
-	PRINT_TEST_NAME("FT_STRTOD");
-	compare_strtod("0.0", 0.0);
-	compare_strtod("-10.0", -10.0);
-	compare_strtod("42.0", 42.0);
-	compare_strtod("2147483647", 2147483647.0);
+	PRINT_TEST_NAME("FT_CHARCOUNT");
+	check_charcount('a', TEST_STR_EMPTY, 0);
+	check_charcount('a', TEST_STR_02, 1);
+	check_charcount('o', TEST_STR_00, 2);
+	check_charcount('l', TEST_STR_00, 3);
+	check_charcount('z', "zzzzzzzzzz", 10);
 	PRINT_SEP();
 }

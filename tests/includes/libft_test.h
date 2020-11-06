@@ -6,29 +6,26 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:45 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 19:17:23 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/06 15:21:07 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_TEST_H
 # define LIBFT_TEST_H
 
-# include <stdbool.h>
-# include <stdint.h>
 # include <stdio.h>
-# include <stdlib.h>
-# include <sys/stat.h>
-# include <fcntl.h>
 # include "libft.h"
 
 /*
 ** Test values
 */
 
+# define MIN_ARGC 1
+# define MAX_ARGC 2
 # define DEFAULT_VALUE 0
 # define READ_MODE "r"
 
-# define TEST_SIZE 42
+# define TEST_FT_NUM 42
 # define TEST_NEG -100
 
 # define TEST_STR_EMPTY ""
@@ -43,6 +40,7 @@
 # define TEST_NODE_2 "2ND INPUT"
 # define TEST_NODE_3 "3RD INPUT"
 # define TEST_NODE_4 "4TH INPUT"
+
 
 /*
 ** Output formatting
@@ -79,7 +77,7 @@
 
 # define PRINT_TEST_NUMBER(num)											\
 {																		\
-	printf("%sTest n. %d:%s", COL_BLUE, num, COL_RESET);				\
+	printf("%sTest n. %d:%s\n", COL_BLUE, num, COL_RESET);				\
 }
 
 # define PRINT_TEST_LIST(test_lst)										\
@@ -129,6 +127,12 @@ extern t_result	*g_results;
 */
 
 void			launch_tests(void);
+void			select_test(char *option);
+
+void			launch_conv_tests(void);
+void			launch_ctype_tests(void);
+void			launch_list_tests(void);
+void			launch_str_tests(void);
 
 /*
 ** Conv functions
@@ -140,6 +144,17 @@ void			test_ft_utoa(void);
 void			test_ft_strtod(void);
 
 /*
+** Ctype functions
+*/
+
+void			test_ft_charcount(void);
+void			test_ft_isalnum(void);
+void			test_ft_isalpha(void);
+void			test_ft_isdigit(void);
+
+bool			check_recon_char(int ret, int ft_ret);
+
+/*
 ** List functions
 */
 
@@ -148,6 +163,10 @@ void			test_ft_list_delif(void);
 void			test_ft_list_prepend(void);
 void			test_ft_list_size(void);
 void			test_ft_list_sort(void);
+
+void			ft_list_print(t_node *node);
+int				ft_list_cmp(t_node *test_lst, char **ref);
+int				data_cmp(void *data, void *data_ref);
 
 /*
 ** String functions
@@ -162,13 +181,11 @@ void			test_ft_strlen(void);
 ** Test utils
 */
 
-void			print_test_input(char *input1, char *input2);
+char			*check_params(int argc, char **argv);
 void			check_return(bool condition);
 t_result		*malloc_result(void);
 void			free_result(t_result *to_free);
-void			ft_list_print(t_node *node);
-int				ft_list_cmp(t_node *test_lst, char **ref);
-int				data_cmp(void *data, void *data_ref);
+void			print_test_input(char *input1, char *input2);
 void			print_ref(char **ref, int size);
 
 #endif

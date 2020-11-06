@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 19:22:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/06 14:30:30 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 
 static void	compare_lenghts(char *s)
 {
-	int		strlen_ret;
-	int		ft_ret;
+	size_t	strlen_ret;
+	size_t	ft_ret;
 
 	g_results->test_num++;
 	PRINT_TEST_NUMBER(g_results->test_num);
 	print_test_input(s, NULL);
 	strlen_ret = strlen(s);
 	ft_ret = ft_strlen(s);
-	printf("strlen:\t\t%d\n", strlen_ret);
-	printf("ft_strlen:\t%d\n", ft_ret);
+	printf("strlen:\t\t%ld\n", strlen_ret);
+	printf("ft_strlen:\t%ld\n", ft_ret);
 	check_return(strlen_ret == ft_ret);
 }
 

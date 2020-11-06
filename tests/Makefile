@@ -16,11 +16,18 @@ SRC_FILES	=	main.c
 
 # UTILS #
 
-SRC_FILES	+=	launch_tests.c				\
+SRC_FILES	+=	check_params.c				\
+				check_recon_char.c			\
 				check_return.c				\
 				data_cmp.c					\
 				ft_list_print.c				\
 				ft_list_cmp.c				\
+				launch_tests.c				\
+				select_test.c				\
+				launch_conv_tests.c			\
+				launch_ctype_tests.c		\
+				launch_list_tests.c			\
+				launch_str_tests.c			\
 				print_ref.c					\
 				print_test_input.c			\
 				result_counter.c
@@ -36,9 +43,9 @@ SRC_FILES	+=	test_ft_atoi.c				\
 
 # CTYPE FUNCTIONS #
 
-# SRC_FILES	+=	test_ft_charcount.c		\
-# 				test_ft_isalnum.c		\
-# 				test_ft_isalpha.c		\
+SRC_FILES	+=	test_ft_charcount.c		\
+				test_ft_isalnum.c		\
+				test_ft_isalpha.c		test_ft_isdigit.c		\
 # 				test_ft_isascii.c		\
 # 				test_ft_isblank.c		\
 # 				test_ft_ischarset.c		\
@@ -97,7 +104,8 @@ SRC_DIR		=	src
 OBJ_DIR		=	obj
 
 
-SUB_DIRS	=	utils \
+SUB_DIRS	=	test_launchers \
+				test_utils \
 				ft_conv \
 				ft_ctype \
 				ft_list \

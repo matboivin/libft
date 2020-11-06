@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   launch_list_tests.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 15:20:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/06 15:21:25 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test.h"
 
-t_result	*g_results;
-
-int			main(int argc, char **argv)
+void	launch_list_tests(void)
 {
-	int		ret_val;
-	char	*option;
-
-	ret_val = 0;
-	option = check_params(argc, argv);
-	if (!option)
-		launch_tests();
-	else
-		select_test(option);
-	PRINT_TITLE("END OF TESTS");
-	if (g_results->passed != g_results->total)
-		ret_val = 1;
-	free_result(g_results);
-	return (ret_val);
+	PRINT_TITLE("LIST");
+	test_ft_list_size();
+	test_ft_list_append();
+	test_ft_list_prepend();
+	test_ft_list_delif();
+	test_ft_list_sort();
+	PRINT_TEST_RESULTS(g_results->passed, g_results->total);
 }

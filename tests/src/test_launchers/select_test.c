@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_return.c                                     :+:      :+:    :+:   */
+/*   select_test.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 16:44:33 by mboivin          ###   ########.fr       */
+/*   Created: 2020/11/06 15:15:06 by mboivin           #+#    #+#             */
+/*   Updated: 2020/11/06 15:15:38 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test.h"
 
-/*
-** Assert return values are the same
-*/
-
-void		check_return(bool condition)
+void	select_test(char *option)
 {
-	g_results->total += 1;
-	if (condition)
-	{
-		g_results->passed += 1;
-		PRINT_TEST_OK();
-	}
-	else
-		PRINT_TEST_KO();
+	g_results = malloc_result();
+	PRINT_TITLE("LIBFT TESTS");
+	(void)option;
+	PRINT_TEST_RESULTS(g_results->passed, g_results->total);
 }

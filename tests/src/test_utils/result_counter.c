@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   result_counter.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 15:20:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/06 14:30:05 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft_test.h"
 
-t_result	*g_results;
+/*
+** Result counter
+*/
 
-int			main(int argc, char **argv)
+t_result		*malloc_result(void)
 {
-	int		ret_val;
-	char	*option;
+	t_result	*result;
 
-	ret_val = 0;
-	option = check_params(argc, argv);
-	if (!option)
-		launch_tests();
-	else
-		select_test(option);
-	PRINT_TITLE("END OF TESTS");
-	if (g_results->passed != g_results->total)
-		ret_val = 1;
-	free_result(g_results);
-	return (ret_val);
+	result = malloc(sizeof(t_result));
+	if (!result)
+		exit(EXIT_FAILURE);
+	result->total = 0;
+	result->passed = 0;
+	result->test_num = 0;
+	return (result);
+}
+
+void			free_result(t_result *to_free)
+{
+	free(to_free);
 }

@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   launch_tests.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 15:20:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/06 15:19:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test.h"
 
-t_result	*g_results;
-
-int			main(int argc, char **argv)
+void		launch_tests(void)
 {
-	int		ret_val;
-	char	*option;
-
-	ret_val = 0;
-	option = check_params(argc, argv);
-	if (!option)
-		launch_tests();
-	else
-		select_test(option);
-	PRINT_TITLE("END OF TESTS");
-	if (g_results->passed != g_results->total)
-		ret_val = 1;
-	free_result(g_results);
-	return (ret_val);
+	g_results = malloc_result();
+	PRINT_TITLE("LIBFT TESTS");
+	launch_conv_tests();
+	launch_ctype_tests();
+	launch_str_tests();
+	launch_list_tests();
+	PRINT_TEST_RESULTS(g_results->passed, g_results->total);
 }
