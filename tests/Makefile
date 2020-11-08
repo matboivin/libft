@@ -64,8 +64,8 @@ SRC_FILES	+=	test_ft_charcount.c		\
 
 # INPUT/OUTPUT FUNCTIONS #
 
-SRC_FILES	+=	test_ft_putchar.c		\
-				test_ft_putchar_fd.c	\
+# SRC_FILES	+=	test_ft_putchar.c		\
+# 				test_ft_putchar_fd.c
 
 # LIST FUNCTIONS #
 
@@ -112,7 +112,6 @@ SUB_DIRS	=	test_launchers \
 				test_utils \
 				ft_conv \
 				ft_ctype \
-				ft_io \
 				ft_list \
 				ft_num \
 				ft_str

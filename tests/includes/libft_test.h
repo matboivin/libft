@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:45 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 15:16:45 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 15:36:46 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -179,8 +179,8 @@ bool			check_recon_char(int ret, int ft_ret);
 ** IO functions
 */
 
-void			test_ft_putchar(void);
-void			test_ft_putchar_fd(void);
+// void			test_ft_putchar(void);
+// void			test_ft_putchar_fd(void);
 
 /*
 ** List functions
