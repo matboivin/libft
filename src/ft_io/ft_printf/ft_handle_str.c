@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:50:23 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 19:39:19 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,27 @@ static char	*length_wchar(wchar_t *arg)
 ** returns: The count of printed characters
 */
 
+static char	*ft_strshorten(char *src, int size)
+{
+	char	*result;
+	int		i;
+
+	if (!src || (size < 0))
+		return (NULL);
+	i = 0;
+	result = ft_strnew(size);
+	if (!result)
+		return (NULL);
+	while (src[i] && (i < size))
+	{
+		result[i] = src[i];
+		i++;
+	}
+	result[i] = '\0';
+	ft_strdel(&src);
+	return (result);
+}
+
 int			ft_handle_str(t_spec *spec, va_list ap)
 {
 	int		printed;
@@ -90,7 +111,7 @@ int			ft_handle_str(t_spec *spec, va_list ap)
 	else
 		buffer = ft_strdup(arg);
 	if (spec->prec >= 0 && spec->prec < (int)ft_strlen(buffer))
-		buffer = ft_strrep(buffer, spec->prec);
+		buffer = ft_strshorten(buffer, spec->prec);
 	if (!buffer)
 		return (-1);
 	printed = ft_printf_str(buffer, spec);
