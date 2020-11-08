@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 18:25:29 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 16:25:11 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 13:49:34 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string.h>
 #include "libft_test.h"
 
-static void	compare_strtod(char	*s, double ref)
+static void	compare_strtod(char *s, double ref)
 {
 	double	result;
 	char	*endptr;

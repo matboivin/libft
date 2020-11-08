@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 15:15:06 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 16:35:17 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 13:20:13 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ static t_launcher	g_launcher[] =
 	{ "CONV", &launch_conv_tests },
 	{ "CTYPE", &launch_ctype_tests },
 	{ "LIST", &launch_list_tests },
+	{ "NUM", &launch_num_tests },
 	{ "STRING", &launch_str_tests }
 };
 

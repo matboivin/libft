@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 14:42:48 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 13:40:28 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,11 @@ void		test_ft_strcpy(void)
 	g_results->test_num = 0;
 	PRINT_TEST_NAME("FT_STRCPY");
 	compare_copies(TEST_STR_EMPTY);
-	compare_copies(TEST_STR_00);
-	compare_copies(TEST_STR_01);
-	compare_copies(TEST_STR_02);
-	compare_copies(TEST_STR_03);
-	compare_copies(TEST_STR_04);
-	compare_copies(TEST_STR_05);
+	compare_copies(TEST_STR_HELLO);
+	compare_copies(TEST_STR_HELL);
+	compare_copies(TEST_STR_LOWER_AL);
+	compare_copies(TEST_STR_UPPER_AL);
+	compare_copies(TEST_STR_UPPER_FOO);
+	compare_copies(TEST_STR_LOWER_BAR);
 	PRINT_SEP();
 }

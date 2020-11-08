@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:45 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 16:31:14 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 13:57:27 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,13 @@
 # define MAX_OPTIONS 5
 # define MAX_STR_SIZE 7
 
-# define DEFAULT_VALUE 0
-# define READ_MODE "r"
-
-# define TEST_FT_NUM 42
-# define TEST_NEG -100
-
 # define TEST_STR_EMPTY ""
-# define TEST_STR_00 "Hello World!"
-# define TEST_STR_01 "Hell"
-# define TEST_STR_02 "a     bcd ef"
-# define TEST_STR_03 "A     BCD EF"
-# define TEST_STR_04 "FOO"
-# define TEST_STR_05 "bar"
+# define TEST_STR_HELLO "Hello World!"
+# define TEST_STR_HELL "Hell"
+# define TEST_STR_LOWER_AL "a     bcd ef"
+# define TEST_STR_UPPER_AL "A     BCD EF"
+# define TEST_STR_UPPER_FOO "FOO"
+# define TEST_STR_LOWER_BAR "bar"
 # define TEST_STR_INTMAX "2147483647"
 # define TEST_STR_INTMIN "-2147483648"
 
@@ -145,6 +139,7 @@ void			select_test(char *option);
 void			launch_conv_tests(void);
 void			launch_ctype_tests(void);
 void			launch_list_tests(void);
+void			launch_num_tests(void);
 void			launch_str_tests(void);
 
 /*
@@ -191,6 +186,17 @@ void			test_ft_list_sort(void);
 void			ft_list_print(t_node *node);
 int				ft_list_cmp(t_node *test_lst, char **ref);
 int				data_cmp(void *data, void *data_ref);
+
+/*
+** Numeric functions
+*/
+
+void			test_ft_swap(void);
+void			test_ft_nbrlen(void);
+void			test_ft_nbrlen_base(void);
+void			test_ft_unbrlen_base(void);
+void			test_ft_n_range(void);
+void			test_ft_f_range(void);
 
 /*
 ** String functions

@@ -27,6 +27,7 @@ SRC_FILES	+=	check_params.c				\
 				launch_conv_tests.c			\
 				launch_ctype_tests.c		\
 				launch_list_tests.c			\
+				launch_num_tests.c			\
 				launch_str_tests.c			\
 				print_ref.c					\
 				print_test_input.c			\
@@ -73,12 +74,12 @@ SRC_FILES	+=	test_ft_list_append.c	\
 
 # NUMERIC FUNCTIONS #
 
-# SRC_FILES	+=	test_ft_swap.c			\
-# 				test_ft_nbrlen.c		\
-# 				test_ft_nbrlen_base.c	\
-# 				test_ft_unbrlen_base.c	\
-# 				test_ft_n_range.c		\
-# 				test_ft_f_range.c
+SRC_FILES	+=	test_ft_swap.c			\
+				test_ft_nbrlen.c		\
+				test_ft_nbrlen_base.c	\
+				test_ft_unbrlen_base.c	\
+				test_ft_n_range.c		\
+				test_ft_f_range.c
 
 # STRING #
 

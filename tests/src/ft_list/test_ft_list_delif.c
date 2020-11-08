@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_list_delif.c                           :+:      :+:    :+:   */
+/*   test_ft_list_delif.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/25 16:32:14 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/25 23:31:26 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 13:49:48 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ static void	test_delif_00(void)
 	g_results->test_num++;
 	PRINT_TEST_NUMBER(g_results->test_num);
 	bzero(&test_lst, sizeof(test_lst));
-	ft_list_append(&test_lst, ft_list_new(TEST_STR_04));
-	ft_list_append(&test_lst, ft_list_new(TEST_STR_04));
-	ft_list_append(&test_lst, ft_list_new(TEST_STR_05));
+	ft_list_append(&test_lst, ft_list_new(TEST_STR_UPPER_FOO));
+	ft_list_append(&test_lst, ft_list_new(TEST_STR_UPPER_FOO));
+	ft_list_append(&test_lst, ft_list_new(TEST_STR_LOWER_BAR));
 	PRINT_TEST_LIST(test_lst);
-	printf("Remove if data == \"%s\"\n\n", TEST_STR_05);
+	printf("Remove if data == \"%s\"\n\n", TEST_STR_LOWER_BAR);
 	print_ref(ref, 2);
 	printf("\nft_list_delif result:\n");
-	ft_list_delif(&test_lst, TEST_STR_05);
+	ft_list_delif(&test_lst, TEST_STR_LOWER_BAR);
 	ft_list_print(test_lst);
 	check_return(ft_list_cmp(test_lst, ref) == 0);
 	ft_list_del(&test_lst);

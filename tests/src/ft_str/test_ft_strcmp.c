@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 14:42:29 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 13:49:16 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,11 @@ void		print_warn_cmp(void)
 	printf("%s-> Warning%s\n", COL_YELLOW_B, COL_RESET);
 	printf(
 		"strcmp() return different values for same string comparisons\n\
-		\rThe difference is due to the implementation of strcmp and passed flags.\nAs long as it conforms to the (<0, 0, >0), it is correct.\n\n\
-		\rstrcmp() returns an integer indicating the result of the comparison, as follows:\n\
+		\rThe difference is due to the implementation of strcmp and passed\
+		\r flags.\nAs long as it conforms to the (<0, 0, >0), \
+		\rit is correct.\n\n\
+		\rstrcmp() returns an integer indicating the result of the comparison, \
+		\ras follows:\n\
 		\r  • 0, if the s1 and s2 are equal;\n\
 		\r  • a negative value if s1 is less than s2;\n\
 		\r  • a positive value if s1 is greater than s2\n\n");
@@ -56,27 +59,24 @@ void		print_warn_cmp(void)
 
 void		test_ft_strcmp(void)
 {
-	char	*empty = "";
-	char	*hello = "Hello World!";
-	char	*hell = "Hell";
-	char	*lower_letters = TEST_STR_02;
-	char	*upper_letters = TEST_STR_03;
-	char	*foo = TEST_STR_04;
-	char	*bar = TEST_STR_05;
+	char	*hello;
+	char	*hell;
 
+	hello = "Hello World!";
+	hell = "Hell";
 	g_results->test_num = 0;
 	PRINT_TEST_NAME("FT_STRCMP");
 	print_warn_cmp();
-	compare_strings(empty, empty);
-	compare_strings(hello, empty);
-	compare_strings(empty, hello);
+	compare_strings(TEST_STR_EMPTY, TEST_STR_EMPTY);
+	compare_strings(hello, TEST_STR_EMPTY);
+	compare_strings(TEST_STR_EMPTY, hello);
 	compare_strings(hello, hello);
 	compare_strings(hello, hell);
 	compare_strings(hell, hello);
-	compare_strings(lower_letters, lower_letters);
-	compare_strings(lower_letters, upper_letters);
-	compare_strings(bar, foo);
-	compare_strings(foo, bar);
+	compare_strings(TEST_STR_LOWER_AL, TEST_STR_LOWER_AL);
+	compare_strings(TEST_STR_LOWER_AL, TEST_STR_UPPER_AL);
+	compare_strings(TEST_STR_LOWER_BAR, TEST_STR_UPPER_FOO);
+	compare_strings(TEST_STR_UPPER_FOO, TEST_STR_LOWER_BAR);
 	compare_strings("célestin  le petit coquin", "célestin  le petit coquin");
 	compare_strings("célestin  le petit coquin", "célestin  le peetit coquin");
 	PRINT_SEP();

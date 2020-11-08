@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_isnumeric.c                                :+:      :+:    :+:   */
+/*   launch_num_tests.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 13:40:28 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 13:57:16 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
 #include "libft_test.h"
 
-static void	check_isnumeric(char *s, int expected)
+void	launch_num_tests(void)
 {
-	int		ft_ret;
-
-	g_results->test_num++;
-	PRINT_TEST_NUMBER(g_results->test_num);
-	print_test_input(s, NULL);
-	ft_ret = ft_isnumeric(s);
-	printf("ft_isnumeric:\t\"%d\"\n", ft_ret);
-	check_return(expected == ft_ret);
-}
-
-void		test_ft_isnumeric(void)
-{
-	g_results->test_num = 0;
-	PRINT_TEST_NAME("FT_ISNUMERIC");
-	check_isnumeric(TEST_STR_HELLO, 0);
-	check_isnumeric(TEST_STR_LOWER_BAR, 0);
-	check_isnumeric(TEST_STR_INTMAX, 1);
-	check_isnumeric(TEST_STR_INTMIN, 0);
-	check_isnumeric("42", 1);
-	PRINT_SEP();
+	PRINT_TITLE("NUM");
+	test_ft_swap();
+	test_ft_nbrlen();
+	test_ft_nbrlen_base();
+	test_ft_unbrlen_base();
+	test_ft_n_range();
+	test_ft_f_range();
+	PRINT_TEST_RESULTS(g_results->passed, g_results->total);
 }
