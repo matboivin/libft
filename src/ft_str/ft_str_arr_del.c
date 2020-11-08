@@ -6,11 +6,10 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 21:40:54 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:23:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 21:31:40 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_mem.h"
 #include "libft_str.h"
 
 /*
@@ -24,13 +23,11 @@ void	ft_str_arr_del(char **to_free)
 	int	i;
 
 	i = 0;
-	if (to_free)
+	while (to_free && to_free[i])
 	{
-		while (to_free[i])
-		{
-			ft_memdel((void **)&(to_free[i]));
-			i++;
-		}
-		ft_memdel((void **)&to_free);
+		free(to_free[i]);
+		i++;
 	}
+	if (to_free && to_free[i])
+		free(to_free[i]);
 }
