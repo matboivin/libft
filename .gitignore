@@ -62,4 +62,6 @@ dkms.conf
 # Debug
 .gdb_history
 */leaks.txt
+test_output.txt
 libft_tester
+tests/src/ft_io

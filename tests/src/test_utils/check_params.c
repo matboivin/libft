@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 15:04:14 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 16:09:52 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 15:33:00 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ static bool	check_option(char *tofind)
 	{
 		"CONV",
 		"CTYPE",
+		"IO",
 		"LIST",
 		"NUM",
 		"STRING"

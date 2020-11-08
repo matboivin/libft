@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:45 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 13:57:27 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 15:16:45 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@
 # define MIN_ARGC 1
 # define MAX_ARGC 2
 # define HELP_OPT "-h"
-# define MAX_OPTIONS 5
+# define MAX_OPTIONS 6
 # define MAX_STR_SIZE 7
 
+# define TEST_OUTPUT_FILE "test_output.txt"
 # define TEST_STR_EMPTY ""
 # define TEST_STR_HELLO "Hello World!"
 # define TEST_STR_HELL "Hell"
@@ -138,6 +139,7 @@ void			select_test(char *option);
 
 void			launch_conv_tests(void);
 void			launch_ctype_tests(void);
+void			launch_io_tests(void);
 void			launch_list_tests(void);
 void			launch_num_tests(void);
 void			launch_str_tests(void);
@@ -172,6 +174,13 @@ void			test_ft_tolower(void);
 void			test_ft_toupper(void);
 
 bool			check_recon_char(int ret, int ft_ret);
+
+/*
+** IO functions
+*/
+
+void			test_ft_putchar(void);
+void			test_ft_putchar_fd(void);
 
 /*
 ** List functions

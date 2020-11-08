@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 13:13:23 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 13:45:24 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 15:08:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	check_unbrlen_base(int n, int expected, int base)
 	g_results->test_num++;
 	PRINT_TEST_NUMBER(g_results->test_num);
 	ft_ret = ft_unbrlen_base(n, base);
-	printf("Input number: %d\tin base: %d\n\n", n, base);
+	printf("Input number -> %d\tin base %d\n\n", n, base);
 	printf("Expected result:\t%d\n", expected);
 	printf("ft_unbrlen_base:\t%d\n", ft_ret);
 	check_return(expected == ft_ret);

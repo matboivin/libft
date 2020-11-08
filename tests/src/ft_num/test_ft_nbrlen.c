@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 13:13:23 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 13:44:27 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 15:08:02 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	check_nbrlen(int n, int expected)
 	g_results->test_num++;
 	PRINT_TEST_NUMBER(g_results->test_num);
 	ft_ret = ft_nbrlen(n);
-	printf("Input number: %d\n\n", n);
+	printf("Input number -> %d\n\n", n);
 	printf("Expected result:\t%d\n", expected);
 	printf("ft_nbrlen:\t\t%d\n", ft_ret);
 	check_return(expected == ft_ret);

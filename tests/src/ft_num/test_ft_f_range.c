@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 13:51:41 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 14:00:07 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/08 15:07:38 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	check_f_range(double x, double start, double end, bool expected)
 
 	g_results->test_num++;
 	PRINT_TEST_NUMBER(g_results->test_num);
-	printf("Input: %f <= %f <= %f\n\n", start, x, end);
+	printf("Input -> %f <= %f <= %f\n\n", start, x, end);
 	printf("Expected result:\t%d\n", expected);
 	ft_ret = ft_f_range(x, start, end);
 	printf("ft_f_range:\t\t%d\n", ft_ret);
