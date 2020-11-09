@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:45 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 15:36:46 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/09 16:23:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@
 # define TEST_STR_LOWER_BAR "bar"
 # define TEST_STR_INTMAX "2147483647"
 # define TEST_STR_INTMIN "-2147483648"
+# define TEST_STR_LOREM "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
 
 # define TEST_NODE_1 "1ST INPUT"
 # define TEST_NODE_2 "2ND INPUT"
@@ -211,6 +212,7 @@ void			test_ft_f_range(void);
 ** String functions
 */
 
+void			test_ft_str_arr_len(void);
 void			test_ft_strcmp(void);
 void			test_ft_strcpy(void);
 void			test_ft_strdup(void);

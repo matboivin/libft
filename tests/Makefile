@@ -86,7 +86,8 @@ SRC_FILES	+=	test_ft_swap.c			\
 
 # STRING #
 
-SRC_FILES	+=	test_ft_strcmp.c			\
+SRC_FILES	+=	test_ft_str_arr_len.c		\
+				test_ft_strcmp.c			\
 				test_ft_strcpy.c			\
 				test_ft_strdup.c			\
 				test_ft_strlen.c

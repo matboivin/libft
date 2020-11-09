@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 17:40:55 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 13:40:28 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/09 16:16:49 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ void		test_ft_strdup(void)
 	compare_duplicates(TEST_STR_UPPER_AL);
 	compare_duplicates(TEST_STR_UPPER_FOO);
 	compare_duplicates(TEST_STR_LOWER_BAR);
+	compare_duplicates(TEST_STR_LOREM);
 	PRINT_SEP();
 }
