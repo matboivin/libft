@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:29:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:57:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/09 20:19:19 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@
 **          NULL otherwise
 */
 
-char			*ft_strappend(char *s, char *suffix)
+char		*ft_strappend(char *s, char *suffix)
 {
-	char		*result;
-	size_t		len_s;
-	size_t		len_suffix;
-	size_t		len;
+	char	*result;
+	size_t	len_s;
+	size_t	len_suffix;
+	size_t	len;
 
 	if (!s || !suffix)
 		return (NULL);

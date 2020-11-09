@@ -87,9 +87,18 @@ SRC_FILES	+=	test_ft_swap.c			\
 # STRING #
 
 SRC_FILES	+=	test_ft_str_arr_len.c		\
+				test_ft_strcat.c			\
+				test_ft_strncat.c			\
+				test_ft_strlcat.c			\
 				test_ft_strcmp.c			\
 				test_ft_strcpy.c			\
+				test_ft_strncpy.c			\
+				test_ft_strlcpy.c			\
 				test_ft_strdup.c			\
+				test_ft_strjoin.c			\
+				test_ft_strjoindel.c		\
+				test_ft_strjoindelone.c		\
+				test_ft_join_n_str.c		\
 				test_ft_strlen.c
 
 # ********************************* OBJECTS ********************************** #

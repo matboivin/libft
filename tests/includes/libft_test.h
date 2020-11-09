@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:45 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/09 16:23:23 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/09 21:54:06 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -213,9 +213,18 @@ void			test_ft_f_range(void);
 */
 
 void			test_ft_str_arr_len(void);
+void			test_ft_strcat(void);
+void			test_ft_strncat(void);
+void			test_ft_strlcat(void);
 void			test_ft_strcmp(void);
 void			test_ft_strcpy(void);
+void			test_ft_strncpy(void);
+void			test_ft_strlcpy(void);
 void			test_ft_strdup(void);
+void			test_ft_strjoin(void);
+void			test_ft_strjoindel(void);
+void			test_ft_strjoindelone(void);
+void			test_ft_join_n_str(void);
 void			test_ft_strlen(void);
 
 /*

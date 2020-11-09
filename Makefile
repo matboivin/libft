@@ -145,6 +145,7 @@ SRC_FILES	+=	ft_split.c			\
 				ft_strjoin.c		\
 				ft_strjoindel.c		\
 				ft_strjoindelone.c	\
+				ft_join_n_str.c		\
 				ft_strlcat.c		\
 				ft_strlcpy.c		\
 				ft_strlen.c			\

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 19:46:58 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/09 21:53:21 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strjoindel(char *s1, char *s2);
-char	*ft_strjoindelone(char *s1, char *s2);
+char	*ft_strjoindelone(char *s1, const char *s2);
+char	*ft_join_n_str(int count, ...);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
@@ -39,10 +40,10 @@ char	*ft_strmap(const char *s, char (*f)(char));
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char	*ft_strncat(char *s1, const char *s2, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-char	*ft_strncpy(char *dst, const char *src, size_t len);
+char	*ft_strncpy(char *dst, const char *src, size_t n);
 int		ft_strnequ(const char *s1, const char *s2, size_t n);
 char	*ft_strnew(size_t size);
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 char	*ft_strprepend(const char *prefix, char *s);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strreplace(char *s1, char *s2);
