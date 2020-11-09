@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 21:40:54 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 22:04:41 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/09 15:56:01 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,16 @@ void	ft_str_arr_del(char **to_free)
 {
 	int	i;
 
-	i = 0;
-	while (to_free && to_free[i])
-	{
-		ft_strdel(&to_free[i]);
-		i++;
-	}
 	if (to_free)
-		ft_strdel(to_free);
+	{
+		i = 0;
+		while (to_free && to_free[i])
+		{
+			free(to_free[i]);
+			i++;
+		}
+		if (to_free && to_free[i])
+			free(to_free[i]);
+		free(to_free);
+	}
 }

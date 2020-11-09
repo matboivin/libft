@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:34 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:45:16 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/09 15:56:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@ void		*ft_calloc(size_t count, size_t size)
 {
 	void	*result;
 
+	if ((count == 0) || (size == 0))
+		return (NULL);
 	result = malloc(count * size);
 	if (!result)
 		return (NULL);
-	result = ft_memset(result, 0, count * size);
-	return (result);
+	return (ft_memset(result, 0, count * size));
 }
