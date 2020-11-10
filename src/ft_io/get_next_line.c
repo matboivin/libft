@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:12:56 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/10 16:56:59 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** This function checks for a newline character in the content pointed to by
 ** store and updates the content of store and line
 **
-** store: Read content
+** store: Saved read content
 ** line: The value of what has been read
 **
 ** returns: true if a newline character has been found
@@ -28,18 +28,18 @@
 
 static bool		ft_is_line(char **store, char **line)
 {
-	char		*found;
-	size_t		end;
-	size_t		len;
+	char		*newline;
+	size_t		line_end;
+	size_t		store_start;
 
-	len = 0;
-	found = NULL;
-	if ((found = ft_strchr(*store, NEWLINE)))
+	store_start = 0;
+	newline = NULL;
+	if ((newline = ft_strchr(*store, NEWLINE)))
 	{
-		end = found - *store;
-		len = ft_strlen(found);
-		*line = ft_substr(*store, 0, end);
-		ft_strlcpy(*store, (found + 1), (len + 1));
+		line_end = newline - *store;
+		store_start = ft_strlen(newline);
+		*line = ft_substr(*store, 0, line_end);
+		ft_strlcpy(*store, (newline + 1), (store_start + 1));
 		return (true);
 	}
 	return (false);

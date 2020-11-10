@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:11:38 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/10 16:53:59 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ typedef struct	s_file
 int				ft_fileno(t_file *stream);
 int				ft_fgetc(t_file *stream);
 int				get_next_line(int fd, char **line);
+char			*ft_readline(const char *prompt);
 
 void			ft_putchar(char c);
 void			ft_putchar_fd(char c, int fd);

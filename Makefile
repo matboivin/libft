@@ -61,6 +61,7 @@ SRC_FILES	+=	ft_fgetc.c			\
 				ft_putnbr_fd.c		\
 				ft_putstr.c			\
 				ft_putstr_fd.c		\
+				ft_readline.c		\
 				get_next_line.c
 
 # ft_printf #
