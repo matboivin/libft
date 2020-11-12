@@ -1,10 +1,13 @@
+# New 42 Norminette is beta
+# Workflow will then continue on error
+
 name: 42 Norm
 
 on:
   push:
-    branches: [ test/norme ]
+    branches: [ main ]
   pull_request:
-    branches: [ test/norme ]
+    branches: [ main ]
 
 jobs:
   build:

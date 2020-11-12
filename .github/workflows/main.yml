@@ -2,9 +2,9 @@ name: libft tester
 
 on:
   push:
-    branches: [ test/norme ]
+    branches: [ main ]
   pull_request:
-    branches: [ test/norme ]
+    branches: [ main ]
 
 jobs:
   build:
