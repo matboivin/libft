@@ -1,0 +1,4 @@
+certifi==2020.11.8
+norminette==2.51
+sentry-sdk==0.19.2
+urllib3==1.26.1
