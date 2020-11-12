@@ -17,12 +17,14 @@ jobs:
         run: |
           sudo apt-get install -y valgrind
           valgrind -v --leak-check=full --show-leak-kinds=all ./tests/libft_tester
-      - name: Norminette
+      - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.7'
+      - name: Install dependencies
         run: |
           git clone https://github.com/42School/norminette.git
           cd norminette && pip3 install -r requirements.txt sentry-sdk
           python3 setup.py install
-          cd .. && norminette
+      - name: Norme
+        run: cd .. && norminette
