@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [ test/norme ]
 
-continue-on-error: true
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,3 +22,4 @@ jobs:
           python3 setup.py install
       - name: Check 42 Norm
         run: cd .. && norminette
+        continue-on-error: true
