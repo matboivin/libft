@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/15 19:14:43 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/15 19:36:27 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int		ft_strnequ(const char *s1, const char *s2, size_t n);
 char	*ft_strnew(size_t size);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 char	*ft_strprepend(const char *prefix, char *s);
-char	*ft_strpushc(char *s, char *c);
+char	*ft_strpushc(char *s, char **c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strreplace(char *s1, char *s2);
 char	*ft_strrev(char *s);
