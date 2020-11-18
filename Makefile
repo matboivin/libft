@@ -90,18 +90,13 @@ SRC_FILES	+=	ft_list_append.c	\
 				ft_list_at.c		\
 				ft_list_del.c		\
 				ft_list_delif.c		\
-				ft_list_delone.c	\
 				ft_list_find.c		\
 				ft_list_iter.c		\
 				ft_list_iterif.c	\
 				ft_list_last.c		\
-				ft_list_map.c		\
 				ft_list_new.c		\
 				ft_list_prepend.c	\
-				ft_list_rev.c		\
-				ft_list_size.c		\
-				ft_list_sort.c		\
-				ft_list_swap.c
+				ft_list_size.c
 
 # MEMORY FUNCTIONS #
 
