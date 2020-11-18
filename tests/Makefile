@@ -72,8 +72,7 @@ SRC_FILES	+=	test_ft_charcount.c		\
 SRC_FILES	+=	test_ft_list_append.c	\
 				test_ft_list_delif.c	\
 				test_ft_list_prepend.c	\
-				test_ft_list_size.c		\
-				test_ft_list_sort.c
+				test_ft_list_size.c
 
 # NUMERIC FUNCTIONS #
 
@@ -86,7 +85,8 @@ SRC_FILES	+=	test_ft_swap.c			\
 
 # STRING #
 
-SRC_FILES	+=	test_ft_str_arr_len.c		\
+SRC_FILES	+=	test_ft_split.c				\
+				test_ft_str_arr_len.c		\
 				test_ft_strcat.c			\
 				test_ft_strncat.c			\
 				test_ft_strlcat.c			\
@@ -99,7 +99,8 @@ SRC_FILES	+=	test_ft_str_arr_len.c		\
 				test_ft_strjoindel.c		\
 				test_ft_strjoindelone.c		\
 				test_ft_join_n_str.c		\
-				test_ft_strlen.c
+				test_ft_strlen.c			\
+				test_ft_strtok.c
 
 # ********************************* OBJECTS ********************************** #
 

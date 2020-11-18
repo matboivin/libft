@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/16 17:40:55 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/09 21:56:56 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/18 18:53:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void	compare_n_join(int count, char *s1, char *s2, char *s3, char *ref)
 void		test_ft_join_n_str(void)
 {
 	g_results->test_num = 0;
-	PRINT_TEST_NAME("ft_join_n_str");
+	PRINT_TEST_NAME("FT_JOIN_N_STR");
 	compare_n_join(3, "Hello", " ", "World!","Hello World!");
 	compare_n_join(3, "key", "=", "value", "key=value");
 	PRINT_SEP();

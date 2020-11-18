@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:20:34 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/18 19:58:07 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,58 +17,25 @@
 ** This function computes the number of strings to split
 **
 ** s: The total string to be split
-** c: The delimiter character
+** delim: The delimiter character
 **
 ** returns: The number of substrings delimited by c
 */
 
-static size_t	ft_count_strings(const char *s, char c)
+static size_t	ft_count_strings(const char *s, char delim)
 {
 	size_t		i;
-	size_t		j;
+	size_t		count;
 
 	i = 0;
-	j = 0;
+	count = 0;
 	while (s[i])
 	{
-		if ((s[i] != c) && ((i == 0) || (s[i - 1] == c)))
-			j++;
+		if ((s[i] != delim) && ((i == 0) || (s[i - 1] == delim)))
+			count++;
 		i++;
 	}
-	return (j);
-}
-
-/*
-** This function allocates and copies a splitted string
-**
-** s: The total string to be split
-** i: The index of the last non-delimiter character in s
-** c_index: The index of the last delimiter character in s
-**
-** returns: The splitted string
-*/
-
-static char		*ft_get_strings(const char *s, size_t i, size_t c_index)
-{
-	size_t		j;
-	size_t		len;
-	char		*result;
-
-	if (c_index > i)
-		return (0);
-	j = 0;
-	len = i - c_index;
-	result = ft_strnew(len);
-	if (!result)
-		return (NULL);
-	while (j < len)
-	{
-		result[j] = s[c_index];
-		c_index++;
-		j++;
-	}
-	result[j] = '\0';
-	return (result);
+	return (count);
 }
 
 /*
@@ -85,28 +52,21 @@ static char		*ft_get_strings(const char *s, size_t i, size_t c_index)
 char			**ft_split(const char *s, char c)
 {
 	size_t		str_count;
-	size_t		c_index;
 	size_t		i;
-	size_t		j;
 	char		**result;
+	char		*delim;
 
 	if (!s)
 		return (NULL);
 	str_count = ft_count_strings(s, c);
 	i = 0;
-	j = 0;
 	if (!(result = malloc((str_count + 1) * sizeof(char *))))
 		return (NULL);
-	while (s[i] && (j < str_count))
-	{
-		while (s[i] && (s[i] == c))
-			i++;
-		c_index = i;
-		while (s[i] && (s[i] != c))
-			i++;
-		result[j] = ft_get_strings(s, i, c_index);
-		j++;
-	}
-	result[j] = NULL;
+	delim = ft_strnew(1);
+	delim[0] = c;
+	result[i] = ft_strtok((char *)s, delim);
+	while (result[i] && i++ < str_count)
+		result[i] = ft_strtok(NULL, delim);
+	ft_strdel(&delim);
 	return (result);
 }

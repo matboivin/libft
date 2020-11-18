@@ -159,6 +159,7 @@ SRC_FILES	+=	ft_split.c			\
 				ft_strreplace.c		\
 				ft_strrev.c			\
 				ft_strstr.c			\
+				ft_strtok.c			\
 				ft_strtrim.c		\
 				ft_substr.c			\
 				ft_strupcase.c		\
