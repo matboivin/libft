@@ -154,7 +154,6 @@ SRC_FILES	+=	ft_split.c			\
 				ft_strnew.c			\
 				ft_strnstr.c		\
 				ft_strprepend.c		\
-				ft_strpushc.c		\
 				ft_strrchr.c		\
 				ft_strreplace.c		\
 				ft_strrev.c			\
