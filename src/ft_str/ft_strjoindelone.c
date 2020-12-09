@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/09 20:49:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/12/09 16:18:32 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,12 @@ char		*ft_strjoindelone(char *s1, const char *s2)
 	char	*result;
 	size_t	len_s1;
 	size_t	len_s2;
-	size_t	len;
 
-	len_s1 = 0;
+	if (!s1 && !s2)
+		return (NULL);
+	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
-	if (s1)
-		len_s1 = ft_strlen(s1);
-	len = len_s1 + len_s2;
-	result = ft_strnew(len);
+	result = ft_strnew(len_s1 + len_s2);
 	if (!result)
 		return (NULL);
 	if (s1)
@@ -43,6 +41,7 @@ char		*ft_strjoindelone(char *s1, const char *s2)
 		ft_strlcpy(result, s1, (len_s1 + 1));
 		ft_strdel(&s1);
 	}
-	ft_strlcpy(result + len_s1, s2, (len_s2 + 1));
+	if (s2)
+		ft_strlcpy(result + len_s1, s2, (len_s2 + 1));
 	return (result);
 }
