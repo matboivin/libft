@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:45 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/18 19:43:44 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/12/09 17:57:50 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -228,6 +228,7 @@ void			test_ft_strjoindelone(void);
 void			test_ft_join_n_str(void);
 void			test_ft_strlen(void);
 void			test_ft_strtok(void);
+void			test_ft_strtrim(void);
 
 /*
 ** Test utils
