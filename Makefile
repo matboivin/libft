@@ -125,7 +125,8 @@ SRC_FILES	+=	ft_swap.c			\
 
 # STRING FUNCTIONS #
 
-SRC_FILES	+=	ft_split.c			\
+SRC_FILES	+=	ft_char_to_str.c	\
+				ft_split.c			\
 				ft_str_arr_del.c	\
 				ft_str_arr_len.c	\
 				ft_strappend.c		\
