@@ -6,14 +6,42 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 15:33:20 by mboivin           #+#    #+#             */
-/*   Updated: 2020/12/12 15:42:21 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/11/10 17:01:03 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdbool.h>
 #include "libft_define.h"
-#include "libft_io.h"
-#include "libft_printf.h"
 #include "libft_str.h"
+#include "libft_printf.h"
+
+/*
+** This function checks for a newline character in the content pointed to by
+** line. If a newline is found, line is updated and true is returned.
+**
+** line: The value of what has been read
+**
+** returns: true if a newline character has been found
+**          false otherwise
+*/
+
+static bool	ft_is_line(char **line)
+{
+	char	*newline;
+	char	*sub_string;
+	size_t	line_end;
+
+	newline = NULL;
+	if ((newline = ft_strchr(*line, NEWLINE)))
+	{
+		line_end = newline - *line;
+		sub_string = ft_substr(*line, 0, line_end);
+		*line = ft_strreplace(*line, sub_string);
+		ft_strdel(&sub_string);
+		return (true);
+	}
+	return (false);
+}
 
 /*
 ** This function reads a line from the terminal and return it, using prompt as
@@ -30,19 +58,22 @@
 
 char		*ft_readline(const char *prompt)
 {
-	char	c;
+	int		bytes_read;
+	char	buffer[BUFFER_SIZE + 1];
 	char	*line;
 
+	if (BUFFER_SIZE < 1)
+		return (NULL);
 	line = NULL;
 	if (prompt)
 		ft_printf("%s", prompt);
-	while ((c = ft_getchar()) != FT_EOF)
+	while ((bytes_read = read(STDIN_FILENO, buffer, BUFFER_SIZE)) > 0)
 	{
-		if (c == NEWLINE)
-			break ;
-		line = ft_char_to_str(line, c);
-		if (!line)
+		buffer[bytes_read] = '\0';
+		if (!(line = ft_strjoindelone(line, buffer)))
 			return (NULL);
+		if (ft_is_line(&line))
+			return (line);
 	}
 	return (line);
 }
