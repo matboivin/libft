@@ -52,6 +52,7 @@ SRC_FILES	+=	ft_charcount.c		\
 # INPUT/OUTPUT FUNCTIONS #
 
 SRC_FILES	+=	ft_fgetc.c			\
+				ft_getchar.c		\
 				ft_fileno.c			\
 				ft_putchar.c		\
 				ft_putchar_fd.c		\
