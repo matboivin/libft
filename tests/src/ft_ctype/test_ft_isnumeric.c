@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 13:40:28 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/12/22 19:26:52 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,12 @@ void		test_ft_isnumeric(void)
 	check_isnumeric(TEST_STR_HELLO, 0);
 	check_isnumeric(TEST_STR_LOWER_BAR, 0);
 	check_isnumeric(TEST_STR_INTMAX, 1);
-	check_isnumeric(TEST_STR_INTMIN, 0);
+	check_isnumeric(TEST_STR_INTMIN, 1);
 	check_isnumeric("42", 1);
+	check_isnumeric("1337", 1);
+	check_isnumeric("-1", 1);
+	check_isnumeric("+3", 1);
+	check_isnumeric("-", 0);
+	check_isnumeric("+", 0);
 	PRINT_SEP();
 }
