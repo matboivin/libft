@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 15:33:20 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/10 17:01:03 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/12/28 00:34:58 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ static bool	ft_is_line(char **line)
 	size_t	line_end;
 
 	newline = NULL;
-	if ((newline = ft_strchr(*line, NEWLINE)))
+	newline = ft_strchr(*line, NEWLINE);
+	if (newline != NULL)
 	{
 		line_end = newline - *line;
 		sub_string = ft_substr(*line, 0, line_end);
