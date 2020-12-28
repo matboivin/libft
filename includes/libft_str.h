@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/12/12 15:43:45 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/12/28 03:25:52 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strreplace(char *s1, char *s2);
 char	*ft_strrev(char *s);
 char	*ft_strstr(const char *s, const char *needle);
+void	ft_strswap(char **a, char **b);
 char	*ft_strtok(char *str, const char *delim);
 char	*ft_strtrim(const char *s, const char *set);
 char	*ft_substr(const char *s, unsigned int start, size_t len);

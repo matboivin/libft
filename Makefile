@@ -160,6 +160,7 @@ SRC_FILES	+=	ft_char_to_str.c	\
 				ft_strreplace.c		\
 				ft_strrev.c			\
 				ft_strstr.c			\
+				ft_strswap.c		\
 				ft_strtok.c			\
 				ft_strtrim.c		\
 				ft_substr.c			\
