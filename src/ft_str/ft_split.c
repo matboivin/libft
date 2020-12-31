@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/18 19:58:07 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/12/31 03:33:41 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,8 @@ char			**ft_split(const char *s, char c)
 		return (NULL);
 	str_count = ft_count_strings(s, c);
 	i = 0;
-	if (!(result = malloc((str_count + 1) * sizeof(char *))))
+	result = malloc((str_count + 1) * sizeof(char *));
+	if (!result)
 		return (NULL);
 	delim = ft_strnew(1);
 	delim[0] = c;

@@ -6,11 +6,12 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 13:12:29 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/24 00:04:30 by mboivin          ###   ########.fr       */
+/*   Updated: 2020/12/31 03:40:21 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_mem.h"
+#include "libft_str.h"
 #include "libft_stack.h"
 
 /*
@@ -22,11 +23,11 @@
 ** free_stack()     :  Free function
 */
 
-void		create_stack(t_stack *stack, size_t capacity)
+void		create_stack(t_stack *stack, size_t p_capacity)
 {
-	stack->capacity = capacity;
+	stack->capacity = p_capacity;
 	stack->top = DEFAULT_TOP_VAL;
-	stack->content = ft_calloc(capacity, sizeof(int));
+	stack->content = ft_calloc((p_capacity + 1), sizeof(char *));
 }
 
 t_stack		*malloc_stack(size_t capacity)
@@ -42,13 +43,15 @@ t_stack		*malloc_stack(size_t capacity)
 
 void		destroy_stack(t_stack to_destroy)
 {
-	to_destroy.capacity = 0;
-	to_destroy.top = DEFAULT_TOP_VAL;
-	free(to_destroy.content);
+	ft_str_arr_del(to_destroy.content);
 }
 
-void		free_stack(t_stack *to_free)
+void		free_stack(t_stack **to_free)
 {
-	destroy_stack(*to_free);
-	free(to_free);
+	if (to_free)
+	{
+		destroy_stack(**to_free);
+		free(*to_free);
+		*to_free = NULL;
+	}
 }
