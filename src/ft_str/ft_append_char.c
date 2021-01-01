@@ -6,10 +6,11 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/01 21:29:54 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/01 21:40:16 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/01 23:05:25 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdbool.h>
 #include "libft_str.h"
 
 /*
@@ -22,7 +23,7 @@
 **          NULL otherwise
 */
 
-char		*ft_append_char(char *s, char *c)
+char		*ft_append_char(char *s, char *c, bool replace)
 {
 	char	*result;
 	size_t	len;
@@ -34,7 +35,11 @@ char		*ft_append_char(char *s, char *c)
 	if (!result)
 		return (NULL);
 	if (s)
+	{
 		ft_strlcpy(result, s, (len + 1));
+		if (replace)
+			ft_strdel(&s);
+	}
 	ft_strlcpy(result + len, c, 2);
 	return (result);
 }

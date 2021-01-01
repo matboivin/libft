@@ -6,12 +6,13 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/01 21:44:28 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/01 23:05:00 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_STR_H
 # define LIBFT_STR_H
+# include <stdbool.h>
 # include <stdlib.h>
 
 char	**ft_split(const char *s, char c);
@@ -55,6 +56,6 @@ char	*ft_strtrim(const char *s, const char *set);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strupcase(char *s);
 char	*ft_strlowcase(char *s);
-char	*ft_append_char(char *s, char *c);
+char	*ft_append_char(char *s, char *c, bool replace);
 
 #endif

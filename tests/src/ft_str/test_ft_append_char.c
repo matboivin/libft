@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/01 21:38:47 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/01 23:05:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	compare_append(char *s, char *c, char *ref)
 	g_results->test_num++;
 	PRINT_TEST_NUMBER(g_results->test_num);
 	printf("Input -> \"%s\" + \"%s\"\n\n", s, c);
-	ft_ret = ft_append_char(s, c);
+	ft_ret = ft_append_char(s, c, false);
 	printf("Expected result:\t\"%s\"\n", ref);
 	printf("ft_append_char:\t\t\"%s\"\n", ft_ret);
 	cmp_str = strcmp(ref, ft_ret);
