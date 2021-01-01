@@ -165,7 +165,8 @@ SRC_FILES	+=	ft_char_to_str.c	\
 				ft_strtrim.c		\
 				ft_substr.c			\
 				ft_strupcase.c		\
-				ft_strlowcase.c
+				ft_strlowcase.c		\
+				ft_append_char.c
 
 # STACK FUNCTIONS #
 

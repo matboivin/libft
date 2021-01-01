@@ -101,7 +101,8 @@ SRC_FILES	+=	test_ft_split.c				\
 				test_ft_join_n_str.c		\
 				test_ft_strlen.c			\
 				test_ft_strtok.c			\
-				test_ft_strtrim.c
+				test_ft_strtrim.c			\
+				test_ft_append_char.c
 
 # ********************************* OBJECTS ********************************** #
 
