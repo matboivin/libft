@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 12:41:45 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:35:03 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:48:51 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **          0 otherwise
 */
 
-char		*ft_atos(char c)
+char	*ft_atos(char c)
 {
 	char	*result;
 

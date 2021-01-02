@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/25 21:35:39 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:48:31 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@
 **          0 otherwise
 */
 
-int			ft_atoi(const char *s)
+int	ft_atoi(const char *s)
 {
-	int		result;
-	int		sign;
+	int	result;
+	int	sign;
 
 	result = 0;
 	sign = 1;

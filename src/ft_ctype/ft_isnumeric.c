@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/21 00:23:51 by mboivin           #+#    #+#             */
-/*   Updated: 2020/12/22 19:27:19 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:52:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,21 @@
 **          0 otherwise
 */
 
-int			ft_isnumeric(char *s)
+int	ft_isnumeric(char *s)
 {
 	size_t	i;
-	int		retval;
+	int		ret;
 
 	i = 0;
-	retval = 0;
+	ret = 1;
 	if ((s[i] == PLUS) || (s[i] == MINUS))
 		i++;
-	while (s[i])
+	while (s[i] && ret)
 	{
-		if (!(retval = ft_isdigit(s[i])))
+		ret = ft_isdigit(s[i]);
+		if (!ret)
 			break ;
 		i++;
 	}
-	return (retval);
+	return (ret);
 }

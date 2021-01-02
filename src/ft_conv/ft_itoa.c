@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:07:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 18:46:59 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:49:05 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 static int64_t	digit_to_char(int64_t n, int base)
 {
-	int64_t		rem;
+	int64_t	rem;
 
 	rem = n % base;
 	if (rem < DEC_BASE)
@@ -33,7 +33,7 @@ static int64_t	digit_to_char(int64_t n, int base)
 ** This function checks whether n is negative
 */
 
-static bool		ft_is_neg(int n, int64_t *nbr, size_t *sign)
+static bool	ft_is_neg(int n, int64_t *nbr, size_t *sign)
 {
 	*sign = 0;
 	*nbr = n;
@@ -58,12 +58,12 @@ static bool		ft_is_neg(int n, int64_t *nbr, size_t *sign)
 **          NULL otherwise
 */
 
-char			*ft_itoa(int n, char *output, int base)
+char	*ft_itoa(int n, char *output, int base)
 {
-	int64_t		nbr;
-	size_t		nbr_len;
-	size_t		sign;
-	bool		is_neg;
+	int64_t	nbr;
+	size_t	nbr_len;
+	size_t	sign;
+	bool	is_neg;
 
 	if ((base < BINARY_BASE) || (base > HEX_BASE))
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 22:10:09 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 14:36:15 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:51:06 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **          0 otherwise
 */
 
-int		ft_isupper(int c)
+int	ft_isupper(int c)
 {
 	return (c >= 'A' && c <= 'Z');
 }

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 14:09:32 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:00:07 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:50:24 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** returns: The count of occurences
 */
 
-int		ft_charcount(char c, char *s)
+int	ft_charcount(char c, char *s)
 {
 	int	i;
 	int	count;

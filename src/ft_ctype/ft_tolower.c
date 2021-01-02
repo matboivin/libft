@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:24:21 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:00:16 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:51:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **          Otherwise the argument is returned unchanged
 */
 
-int		ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:43:41 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:48:44 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** This function converts c to int
 */
 
-static int		char_to_digit(int c)
+static int	char_to_digit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (c - ZERO);
@@ -39,7 +39,7 @@ static int		char_to_digit(int c)
 **          false otherwise
 */
 
-static bool		is_in_base(int c, int base)
+static bool	is_in_base(int c, int base)
 {
 	const char	*lower_hex = "0123456789abcdef";
 	int			i;
@@ -64,10 +64,10 @@ static bool		is_in_base(int c, int base)
 **          0 otherwise
 */
 
-int				ft_atoi_dec_base(const char *s, int from_base)
+int	ft_atoi_dec_base(const char *s, int from_base)
 {
-	int			result;
-	int			sign;
+	int	result;
+	int	sign;
 
 	if ((from_base < BINARY_BASE) || (from_base > HEX_BASE))
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 10:22:44 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 14:31:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:50:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **          0 otherwise
 */
 
-int		ft_isblank(int c)
+int	ft_isblank(int c)
 {
 	return ((c == ' ') || (c == '\t'));
 }

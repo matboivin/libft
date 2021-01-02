@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 18:44:40 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 15:54:46 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:49:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 static int64_t	digit_to_char(int64_t n, int base)
 {
-	int64_t		rem;
+	int64_t	rem;
 
 	rem = n % base;
 	if (rem < DEC_BASE)
@@ -41,10 +41,10 @@ static int64_t	digit_to_char(int64_t n, int base)
 **          NULL otherwise
 */
 
-char			*ft_utoa(int64_t n, char *output, int base)
+char	*ft_utoa(int64_t n, char *output, int base)
 {
-	int64_t		nbr;
-	size_t		n_len;
+	int64_t	nbr;
+	size_t	n_len;
 
 	if ((base < BINARY_BASE) || (base > HEX_BASE))
 		return (NULL);

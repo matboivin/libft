@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:24:29 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:00:19 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:51:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **          Otherwise the argument is returned unchanged
 */
 
-int		ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c -= 32;

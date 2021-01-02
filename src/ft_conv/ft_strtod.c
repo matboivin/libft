@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/25 21:35:39 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:49:15 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 
 static double	decimal_val(const char *s, char **endptr)
 {
-	int			i;
-	double		result;
-	double		val;
+	int		i;
+	double	result;
+	double	val;
 
 	i = 0;
 	result = 0.0;
@@ -48,11 +48,11 @@ static double	decimal_val(const char *s, char **endptr)
 **          0 otherwise
 */
 
-double			ft_strtod(const char *s, char **endptr)
+double	ft_strtod(const char *s, char **endptr)
 {
-	int			i;
-	double		result;
-	int			sign;
+	int		i;
+	double	result;
+	int		sign;
 
 	i = 0;
 	result = 0.0;
