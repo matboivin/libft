@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:17:11 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:27:07 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,6 @@ int	get_next_line(int fd, char **line)
 	}
 	if (ft_is_line(&store, line))
 		return (1);
-	handle_remainder(&store, &line, &bytes_read);
+	handle_remainder(&store, line, &bytes_read);
 	return (bytes_read);
 }
