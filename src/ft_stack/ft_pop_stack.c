@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 13:36:22 by mboivin           #+#    #+#             */
-/*   Updated: 2020/12/31 03:39:05 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:21:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** This function pops out the object at the top of the stack
 */
 
-char		*ft_pop_stack(t_stack *stack)
+char	*ft_pop_stack(t_stack *stack)
 {
 	char	*top_obj;
 

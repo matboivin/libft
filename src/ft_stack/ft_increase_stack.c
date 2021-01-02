@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 13:36:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/12/31 03:35:39 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:21:58 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	ft_increase_stack(t_stack *stack)
 {
 	stack->capacity *= 2;
 	stack->content = ft_reallocarray(
-		stack->content, stack->capacity, sizeof(char *));
+			stack->content, stack->capacity, sizeof(char *));
 }
