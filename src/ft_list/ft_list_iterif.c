@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 21:40:44 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:05:02 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:19:04 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** data_ref: The data to be compared to the content of each node
 */
 
-void		ft_list_iterif(t_node *node, void (*f)(void *), void *data_ref)
+void	ft_list_iterif(t_node *node, void (*f)(void *), void *data_ref)
 {
 	if (!node || !f || !data_ref)
 		return ;

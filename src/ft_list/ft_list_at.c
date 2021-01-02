@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:23:57 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:03:47 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:18:47 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **          NULL otherwise
 */
 
-t_node				*ft_list_at(t_node *head, unsigned int n)
+t_node	*ft_list_at(t_node *head, unsigned int n)
 {
 	unsigned int	i;
 

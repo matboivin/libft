@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:37:24 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:04:49 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:19:01 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 ** f: The address of the function to iterate on the list
 */
 
-void		ft_list_iter(t_node *node, void (*f)(void *))
+void	ft_list_iter(t_node *node, void (*f)(void *))
 {
 	if (!node || !f)
 		return ;

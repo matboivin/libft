@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:38:18 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:05:14 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:19:07 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 ** returns: The last node of the list
 */
 
-t_node		*ft_list_last(t_node *node)
+t_node	*ft_list_last(t_node *node)
 {
 	if (!node)
 		return (NULL);

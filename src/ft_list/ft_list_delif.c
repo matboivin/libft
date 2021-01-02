@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 22:08:20 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 17:55:21 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:18:54 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 ** data_ref: The data to be compared to the content
 */
 
-void		ft_list_delif(t_node **head, void *data_ref)
+void	ft_list_delif(t_node **head, void *data_ref)
 {
 	t_node	*cursor;
 	t_node	*to_free;

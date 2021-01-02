@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:41:33 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:03:26 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:18:43 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** new_node: Pointer to the node to add to the list
 */
 
-void		ft_list_append(t_node **head, t_node *new_node)
+void	ft_list_append(t_node **head, t_node *new_node)
 {
 	t_node	*cursor;
 

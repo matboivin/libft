@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 17:33:28 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:05:37 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:19:11 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 ** returns: The new node
 */
 
-t_node		*ft_list_new(void *p_content)
+t_node	*ft_list_new(void *p_content)
 {
 	t_node	*result;
 

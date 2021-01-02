@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 18:17:57 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:06:03 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:19:18 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 ** returns: The length of the list
 */
 
-int			ft_list_size(t_node *head)
+int	ft_list_size(t_node *head)
 {
-	int		size;
+	int	size;
 
 	size = 0;
 	if (head)

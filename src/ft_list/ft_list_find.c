@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 21:50:45 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:04:35 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:18:58 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **          NULL otherwise
 */
 
-t_node		*ft_list_find(t_node *head, void *data_ref)
+t_node	*ft_list_find(t_node *head, void *data_ref)
 {
 	if (head && data_ref)
 	{

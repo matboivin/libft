@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:46:51 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 18:46:04 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:18:51 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 ** node: Pointer to a node
 */
 
-void		ft_list_del(t_node **node)
+void	ft_list_del(t_node **node)
 {
 	t_node	*cursor;
 	t_node	*next_node;
