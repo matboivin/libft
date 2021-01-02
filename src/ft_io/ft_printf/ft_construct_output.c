@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 12:33:13 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:48:59 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:54:45 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@
 ** returns: The count of printed characters
 */
 
-int			ft_construct_output(int fd, const char *format, va_list ap)
+int	ft_construct_output(int fd, const char *format, va_list ap)
 {
-	int		printed;
+	int	printed;
 
 	if (!format)
 		return (0);

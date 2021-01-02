@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 15:26:23 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:55:24 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 ** returns: The count of printed characters
 */
 
-static int		ft_printf_ptr(char *s, t_spec *spec)
+static int	ft_printf_ptr(char *s, t_spec *spec)
 {
-	int			printed;
+	int	printed;
 
 	printed = 0;
 	if (!(spec->flag & LEFTALIGN) && spec->width > (int)ft_strlen(s))
@@ -49,7 +49,7 @@ static int		ft_printf_ptr(char *s, t_spec *spec)
 ** returns: The count of printed characters
 */
 
-int				ft_handle_ptr(t_spec *spec, va_list ap)
+int	ft_handle_ptr(t_spec *spec, va_list ap)
 {
 	int			printed;
 	uint64_t	arg;

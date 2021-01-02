@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/12/31 02:39:53 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:56:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@
 
 static int	ft_printf_int(char *s, int pad, int len, t_spec *spec)
 {
-	int		printed;
-	int		zeroes;
+	int	printed;
+	int	zeroes;
 
 	printed = 0;
 	zeroes = ft_strlen(s);
@@ -62,8 +62,8 @@ static int	ft_printf_int(char *s, int pad, int len, t_spec *spec)
 
 static int	ft_printf_zero(char *s, t_spec *spec)
 {
-	int		printed;
-	int		len;
+	int	printed;
+	int	len;
 
 	printed = 0;
 	len = 0;
@@ -88,11 +88,11 @@ static int	ft_printf_zero(char *s, t_spec *spec)
 ** returns: The count of printed characters
 */
 
-int			ft_printf_nbr(char *s, t_spec *spec, int arg)
+int	ft_printf_nbr(char *s, t_spec *spec, int arg)
 {
-	int		printed;
-	int		len;
-	int		pad;
+	int	printed;
+	int	len;
+	int	pad;
 
 	printed = 0;
 	if (spec->prec >= (int)ft_strlen(s))

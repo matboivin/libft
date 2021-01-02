@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:45:41 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:13:17 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:54:03 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** n: The integer to output
 */
 
-void				ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
 	unsigned int	nbr;
 

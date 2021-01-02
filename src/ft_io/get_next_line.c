@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/12/28 00:34:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:17:11 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@
 **          false otherwise
 */
 
-static bool		ft_is_line(char **store, char **line)
+static bool	ft_is_line(char **store, char **line)
 {
-	char		*newline;
-	size_t		line_end;
-	size_t		store_start;
+	char	*newline;
+	size_t	line_end;
+	size_t	store_start;
 
 	store_start = 0;
 	newline = NULL;
@@ -47,6 +47,22 @@ static bool		ft_is_line(char **store, char **line)
 }
 
 /*
+** This function handles the remaining read content
+*/
+
+static void	handle_remainder(char **store, char **line, int *bytes_read)
+{
+	if (*store && **store)
+	{
+		*line = ft_strdup(*store);
+		*bytes_read = 1;
+	}
+	else
+		*line = NULL;
+	ft_strdel(store);
+}
+
+/*
 ** This function gets a line read from a file descriptor, without the newline
 **
 ** fd: File descriptor for reading
@@ -57,7 +73,7 @@ static bool		ft_is_line(char **store, char **line)
 **          -1 if an error happened
 */
 
-int				get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	int			bytes_read;
 	char		buffer[BUFFER_SIZE + 1];
@@ -65,23 +81,18 @@ int				get_next_line(int fd, char **line)
 
 	if ((!line) || (fd < 0) || (BUFFER_SIZE < 1))
 		return (-1);
-	if (store && ft_is_line(&store, line))
-		return (1);
-	while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
+	while (!ft_strchr(store, NEWLINE))
 	{
+		bytes_read = read(fd, buffer, BUFFER_SIZE);
+		if (bytes_read < 1)
+			break ;
 		buffer[bytes_read] = '\0';
-		if (!(store = ft_strjoindelone(store, buffer)))
+		store = ft_strjoindelone(store, buffer);
+		if (!store)
 			return (-1);
-		if (ft_is_line(&store, line))
-			return (1);
 	}
-	if (store && *store)
-	{
-		*line = ft_strdup(store);
-		bytes_read = 1;
-	}
-	else
-		*line = NULL;
-	ft_strdel(&store);
+	if (ft_is_line(&store, line))
+		return (1);
+	handle_remainder(&store, &line, &bytes_read);
 	return (bytes_read);
 }

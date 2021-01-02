@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 15:08:06 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:55:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static intmax_t	length_int(t_spec *spec, va_list ap)
 ** returns: The count of printed characters
 */
 
-int				ft_handle_int(t_spec *spec, va_list ap)
+int	ft_handle_int(t_spec *spec, va_list ap)
 {
 	int			printed;
 	intmax_t	arg;

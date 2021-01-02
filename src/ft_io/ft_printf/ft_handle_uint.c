@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 15:27:36 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:55:49 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,11 @@ static uintmax_t	length_uint(t_spec *spec, va_list ap)
 ** returns: The count of printed characters
 */
 
-int					ft_handle_uint(t_spec *spec, va_list ap)
+int	ft_handle_uint(t_spec *spec, va_list ap)
 {
-	int				printed;
-	uintmax_t		arg;
-	char			*buffer;
+	int			printed;
+	uintmax_t	arg;
+	char		*buffer;
 
 	buffer = NULL;
 	arg = length_uint(spec, ap);
@@ -70,11 +70,11 @@ int					ft_handle_uint(t_spec *spec, va_list ap)
 ** returns: The count of printed characters
 */
 
-int					ft_handle_oct(t_spec *spec, va_list ap)
+int	ft_handle_oct(t_spec *spec, va_list ap)
 {
-	int				printed;
-	uintmax_t		arg;
-	char			*buffer;
+	int			printed;
+	uintmax_t	arg;
+	char		*buffer;
 
 	buffer = NULL;
 	arg = length_uint(spec, ap);
@@ -99,11 +99,11 @@ int					ft_handle_oct(t_spec *spec, va_list ap)
 ** returns: The count of printed characters
 */
 
-int					ft_handle_hex(t_spec *spec, va_list ap)
+int	ft_handle_hex(t_spec *spec, va_list ap)
 {
-	int				printed;
-	uintmax_t		arg;
-	char			*buffer;
+	int			printed;
+	uintmax_t	arg;
+	char		*buffer;
 
 	buffer = NULL;
 	arg = length_uint(spec, ap);

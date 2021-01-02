@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:20:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:51:11 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:56:37 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@
 ** returns: The count of printed characters
 */
 
-int			ft_put_zeroes(int len, t_spec *spec)
+int	ft_put_zeroes(int len, t_spec *spec)
 {
-	int		printed;
-	int		zeroes;
+	int	printed;
+	int	zeroes;
 
 	printed = 0;
 	zeroes = spec->prec - len;

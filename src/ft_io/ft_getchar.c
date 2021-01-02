@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/12 13:40:06 by mboivin           #+#    #+#             */
-/*   Updated: 2020/12/12 13:40:50 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:53:52 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **          EOF on end of file or error
 */
 
-int			ft_getchar(void)
+int	ft_getchar(void)
 {
 	char	buffer[2];
 	size_t	bytes_read;

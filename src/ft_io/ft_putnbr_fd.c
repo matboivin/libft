@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 15:15:11 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:13:13 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:53:59 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** fd: The file descriptor on which to write
 */
 
-void				ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	nbr;
 

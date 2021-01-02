@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 21:18:36 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:51:15 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:56:41 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 ** returns: The argument
 */
 
-int			get_arg(va_list ap)
+int	get_arg(va_list ap)
 {
-	int		field;
+	int	field;
 
 	field = va_arg(ap, int);
 	return (field);

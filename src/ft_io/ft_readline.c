@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 15:33:20 by mboivin           #+#    #+#             */
-/*   Updated: 2020/12/28 00:34:58 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:08:22 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static bool	ft_is_line(char **line)
 **          NULL otherwise
 */
 
-char		*ft_readline(const char *prompt)
+char	*ft_readline(const char *prompt)
 {
 	int		bytes_read;
 	char	buffer[BUFFER_SIZE + 1];
@@ -68,13 +68,16 @@ char		*ft_readline(const char *prompt)
 	line = NULL;
 	if (prompt)
 		ft_printf("%s", prompt);
-	while ((bytes_read = read(STDIN_FILENO, buffer, BUFFER_SIZE)) > 0)
+	bytes_read = read(STDIN_FILENO, buffer, BUFFER_SIZE);
+	while (bytes_read > 0)
 	{
 		buffer[bytes_read] = '\0';
-		if (!(line = ft_strjoindelone(line, buffer)))
+		line = ft_strjoindelone(line, buffer);
+		if (!line)
 			return (NULL);
 		if (ft_is_line(&line))
 			return (line);
+		bytes_read = read(STDIN_FILENO, buffer, BUFFER_SIZE);
 	}
 	return (line);
 }

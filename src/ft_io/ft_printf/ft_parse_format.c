@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 12:33:13 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:50:46 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:58:33 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@
 
 static t_conv	g_conv[] =
 {
-	{ 'c', &ft_handle_char },
-	{ 's', &ft_handle_str },
-	{ 'p', &ft_handle_ptr },
-	{ 'd', &ft_handle_int },
-	{ 'i', &ft_handle_int },
-	{ 'o', &ft_handle_oct },
-	{ 'u', &ft_handle_uint },
-	{ 'x', &ft_handle_hex },
-	{ 'X', &ft_handle_hex },
-	{ '%', &ft_handle_percent }
+	{'c', &ft_handle_char},
+	{'s', &ft_handle_str},
+	{'p', &ft_handle_ptr},
+	{'d', &ft_handle_int},
+	{'i', &ft_handle_int},
+	{'o', &ft_handle_oct},
+	{'u', &ft_handle_uint},
+	{'x', &ft_handle_hex},
+	{'X', &ft_handle_hex},
+	{'%', &ft_handle_percent}
 };
 
 /*
@@ -41,7 +41,7 @@ static t_conv	g_conv[] =
 
 static int	format_output(t_spec *spec, va_list ap)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (g_conv[i].type != spec->type)
@@ -72,7 +72,7 @@ static void	create_spec(int fd, t_spec *spec)
 ** returns: The count of printed characters
 */
 
-int			ft_parse_format(int fd, const char **format, va_list ap)
+int	ft_parse_format(int fd, const char **format, va_list ap)
 {
 	t_spec	spec;
 

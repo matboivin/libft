@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 11:36:15 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:12:24 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:53:47 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 **          -1 if an error happened
 */
 
-int		ft_fileno(t_file *stream)
+int	ft_fileno(t_file *stream)
 {
 	if (!stream)
 	{

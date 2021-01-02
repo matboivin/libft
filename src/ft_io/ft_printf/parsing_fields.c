@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 12:35:35 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:51:26 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:00:27 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@
 ** spec: A structure containing the retrieved formatting data
 */
 
-void			get_flags(const char **format, t_spec *spec)
+void	get_flags(const char **format, t_spec *spec)
 {
-	const char	*flags = "-0+ #";
-
-	while (**format && ft_strchr(flags, **format))
+	while (**format && ft_strchr(FLAG_TYPES, **format))
 	{
 		if (**format == MINUS)
 			spec->flag |= LEFTALIGN;
@@ -49,7 +47,7 @@ void			get_flags(const char **format, t_spec *spec)
 ** ap: A pointer to the list of arguments
 */
 
-void			get_width(const char **format, t_spec *spec, va_list ap)
+void	get_width(const char **format, t_spec *spec, va_list ap)
 {
 	if (**format == ASTERISK)
 	{
@@ -77,7 +75,7 @@ void			get_width(const char **format, t_spec *spec, va_list ap)
 ** ap: A pointer to the list of arguments
 */
 
-void			get_precision(const char **format, t_spec *spec, va_list ap)
+void	get_precision(const char **format, t_spec *spec, va_list ap)
 {
 	if (**format == DOT)
 	{
@@ -105,15 +103,13 @@ void			get_precision(const char **format, t_spec *spec, va_list ap)
 ** spec: A structure containing the retrieved formatting data
 */
 
-void			get_length(const char **format, t_spec *spec)
+void	get_length(const char **format, t_spec *spec)
 {
-	const char	*modifiers = "hl";
-
-	if (**format && ft_strchr(modifiers, **format))
+	if (**format && ft_strchr(MODIFIER_TYPES, **format))
 	{
 		spec->modifier = **format;
 		(*format)++;
-		if (**format && ft_strchr(modifiers, **format))
+		if (**format && ft_strchr(MODIFIER_TYPES, **format))
 		{
 			spec->modifier += **format;
 			(*format)++;
@@ -129,11 +125,9 @@ void			get_length(const char **format, t_spec *spec)
 ** spec: A structure containing the retrieved formatting data
 */
 
-void			get_type(const char **format, char c, t_spec *spec)
+void	get_type(const char **format, char c, t_spec *spec)
 {
-	const char	*types = "cspdiouxX%";
-
-	if (**format && ft_strchr(types, c))
+	if (**format && ft_strchr(CONV_TYPES, c))
 	{
 		spec->type = c;
 		(*format)++;

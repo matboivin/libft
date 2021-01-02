@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:49:14 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:55:32 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 
 static int	ft_printf_char(char *s, t_spec *spec)
 {
-	int		printed;
-	int		pad;
+	int	printed;
+	int	pad;
 
 	printed = 0;
 	pad = SPACE;
@@ -49,7 +49,7 @@ static int	ft_printf_char(char *s, t_spec *spec)
 ** returns: The count of printed characters
 */
 
-int			ft_handle_char(t_spec *spec, va_list ap)
+int	ft_handle_char(t_spec *spec, va_list ap)
 {
 	int		printed;
 	char	c;
@@ -76,7 +76,7 @@ int			ft_handle_char(t_spec *spec, va_list ap)
 ** returns: The count of printed characters
 */
 
-int			ft_handle_percent(t_spec *spec, va_list ap)
+int	ft_handle_percent(t_spec *spec, va_list ap)
 {
 	int		printed;
 	char	*buffer;

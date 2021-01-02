@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 13:19:02 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 19:39:19 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 21:56:02 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ static char	*ft_strshorten(char *src, int size)
 	return (result);
 }
 
-int			ft_handle_str(t_spec *spec, va_list ap)
+int	ft_handle_str(t_spec *spec, va_list ap)
 {
 	int		printed;
 	char	*arg;

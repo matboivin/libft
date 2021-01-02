@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 11:51:30 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 21:46:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:00:17 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,12 @@
 # define ASTERISK '*'
 # define PERCENT '%'
 # define HASH '#'
-
 # define OCT_PREFIX "0"
 # define LOWHEX_PREFIX "0x"
 # define UPHEX_PREFIX "0X"
+# define CONV_TYPES "cspdiouxX%"
+# define FLAG_TYPES "-0+ #"
+# define MODIFIER_TYPES "hl"
 
 typedef enum	e_flag
 {
