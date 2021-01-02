@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2020/12/09 16:29:36 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:23:32 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **          NULL otherwise
 */
 
-char		*ft_strjoindelone(char *s1, const char *s2)
+char	*ft_strjoindelone(char *s1, const char *s2)
 {
 	char	*result;
 	size_t	len_s1;

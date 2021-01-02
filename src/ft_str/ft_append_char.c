@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/01 21:29:54 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/01 23:05:25 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:22:18 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **          NULL otherwise
 */
 
-char		*ft_append_char(char *s, char *c, bool replace)
+char	*ft_append_char(char *s, char *c, bool replace)
 {
 	char	*result;
 	size_t	len;

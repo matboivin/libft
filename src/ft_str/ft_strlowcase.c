@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/12 20:58:04 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:57:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:23:46 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 ** This function converts all upper-case letters of s to lower-case letters
 */
 
-char		*ft_strlowcase(char *s)
+char	*ft_strlowcase(char *s)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (s[i])

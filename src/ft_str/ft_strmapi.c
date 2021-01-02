@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 16:48:25 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:59:27 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:24:20 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 **          NULL otherwise
 */
 
-char		*ft_strmapi(const char *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
 	char	*result;

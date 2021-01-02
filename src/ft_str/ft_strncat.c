@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 12:15:10 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/09 18:54:14 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:24:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 ** returns: A pointer to the new string
 */
 
-char		*ft_strncat(char *dst, const char *src, size_t n)
+char	*ft_strncat(char *dst, const char *src, size_t n)
 {
 	size_t	i;
 	size_t	dst_len;

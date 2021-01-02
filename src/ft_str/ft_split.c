@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 12:38:42 by mboivin           #+#    #+#             */
-/*   Updated: 2020/12/31 03:33:41 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:26:19 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@
 
 static size_t	ft_count_strings(const char *s, char delim)
 {
-	size_t		i;
-	size_t		count;
+	size_t	i;
+	size_t	count;
 
 	i = 0;
 	count = 0;
@@ -49,18 +49,18 @@ static size_t	ft_count_strings(const char *s, char delim)
 **          NULL otherwise
 */
 
-char			**ft_split(const char *s, char c)
+char	**ft_split(const char *s, char c)
 {
-	size_t		str_count;
-	size_t		i;
-	char		**result;
-	char		*delim;
+	size_t	str_count;
+	size_t	i;
+	char	**result;
+	char	*delim;
 
 	if (!s)
 		return (NULL);
 	str_count = ft_count_strings(s, c);
 	i = 0;
-	result = malloc((str_count + 1) * sizeof(char *));
+	result = malloc(sizeof(char *) * (str_count + 1));
 	if (!result)
 		return (NULL);
 	delim = ft_strnew(1);

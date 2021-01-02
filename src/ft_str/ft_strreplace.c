@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/20 19:47:13 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 19:48:24 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:24:57 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **          NULL otherwise
 */
 
-char		*ft_strreplace(char *s1, char *s2)
+char	*ft_strreplace(char *s1, char *s2)
 {
 	char	*result;
 

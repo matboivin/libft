@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 03:23:59 by mboivin           #+#    #+#             */
-/*   Updated: 2020/12/28 03:25:40 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:25:08 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** This function swaps the value of two strings
 */
 
-void		ft_strswap(char **a, char **b)
+void	ft_strswap(char **a, char **b)
 {
 	char	*tmp;
 

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/12 15:42:30 by mboivin           #+#    #+#             */
-/*   Updated: 2020/12/12 15:43:27 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:22:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **          NULL otherwise
 */
 
-char		*ft_char_to_str(char *s, char c)
+char	*ft_char_to_str(char *s, char c)
 {
 	char	*result;
 	size_t	len;

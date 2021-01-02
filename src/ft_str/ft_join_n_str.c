@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:25:33 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/09 21:53:45 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:22:27 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **          NULL otherwise
 */
 
-char		*ft_join_n_str(int count, ...)
+char	*ft_join_n_str(int count, ...)
 {
 	va_list	ap;
 	char	*result;

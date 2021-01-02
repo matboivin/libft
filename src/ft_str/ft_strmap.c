@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/17 16:33:47 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:59:17 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:23:53 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 **          NULL otherwise
 */
 
-char		*ft_strmap(const char *s, char (*f)(char))
+char	*ft_strmap(const char *s, char (*f)(char))
 {
 	size_t	i;
 	char	*result;

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 17:34:43 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/18 19:36:47 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:25:12 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 **          NULL if there are no more tokens
 */
 
-char			*ft_strtok(char *s, const char *delim)
+char	*ft_strtok(char *s, const char *delim)
 {
 	static char	*buffer;
 	static int	curr_delim = 0;

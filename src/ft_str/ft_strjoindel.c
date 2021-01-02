@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 15:16:05 by mboivin           #+#    #+#             */
-/*   Updated: 2020/12/09 16:31:01 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:23:28 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **          NULL otherwise
 */
 
-char		*ft_strjoindel(char *s1, char *s2)
+char	*ft_strjoindel(char *s1, char *s2)
 {
 	char	*result;
 	size_t	len_s1;
