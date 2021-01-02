@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:00 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:45:58 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:19:54 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 ** returns: The original value of dst
 */
 
-void		*ft_memcpy(void *dst, void const *src, size_t n)
+void	*ft_memcpy(void *dst, void const *src, size_t n)
 {
 	size_t	i;
 	uint8_t	*to;

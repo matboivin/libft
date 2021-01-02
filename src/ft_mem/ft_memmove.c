@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:10 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:46:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:19:58 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 ** returns: The original value of dst
 */
 
-void		*ft_memmove(void *dst, void const *src, size_t len)
+void	*ft_memmove(void *dst, void const *src, size_t len)
 {
 	uint8_t	*from;
 	uint8_t	*to;

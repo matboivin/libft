@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:34 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:46:39 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:20:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 **          specified size
 */
 
-void		*ft_reallocarray(void *ptr, size_t nmemb, size_t size)
+void	*ft_reallocarray(void *ptr, size_t nmemb, size_t size)
 {
 	void	*result;
 

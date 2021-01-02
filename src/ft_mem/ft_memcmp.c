@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:54 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:45:52 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:19:51 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 **          Otherwise the difference between the first two differing bytes
 */
 
-int			ft_memcmp(void const *s1, void const *s2, size_t n)
+int	ft_memcmp(void const *s1, void const *s2, size_t n)
 {
 	size_t	i;
 	uint8_t	*p1;

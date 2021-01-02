@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:18 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:46:18 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:20:00 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 ** returns: A pointer to the memory area s
 */
 
-void		*ft_memset(void *s, int c, size_t len)
+void	*ft_memset(void *s, int c, size_t len)
 {
 	uint8_t	*p;
 

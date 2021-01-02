@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:27 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:45:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:19:36 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** n: The number of bytes to fill
 */
 
-void		ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	uint8_t	*result;
 

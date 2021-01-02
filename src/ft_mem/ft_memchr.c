@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:22:47 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:45:46 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:19:48 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 **          NULL otherwise
 */
 
-void		*ft_memchr(void const *s, int c, size_t n)
+void	*ft_memchr(void const *s, int c, size_t n)
 {
 	size_t	i;
 	uint8_t	*from;
