@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 13:46:03 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/05 15:54:52 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:20:52 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** as an argument using the specified base
 */
 
-size_t		ft_unbrlen_base(int64_t n, int base)
+size_t	ft_unbrlen_base(int64_t n, int base)
 {
 	size_t	len;
 

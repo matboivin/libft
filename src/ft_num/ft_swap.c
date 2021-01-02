@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 13:41:41 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:47:35 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:20:47 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 ** as parameters
 */
 
-void		ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-	int		tmp;
+	int	tmp;
 
 	if (!a || !b)
 		return ;

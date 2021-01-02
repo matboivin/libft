@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 13:46:03 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:47:19 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/02 22:20:44 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** as an argument (e.g., length of 100 is 3, length of 42 is 2)
 */
 
-size_t		ft_nbrlen(int n)
+size_t	ft_nbrlen(int n)
 {
 	size_t	len;
 
