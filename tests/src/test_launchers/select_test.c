@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 15:15:06 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 15:32:51 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/16 18:26:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ static t_launcher	g_launcher[] =
 	{ "IO", &launch_io_tests },
 	{ "LIST", &launch_list_tests },
 	{ "NUM", &launch_num_tests },
-	{ "STRING", &launch_str_tests }
+	{ "STRING", &launch_str_tests },
+	{ "STACK", &launch_stack_tests }
 };
 
 static void	launch_selected_test(char *option)

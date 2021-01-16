@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/24 00:42:37 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/16 18:17:35 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	*ft_memchr(void const *s, int c, size_t n);
 int		ft_memcmp(void const *s1, void const *s2, size_t n);
 void	*ft_memcpy(void *dst, void const *src, size_t n);
 void	ft_memdel(void **to_free);
-void	*ft_memmove(void *dst, void const *src, size_t len);
 void	*ft_memset(void *s, int c, size_t len);
 void	*ft_realloc(void *ptr, size_t size);
 void	*ft_reallocarray(void *ptr, size_t nmemb, size_t size);

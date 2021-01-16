@@ -1,0 +1,7 @@
+>> Start test
+
+Line: 1 |  | Return: 1
+Line: 2 | (null) | Return: 0
+
+>> EOF reached
+

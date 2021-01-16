@@ -1,0 +1,11 @@
+>> Start test
+
+Line: 1 | a1 | Return: 1
+Line: 2 | b2 | Return: 1
+Line: 3 | c3 | Return: 1
+Line: 4 | d4 | Return: 1
+Line: 5 | e5 | Return: 1
+Line: 6 | (null) | Return: 0
+
+>> EOF reached
+

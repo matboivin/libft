@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 13:12:29 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:21:26 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/16 18:05:05 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_stack	*malloc_stack(size_t capacity)
 {
 	t_stack	*result;
 
-	result = malloc(sizeof(t_stack *));
+	result = malloc(sizeof(t_stack));
 	if (!result)
 		return (NULL);
 	create_stack(result, capacity);
@@ -43,7 +43,8 @@ t_stack	*malloc_stack(size_t capacity)
 
 void	destroy_stack(t_stack to_destroy)
 {
-	ft_str_arr_del(to_destroy.content);
+	if (to_destroy.content)
+		ft_str_arr_del(to_destroy.content);
 }
 
 void	free_stack(t_stack **to_free)

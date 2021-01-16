@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:00 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:19:54 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/16 18:18:08 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	*ft_memcpy(void *dst, void const *src, size_t n)
 	i = 0;
 	to = (uint8_t *)dst;
 	from = (uint8_t *)src;
-	while (n--)
+	while (n-- && from[i])
 	{
 		to[i] = from[i];
 		i++;

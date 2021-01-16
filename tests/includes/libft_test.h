@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:45 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/01 21:43:38 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/16 19:17:05 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # define MIN_ARGC 1
 # define MAX_ARGC 2
 # define HELP_OPT "-h"
-# define MAX_OPTIONS 6
+# define MAX_OPTIONS 7
 # define MAX_STR_SIZE 7
 
 # define TEST_OUTPUT_FILE "test_output.txt"
@@ -144,6 +144,7 @@ void			launch_io_tests(void);
 void			launch_list_tests(void);
 void			launch_num_tests(void);
 void			launch_str_tests(void);
+void			launch_stack_tests(void);
 
 /*
 ** Conv functions
@@ -230,6 +231,13 @@ void			test_ft_strlen(void);
 void			test_ft_strtok(void);
 void			test_ft_strtrim(void);
 void			test_ft_append_char(void);
+
+/*
+** Stack function
+*/
+
+void			test_ft_stack(void);
+int				ft_stack_cmp(t_stack *test_stack, char **ref);
 
 /*
 ** Test utils

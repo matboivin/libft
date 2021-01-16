@@ -85,7 +85,6 @@ SRC_FILES	+=	ft_bzero.c			\
 				ft_memcmp.c			\
 				ft_memcpy.c			\
 				ft_memdel.c			\
-				ft_memmove.c		\
 				ft_memset.c			\
 				ft_realloc.c		\
 				ft_reallocarray.c

@@ -1,0 +1,6 @@
+>> Start test
+
+Line: 1 | (null) | Return: -1
+
+/!\ Error occurred
+

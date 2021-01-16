@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 15:32:33 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/16 18:23:46 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ void		launch_tests(void)
 	launch_num_tests();
 	launch_str_tests();
 	launch_list_tests();
+	launch_stack_tests();
 }

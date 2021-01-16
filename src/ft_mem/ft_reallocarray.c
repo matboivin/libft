@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:34 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:20:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/16 18:18:39 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	*ft_reallocarray(void *ptr, size_t nmemb, size_t size)
 		result = ft_calloc(nmemb, size);
 		if (!result)
 			return (NULL);
-		result = ft_memmove(result, ptr, nmemb);
+		result = ft_memcpy(result, ptr, nmemb);
 	}
 	ft_memdel(&ptr);
 	return (result);

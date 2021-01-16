@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:34 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:20:03 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/16 18:18:45 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	*ft_realloc(void *ptr, size_t size)
 		result = ft_memalloc(size);
 		if (!result)
 			return (NULL);
-		result = ft_memmove(result, ptr, size);
+		result = ft_memcpy(result, ptr, size);
 	}
 	ft_memdel(&ptr);
 	return (result);
