@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:40:12 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:27:07 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/01/16 23:23:58 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,9 @@ int	get_next_line(int fd, char **line)
 
 	if ((!line) || (fd < 0) || (BUFFER_SIZE < 1))
 		return (-1);
-	while (!ft_strchr(store, NEWLINE))
+	if (store && ft_is_line(&store, line))
+		return (1);
+	while (true)
 	{
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
 		if (bytes_read < 1)
@@ -90,9 +92,9 @@ int	get_next_line(int fd, char **line)
 		store = ft_strjoindelone(store, buffer);
 		if (!store)
 			return (-1);
+		if (ft_is_line(&store, line))
+			return (1);
 	}
-	if (ft_is_line(&store, line))
-		return (1);
 	handle_remainder(&store, line, &bytes_read);
 	return (bytes_read);
 }
