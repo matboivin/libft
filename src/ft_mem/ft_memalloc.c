@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 19:21:49 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:19:42 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/04/15 18:42:14 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	*ft_memalloc(size_t size)
 {
 	void	*result;
 
+	result = NULL;
 	result = malloc(size);
 	if (!result)
 		return (NULL);

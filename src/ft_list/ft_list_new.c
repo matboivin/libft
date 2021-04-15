@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 17:33:28 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:19:11 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/04/15 18:42:37 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ t_node	*ft_list_new(void *p_content)
 {
 	t_node	*result;
 
+	result = NULL;
 	result = malloc(sizeof(t_node));
 	if (!result)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 13:12:29 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/16 18:05:05 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/04/15 18:42:55 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ t_stack	*malloc_stack(size_t capacity)
 {
 	t_stack	*result;
 
+	result = NULL;
 	result = malloc(sizeof(t_stack));
 	if (!result)
 		return (NULL);

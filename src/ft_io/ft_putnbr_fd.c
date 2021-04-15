@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 15:15:11 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 21:53:59 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/04/15 18:39:34 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_putnbr_fd(int n, int fd)
 	nbr = n;
 	if (n < 0)
 	{
-		ft_putchar_fd(MINUS, fd);
+		ft_putchar_fd('-', fd);
 		nbr = -n;
 	}
 	if (nbr > 9)

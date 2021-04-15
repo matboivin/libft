@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 20:48:03 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:26:01 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/04/15 18:40:31 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char	*ft_strnew(size_t size)
 {
 	char	*result;
 
+	result = NULL;
 	result = malloc(sizeof(char) * (size + 1));
 	if (!result)
 		return (NULL);

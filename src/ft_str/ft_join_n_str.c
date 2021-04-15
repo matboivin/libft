@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 11:25:33 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:22:27 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/04/15 18:43:22 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ char	*ft_join_n_str(int count, ...)
 	va_list	ap;
 	char	*result;
 
+	result = NULL;
 	if (count == 0)
 		return (NULL);
-	result = NULL;
 	va_start(ap, count);
 	while (count > 0)
 	{

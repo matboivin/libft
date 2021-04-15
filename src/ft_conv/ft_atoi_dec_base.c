@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 21:48:44 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/04/15 18:39:42 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,9 +75,9 @@ int	ft_atoi_dec_base(const char *s, int from_base)
 	sign = 1;
 	while (*s && ft_isspace(*s))
 		s++;
-	if (*s == MINUS)
+	if (*s == '-')
 		sign = -1;
-	if ((*s == PLUS) || (*s == MINUS))
+	if ((*s == '+') || (*s == '-'))
 		s++;
 	while (*s && is_in_base(*s, from_base))
 		result = (result * from_base) + char_to_digit(*(s++));

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:41:33 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:18:43 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/04/15 18:45:17 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	ft_list_append(t_node **head, t_node *new_node)
 {
 	t_node	*cursor;
 
+	cursor = NULL;
 	if (!head || !new_node)
 		return ;
 	if (*head)

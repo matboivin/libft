@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 12:35:35 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:00:27 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/04/15 18:50:23 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ void	get_flags(const char **format, t_spec *spec)
 {
 	while (**format && ft_strchr(FLAG_TYPES, **format))
 	{
-		if (**format == MINUS)
+		if (**format == '-')
 			spec->flag |= LEFTALIGN;
 		else if (**format == ZERO)
 			spec->flag |= ZERO_PAD;
-		else if (**format == PLUS)
+		else if (**format == '+')
 			spec->flag |= PLUS_PREF;
 		else if (**format == SPACE)
 			spec->flag |= SPACE_PREF;

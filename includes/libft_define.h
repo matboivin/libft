@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/09 16:10:12 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/04/15 18:39:52 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # define DEC_BASE 10
 # define HEX_BASE 16
-# define MINUS '-'
-# define PLUS '+'
 # define DOT '.'
 # define COMMA ','
 # define SPACE ' '

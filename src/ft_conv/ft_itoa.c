@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:07:24 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 21:49:05 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/04/15 18:39:34 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ char	*ft_itoa(int n, char *output, int base)
 		if (!output)
 			return (NULL);
 		if (is_neg && base == DEC_BASE)
-			output[0] = MINUS;
+			output[0] = '-';
 		while (nbr_len-- > sign)
 		{
 			output[nbr_len] = digit_to_char(nbr, base);

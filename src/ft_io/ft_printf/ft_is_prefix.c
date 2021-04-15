@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:20:53 by mboivin           #+#    #+#             */
-/*   Updated: 2020/10/23 23:50:42 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/04/15 18:39:42 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@
 
 bool	ft_is_prefix(int c)
 {
-	return ((c == SPACE) || (c == PLUS) || (c == MINUS));
+	return ((c == SPACE) || (c == '+') || (c == '-'));
 }

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:46:51 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:18:51 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/04/15 18:45:46 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	ft_list_del(t_node **node)
 	t_node	*cursor;
 	t_node	*next_node;
 
+	cursor = NULL;
+	next_node = NULL;
 	if (!node)
 		return ;
 	if (*node)
