@@ -42,26 +42,6 @@ SRC_FILES	+=	ft_fgetc.c			\
 				ft_readline.c		\
 				get_next_line.c
 
-# ft_printf #
-
-SRC_FILES	+=	ft_printf.c				\
-				ft_dprintf.c			\
-				ft_add_prefix.c			\
-				ft_construct_output.c	\
-				ft_handle_char.c		\
-				ft_handle_int.c			\
-				ft_handle_ptr.c			\
-				ft_handle_str.c			\
-				ft_handle_uint.c		\
-				ft_is_prefix.c			\
-				ft_parse_format.c		\
-				ft_printf_nbr.c			\
-				ft_put_padding.c		\
-				ft_put_zeroes.c			\
-				get_arg.c				\
-				get_digits.c			\
-				parsing_fields.c
-
 # LIST FUNCTIONS #
 
 SRC_FILES	+=	ft_list_append.c	\

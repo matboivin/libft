@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 18:32:33 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/16 19:21:39 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/05/04 22:58:59 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int			ft_stack_cmp(t_stack *test_stack, char **ref)
 	while (i--)
 	{
 		s = ft_pop_stack(test_stack);
-		ft_printf("%s <-> %s\n", s, ref[i]);
+		printf("%s <-> %s\n", s, ref[i]);
 		if (ft_strcmp(s, ref[i]))
 			return (1);
 	}

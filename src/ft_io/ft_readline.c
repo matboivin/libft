@@ -6,14 +6,15 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 15:33:20 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:08:22 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/05/04 22:59:52 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdbool.h>
+#include <unistd.h>
 #include "libft_define.h"
 #include "libft_str.h"
-#include "libft_printf.h"
 
 /*
 ** This function checks for a newline character in the content pointed to by
@@ -67,7 +68,7 @@ char	*ft_readline(const char *prompt)
 		return (NULL);
 	line = NULL;
 	if (prompt)
-		ft_printf("%s", prompt);
+		printf("%s", prompt);
 	bytes_read = read(STDIN_FILENO, buffer, BUFFER_SIZE);
 	while (bytes_read > 0)
 	{

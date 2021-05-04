@@ -19,7 +19,6 @@ OBJ_DIR		=	obj
 SUB_DIRS	=	ft_conv \
 				ft_ctype \
 				ft_io \
-				ft_io/ft_printf \
 				ft_list \
 				ft_mem \
 				ft_num \
