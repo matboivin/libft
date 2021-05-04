@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:45 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/16 19:17:05 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/05/04 22:24:09 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,6 +154,7 @@ void			test_ft_atoi(void);
 void			test_ft_itoa(void);
 void			test_ft_utoa(void);
 void			test_ft_strtod(void);
+void			test_ft_strtol(void);
 
 /*
 ** Ctype functions

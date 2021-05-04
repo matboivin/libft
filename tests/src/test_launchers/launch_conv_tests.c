@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/06 15:17:07 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/05/04 22:23:53 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ void	launch_conv_tests(void)
 	test_ft_itoa();
 	test_ft_utoa();
 	test_ft_strtod();
+	test_ft_strtol();
 	PRINT_TEST_RESULTS(g_results->passed, g_results->total);
 }

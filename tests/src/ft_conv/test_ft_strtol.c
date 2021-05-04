@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_strtod.c                                   :+:      :+:    :+:   */
+/*   test_ft_strtol.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 18:25:29 by mboivin           #+#    #+#             */
-/*   Updated: 2021/05/04 22:51:11 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/05/04 22:53:18 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,30 @@
 #include <string.h>
 #include "libft_test.h"
 
-static void	compare_strtod(char *s, double ref, char *ref_ptr)
+static void	compare_strtol(char *s)
 {
-	double	result = 0.0;
+	long	strtol_ret = 0;
+	long	ft_ret = 0;
 	char	*endptr = NULL;
+	char	*ft_endptr = NULL;
 
 	g_results->test_num++;
 	PRINT_TEST_NUMBER(g_results->test_num);
-	print_test_input(NULL, NULL);
-	printf("Expected result:\t\"%f\" | endptr: %s\n", ref, ref_ptr);
-	result = ft_strtod(s, &endptr);
-	printf("ft_strtod result:\t\"%f\" | endptr: %s\n", result, endptr);
-	check_return(ref == result);
+	print_test_input(s, NULL);
+	strtol_ret = strtol(s, &endptr, 10);
+	ft_ret = ft_strtol(s, &ft_endptr);
+	printf("strtol:\t\t\"%ld\" | endptr: %s\n", strtol_ret, endptr);
+	printf("ft_strtol:\t\"%ld\" | endptr: %s\n", ft_ret, ft_endptr);
+	check_return(strtol_ret == ft_ret);
 }
 
-void		test_ft_strtod(void)
+void		test_ft_strtol(void)
 {
 	g_results->test_num = 0;
-	PRINT_TEST_NAME("FT_STRTOD");
-	compare_strtod("0.0 TEST", 0.0, " TEST");
-	compare_strtod("-10.0", -10.0, "");
-	compare_strtod("42.0|   FOO |", 42.0, "|   FOO |");
-	compare_strtod(TEST_STR_INTMAX, 2147483647.0, "");
+	PRINT_TEST_NAME("FT_STRTOL");
+	compare_strtol("0");
+	compare_strtol("2030300 TEST");
+	compare_strtol("500|     FOO|");
+	compare_strtol("-2|     FOO|");
 	PRINT_SEP();
 }

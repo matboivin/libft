@@ -6,6 +6,7 @@ SRC_FILES	=	ft_atoi.c			\
 				ft_itoa.c			\
 				ft_utoa.c			\
 				ft_strtod.c			\
+				ft_strtol.c			\
 
 # CTYPE FUNCTIONS #
 

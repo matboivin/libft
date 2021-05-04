@@ -28,7 +28,8 @@ SRC_FILES	+=	check_params.c				\
 SRC_FILES	+=	test_ft_atoi.c				\
 				test_ft_itoa.c				\
 				test_ft_utoa.c				\
-				test_ft_strtod.c
+				test_ft_strtod.c			\
+				test_ft_strtol.c
 
 # CTYPE FUNCTIONS #
 

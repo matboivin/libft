@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtod.c                                        :+:      :+:    :+:   */
+/*   ft_strtol.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 17:21:17 by mboivin           #+#    #+#             */
-/*   Updated: 2021/05/04 22:51:48 by mboivin          ###   ########.fr       */
+/*   Created: 2021/05/04 22:17:41 by mboivin           #+#    #+#             */
+/*   Updated: 2021/05/04 22:52:29 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 ** This function returns the decimal part
 */
 
-static double	decimal_val(const char *s, int *i)
+static long	decimal_val(const char *s, int *i)
 {
-	double	result;
-	double	val;
+	long	result;
+	long	val;
 
 	result = 0.0;
 	val = 0.1;
@@ -37,7 +37,7 @@ static double	decimal_val(const char *s, int *i)
 }
 
 /*
-** Recoded strtod libc function: Converts a string to a double
+** Recoded strtol libc function: Converts a string to a long
 **
 ** s: The reference to an already allocated object of type char*, whose value is
 ** set by the function to the next character in s after the numerical value
@@ -46,10 +46,10 @@ static double	decimal_val(const char *s, int *i)
 **          0 otherwise
 */
 
-double	ft_strtod(const char *s, char **endptr)
+long	ft_strtol(const char *s, char **endptr)
 {
 	int		i;
-	double	result;
+	long	result;
 	int		sign;
 
 	i = 0;
@@ -69,5 +69,5 @@ double	ft_strtod(const char *s, char **endptr)
 	if (s[i] == DOT)
 		result = result + decimal_val(s, &i);
 	*endptr = (char *)s + i;
-	return ((double)sign * result);
+	return ((long)sign * result);
 }
