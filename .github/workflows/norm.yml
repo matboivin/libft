@@ -1,5 +1,4 @@
-# New 42 Norminette is beta
-# Workflow will then continue on error
+# 42 Norminette v3
 
 name: 42 Norm
 
@@ -20,9 +19,9 @@ jobs:
           python-version: '3.7'
       - name: Install dependencies
         run: |
-          git clone https://github.com/42School/norminette.git
-          cd norminette && pip3 install -r requirements.txt sentry-sdk
-          python3 setup.py install
+          python3 -m pip install --upgrade pip setuptools
+          python3 -m pip install norminette
       - name: Check 42 Norm
-        run: cd .. && norminette
+        run: norminette
+        # Project is coded under Norminette v2
         continue-on-error: true
