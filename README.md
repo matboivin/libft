@@ -13,21 +13,22 @@ The 'ft' in front of function names stands for 'fourty two'.
 This project is a school assignment. It was done for **learning purposes** and is thus **not intended for production**.  
 Don't copy. Learn.
 
-### Prerequisites
+## Requirements
 
-GNU make and a C compiler.
+- gcc
+- make
 
-### Installing
+## Installation
 
 Clone the repository, change it to your working directory and run:
 ```console
 & make
 ```
 
-### License
-
-See `LICENSE` for more information.
-
-### Acknowledgements
+## Acknowledgements
 
 School project done at [42 Paris](https://www.42.fr).
+
+## License
+
+See `LICENSE` for more information.
