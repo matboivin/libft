@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 18:25:29 by mboivin           #+#    #+#             */
-/*   Updated: 2021/05/04 22:53:18 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/06/22 20:21:56 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ void		test_ft_strtol(void)
 	compare_strtol("2030300 TEST");
 	compare_strtol("500|     FOO|");
 	compare_strtol("-2|     FOO|");
+	compare_strtol("4.2");
 	PRINT_SEP();
 }

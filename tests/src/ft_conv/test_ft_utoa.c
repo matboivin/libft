@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 18:25:32 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/08 13:41:57 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/06/22 20:20:26 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 static void	compare_utoa(int n, char *ref, int base)
 {
-	char	*result;
+	char	*result = NULL;
 
 	g_results->test_num++;
 	PRINT_TEST_NUMBER(g_results->test_num);

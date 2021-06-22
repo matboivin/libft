@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/09 19:06:35 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/06/22 20:27:34 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void	compare_nconcat(char *s, size_t n)
 	printf("Input -> \"%s\"-> n: %ld\n\n", s, n);
 	strncat_ret = strncat(dst, s, n);
 	ft_ret = ft_strncat(ft_dst, s, n);
-	printf("strncat:\t\t\"%s\"\n", strncat_ret);
+	printf("strncat:\t\"%s\"\n", strncat_ret);
 	printf("ft_strncat:\t\"%s\"\n", ft_ret);
 	check_return(strcmp(strncat_ret, ft_ret) == 0);
 }
