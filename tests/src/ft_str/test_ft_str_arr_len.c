@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 00:12:49 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/09 16:42:09 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/07/11 16:37:28 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	compare_arr_lengths(char *s, char c, size_t expected)
 	test_arr = ft_split(s, c);
 	g_results->test_num++;
 	PRINT_TEST_NUMBER(g_results->test_num);
-	ft_ret = ft_str_arr_len(test_arr);
+	ft_ret = ft_str_arr_len((const char **)test_arr);
 	printf("Expected result:\t%ld\n", expected);
 	printf("ft_str_arr_len:\t\t%ld\n", ft_ret);
 	ft_str_arr_del(test_arr);
@@ -38,7 +38,7 @@ static void	compare_arr_lengths2(char *s, char c, size_t expected)
 	test_arr[10] = ft_strreplace(test_arr[10], EMPTY_STR);
 	g_results->test_num++;
 	PRINT_TEST_NUMBER(g_results->test_num);
-	ft_ret = ft_str_arr_len(test_arr);
+	ft_ret = ft_str_arr_len((const char **)test_arr);
 	printf("Expected result:\t%ld\n", expected);
 	printf("ft_str_arr_len:\t\t%ld\n", ft_ret);
 	ft_str_arr_del(test_arr);
