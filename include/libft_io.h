@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:30:53 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 21:47:42 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/07/11 15:34:54 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ int		get_next_line(int fd, char **line);
 char	*ft_readline(const char *prompt);
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
-void	ft_putendl(char *s);
-void	ft_putendl_fd(char *s, int fd);
+void	ft_putendl(const char *s);
+void	ft_putendl_fd(const char *s, int fd);
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr(char *s);
-void	ft_putstr_fd(char *s, int fd);
+void	ft_putstr(const char *s);
+void	ft_putstr_fd(const char *s, int fd);
 
 #endif

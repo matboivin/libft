@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 15:12:23 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:12:29 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/07/11 15:35:25 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 ** fd: The file descriptor on which to write
 */
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(const char *s, int fd)
 {
 	if (s)
 		write(fd, s, ft_strlen(s));

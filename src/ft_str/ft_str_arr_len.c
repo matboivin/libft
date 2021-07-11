@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:23:49 by mboivin           #+#    #+#             */
-/*   Updated: 2021/01/02 22:22:46 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/07/11 15:37:25 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@
 ** returns: The number of array elements
 */
 
-size_t	ft_str_arr_len(char **arr)
+size_t	ft_str_arr_len(const char **arr)
 {
 	size_t	i;
 	size_t	len;
 
 	i = 0;
 	len = 0;
-	while (arr[i])
+	while (arr && arr[i])
 	{
 		if (ft_strcmp(arr[i], EMPTY_STR))
 			len++;

@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/21 00:23:51 by mboivin           #+#    #+#             */
-/*   Updated: 2021/04/15 18:39:42 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/07/11 15:33:35 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **          0 otherwise
 */
 
-int	ft_isnumeric(char *s)
+int	ft_isnumeric(const char *s)
 {
 	size_t	i;
 	int		ret;

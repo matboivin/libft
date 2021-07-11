@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 15:19:28 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:12:29 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/07/11 15:35:05 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** fd: The file descriptor on which to write
 */
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(const char *s, int fd)
 {
 	if (s)
 	{

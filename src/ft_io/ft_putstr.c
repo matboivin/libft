@@ -6,7 +6,7 @@
 /*   By: mboivin <mboivin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:37:21 by mboivin           #+#    #+#             */
-/*   Updated: 2020/11/01 20:12:29 by mboivin          ###   ########.fr       */
+/*   Updated: 2021/07/11 15:35:47 by mboivin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** s: The string to output
 */
 
-void	ft_putstr(char *s)
+void	ft_putstr(const char *s)
 {
 	if (s)
 		write(STDOUT_FILENO, s, ft_strlen(s));
